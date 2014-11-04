@@ -1,0 +1,27 @@
+{
+    "plugins\/virtual\/desktop\/php\/virtual.php": {
+        "Liste des équipements virtuel": "Liste des équipements virtuel",
+        "Général": "Général",
+        "Nom de l'équipement virtual": "Nom de l'équipement virtual",
+        "Nom de l'équipement virtuel": "Nom de l'équipement virtuel",
+        "Virtuel": "Virtuel",
+        "Ajouter une info virtuelle": "Ajouter une info virtuelle",
+        "Ajouter une commande virtuelle": "Ajouter une commande virtuelle",
+        "Sous-Type": "Sous-Type",
+        "Valeur": "Valeur",
+        "Unité": "Unité",
+        "Paramètres": "Paramètres"
+    },
+    "plugins\/virtual\/desktop\/js\/virtual.js": {
+        "Calcul": "Calcul",
+        "Rechercher équipement": "Rechercher équipement",
+        "Unite": "Unite",
+        "Historiser": "Historiser",
+        "Afficher": "Afficher",
+        "Evénement seulement": "Evénement seulement",
+        "Lifetime cache": "Lifetime cache",
+        "Tester": "Tester",
+        "Nom information": "Nom information",
+        "Valeur": "Valeur"
+    }
+}

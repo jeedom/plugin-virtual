@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<info>
+    <id>virtual</id>
+    <name>Virtual</name>
+    <description>Plugin pour gerer des équipement virtuel</description>
+    <icon>fa fa-tablet</icon>
+    <licence>AGPL</licence>
+    <author>Loïc Gevrey</author>
+    <installation>Aucune</installation>
+    <require>1.10</require>
+    <version>1.0</version>
+    <category>programming</category>
+</info>
+
