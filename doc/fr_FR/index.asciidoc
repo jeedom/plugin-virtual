@@ -1,0 +1,10 @@
+== Virtuel
+
+=== Description
+Plugin permetant de creer des périphériques virtuel
+
+=== Configuration
+include::configuration.asciidoc[]
+
+=== Changelog
+include::changelog.asciidoc[]
