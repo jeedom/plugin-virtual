@@ -1,1 +1,1 @@
-image::../images/virtual.JPG[]
+image::../images/virtuel.JPG[]
