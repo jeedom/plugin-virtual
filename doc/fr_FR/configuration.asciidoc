@@ -1,1 +1,11 @@
+Voici le plugin Virtual il permet de créer des équipements virtuels :
+
 image::../images/virtuel.JPG[]
+
+Ce plugin marche comme tous les autres, en haut à droite on peut ajouter un équipement. Ensuite on choisit l’objet parent de l’équipement, s’il est visible et actif.
+
+Vient la création des commandes on peut au choix créer une commande de type :
+
+- Action : commande affectant l’état d’une commande de type info virtuelle. Pour la configuration c’est simple on donne un nom, le sous-type (default, message, slider ou color), puis le nom de la commande info virtuelle que cela affecte (s’il elle n’existe pas elle sera automatiquement créée), et la valeur que ça donne en fonction du sous-type
+- Info : commande de type info virtuelle qui peut être soit modifiée par une commande de type action virtuelle ou être un calcul avec des valeurs d’autres commandes (exemple la moyenne entre tous les capteurs de température de l’appartement)
+Voilà une petite présentation mais c’est un plugin d’une très grande puissance et qui peut être utilisé pour tout et n’importe quoi (ex : je m’en sers pour calculer une commande binaire qui si je suis en-dessous d’une certaine distance passe à vrai pour dire que je suis dans l’appartement, ou pour faire une variable qui indique le mode de l’appartement : jour ou nuit, pour l’ambiance  : aucune, calme….)
