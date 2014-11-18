@@ -1,6 +1,6 @@
 Voici le plugin Virtual il permet de créer des équipements virtuels :
 
-image::../images/virtuel.JPG[]
+image::../images/virtual.JPG[]
 
 Ce plugin marche comme tous les autres, en haut à droite on peut ajouter un équipement. Ensuite on choisit l’objet parent de l’équipement, s’il est visible et actif.
 
