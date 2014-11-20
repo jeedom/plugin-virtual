@@ -3,8 +3,14 @@
 === Description
 Plugin permetant de creer des périphériques virtuel
 
+'''
 === Configuration
 include::configuration.asciidoc[]
 
+'''
+=== FAQ
+include::faq.asciidoc[]
+
+'''
 === Changelog
 include::changelog.asciidoc[]
