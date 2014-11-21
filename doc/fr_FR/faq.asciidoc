@@ -1,2 +1,1 @@
-Quelle est la fréquence de rafraichissement de la météo:::
-Le systeme recupère les informations métérologique toute les 30 min
+
