@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <info>
     <id>virtual</id>
-    <name>Virtual</name>
+    <name>Virtuel</name>
     <description>Plugin pour gerer des équipement virtuel</description>
     <icon>fa fa-tablet</icon>
     <licence>AGPL</licence>
