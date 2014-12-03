@@ -2,7 +2,7 @@
 <info>
     <id>virtual</id>
     <name>Virtuel</name>
-    <description>Plugin pour gerer des équipement virtuel</description>
+    <description>Plugin pour gérer des équipements virtuels</description>
     <icon>fa fa-tablet</icon>
     <licence>AGPL</licence>
     <author>Loïc Gevrey</author>
