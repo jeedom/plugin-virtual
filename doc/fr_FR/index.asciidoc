@@ -1,7 +1,7 @@
 == Virtuel
 
 === Description
-Plugin permetant de creer des périphériques virtuel
+Plugin permettant de créer des périphériques virtuels.
 
 '''
 === Configuration

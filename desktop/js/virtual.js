@@ -18,7 +18,7 @@
 $('#bt_importEqLogic').on('click', function () {
     jeedom.eqLogic.getSelectModal({}, function (result) {
         $.ajax({// fonction permettant de faire de l'ajax
-            type: "POST", // methode de transmission des données au fichier php
+            type: "POST", // méthode de transmission des données au fichier php
             url: "plugins/virtual/core/ajax/virtual.ajax.php", // url du fichier php
             data: {
                 action: "copyFromEqLogic",
@@ -98,7 +98,7 @@ function addCmdToTable(_cmd) {
         tr += '<input class="cmdAttr form-control input-sm" data-l1key="configuration" data-l2key="returnStateValue" placeholder="{{Valeur retour d\'état}}" style="margin : 5px;width : 30%;display : inline-block;">';
         tr += '<input class="cmdAttr form-control input-sm" data-l1key="configuration" data-l2key="returnStateTime" placeholder="{{Durée avant retour d\'état (min)}}" style="margin : 5px;width : 30%;display : inline-block;">';
         tr += '</td>';
-        tr += '<td><input class="cmdAttr form-control input-sm" data-l1key="unite" style="width : 90px;" placeholder="{{Unite}}"></td>';
+        tr += '<td><input class="cmdAttr form-control input-sm" data-l1key="unite" style="width : 90px;" placeholder="{{Unité}}"></td>';
         tr += '<td>';
         tr += '<span><input type="checkbox" class="cmdAttr" data-l1key="isHistorized"/> {{Historiser}}<br/></span>';
         tr += '<span><input type="checkbox" class="cmdAttr" data-l1key="isVisible" checked/> {{Afficher}}<br/></span>';
@@ -137,7 +137,7 @@ function addCmdToTable(_cmd) {
         tr += '<input class="cmdAttr form-control input-sm" data-l1key="name">';
         tr += '</div>';
         tr += '</div>';
-        tr += '<select class="cmdAttr form-control tooltips input-sm" data-l1key="value" style="display : none;margin-top : 5px;margin-right : 10px;" title="{{La valeur de la commande vaut par defaut la commande}}">';
+        tr += '<select class="cmdAttr form-control tooltips input-sm" data-l1key="value" style="display : none;margin-top : 5px;margin-right : 10px;" title="{{La valeur de la commande vaut par défaut la commande}}">';
         tr += '<option value="">Aucune</option>';
         tr += '</select>';
         tr += '</td>';
