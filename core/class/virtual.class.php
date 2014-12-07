@@ -101,6 +101,12 @@ class virtualCmd extends cmd {
     /*     * *********************Methode d'instance************************* */
 
     public function preSave() {
+        if ($this->getConfiguration('virtualAction') == 1) {
+            $actionInfo = virtualCmd::byEqLogicIdCmdName($this->getEqLogic_id(), $this->getName());
+            if (is_object($actionInfo)) {
+                $this->setId($actionInfo->getId());
+            }
+        }
         if ($this->getType() == 'action') {
             if ($this->getConfiguration('infoName') == '') {
                 throw new Exception(__('Le nom de la commande info ne peut etre vide', __FILE__));
