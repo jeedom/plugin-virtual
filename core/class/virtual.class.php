@@ -214,7 +214,7 @@ class virtualCmd extends cmd {
                         $value = $this->getConfiguration('value');
                     }
 
-                    $result = cmd::cmdToValue($value);
+                    $result = jeedom::evaluateExpression($value);
 
                     if (!is_numeric($result)) {
                         try {
