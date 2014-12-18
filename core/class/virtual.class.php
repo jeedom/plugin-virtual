@@ -163,9 +163,8 @@ class virtualCmd extends cmd {
             case 'info':
                 if ($this->getConfiguration('virtualAction', 0) == '0') {
                     try {
-                        $calcul = jeedom::evaluateExpression($this->getConfiguration('calcul'));
-                        $test = new evaluate();
-                        $result = $test->Evaluer($calcul);
+                        $result = jeedom::evaluateExpression($this->getConfiguration('calcul'));
+                        log::add('virtuel', 'debug', $this->getHumanName() . ' => ' . $this->getConfiguration('calcul') . ' = ' . $result);
                         if ($this->getSubType() == 'binary') {
                             if ($result) {
                                 return 1;
