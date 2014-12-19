@@ -183,7 +183,6 @@ class virtualCmd extends cmd {
                                 $result = str_replace(',', '.', $result);
                             }
                         }
-                        log::add('virtuel', 'debug', $this->getHumanName() . ' => ' . $this->getConfiguration('calcul') . ' = ' . cmd::cmdToValue($this->getConfiguration('calcul')) . ' = ' . $result);
                         return $result;
                     } catch (Exception $e) {
                         log::add('virtual', 'info', $e->getMessage());
