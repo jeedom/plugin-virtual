@@ -65,9 +65,10 @@ $("#table_cmd").delegate(".listEquipementInfo", 'click', function () {
 
 $("#table_cmd").delegate(".listEquipementAction", 'click', function () {
     var el = $(this);
-    jeedom.cmd.getSelectModal({cmd: {type: 'action'}}, function (result) {
+    var subtype = $(this).closest('.cmd').find('.cmdAttr[data-l1key=subType]').value();
+    jeedom.cmd.getSelectModal({cmd: {type: 'action', subType: subtype}}, function (result) {
         var calcul = el.closest('tr').find('.cmdAttr[data-l1key=configuration][data-l2key=' + el.attr('data-input') + ']');
-        calcul.value(result.human);
+        calcul.atCaret('insert', result.human);
     });
 });
 

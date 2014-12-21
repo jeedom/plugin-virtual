@@ -193,14 +193,20 @@ class virtualCmd extends cmd {
                 }
                 break;
             case 'action':
-                $cmd = cmd::byId(str_replace('#', '', $this->getConfiguration('infoName')));
-                if (is_object($cmd)) {
-                    return $cmd->execCmd($_options);
-                } else {
-                    $virtualCmd = virtualCmd::byId($this->getConfiguration('infoId'));
-                    if (!is_object($virtualCmd)) {
-                        throw new Exception(__('Virtual info commande non trouvé, verifier ID', __FILE__));
+                $virtualCmd = virtualCmd::byId($this->getConfiguration('infoId'));
+                if (!is_object($virtualCmd)) {
+                    $cmds = explode('&&', $this->getConfiguration('infoName'));
+                    if (is_array($cmds)) {
+                        foreach ($cmds as $cmd_id) {
+                            $cmd = cmd::byId(str_replace('#', '', $cmd_id));
+                            $cmd->execCmd($_options);
+                        }
+                        return;
+                    } else {
+                        $cmd = cmd::byId(str_replace('#', '', $this->getConfiguration('infoName')));
+                        return $cmd->execCmd($_options);
                     }
+                } else {
                     if ($virtualCmd->getEqType() != 'virtual') {
                         throw new Exception(__('La cible de la commande virtuel n\'est pas un équipement de type virtuel', __FILE__));
                     }
@@ -211,7 +217,6 @@ class virtualCmd extends cmd {
                     } else {
                         $value = $this->getConfiguration('value');
                     }
-
                     $result = jeedom::evaluateExpression($value);
 
                     if (!is_numeric($result)) {
