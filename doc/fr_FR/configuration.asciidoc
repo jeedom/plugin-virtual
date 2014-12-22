@@ -1,6 +1,22 @@
-Voici le plugin Virtual qui permet de créer des équipements virtuels :
 
-image::../images/virtual_screenshot1.JPG[]
+
+== Description
+
+Le plugin Virtual (virtuel) permet la création de périphériques virtuels et de leurs propriétés.
+
+Nous nommerons un périquérique créé par ce plugin : périphérique virtuel
+
+Un périphérique virtuel peux être créé pour les besoins suivants :
+
+* consolider dans un seul périphérique des informations ou actions de plusieurspériphériques physiques/virtuels
+* creer un périphérique alimenté par une source externe à Jeedom (zibase, IPX800, ...)
+* autres
+
+== Apercu
+
+image::images/virtual_screenshot1.jpg[width=800,link="images/virtual_screenshot1.jpg"]
+
+== Configuration
 
 Ce plugin fonctionne comme tous les autres : en haut à droite on peut ajouter un équipement. Ensuite on choisit l’objet parent de l’équipement, s’il est visible et actif.
 
@@ -9,3 +25,7 @@ Ensuite vient la création des commandes : on peut au choix créer une commande 
 - Action : commande affectant l’état d’une commande de type info virtuelle. Pour la configuration c’est simple on donne un nom, le sous-type (default, message, slider ou color), puis le nom de la commande info virtuelle qui est affectée (si elle n’existe pas, elle sera automatiquement créée), et enfin la valeur produite en fonction du sous-type.
 - Info : commande de type info virtuelle qui peut être soit modifiée par une commande de type action virtuelle ou être le résultat d'un calcul utilisant des valeurs d’autres commandes (exemple : moyenne entre tous les capteurs de température de l’appartement)
 Voilà une petite présentation mais c’est un plugin d’une très grande puissance et qui peut être utilisé pour tout et n’importe quoi (ex : on peut s'en servir pour calculer une commande binaire qui, si je suis en-dessous d’une certaine distance passe à vrai pour dire que je suis dans l’appartement, ou pour faire une variable qui indique le mode de l’appartement : jour ou nuit, pour l’ambiance  : aucune, calme, ….)
+
+== Tutoriels
+
+https://wiki.jeedom.fr/index.php?title=Tuto-widget-sonde[Tutoriel de création d'un widget ]
