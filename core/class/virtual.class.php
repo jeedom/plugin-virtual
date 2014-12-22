@@ -176,7 +176,7 @@ class virtualCmd extends cmd {
                                 $result = str_replace(',', '.', $result);
                             }
                         }
-                        log::add('virtual', 'debug', $this->getHumanName().' => '.$this->getConfiguration('calcul').'  = '.jeedom::evaluateExpression($this->getConfiguration('calcul')).' = '.$result);
+                        log::add('virtual', 'debug', $this->getHumanName() . ' => ' . cmd::cmdToValue($this->getConfiguration('calcul')) . '  = ' . jeedom::evaluateExpression($this->getConfiguration('calcul')) . ' = ' . $result);
                         return $this->formatValue($result);
                     } catch (Exception $e) {
                         log::add('virtual', 'info', $e->getMessage());
@@ -220,6 +220,9 @@ class virtualCmd extends cmd {
                         } catch (Exception $e) {
                             log::add('virtual', 'info', $e->getMessage());
                         }
+                    }
+                    if ($this->getSubtype() == 'message') {
+                        $result = $_options['title'] . ' ' . $_options['message'];
                     }
                     $virtualCmd->setConfiguration('value', $result);
                     $virtualCmd->save();
