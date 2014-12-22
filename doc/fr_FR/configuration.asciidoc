@@ -14,7 +14,7 @@ Un périphérique virtuel peux être créé pour les besoins suivants :
 
 == Apercu
 
-image::images/virtual_screenshot1.jpg[width=800,link="images/virtual_screenshot1.jpg"]
+image::../images/virtual_screenshot1.jpg[width=800,link="../images/virtual_screenshot1.jpg"]
 
 == Configuration
 
