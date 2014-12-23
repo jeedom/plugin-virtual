@@ -2,3 +2,4 @@ nbproject/
 test.php
 core/config/common.config.php
 plugins
+doc/fr_FR/configuration.wiki
