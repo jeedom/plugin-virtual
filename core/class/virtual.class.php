@@ -176,7 +176,6 @@ class virtualCmd extends cmd {
                                 $result = str_replace(',', '.', $result);
                             }
                         }
-                        log::add('virtual', 'debug', $this->getHumanName() . ' => ' . cmd::cmdToValue($this->getConfiguration('calcul')) . '  = ' . jeedom::evaluateExpression($this->getConfiguration('calcul')) . ' = ' . $this->formatValue($result));
                         return $this->formatValue($result);
                     } catch (Exception $e) {
                         log::add('virtual', 'info', $e->getMessage());
