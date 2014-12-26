@@ -1,0 +1,13 @@
+Le plugin Virtual (virtuel) permet la création de périphériques virtuels et de leurs propriétés.
+
+Nous nommerons un périquérique créé par ce plugin : périphérique virtuel
+
+Un périphérique virtuel peux être créé pour les besoins suivants :
+
+* consolider dans un seul périphérique des informations ou actions de plusieurspériphériques physiques/virtuels
+* creer un périphérique alimenté par une source externe à Jeedom (zibase, IPX800, ...)
+* autres
+
+== Apercu
+
+image::../images/virtual_screenshot1.jpg[width=800,link="../images/virtual_screenshot1.jpg"]
