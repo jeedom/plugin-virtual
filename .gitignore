@@ -3,3 +3,4 @@ test.php
 core/config/common.config.php
 plugins
 sftp-config.json
+doc/fr_FR/configuration.wiki
