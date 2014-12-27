@@ -1,7 +1,3 @@
-Voici le plugin Virtual qui permet de créer des équipements virtuels :
-
-image::../images/virtual_screenshot1.JPG[]
-
 Ce plugin fonctionne comme tous les autres : en haut à droite on peut ajouter un équipement. Ensuite on choisit l’objet parent de l’équipement, s’il est visible et actif.
 
 Ensuite vient la création des commandes : on peut au choix créer une commande de type :
@@ -9,3 +5,35 @@ Ensuite vient la création des commandes : on peut au choix créer une commande 
 - Action : commande affectant l’état d’une commande de type info virtuelle. Pour la configuration c’est simple on donne un nom, le sous-type (default, message, slider ou color), puis le nom de la commande info virtuelle qui est affectée (si elle n’existe pas, elle sera automatiquement créée), et enfin la valeur produite en fonction du sous-type.
 - Info : commande de type info virtuelle qui peut être soit modifiée par une commande de type action virtuelle ou être le résultat d'un calcul utilisant des valeurs d’autres commandes (exemple : moyenne entre tous les capteurs de température de l’appartement)
 Voilà une petite présentation mais c’est un plugin d’une très grande puissance et qui peut être utilisé pour tout et n’importe quoi (ex : on peut s'en servir pour calculer une commande binaire qui, si je suis en-dessous d’une certaine distance passe à vrai pour dire que je suis dans l’appartement, ou pour faire une variable qui indique le mode de l’appartement : jour ou nuit, pour l’ambiance  : aucune, calme, ….)
+
+A chaque ajout d'une commande ou info virtuel, un numéro d'id (colonne #) est créé (le numéro d'id apparait après sauvegarde de la configuration)
+Ce numéro d'ID vous sera nécessaire pour alimenter sa valeur.
+
+Prenons un exemple de création d'une sonde de température alimentée pas un composant externe à Jeedom.
+Dans l'exemple ci-dessous, nous allons créer 4 "info virtelle" pour le température, l'hydrométrie, le niveau de batterie et du signal.
+
+image::../images/virtual_screenshot2.png[width=800,link="../images/virtual_screenshot2.png"]
+
+==== Configuration des options "Info virtuelle"
+
+* Nom : permet de définir le nom de l'info virtuelle.
+* Sous-Type : permet de définir un des sous-type suivants:
+** Numérique : permet de contenir un nombre à 2 décimales (ex 16.1 pour 16,1 °C)
+** Binaire : permet de contenir les valeurs 0 ou 1 (ex pour l'état d'un contact de porte)
+** Autre : permet de contenir tous type de données (aucun controle des données)
+* Calcul : permet de réaliser des opérations (ex \#[Chambre Alyssia][Sonde Alyssia][Temp]#/10 => divise la valeur de la température de la sonde Alyssia par 10 )
+* Recherche equipement : permet la sélection d'un équipement, la fenêtre suivante s'ouvre pour effectuer la sélection:
+
+image::../images/virtual_screenshot3.png[width=800,link="../images/virtual_screenshot3.png"]
+
+* Valeur retour d'état : #A compléter#
+* Durée avant retour d'état (min) : #A compléter#
+* Unité : Permet de définir l'unité (ex °C pour la température). Cette valeur est récupérée et affichée dans les widgets.
+* Paramètres :
+** Historiser : Permet d'historiser les données
+** Afficher : Permet l'affichage ou non dans le widget
+** Evènement seulement : est nécessaire quand mise à jour par un composant externe à Jeedom
+** min et max :  Permet  de définir la valeur minimum et maximum. Ces valeurs sont prisent en comptes pour la mise en forme de certains widgets.
+
+==== Configuration des options "Info virtuelle"
+#A compléter#

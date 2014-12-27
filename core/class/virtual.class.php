@@ -164,26 +164,19 @@ class virtualCmd extends cmd {
                 if ($this->getConfiguration('virtualAction', 0) == '0') {
                     try {
                         $result = jeedom::evaluateExpression($this->getConfiguration('calcul'));
-                        if ($this->getSubType() == 'binary') {
-                            if ($result) {
-                                return 1;
-                            } else {
-                                return 0;
-                            }
-                        }
-                        if (is_numeric($result)) {
-                            $result = number_format($result, 2);
-                        } else {
-                            $result = str_replace('"', '', $result);
-                        }
                         if ($this->getSubType() == 'numeric') {
+                            if (is_numeric($result)) {
+                                $result = number_format($result, 2);
+                            } else {
+                                $result = str_replace('"', '', $result);
+                            }
                             if (strpos($result, '.') !== false) {
                                 $result = str_replace(',', '', $result);
                             } else {
                                 $result = str_replace(',', '.', $result);
                             }
                         }
-                        return $result;
+                        return $this->formatValue($result);
                     } catch (Exception $e) {
                         log::add('virtual', 'info', $e->getMessage());
                         return jeedom::evaluateExpression(str_replace('"', '', cmd::cmdToValue($this->getConfiguration('calcul'))));
@@ -226,6 +219,9 @@ class virtualCmd extends cmd {
                         } catch (Exception $e) {
                             log::add('virtual', 'info', $e->getMessage());
                         }
+                    }
+                    if ($this->getSubtype() == 'message') {
+                        $result = $_options['title'] . ' ' . $_options['message'];
                     }
                     $virtualCmd->setConfiguration('value', $result);
                     $virtualCmd->save();
