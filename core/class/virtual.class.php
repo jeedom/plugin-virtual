@@ -36,8 +36,8 @@ class virtual extends eqLogic {
             if ($virtualCmd->getEqLogic()->getEqType_name() != 'virtual') {
                 throw new Exception(__('La cible de la commande virtuel n\'est pas un équipement de type virtuel', __FILE__));
             }
-            if ($this->getSubType() != 'slider' && $this->getSubType() != 'color') {
-                $value = $this->getConfiguration('value');
+            if ($virtualCmd->getSubType() != 'slider' && $virtualCmd->getSubType() != 'color') {
+                $value = $virtualCmd->getConfiguration('value');
             }
             $virtualCmd->setConfiguration('value', $value);
             $virtualCmd->save();
