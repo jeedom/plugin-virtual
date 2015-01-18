@@ -182,7 +182,7 @@ class virtualCmd extends cmd {
                         return jeedom::evaluateExpression(str_replace('"', '', cmd::cmdToValue($this->getConfiguration('calcul'))));
                     }
                 } else {
-                    return $this->getConfiguration('value');
+                    return trim(trim($this->getConfiguration('value')),'"');
                 }
                 break;
             case 'action':
