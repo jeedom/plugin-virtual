@@ -10,7 +10,10 @@
         "Sous-Type": "Sous-Type",
         "Valeur": "Valeur",
         "Unité": "Unité",
-        "Paramètres": "Paramètres"
+        "Paramètres": "Paramètres",
+        "Ajouter un équipement": "Ajouter un équipement",
+        "Importer équipement": "Importer équipement",
+        "Commentaire": "Commentaire"
     },
     "plugins\/virtual\/desktop\/js\/virtual.js": {
         "Calcul": "Calcul",
@@ -22,6 +25,10 @@
         "Lifetime cache": "Lifetime cache",
         "Tester": "Tester",
         "Nom information": "Nom information",
-        "Valeur": "Valeur"
+        "Valeur": "Valeur",
+        "Valeur retour d\\'état": "Valeur retour d\\'état",
+        "Durée avant retour d\\'état (min)": "Durée avant retour d\\'état (min)",
+        "Inverser": "Inverser",
+        "La valeur de la commande vaut par defaut la commande": "La valeur de la commande vaut par defaut la commande"
     }
 }
