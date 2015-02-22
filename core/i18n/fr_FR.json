@@ -44,5 +44,9 @@
         "La valeur de la commande vaut par défaut la commande": "La valeur de la commande vaut par défaut la commande",
         "Nom information": "Nom information",
         "Valeur": "Valeur"
+    },
+    "plugins\/virtual\/plugin_info\/info.xml": {
+        "Plugin pour gérer des équipements virtuels": "Plugin pour gérer des équipements virtuels",
+        "Aucune": "Aucune"
     }
 }
