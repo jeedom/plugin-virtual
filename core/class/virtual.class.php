@@ -111,6 +111,7 @@ class virtualCmd extends cmd {
 			$cmd = cmd::byId(str_replace('#', '', $this->getConfiguration('infoName')));
 			if (is_object($cmd)) {
 				$this->setSubType($cmd->getSubType());
+				$this->setEventOnly(1);
 			} else {
 				$actionInfo = virtualCmd::byEqLogicIdCmdName($this->getEqLogic_id(), $this->getConfiguration('infoName'));
 				if (!is_object($actionInfo)) {
