@@ -10,4 +10,4 @@ Un périphérique virtuel peut être créé pour les besoins suivants :
 
 *Aperçu*
 
-image::../images/virtual_screenshot1.jpg[width=800,link="../images/virtual_screenshot1.jpg"]
+image::../images/virtual_screenshot1.JPG[width=800,link="../images/virtual_screenshot1.JPG"]
