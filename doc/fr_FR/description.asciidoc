@@ -6,8 +6,8 @@ Un périphérique virtuel peut être créé pour les besoins suivants :
 
 * consolider dans un seul périphérique des informations ou actions de plusieurs périphériques physiques/virtuels
 * créer un périphérique alimenté par une source externe à Jeedom (Zibase, IPX800, ...)
-* autres
+* dupliquer un équipement pour le scinder en 2 par exemple
+* effectuer un calcul sur plusieurs valeur d'équipement
+* exécuter de multiple action (macro)
 
-*Aperçu*
 
-image::../images/virtual_screenshot1.JPG[width=800,link="../images/virtual_screenshot1.JPG"]

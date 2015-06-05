@@ -1,17 +1,11 @@
 :icons:
 == Virtuel
 
-'''
 === Description
 include::description.asciidoc[]
 
 '''
-=== Configuration
 include::configuration.asciidoc[]
-
-'''
-=== Tutoriels
-include::tutoriels.asciidoc[]
 
 '''
 === FAQ
