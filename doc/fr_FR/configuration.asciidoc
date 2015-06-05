@@ -1,6 +1,6 @@
 === Configuration
 
-Le plugin ne nécessite aucune configuration il faut juste l'activer : 
+Le plugin ne nécessite aucune configuration, il faut juste l'activer : 
 
 image::../images/virtual1.png[]
 
@@ -9,23 +9,23 @@ image::../images/virtual1.png[]
 
 La configuration des équipements virtuels est accessible à partir du menu plugin : 
 
-image::../images/virtual2.PNG[]
+image::../images/virtual2.png[]
 
-Voilà à quoi ressemble la page du plugin virtuel (ici avec déja un équipement) : 
+Voilà à quoi ressemble la page du plugin virtuel (ici avec déjà un équipement) : 
 
-image::../images/virtual3.PNG[]
+image::../images/virtual3.png[]
 
-Voila à quoi ressemble la page de configuration d'un équipement virtuel : 
+Voilà à quoi ressemble la page de configuration d'un équipement virtuel : 
 
-image::../images/virtual4.PNG[]
+image::../images/virtual4.png[]
 
 [icon="../images/plugin/tip.png"]
 [TIP]
-Comme à beaucoup d'endroit sur Jeedom, mettre la souris tout à gauche permet de faire apparaître un menu d'accès rapide (vous pouvez à partir de votre profils le laisser toujours visible)
+Comme à beaucoup d'endroits sur Jeedom, mettre la souris tout à gauche permet de faire apparaître un menu d'accès rapide (vous pouvez à partir de votre profil le laisser toujours visible).
 
 Vous retrouvez ici toute la configuration de votre équipement : 
 
-* *Nom de l'équipement PushingBox* : nom de votre équipement PushingBox
+* *Nom de l'équipement virtuel* : nom de votre équipement virtuel
 * *Objet parent* : indique l'objet parent auquel appartient l'équipement
 * *Catégorie* : les catégories de l'équipement (il peut appartenir à plusieurs catégories)
 * *Activer* : permet de rendre votre équipement actif
@@ -36,9 +36,9 @@ En haut à droite vous avez accès à 3 boutons :
 
 * *Importer équipement* : permet de dupliquer un équipement existant dans un virtuel automatiquement (permet de gagner du temps pour scinder un équipement en 2 par exemple)
 * *Dupliquer* : permet de dupliquer l'équipement courant
-* *Avancé (roues crantées)* : permet d'afficher les options avancé de l'équipement (commun à tous les plugins Jeedom)
+* *Avancée (roues crantées)* : permet d'afficher les options avancées de l'équipement (commun à tous les plugins Jeedom)
 
-En dessous vous retrouvez la liste des commandes : 
+En-dessous vous retrouvez la liste des commandes : 
 
 * le nom affiché sur le dashboard
 * le type et le sous-type
@@ -56,70 +56,70 @@ En dessous vous retrouvez la liste des commandes :
 
 === Interrupteur virtuel
 
-Pour faire un interrupteur virtuel il vous faut ajouter 2 commandes virtuel comme cela : 
+Pour faire un interrupteur virtuel, il vous faut ajouter 2 commandes virtuelles comme cela : 
 
 image::../images/virtual5.png[]
 
-Puis vous sauvegardez et la Jeedom va automatiquement ajouter la commande d'information virtuel : 
+Puis vous sauvegardez, et là Jeedom va automatiquement ajouter la commande d'information virtuelle : 
 
 image::../images/virtual6.png[]
 
-Ajouter dans les commandes action On et Off la commande Etat (ca permet à jeedom de faire le lien avec la commande état).
+Ajoutez dans les commandes "action" On et Off la commande Etat (ça permet à jeedom de faire le lien avec la commande état).
 
-Pour aovir un jolie widget il vous faut masquer la commande d'état : 
+Pour aovir un joli widget, il vous faut masquer la commande d'état : 
 
 image::../images/virtual7.png[]
 
-Et affecter un widget qui gere le retour d'état au 2 commandes d'actions, par exemple ici le widget light, pour se faire cliquez sur la petite roue cranté en face de la commande On et dans le 2eme onglet selectionnez light en widget : 
+Et affectez un widget qui gère le retour d'état aux 2 commandes d'action, par exemple ici le widget light. Pour ce faire cliquez sur la petite roue crantée en face de la commande On et dans le 2ème onglet sélectionnez light en widget : 
 
 image::../images/virtual8.png[]
 
-Enregistrez et faite de meme pour la commande off. Et vous obtiendrez un jolie widget qui lors d'un clique changera d'état : 
+Enregistrez et faites de même pour la commande off. Et vous obtiendrez un joli widget qui lors d'un clic changera d'état : 
 
 image::../images/virtual9.png[]
 
 === Slider virtuel
 
-Pour faire un slider virtuel il faut ajouter une commande virtuel comme cela : 
+Pour faire un slider virtuel il faut ajouter une commande virtuelle comme cela : 
 
 image::../images/virtual12.png[]
 
-Comme tout a l'heure après la sauvegarde Jeedom va automatiquement creer la commande info :
+Comme tout à l'heure après la sauvegarde Jeedom va automatiquement créer la commande info :
 
 image::../images/virtual13.png[]
 
-Et comme tout l'heure il est conseillé de liée l'action à la commande d'état et de masquer celle-ci
+Et comme tout à l'heure il est conseillé de lier l'action à la commande d'état et de masquer celle-ci.
 
 === Interrupteur de type toggle
 
-Voila comment faire un interrupteur de type toggle, pour cela il faut creer une commande virtuel de ce type : 
+Voilà comment faire un interrupteur de type toggle, pour cela il faut créer une commande virtuelle de ce type : 
 
 image::../images/virtual14.png[]
 
-Ensuite vous sauvegardez pour voir apparaitre la commande d'état : 
+Ensuite vous sauvegardez pour voir apparaître la commande d'état : 
 
 image::../images/virtual14.png[]
 
-Ici il faut dans la valeur de la commande action mettre not(commande_etat) et liée l'état à la commande action (attention il ne faut pas masquer la commande etat cette fois). Il faut aussi passer la commande info en sous-type binaire
+Ici il faut dans la valeur de la commande action mettre not(commande_etat) et lier l'état à la commande action (attention il ne faut pas masquer la commande état cette fois). Il faut aussi passer la commande info en sous-type binaire.
 
 === Calcul
 
-Pour faire un calcul sur de multiple widget c'est très facile il suffit de creer une commande de type information virtuelle et dans le champs valeur, par exemple, pour faire la moyenne de 2 températures : 
+Pour faire un calcul sur de multiple commandes, c'est très facile ! Il suffit de créer une commande de type information virtuelle et dans le champs valeur mettre vos calculs. Par exemple, pour faire la moyenne de 2 températures : 
 
 image::../images/virtual10.png[]
 
 Plusieurs points à bien faire : 
 
-* Bien choisir le sous type en fonction du type d'information (ici calcul de moyenne donc c'est un numérique)
-* Mettre des parenthèses dans les calculs ca permet d'etre sur du résultat de l'opération
+* Bien choisir le sous-type en fonction du type d'information (ici calcul de moyenne donc c'est un numérique)
+* Mettre des parenthèses dans les calculs, ça permet d'être sûr du résultat de l'opération
 * Bien mettre l'unité
-* Cocher la case pour historiser si necessaire
-* Il est conseillé de cocher la case "évènement seulement", ca permet de reduire la charge de jeedom et d'avoir vraiment une actualisation en temps reel
+* Cocher la case pour historiser si nécessaire
+* Il est conseillé de cocher la case "évènement seulement", ça permet de reduire la charge de Jeedom et d'avoir vraiment une actualisation en temps réel.
 
 === Multiple commandes
 
-Nous allons voir ici comment faire une commande qui va eteindre 2 lumieres, rien de plus simple il suffit de créée une commande virtuel et de mettre les 2 commandes séparée par un && : 
+Nous allons voir ici comment faire une commande qui va éteindre 2 lumières. Rien de plus simple, il suffit de créer une commande virtuelle et de mettre les 2 commandes séparées par un && : 
 
 image::../images/virtual11.png[]
 
-Ici il faut bien que le sous type de la commande soit le meme que les sous type des commandes pilotées, donc toutes les commandes dans le champs valeur doivent avoir le meme sous type (toute autre, ou toute slider ou toute de type couleur)
+Ici, il faut bien que le sous-type de la commande soit le même que les sous-types des commandes pilotées, donc toutes les commandes dans le champs valeur doivent avoir le même sous-type (toutes "autre", ou toutes "slider", ou toutes de type couleur)
