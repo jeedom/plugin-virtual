@@ -25,33 +25,33 @@ Comme à beaucoup d'endroits sur Jeedom, mettre la souris tout à gauche permet 
 
 Vous retrouvez ici toute la configuration de votre équipement : 
 
-* *Nom de l'équipement virtuel* : nom de votre équipement virtuel
-* *Objet parent* : indique l'objet parent auquel appartient l'équipement
-* *Catégorie* : les catégories de l'équipement (il peut appartenir à plusieurs catégories)
-* *Activer* : permet de rendre votre équipement actif
-* *Visible* : le rend visible sur le dashboard
-* *Commentaire* : vous permet de mettre des commentaires sur l'équipement
+* *Nom de l'équipement virtuel* : nom de votre équipement virtuel,
+* *Objet parent* : indique l'objet parent auquel appartient l'équipement,
+* *Catégorie* : les catégories de l'équipement (il peut appartenir à plusieurs catégories),
+* *Activer* : permet de rendre votre équipement actif,
+* *Visible* : le rend visible sur le dashboard,
+* *Commentaire* : vous permet de mettre des commentaires sur l'équipement.
 
 En haut à droite vous avez accès à 3 boutons : 
 
-* *Importer équipement* : permet de dupliquer un équipement existant dans un virtuel automatiquement (permet de gagner du temps pour scinder un équipement en 2 par exemple)
-* *Dupliquer* : permet de dupliquer l'équipement courant
-* *Avancée (roues crantées)* : permet d'afficher les options avancées de l'équipement (commun à tous les plugins Jeedom)
+* *Importer équipement* : permet de dupliquer un équipement existant dans un virtuel automatiquement (permet de gagner du temps pour scinder un équipement en 2 par exemple),
+* *Dupliquer* : permet de dupliquer l'équipement courant,
+* *Avancée (roues crantées)* : permet d'afficher les options avancées de l'équipement (commun à tous les plugins Jeedom).
 
 En-dessous vous retrouvez la liste des commandes : 
 
-* le nom affiché sur le dashboard
-* le type et le sous-type
-* la valeur : permet de donner la valeur de la commande en fonction d'une autre commande, d'une clef (cas quand on fait un interrupteur virtuel), d'un calcul....
-* "Valeur de retour d'état" et "Durée avant retour d'état" : permet d'indiquer à Jeedom qu'après un changement sur l'information sa valeur doit revenir à Y, X min après le changement. Exemple : dans le cas d'un détecteur de présence qui n'émet que lors d'une détection de présence, il est utile de mettre par exemple 0 en valeur et 4 en durée, pour que 4 min après une détection de mouvement (et s'il n'y a en pas eu de nouvelles depuis) Jeedom remette la valeur de l'information à 0 (plus de mouvement détecté)
-* unité : unité de la donnée (peut être vide)
-* historiser : permet d'historiser la donnée
-* afficher : permet d'afficher la donnée sur le dashboard
-* évènement : dans le cas du RFXcom cette case doit toujours être cochée car on ne peut pas interroger un module RFXcom
-* min/max : bornes de la donnée (peuvent être vides)
-* configuration avancée (petites roues crantées) : permet d'afficher la configuration avancée de la commande (méthode d'historisation, widget...)
-* Tester : permet de tester la commande
-* supprimer (signe -) : permet de supprimer la commande
+* le nom affiché sur le dashboard,
+* le type et le sous-type,
+* la valeur : permet de donner la valeur de la commande en fonction d'une autre commande, d'une clef (cas quand on fait un interrupteur virtuel), d'un calcul...,
+* "Valeur de retour d'état" et "Durée avant retour d'état" : permet d'indiquer à Jeedom qu'après un changement sur l'information sa valeur doit revenir à Y, X min après le changement. Exemple : dans le cas d'un détecteur de présence qui n'émet que lors d'une détection de présence, il est utile de mettre par exemple 0 en valeur et 4 en durée, pour que 4 min après une détection de mouvement (et s'il n'y a en pas eu de nouvelles depuis) Jeedom remette la valeur de l'information à 0 (plus de mouvement détecté),
+* unité : unité de la donnée (peut être vide),
+* historiser : permet d'historiser la donnée,
+* afficher : permet d'afficher la donnée sur le dashboard,
+* évènement : dans le cas du RFXcom cette case doit toujours être cochée car on ne peut pas interroger un module RFXcom,
+* min/max : bornes de la donnée (peuvent être vides),
+* configuration avancée (petites roues crantées) : permet d'afficher la configuration avancée de la commande (méthode d'historisation, widget...),
+* "Tester" : permet de tester la commande,
+* supprimer (signe -) : permet de supprimer la commande.
 
 
 === Interrupteur virtuel
@@ -64,27 +64,27 @@ Puis vous sauvegardez, et là Jeedom va automatiquement ajouter la commande d'in
 
 image::../images/virtual6.png[]
 
-Ajoutez dans les commandes "action" On et Off la commande Etat (ça permet à jeedom de faire le lien avec la commande état).
+Ajoutez dans les commandes "action" `On` et `Off` la commande `Etat` (cela permet à Jeedom de faire le lien avec la commande état).
 
-Pour aovir un joli widget, il vous faut masquer la commande d'état : 
+Pour avoir un joli widget, il vous faut masquer la commande d'état : 
 
 image::../images/virtual7.png[]
 
-Et affectez un widget qui gère le retour d'état aux 2 commandes d'action, par exemple ici le widget light. Pour ce faire cliquez sur la petite roue crantée en face de la commande On et dans le 2ème onglet sélectionnez light en widget : 
+Et affectez un widget qui gère le retour d'état aux 2 commandes d'action, par exemple ici le widget light. Pour ce faire cliquez sur la petite roue crantée en face de la commande `On` et dans le 2ème onglet sélectionnez `light` comme widget : 
 
 image::../images/virtual8.png[]
 
-Enregistrez et faites de même pour la commande off. Et vous obtiendrez un joli widget qui lors d'un clic changera d'état : 
+Enregistrez et faites de même pour la commande `Off`. Et vous obtiendrez un joli widget qui changera d'état lors d'un clic : 
 
 image::../images/virtual9.png[]
 
 === Slider virtuel
 
-Pour faire un slider virtuel il faut ajouter une commande virtuelle comme cela : 
+Pour faire un slider virtuel, il faut ajouter une commande virtuelle comme cela : 
 
 image::../images/virtual12.png[]
 
-Comme tout à l'heure après la sauvegarde Jeedom va automatiquement créer la commande info :
+Comme tout à l'heure après la sauvegarde, Jeedom va automatiquement créer la commande info :
 
 image::../images/virtual13.png[]
 
@@ -100,7 +100,7 @@ Ensuite vous sauvegardez pour voir apparaître la commande d'état :
 
 image::../images/virtual14.png[]
 
-Ici il faut dans la valeur de la commande action mettre not(commande_etat) et lier l'état à la commande action (attention il ne faut pas masquer la commande état cette fois). Il faut aussi passer la commande info en sous-type binaire.
+Ici il faut dans la valeur de la commande action mettre `not(commande_etat)` et lier l'état à la commande action (attention il ne faut pas masquer la commande état cette fois). Il faut aussi passer la commande info en sous-type binaire.
 
 === Calcul
 
@@ -110,16 +110,16 @@ image::../images/virtual10.png[]
 
 Plusieurs points à bien faire : 
 
-* Bien choisir le sous-type en fonction du type d'information (ici calcul de moyenne donc c'est un numérique)
-* Mettre des parenthèses dans les calculs, ça permet d'être sûr du résultat de l'opération
-* Bien mettre l'unité
-* Cocher la case pour historiser si nécessaire
+* Bien choisir le sous-type en fonction du type d'information (ici calcul de moyenne donc c'est un numérique),
+* Mettre des parenthèses dans les calculs, ça permet d'être sûr du résultat de l'opération,
+* Bien mettre l'unité,
+* Cocher la case pour historiser si nécessaire,
 * Il est conseillé de cocher la case "évènement seulement", ça permet de reduire la charge de Jeedom et d'avoir vraiment une actualisation en temps réel.
 
 === Multiple commandes
 
-Nous allons voir ici comment faire une commande qui va éteindre 2 lumières. Rien de plus simple, il suffit de créer une commande virtuelle et de mettre les 2 commandes séparées par un && : 
+Nous allons voir ici comment faire une commande qui va éteindre 2 lumières. Rien de plus simple, il suffit de créer une commande virtuelle et de mettre les 2 commandes séparées par un `&&` : 
 
 image::../images/virtual11.png[]
 
-Ici, il faut bien que le sous-type de la commande soit le même que les sous-types des commandes pilotées, donc toutes les commandes dans le champs valeur doivent avoir le même sous-type (toutes "autre", ou toutes "slider", ou toutes de type couleur)
+Ici, il faut bien que le sous-type de la commande soit le même que les sous-types des commandes pilotées, donc toutes les commandes dans le champs valeur doivent avoir le même sous-type (toutes "autre", ou toutes "slider", ou toutes de type couleur).
