@@ -5,9 +5,9 @@ Nous nommerons un périquérique créé par ce plugin : périphérique virtuel.
 Un périphérique virtuel peut être créé pour les besoins suivants :
 
 * consolider dans un seul périphérique des informations ou actions de plusieurs périphériques physiques/virtuels ;
-* créer un périphérique alimenté par une source externe à Jeedom (Zibase, IPX800, ...) ;
+* créer un périphérique alimenté par une source externe à Jeedom (Zibase, IPX800...) ;
 * dupliquer un équipement pour le scinder en 2 par exemple ;
 * effectuer un calcul sur plusieurs valeurs d'équipement ;
-* exécuter de multiple actions (macro).
+* exécuter de multiples actions (macro).
 
 
