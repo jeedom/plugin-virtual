@@ -168,7 +168,7 @@ class virtualCmd extends cmd {
 								$result = str_replace(',', '.', $result);
 							}
 						}
-						return $this->formatValue($result);
+						return $result;
 					} catch (Exception $e) {
 						log::add('virtual', 'info', $e->getMessage());
 						return jeedom::evaluateExpression(str_replace('"', '', cmd::cmdToValue($this->getConfiguration('calcul'))));
