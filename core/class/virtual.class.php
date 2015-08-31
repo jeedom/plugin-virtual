@@ -182,7 +182,9 @@ class virtualCmd extends cmd {
 					if (is_array($cmds)) {
 						foreach ($cmds as $cmd_id) {
 							$cmd = cmd::byId(str_replace('#', '', $cmd_id));
-							$cmd->execCmd($_options);
+							if (is_object($cmd)) {
+								$cmd->execCmd($_options);
+							}
 						}
 						return;
 					} else {
