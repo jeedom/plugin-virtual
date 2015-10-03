@@ -130,7 +130,7 @@ Lors de l'utilisation d'un équipement qui ne possède pas de retour d'état et 
 
 image::../images/virtual16.png[]
 
-Il faut mettre le nom de la commande info créée précédemment dans la case "Nom Information" de chaque commande et mettre dans la case valeur la commande multiple : _Valeur-Info_ && _Action-Equip_.
+Il faut mettre le nom de la commande info créée précédemment dans la case "Nom Information" de chaque commande et mettre dans la case valeur la commande multiple : _Valeur-Info_ `&&` _Action-Equip_.
 
 == Affectation d'une valeur par API
 
