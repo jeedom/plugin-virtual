@@ -97,7 +97,7 @@ class virtualCmd extends cmd {
 
 	/*     * *********************Methode d'instance************************* */
 
-	public function preSave() {
+	public function postAjax() {
 		if ($this->getConfiguration('virtualAction') == 1) {
 			$actionInfo = virtualCmd::byEqLogicIdCmdName($this->getEqLogic_id(), $this->getName());
 			if (is_object($actionInfo)) {
