@@ -97,7 +97,7 @@ class virtualCmd extends cmd {
 
 	/*     * *********************Methode d'instance************************* */
 
-	public function postAjax() {
+	public function preSave() {
 		if ($this->getConfiguration('virtualAction') == 1) {
 			$actionInfo = virtualCmd::byEqLogicIdCmdName($this->getEqLogic_id(), $this->getName());
 			if (is_object($actionInfo)) {
@@ -117,7 +117,15 @@ class virtualCmd extends cmd {
 				if (!is_object($actionInfo)) {
 					$actionInfo = new virtualCmd();
 					$actionInfo->setType('info');
-					$actionInfo->setSubType('string');
+					switch ($this->getSubType()) {
+						case 'slider':
+							$actionInfo->setSubType('numeric');
+							break;
+						default:
+							$actionInfo->setSubType('string');
+							break;
+					}
+
 					$actionInfo->setCache('enable', 0);
 				}
 				$actionInfo->setEventOnly(1);
