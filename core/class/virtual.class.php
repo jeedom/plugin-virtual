@@ -140,7 +140,7 @@ class virtualCmd extends cmd {
 			if (strpos($this->getConfiguration('calcul'), '#' . $this->getId() . '#') !== false) {
 				throw new Exception(__('Vous ne pouvez faire un calcul sur la valeur elle meme (boucle infinie)!!!', __FILE__));
 			}
-
+			$this->setEventOnly(1);
 			$this->setConfiguration('calcul', $calcul);
 			preg_match_all("/#([0-9]*)#/", $calcul, $matches);
 			$value = '';
