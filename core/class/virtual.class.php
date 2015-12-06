@@ -157,6 +157,12 @@ class virtualCmd extends cmd {
 		}
 	}
 
+	public function postSave() {
+		if ($this->getType() == 'info' && $this->getConfiguration('virtualAction', 0) == '0') {
+			$this->event($this->execute());
+		}
+	}
+
 	public function execute($_options = null) {
 		switch ($this->getType()) {
 			case 'info':
