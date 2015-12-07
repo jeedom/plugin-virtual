@@ -47,6 +47,32 @@ class virtual extends eqLogic {
 		$cmd->event($value);
 	}
 
+	public static function cron() {
+		foreach (eqLogic::byType('virtual') as $eqLogic) {
+			$autorefresh = $eqLogic->getConfiguration('autorefresh');
+			if ($eqLogic->getIsEnable() == 1 && $autorefresh != '') {
+				try {
+					$c = new Cron\CronExpression($autorefresh, new Cron\FieldFactory);
+					if ($c->isDue()) {
+						try {
+							foreach ($eqLogic->getCmd('info') as $cmd) {
+								$value = $cmd->execute();
+								if ($cmd->execCmd() != $cmd->formatValue($value)) {
+									$cmd->setCollectDate('');
+									$cmd->event($value);
+								}
+							}
+						} catch (Exception $exc) {
+							log::add('virtual', 'error', __('Erreur pour ', __FILE__) . $eqLogic->getHumanName() . ' : ' . $exc->getMessage());
+						}
+					}
+				} catch (Exception $exc) {
+					log::add('virtual', 'error', __('Expression cron non valide pour ', __FILE__) . $eqLogic->getHumanName() . ' : ' . $autorefresh);
+				}
+			}
+		}
+	}
+
 	/*     * *********************Methode d'instance************************* */
 
 	public function copyFromEqLogic($_eqLogic_id) {
@@ -159,12 +185,6 @@ class virtualCmd extends cmd {
 
 	public function postSave() {
 		if ($this->getType() == 'info' && $this->getConfiguration('virtualAction', 0) == '0') {
-			$this->event($this->execute());
-		}
-	}
-
-	public function postSave() {
-		if ($this->getType() == 'info') {
 			$this->event($this->execute());
 		}
 	}

@@ -15,7 +15,7 @@
  * along with Jeedom. If not, see <http://www.gnu.org/licenses/>.
  */
 
-$('#bt_importEqLogic').on('click', function () {
+ $('#bt_importEqLogic').on('click', function () {
     jeedom.eqLogic.getSelectModal({}, function (result) {
         $.ajax({// fonction permettant de faire de l'ajax
             type: "POST", // méthode de transmission des données au fichier php
@@ -31,13 +31,19 @@ $('#bt_importEqLogic').on('click', function () {
                 handleAjaxError(request, status, error);
             },
             success: function (data) { // si l'appel a bien fonctionné
-                if (data.state != 'ok') {
-                    $('#div_alert').showAlert({message: data.result, level: 'danger'});
-                    return;
-                }
-                $('#ul_eqLogic .li_eqLogic.active').click();
+            if (data.state != 'ok') {
+                $('#div_alert').showAlert({message: data.result, level: 'danger'});
+                return;
             }
-        });
+            $('#ul_eqLogic .li_eqLogic.active').click();
+        }
+    });
+    });
+});
+
+$('#bt_cronGenerator').on('click',function(){
+    jeedom.getCronSelectModal({},function (result) {
+        $('.eqLogicAttr[data-l1key=configuration][data-l2key=autorefresh]').value(result.value);
     });
 });
 
