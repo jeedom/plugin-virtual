@@ -124,6 +124,9 @@ class virtualCmd extends cmd {
 	/*     * *********************Methode d'instance************************* */
 
 	public function preSave() {
+		if ($this->getType() == 'info') {
+			$this->setEventOnly(1);
+		}
 		if ($this->getConfiguration('virtualAction') == 1) {
 			$actionInfo = virtualCmd::byEqLogicIdCmdName($this->getEqLogic_id(), $this->getName());
 			if (is_object($actionInfo)) {
@@ -154,7 +157,6 @@ class virtualCmd extends cmd {
 
 					$actionInfo->setCache('enable', 0);
 				}
-				$actionInfo->setEventOnly(1);
 				$actionInfo->setConfiguration('virtualAction', 1);
 				$actionInfo->setName($this->getConfiguration('infoName'));
 				$actionInfo->setEqLogic_id($this->getEqLogic_id());
@@ -166,7 +168,6 @@ class virtualCmd extends cmd {
 			if (strpos($calcul, '#' . $this->getId() . '#') !== false) {
 				throw new Exception(__('Vous ne pouvez faire un calcul sur la valeur elle meme (boucle infinie)!!!', __FILE__));
 			}
-			$this->setEventOnly(1);
 			preg_match_all("/#([0-9]*)#/", $calcul, $matches);
 			$value = '';
 			foreach ($matches[1] as $cmd_id) {
