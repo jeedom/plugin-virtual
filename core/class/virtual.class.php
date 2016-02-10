@@ -211,7 +211,7 @@ class virtualCmd extends cmd {
 						return $result;
 					} catch (Exception $e) {
 						log::add('virtual', 'info', $e->getMessage());
-						return jeedom::evaluateExpression(str_replace('"', '', cmd::cmdToValue($this->getConfiguration('calcul'))));
+						return jeedom::evaluateExpression($this->getConfiguration('calcul'));
 					}
 				}
 				break;
