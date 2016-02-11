@@ -56,6 +56,9 @@ class virtual extends eqLogic {
 					if ($c->isDue()) {
 						try {
 							foreach ($eqLogic->getCmd('info') as $cmd) {
+								if ($cmd->getConfiguration('calcul') == '') {
+									continue;
+								}
 								$value = $cmd->execute();
 								if ($cmd->execCmd() != $cmd->formatValue($value)) {
 									$cmd->setCollectDate('');
