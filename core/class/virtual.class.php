@@ -157,8 +157,6 @@ class virtualCmd extends cmd {
 							$actionInfo->setSubType('string');
 							break;
 					}
-
-					$actionInfo->setCache('enable', 0);
 				}
 				$actionInfo->setConfiguration('virtualAction', 1);
 				$actionInfo->setName($this->getConfiguration('infoName'));
