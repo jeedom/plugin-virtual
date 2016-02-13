@@ -27,7 +27,7 @@ class virtual extends eqLogic {
 	public static function event() {
 		$cmd = virtualCmd::byId(init('id'));
 		if (!is_object($cmd) || $cmd->getEqType() != 'virtual') {
-			throw new Exception('Commande ID virtuel inconnu : ' . init('id'));
+			throw new Exception(__('Commande ID virtuel inconnu, ou la commande n\'est pas de type virtuel : ', __FILE__) . init('id'));
 		}
 		$cmd->event(init('value'));
 	}
