@@ -26,25 +26,10 @@ class virtual extends eqLogic {
 
 	public static function event() {
 		$cmd = virtualCmd::byId(init('id'));
-		if (!is_object($cmd)) {
+		if (!is_object($cmd) || $cmd->getEqType() != 'virtual') {
 			throw new Exception('Commande ID virtuel inconnu : ' . init('id'));
 		}
-		$value = init('value');
-		$virtualCmd = virtualCmd::byId($cmd->getConfiguration('infoId'));
-		if (is_object($virtualCmd)) {
-			if ($virtualCmd->getEqLogic()->getEqType_name() != 'virtual') {
-				throw new Exception(__('La cible de la commande virtuel n\'est pas un équipement de type virtuel', __FILE__));
-			}
-			if ($virtualCmd->getSubType() != 'slider' && $virtualCmd->getSubType() != 'color') {
-				$value = $virtualCmd->getConfiguration('value');
-			}
-			$virtualCmd->setConfiguration('value', $value);
-			$virtualCmd->save();
-		} else {
-			$cmd->setConfiguration('value', $value);
-			$cmd->save();
-		}
-		$cmd->event($value);
+		$cmd->event(init('value'));
 	}
 
 	public static function cron() {
