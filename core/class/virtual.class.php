@@ -91,7 +91,6 @@ class virtual extends eqLogic {
 			if ($cmd->getType() == 'info') {
 				$cmd->setConfiguration('calcul', '#' . $cmd_def->getId() . '#');
 				$cmd->setValue($cmd_def->getId());
-				$cmd->setEventOnly(1);
 			} else {
 				$cmd->setValue($cmd_def->getValue());
 				$cmd->setConfiguration('infoName', '#' . $cmd_def->getId() . '#');
@@ -112,9 +111,6 @@ class virtualCmd extends cmd {
 	/*     * *********************Methode d'instance************************* */
 
 	public function preSave() {
-		if ($this->getType() == 'info') {
-			$this->setEventOnly(1);
-		}
 		if ($this->getConfiguration('virtualAction') == 1) {
 			$actionInfo = virtualCmd::byEqLogicIdCmdName($this->getEqLogic_id(), $this->getName());
 			if (is_object($actionInfo)) {
@@ -128,7 +124,6 @@ class virtualCmd extends cmd {
 			$cmd = cmd::byId(str_replace('#', '', $this->getConfiguration('infoName')));
 			if (is_object($cmd)) {
 				$this->setSubType($cmd->getSubType());
-				$this->setEventOnly(1);
 			} else {
 				$actionInfo = virtualCmd::byEqLogicIdCmdName($this->getEqLogic_id(), $this->getConfiguration('infoName'));
 				if (!is_object($actionInfo)) {
