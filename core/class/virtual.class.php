@@ -41,7 +41,7 @@ class virtual extends eqLogic {
 					if ($c->isDue()) {
 						try {
 							foreach ($eqLogic->getCmd('info') as $cmd) {
-								if ($cmd->getConfiguration('calcul') == '') {
+								if ($cmd->getConfiguration('calcul') == '' || $cmd->getConfiguration('virtualAction', 0) != '0') {
 									continue;
 								}
 								$value = $cmd->execute();
