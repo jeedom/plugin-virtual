@@ -41,27 +41,27 @@
     });
 });
 
-$('#bt_cronGenerator').on('click',function(){
+ $('#bt_cronGenerator').on('click',function(){
     jeedom.getCronSelectModal({},function (result) {
         $('.eqLogicAttr[data-l1key=configuration][data-l2key=autorefresh]').value(result.value);
     });
 });
 
-$("#bt_addVirtualInfo").on('click', function (event) {
+ $("#bt_addVirtualInfo").on('click', function (event) {
     var _cmd = {type: 'info'};
     addCmdToTable(_cmd);
 });
 
-$("#bt_addVirtualAction").on('click', function (event) {
+ $("#bt_addVirtualAction").on('click', function (event) {
     var _cmd = {type: 'action'};
     addCmdToTable(_cmd);
 });
 
-$('#table_cmd tbody').delegate('tr .remove', 'click', function (event) {
+ $('#table_cmd tbody').delegate('tr .remove', 'click', function (event) {
     $(this).closest('tr').remove();
 });
 
-$("#table_cmd").delegate(".listEquipementInfo", 'click', function () {
+ $("#table_cmd").delegate(".listEquipementInfo", 'click', function () {
     var el = $(this);
     jeedom.cmd.getSelectModal({cmd: {type: 'info'}}, function (result) {
         var calcul = el.closest('tr').find('.cmdAttr[data-l1key=configuration][data-l2key=' + el.data('input') + ']');
@@ -69,7 +69,7 @@ $("#table_cmd").delegate(".listEquipementInfo", 'click', function () {
     });
 });
 
-$("#table_cmd").delegate(".listEquipementAction", 'click', function () {
+ $("#table_cmd").delegate(".listEquipementAction", 'click', function () {
     var el = $(this);
     var subtype = $(this).closest('.cmd').find('.cmdAttr[data-l1key=subType]').value();
     jeedom.cmd.getSelectModal({cmd: {type: 'action', subType: subtype}}, function (result) {
@@ -78,20 +78,20 @@ $("#table_cmd").delegate(".listEquipementAction", 'click', function () {
     });
 });
 
-$("#table_cmd").sortable({axis: "y", cursor: "move", items: ".cmd", placeholder: "ui-state-highlight", tolerance: "intersect", forcePlaceholderSize: true});
+ $("#table_cmd").sortable({axis: "y", cursor: "move", items: ".cmd", placeholder: "ui-state-highlight", tolerance: "intersect", forcePlaceholderSize: true});
 
-function addCmdToTable(_cmd) {
+ function addCmdToTable(_cmd) {
     if (!isset(_cmd)) {
         var _cmd = {configuration: {}};
     }
     if (!isset(_cmd.configuration)) {
         _cmd.configuration = {};
     }
-    if (_cmd.logicalId == 'refresh') {
+    if (init(_cmd.logicalId) == 'refresh') {
        return;
-    }
+   }
 
-    if (init(_cmd.type) == 'info') {
+   if (init(_cmd.type) == 'info') {
        var disabled = (init(_cmd.configuration.virtualAction) == '1') ? 'disabled' : '';
        var tr = '<tr class="cmd" data-cmd_id="' + init(_cmd.id) + '" virtualAction="' + init(_cmd.configuration.virtualAction) + '">';
        tr += '<td>';
