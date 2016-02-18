@@ -39,20 +39,7 @@ class virtual extends eqLogic {
 				try {
 					$c = new Cron\CronExpression($autorefresh, new Cron\FieldFactory);
 					if ($c->isDue()) {
-						try {
-							foreach ($eqLogic->getCmd('info') as $cmd) {
-								if ($cmd->getConfiguration('calcul') == '' || $cmd->getConfiguration('virtualAction', 0) != '0') {
-									continue;
-								}
-								$value = $cmd->execute();
-								if ($cmd->execCmd() != $cmd->formatValue($value)) {
-									$cmd->setCollectDate('');
-									$cmd->event($value);
-								}
-							}
-						} catch (Exception $exc) {
-							log::add('virtual', 'error', __('Erreur pour ', __FILE__) . $eqLogic->getHumanName() . ' : ' . $exc->getMessage());
-						}
+						$eqLogic->refresh();
 					}
 				} catch (Exception $exc) {
 					log::add('virtual', 'error', __('Expression cron non valide pour ', __FILE__) . $eqLogic->getHumanName() . ' : ' . $autorefresh);
@@ -62,6 +49,36 @@ class virtual extends eqLogic {
 	}
 
 	/*     * *********************Methode d'instance************************* */
+	public function refresh() {
+		try {
+			foreach ($this->getCmd('info') as $cmd) {
+				if ($cmd->getConfiguration('calcul') == '' || $cmd->getConfiguration('virtualAction', 0) != '0') {
+					continue;
+				}
+				$value = $cmd->execute();
+				if ($cmd->execCmd() != $cmd->formatValue($value)) {
+					$cmd->setCollectDate('');
+					$cmd->event($value);
+				}
+			}
+		} catch (Exception $exc) {
+			log::add('virtual', 'error', __('Erreur pour ', __FILE__) . $eqLogic->getHumanName() . ' : ' . $exc->getMessage());
+		}
+	}
+
+	public function postSave() {
+		$refresh = $this->getCmd(null, 'refresh');
+		if (!is_object($refresh)) {
+			$refresh = new virtualCmd();
+			$refresh->setLogicalId('refresh');
+			$refresh->setIsVisible(1);
+			$refresh->setName(__('Rafraichir', __FILE__));
+		}
+		$refresh->setType('action');
+		$refresh->setSubType('other');
+		$refresh->setEqLogic_id($this->getId());
+		$refresh->save();
+	}
 
 	public function copyFromEqLogic($_eqLogic_id) {
 		$eqLogic = eqLogic::byId($_eqLogic_id);
@@ -110,7 +127,17 @@ class virtualCmd extends cmd {
 
 	/*     * *********************Methode d'instance************************* */
 
+	public function dontRemoveCmd() {
+		if ($this->getLogicalId() == 'refresh') {
+			return true;
+		}
+		return false;
+	}
+
 	public function preSave() {
+		if ($this->getLogicalId() == 'refresh') {
+			return;
+		}
 		if ($this->getConfiguration('virtualAction') == 1) {
 			$actionInfo = virtualCmd::byEqLogicIdCmdName($this->getEqLogic_id(), $this->getName());
 			if (is_object($actionInfo)) {
@@ -172,6 +199,10 @@ class virtualCmd extends cmd {
 	}
 
 	public function execute($_options = null) {
+		if ($this->getLogicalId() == 'refresh') {
+			$this->getEqLogic()->refresh();
+			return;
+		}
 		switch ($this->getType()) {
 			case 'info':
 				if ($this->getConfiguration('virtualAction', 0) == '0') {
