@@ -114,6 +114,7 @@ foreach (jeedom::getConfiguration('eqLogic:category') as $key => $value) {
 </form>
 
 <legend>{{Virtuel}}</legend>
+<div class="alert alert-info">Exemple d’URL à appeler : <?php echo network::getNetworkAccess('external') ?>/core/api/jeeApi.php?api=<?php echo config::byKey('api'); ?>&type=virtual&id=#ID_CMD#&value=#VALEUR#</div>
 <a class="btn btn-default btn-sm" id="bt_addVirtualInfo"><i class="fa fa-plus-circle"></i> {{Ajouter une info virtuelle}}</a>
 <a class="btn btn-default btn-sm" id="bt_addVirtualAction"><i class="fa fa-plus-circle"></i> {{Ajouter une commande virtuelle}}</a><br/><br/>
 <table id="table_cmd" class="table table-bordered table-condensed">
