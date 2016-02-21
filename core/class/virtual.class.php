@@ -33,9 +33,9 @@ class virtual extends eqLogic {
 	}
 
 	public static function cron() {
-		foreach (eqLogic::byType('virtual') as $eqLogic) {
+		foreach (eqLogic::byType('virtual', true) as $eqLogic) {
 			$autorefresh = $eqLogic->getConfiguration('autorefresh');
-			if ($eqLogic->getIsEnable() == 1 && $autorefresh != '') {
+			if ($autorefresh != '') {
 				try {
 					$c = new Cron\CronExpression($autorefresh, new Cron\FieldFactory);
 					if ($c->isDue()) {
