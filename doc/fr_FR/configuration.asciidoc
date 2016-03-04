@@ -128,7 +128,7 @@ Ici, il faut bien que le sous-type de la commande soit le même que les sous-typ
 
 Lors de l'utilisation d'un équipement qui ne possède pas de retour d'état et si cet équipement est commandé seulement par jeedom, il est possible d'avoir un retour d'état virtuel. Il faut pour cela de créer un virtuel de type interrupteur qui reprend les commandes (Ex: On & Off) de l'équipement et qui possède une commande info (l'état). Il faut ensuite ajouter un scénario qui s'occupera de lancer les commandes réelles correspondantes sur l'équipement. Ce Scénario aura pour déclencheur la commande info du virtuel et lancera les commandes de l'équipement réel en fonction de la valeur de la commande info.
 
-image::../images/virtual16.png[]
+image::../images/virtual17.png[]
 
 == Affectation d'une valeur par API
 
