@@ -23,7 +23,7 @@ foreach ($eqLogics as $eqLogic) {
    </div>
 
    <div class="col-lg-10 col-md-9 col-sm-8 eqLogicThumbnailDisplay" style="border-left: solid 1px #EEE; padding-left: 25px;">
-    <legend>{{Mes virtuels}}
+    <legend><i class="icon loisir-two28"></i> {{Mes Virtuels}}
     </legend>
     <div class="eqLogicThumbnailContainer">
       <div class="cursor eqLogicAction" data-action="add" style="background-color : #ffffff; height : 200px;margin-bottom : 10px;padding : 5px;border-radius: 2px;width : 160px;margin-left : 10px;" >
@@ -113,8 +113,7 @@ foreach (jeedom::getConfiguration('eqLogic:category') as $key => $value) {
 </fieldset>
 </form>
 
-<legend>{{Virtuel}}</legend>
-<div class="alert alert-info">Exemple d’URL à appeler : <?php echo network::getNetworkAccess('external') ?>/core/api/jeeApi.php?api=<?php echo config::byKey('api'); ?>&type=virtual&id=#ID_CMD#&value=#VALEUR#</div>
+<legend><i class="fa fa-list-alt"></i>  {{Virtuel}}</legend>
 <a class="btn btn-default btn-sm" id="bt_addVirtualInfo"><i class="fa fa-plus-circle"></i> {{Ajouter une info virtuelle}}</a>
 <a class="btn btn-default btn-sm" id="bt_addVirtualAction"><i class="fa fa-plus-circle"></i> {{Ajouter une commande virtuelle}}</a><br/><br/>
 <table id="table_cmd" class="table table-bordered table-condensed">
