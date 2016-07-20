@@ -92,6 +92,9 @@ class virtual extends eqLogic {
 			$this->setCategory($key, $value);
 		}
 		foreach ($eqLogic->getCmd() as $cmd_def) {
+			if($cmd_def->getName() == __('Rafraichir')){
+				continue;
+			}
 			$cmd = new virtualCmd();
 			$cmd->setName($cmd_def->getName());
 			$cmd->setEqLogic_id($this->getId());
