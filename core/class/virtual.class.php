@@ -97,7 +97,7 @@ class virtual extends eqLogic {
 				$cmd_name .= '_1';
 			}
 			$cmd = new virtualCmd();
-			$cmd->setName($cmd_def->getName());
+			$cmd->setName($cmd_name);
 			$cmd->setEqLogic_id($this->getId());
 			$cmd->setIsVisible($cmd_def->getIsVisible());
 			$cmd->setType($cmd_def->getType());
@@ -116,7 +116,11 @@ class virtual extends eqLogic {
 				$cmd->setValue($cmd_def->getValue());
 				$cmd->setConfiguration('infoName', '#' . $cmd_def->getId() . '#');
 			}
-			$cmd->save();
+			try {
+				$cmd->save();
+			} catch (Exception $e) {
+
+			}
 		}
 		$this->save();
 	}
