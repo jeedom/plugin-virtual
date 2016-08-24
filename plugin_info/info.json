@@ -1,0 +1,9 @@
+{
+	"id" : "virtual",
+	"name" : "Virtuel",
+	"description" : "Plugin pour gérer des équipements virtuels",
+	"licence" : "AGPL",
+	"author" : "Loïc",
+	"require" : "2.3",
+	"category" : "programming"
+}

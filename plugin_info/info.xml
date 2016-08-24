@@ -3,12 +3,9 @@
     <id>virtual</id>
     <name>Virtuel</name>
     <description>Plugin pour gérer des équipements virtuels</description>
-    <icon>fa fa-tablet</icon>
     <licence>AGPL</licence>
-    <author>Loïc Gevrey</author>
-    <installation>Aucune</installation>
-    <require>1.10</require>
-    <version>1.0</version>
+    <author>Loïc</author>
+    <require>2.3</require>
     <category>programming</category>
 </info>
 
