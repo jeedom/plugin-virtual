@@ -194,6 +194,11 @@ class virtualCmd extends cmd {
 					}
 				}
 			}
+			preg_match_all("/variable\((.*?)\)/", $calcul, $matches);
+			$value = '';
+			foreach ($matches[1] as $variable) {
+				$value .= '#variable(' . $variable . ')#';
+			}
 			if ($value != '') {
 				$this->setValue($value);
 			}
