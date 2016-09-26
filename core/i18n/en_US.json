@@ -1,0 +1,6 @@
+﻿{
+    "plugins/virtual/plugin_info/info.xml": {
+        "Plugin pour gérer des équipements virtuels": "Plugin to manage virtual devices",
+        "Aucune": "Aucune"
+    }
+}

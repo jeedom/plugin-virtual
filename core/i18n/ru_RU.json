@@ -1,0 +1,6 @@
+﻿{
+    "plugins/virtual/plugin_info/info.xml": {
+        "Plugin pour gérer des équipements virtuels": "Плагин для управления виртуальным оборудованием",
+        "Aucune": "Нет"
+    }
+}
