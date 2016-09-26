@@ -42,12 +42,12 @@ En-dessous vous retrouvez la liste des commandes :
 
 * le nom affiché sur le dashboard,
 * le type et le sous-type,
-* la valeur : permet de donner la valeur de la commande en fonction d'une autre commande, d'une clef (cas quand on fait un interrupteur virtuel), d'un calcul...,
+* la valeur : permet de donner la valeur de la commande en fonction d'une autre commande, d'une clef (cas quand on fait un interrupteur virtuel), d'un calcul,...
 * "Valeur de retour d'état" et "Durée avant retour d'état" : permet d'indiquer à Jeedom qu'après un changement sur l'information sa valeur doit revenir à Y, X min après le changement. Exemple : dans le cas d'un détecteur de présence qui n'émet que lors d'une détection de présence, il est utile de mettre par exemple 0 en valeur et 4 en durée, pour que 4 min après une détection de mouvement (et s'il n'y a en pas eu de nouvelles depuis) Jeedom remette la valeur de l'information à 0 (plus de mouvement détecté),
 * unité : unité de la donnée (peut être vide),
 * historiser : permet d'historiser la donnée,
 * afficher : permet d'afficher la donnée sur le dashboard,
-* évènement : dans le cas du RFXcom cette case doit toujours être cochée car on ne peut pas interroger un module RFXcom,
+* événement : dans le cas du RFXcom cette case doit toujours être cochée car on ne peut pas interroger un module RFXcom,
 * min/max : bornes de la donnée (peuvent être vides),
 * configuration avancée (petites roues crantées) : permet d'afficher la configuration avancée de la commande (méthode d'historisation, widget...),
 * "Tester" : permet de tester la commande,
@@ -70,7 +70,7 @@ Pour avoir un joli widget, il vous faut masquer la commande d'état :
 
 image::../images/virtual7.png[]
 
-Et affectez un widget qui gère le retour d'état aux 2 commandes d'action, par exemple ici le widget light. Pour ce faire cliquez sur la petite roue crantée en face de la commande `On` et dans le 2ème onglet sélectionnez `light` comme widget :
+Affectez un widget qui gère le retour d'état aux 2 commandes d'action, par exemple ici le widget light. Pour ce faire cliquez sur la petite roue crantée en face de la commande `On` et dans le 2ème onglet sélectionnez `light` comme widget :
 
 image::../images/virtual8.png[]
 
