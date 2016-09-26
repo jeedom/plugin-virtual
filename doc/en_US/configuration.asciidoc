@@ -5,7 +5,7 @@ Le plugin ne nécessite aucune configuration, il faut juste l'activer :
 image::../images/virtual1.png[]
 
 
-== Configuration des équipements
+== Equipment configuration
 
 La configuration des équipements virtuels est accessible à partir du menu plugin :
 

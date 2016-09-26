@@ -1,11 +1,11 @@
-== Configuration
+== Konfiguration
 
 Le plugin ne nécessite aucune configuration, il faut juste l'activer :
 
 image::../images/virtual1.png[]
 
 
-== Configuration des équipements
+== Geräte Konfiguration
 
 La configuration des équipements virtuels est accessible à partir du menu plugin :
 
@@ -23,7 +23,7 @@ image::../images/virtual4.png[]
 [TIP]
 Comme à beaucoup d'endroits sur Jeedom, mettre la souris tout à gauche permet de faire apparaître un menu d'accès rapide (vous pouvez à partir de votre profil le laisser toujours visible).
 
-Vous retrouvez ici toute la configuration de votre équipement :
+Hier finden sie die ganze Konfiguration Ihrer Geräte:
 
 * *Nom de l'équipement virtuel* : nom de votre équipement virtuel,
 * *Objet parent* : indique l'objet parent auquel appartient l'équipement,

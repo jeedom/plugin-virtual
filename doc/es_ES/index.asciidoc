@@ -12,5 +12,5 @@ Un périphérique virtuel peut être créé pour les besoins suivants :
 * effectuer un calcul sur plusieurs valeurs d'équipement ;
 * exécuter de multiples actions (macro).
 
-'''
+"
 include::configuration.asciidoc[]

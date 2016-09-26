@@ -416,15 +416,14 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="toc" class="toc2">
 <div id="toctitle">Table des matières</div>
 <ul class="sectlevel1">
-<li><a href="#_configuration">1. Configuration</a></li>
-<li><a href="#_configuration_des_équipements">2. Configuration des équipements</a></li>
-<li><a href="#_interrupteur_virtuel">3. Interrupteur virtuel</a></li>
-<li><a href="#_slider_virtuel">4. Slider virtuel</a></li>
-<li><a href="#_interrupteur_de_type_toggle">5. Interrupteur de type toggle</a></li>
-<li><a href="#_calcul">6. Calcul</a></li>
-<li><a href="#_multiple_commandes">7. Multiple commandes</a></li>
-<li><a href="#_retour_d_état_virtuel">8. Retour d&#8217;état virtuel</a></li>
-<li><a href="#_affectation_d_une_valeur_par_api">9. Affectation d&#8217;une valeur par API</a></li>
+<li><a href="#_configuration_des_équipements">1. Configuration des équipements</a></li>
+<li><a href="#_interrupteur_virtuel">2. Interrupteur virtuel</a></li>
+<li><a href="#_slider_virtuel">3. Slider virtuel</a></li>
+<li><a href="#_interrupteur_de_type_toggle">4. Interrupteur de type toggle</a></li>
+<li><a href="#_calcul">5. Calcul</a></li>
+<li><a href="#_multiple_commandes">6. Multiple commandes</a></li>
+<li><a href="#_retour_d_état_virtuel">7. Retour d&#8217;état virtuel</a></li>
+<li><a href="#_affectation_d_une_valeur_par_api">8. Affectation d&#8217;une valeur par API</a></li>
 </ul>
 </div>
 </div>
@@ -459,12 +458,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 </ul>
 </div>
-<hr>
+<div class="paragraph">
+<p>"
+== Configuration</p>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_configuration">1. Configuration</h2>
-<div class="sectionbody">
 <div class="paragraph">
 <p>Le plugin ne nécessite aucune configuration, il faut juste l&#8217;activer :</p>
 </div>
@@ -476,7 +473,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect1">
-<h2 id="_configuration_des_équipements">2. Configuration des équipements</h2>
+<h2 id="_configuration_des_équipements">1. Configuration des équipements</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>La configuration des équipements virtuels est accessible à partir du menu plugin :</p>
@@ -601,7 +598,7 @@ Comme à beaucoup d&#8217;endroits sur Jeedom, mettre la souris tout à gauche p
 </div>
 </div>
 <div class="sect1">
-<h2 id="_interrupteur_virtuel">3. Interrupteur virtuel</h2>
+<h2 id="_interrupteur_virtuel">2. Interrupteur virtuel</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Pour faire un interrupteur virtuel, il vous faut ajouter 2 commandes virtuelles comme cela :</p>
@@ -649,7 +646,7 @@ Comme à beaucoup d&#8217;endroits sur Jeedom, mettre la souris tout à gauche p
 </div>
 </div>
 <div class="sect1">
-<h2 id="_slider_virtuel">4. Slider virtuel</h2>
+<h2 id="_slider_virtuel">3. Slider virtuel</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Pour faire un slider virtuel, il faut ajouter une commande virtuelle comme cela :</p>
@@ -673,7 +670,7 @@ Comme à beaucoup d&#8217;endroits sur Jeedom, mettre la souris tout à gauche p
 </div>
 </div>
 <div class="sect1">
-<h2 id="_interrupteur_de_type_toggle">5. Interrupteur de type toggle</h2>
+<h2 id="_interrupteur_de_type_toggle">4. Interrupteur de type toggle</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Voilà comment faire un interrupteur de type toggle, pour cela il faut créer une commande virtuelle de ce type :</p>
@@ -697,7 +694,7 @@ Comme à beaucoup d&#8217;endroits sur Jeedom, mettre la souris tout à gauche p
 </div>
 </div>
 <div class="sect1">
-<h2 id="_calcul">6. Calcul</h2>
+<h2 id="_calcul">5. Calcul</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Pour faire un calcul sur de multiple commandes, c&#8217;est très facile ! Il suffit de créer une commande de type information virtuelle et dans le champs valeur mettre vos calculs. Par exemple, pour faire la moyenne de 2 températures :</p>
@@ -732,7 +729,7 @@ Comme à beaucoup d&#8217;endroits sur Jeedom, mettre la souris tout à gauche p
 </div>
 </div>
 <div class="sect1">
-<h2 id="_multiple_commandes">7. Multiple commandes</h2>
+<h2 id="_multiple_commandes">6. Multiple commandes</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Nous allons voir ici comment faire une commande qui va éteindre 2 lumières. Rien de plus simple, il suffit de créer une commande virtuelle et de mettre les 2 commandes séparées par un <code>&amp;&amp;</code> :</p>
@@ -748,7 +745,7 @@ Comme à beaucoup d&#8217;endroits sur Jeedom, mettre la souris tout à gauche p
 </div>
 </div>
 <div class="sect1">
-<h2 id="_retour_d_état_virtuel">8. Retour d&#8217;état virtuel</h2>
+<h2 id="_retour_d_état_virtuel">7. Retour d&#8217;état virtuel</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Lors de l&#8217;utilisation d&#8217;un équipement qui ne possède pas de retour d&#8217;état et si cet équipement est commandé seulement par jeedom, il est possible d&#8217;avoir un retour d&#8217;état virtuel. Il faut pour cela de créer un virtuel de type interrupteur qui reprend les commandes (Ex: On &amp; Off) de l&#8217;équipement et qui possède une commande info (l&#8217;état). Il faut ensuite ajouter un scénario qui s&#8217;occupera de lancer les commandes réelles correspondantes sur l&#8217;équipement. Ce Scénario aura pour déclencheur la commande info du virtuel et lancera les commandes de l&#8217;équipement réel en fonction de la valeur de la commande info.</p>
@@ -761,7 +758,7 @@ Comme à beaucoup d&#8217;endroits sur Jeedom, mettre la souris tout à gauche p
 </div>
 </div>
 <div class="sect1">
-<h2 id="_affectation_d_une_valeur_par_api">9. Affectation d&#8217;une valeur par API</h2>
+<h2 id="_affectation_d_une_valeur_par_api">8. Affectation d&#8217;une valeur par API</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Il est possible de changer la valeur d&#8217;une information virtuel par un appels API :</p>
@@ -788,7 +785,7 @@ Attention à bien rajouter un /jeedom après #IP_JEEDOM# si nécessaire
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-09-26 20:12:12 CEST
+Last updated 2016-09-26 20:27:59 CEST
 </div>
 </div>
 </body>
