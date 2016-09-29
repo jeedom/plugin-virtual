@@ -1,0 +1,3 @@
+==== 21/12/2014
+
+- Possibilitée dans une action virtuel de mettre plusieurs commande, il faut les séparer avec des &&

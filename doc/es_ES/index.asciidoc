@@ -14,3 +14,7 @@ Un périphérique virtuel peut être créé pour les besoins suivants :
 
 "
 include::configuration.asciidoc[]
+
+"
+
+include::changelog.asciidoc[]
