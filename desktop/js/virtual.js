@@ -129,7 +129,6 @@
         $('#table_cmd tbody tr:last .cmdAttr[data-l1key=type]').value(init(_cmd.type));
     }
     jeedom.cmd.changeType($('#table_cmd tbody tr:last'), init(_cmd.subType));
-    initCheckBox();
 }
 
 if (init(_cmd.type) == 'action') {
@@ -194,7 +193,6 @@ if (init(_cmd.type) == 'action') {
             tr.find('.cmdAttr[data-l1key=configuration][data-l2key=updateCmdId]').append(result);
             tr.setValues(_cmd, '.cmdAttr');
             jeedom.cmd.changeType(tr, init(_cmd.subType));
-            initCheckBox();
         }
     });
 }
