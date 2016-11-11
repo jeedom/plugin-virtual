@@ -57,7 +57,6 @@ class virtual extends eqLogic {
 				}
 				$value = $cmd->execute();
 				if ($cmd->execCmd() != $cmd->formatValue($value)) {
-					$cmd->setCollectDate('');
 					$cmd->event($value);
 				}
 			}
