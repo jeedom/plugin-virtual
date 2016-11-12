@@ -1,9 +1,12 @@
 {
+    "plugins/virtual/plugin_info/info.xml": {
+        "Plugin pour gérer des équipements virtuels": "Plugin to manage virtual devices",
+        "Aucune": "Aucune"
+    },
     "plugins/virtual/desktop/php/virtual.php": {
         "Ajouter un équipement": "Add device",
         "Rechercher": "Search",
-        "Mes virtuels": "My virtuals",
-        "Vous n'avez pas encore de virtuel, cliquez sur Ajouter un équipement pour commencer": "You don't have any virtual yet. Click on \"Add an equipment\" to start.",
+        "Mes Virtuels": "Mes Virtuels",
         "Général": "Main",
         "Dupliquer": "Duplicate",
         "Importer équipement": "Import equipment",
@@ -14,6 +17,7 @@
         "Catégorie": "Category",
         "Activer": "Activate",
         "Visible": "Visible",
+        "Auto-actualisation (cron)": "Auto-update (cron)",
         "Commentaire": "Comment",
         "Virtuel": "Virtual",
         "Ajouter une info virtuelle": "Add a virtual info",
@@ -24,7 +28,13 @@
         "Unité": "Unit",
         "Paramètres": "Settings",
         "Supprimer": "Delete",
-        "Sauvegarder": "Save"
+        "Sauvegarder": "Save",
+        "Equipement": "Device",
+        "Commandes": "Commands",
+        "Configuration avancée": "Advanced configuration"
+    },
+    "plugins/virtual/core/class/virtual.class.php": {
+        "Rafraichir": "Refresh"
     },
     "plugins/virtual/desktop/js/virtual.js": {
         "Nom": "Name",
@@ -36,8 +46,6 @@
         "Historiser": "Historize",
         "Afficher": "Show",
         "Inverser": "Invert",
-        "Evènement seulement": "Event only",
-        "Lifetime cache": "Lifetime cache",
         "Min": "Min",
         "Max": "Max",
         "Tester": "Test",
@@ -45,8 +53,7 @@
         "Nom information": "Information name",
         "Valeur": "Value"
     },
-    "plugins/virtual/plugin_info/info.xml": {
-        "Plugin pour gérer des équipements virtuels": "Plugin to manage virtual devices",
-        "Aucune": "Aucune"
+    "plugins/virtual/plugin_info/info.json": {
+        "Plugin pour gérer des équipements virtuels": "Plugin to manage virtual devices"
     }
 }

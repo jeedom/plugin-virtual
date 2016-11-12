@@ -1,9 +1,12 @@
 {
+    "plugins/virtual/plugin_info/info.xml": {
+        "Plugin pour gérer des équipements virtuels": "Плагин для управления виртуальным оборудованием",
+        "Aucune": "Нет"
+    },
     "plugins/virtual/desktop/php/virtual.php": {
         "Ajouter un équipement": "Добавить оборудование",
         "Rechercher": "Искать",
-        "Mes virtuels": "Мой Virtual",
-        "Vous n'avez pas encore de virtuel, cliquez sur Ajouter un équipement pour commencer": "У вас пока нет Virtual, нажмите кнопку Добавить устройство, чтобы начать",
+        "Mes Virtuels": "Mes Virtuels",
         "Général": "Главная",
         "Dupliquer": "Дублировать",
         "Importer équipement": "Импорт оборудования",
@@ -14,6 +17,7 @@
         "Catégorie": "Категория",
         "Activer": "Активировать",
         "Visible": "Видимый",
+        "Auto-actualisation (cron)": "Авто-обновление (cron)",
         "Commentaire": "Комментарии",
         "Virtuel": "Виртуальный",
         "Ajouter une info virtuelle": "Добавьте виртуальный данные",
@@ -24,7 +28,13 @@
         "Unité": "Устройство",
         "Paramètres": "Параметры",
         "Supprimer": "Удалить",
-        "Sauvegarder": "Сохранить"
+        "Sauvegarder": "Сохранить",
+        "Equipement": "Оборудование",
+        "Commandes": "Команды",
+        "Configuration avancée": "Расширенные настройки"
+    },
+    "plugins/virtual/core/class/virtual.class.php": {
+        "Rafraichir": "Обновить"
     },
     "plugins/virtual/desktop/js/virtual.js": {
         "Nom": "Имя",
@@ -36,8 +46,6 @@
         "Historiser": "История",
         "Afficher": "Отобразить",
         "Inverser": "Обратный",
-        "Evènement seulement": "Только по событию",
-        "Lifetime cache": "Время жизни кэш",
         "Min": "Мин",
         "Max": "Макс",
         "Tester": "Тест",
@@ -45,8 +53,7 @@
         "Nom information": "Имя информации",
         "Valeur": "Значение"
     },
-    "plugins/virtual/plugin_info/info.xml": {
-        "Plugin pour gérer des équipements virtuels": "Плагин для управления виртуальным оборудованием",
-        "Aucune": "Нет"
+    "plugins/virtual/plugin_info/info.json": {
+        "Plugin pour gérer des équipements virtuels": "Плагин для управления виртуальным оборудованием"
     }
 }

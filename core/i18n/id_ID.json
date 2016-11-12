@@ -1,9 +1,12 @@
 {
+    "plugins/virtual/plugin_info/info.xml": {
+        "Plugin pour gérer des équipements virtuels": "Plugin untuk mengelola peralatan maya",
+        "Aucune": "Tak ada"
+    },
     "plugins/virtual/desktop/php/virtual.php": {
         "Ajouter un équipement": "Tambahan peralatan",
         "Rechercher": "Mencari",
-        "Mes virtuels": "Maya saya",
-        "Vous n'avez pas encore de virtuel, cliquez sur Ajouter un équipement pour commencer": "Anda tidak memiliki virtual, klik Add Device untuk memulai",
+        "Mes Virtuels": "Mes Virtuels",
         "Général": "Umum",
         "Dupliquer": "Duplikat",
         "Importer équipement": "Peralatan impor",
@@ -14,6 +17,7 @@
         "Catégorie": "Kategori",
         "Activer": "Mengaktifkan",
         "Visible": "Terlihat",
+        "Auto-actualisation (cron)": "\nAktualisasi diri (cron)",
         "Commentaire": "Komentar",
         "Virtuel": "Maya",
         "Ajouter une info virtuelle": "Tambahan Informasi maya",
@@ -24,7 +28,13 @@
         "Unité": "Satuan",
         "Paramètres": "Parameter²",
         "Supprimer": "Menghapus",
-        "Sauvegarder": "Menyimpan"
+        "Sauvegarder": "Menyimpan",
+        "Equipement": "Peralatan",
+        "Commandes": "Perintah",
+        "Configuration avancée": "Configuration avancée"
+    },
+    "plugins/virtual/core/class/virtual.class.php": {
+        "Rafraichir": "Rafraichir"
     },
     "plugins/virtual/desktop/js/virtual.js": {
         "Nom": "Nama",
@@ -36,8 +46,6 @@
         "Historiser": "Historicize",
         "Afficher": "Memenitikan",
         "Inverser": "Membalikkan",
-        "Evènement seulement": "Peristiwa hanya",
-        "Lifetime cache": "Lifetime cache",
         "Min": "Min",
         "Max": "Max",
         "Tester": "Coba",
@@ -45,8 +53,7 @@
         "Nom information": "Nama Informasi",
         "Valeur": "Nilai"
     },
-    "plugins/virtual/plugin_info/info.xml": {
-        "Plugin pour gérer des équipements virtuels": "Plugin untuk mengelola peralatan maya",
-        "Aucune": "Tak ada"
+    "plugins/virtual/plugin_info/info.json": {
+        "Plugin pour gérer des équipements virtuels": "Plugin untuk mengelola peralatan maya"
     }
 }

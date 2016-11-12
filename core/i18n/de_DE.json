@@ -1,9 +1,12 @@
 {
+    "plugins/virtual/plugin_info/info.xml": {
+        "Plugin pour gérer des équipements virtuels": "Plugin für die Verwaltung von Virtuelle Geräte",
+        "Aucune": "Ohne"
+    },
     "plugins/virtual/desktop/php/virtual.php": {
         "Ajouter un équipement": "Gerät hinzufügen",
         "Rechercher": "Suchen nach",
-        "Mes virtuels": "Mein virtuelles Gerät",
-        "Vous n'avez pas encore de virtuel, cliquez sur Ajouter un équipement pour commencer": "Sie verfügen nicht über ein virtuelles Gerät, klicken Sie auf Gerät hinzufügen, um zu starten",
+        "Mes Virtuels": "Mes Virtuels",
         "Général": "Allgemein",
         "Dupliquer": "Kopieren",
         "Importer équipement": "Gerät hinzufügen",
@@ -14,6 +17,7 @@
         "Catégorie": "Kategorie",
         "Activer": "aktivieren",
         "Visible": "Sichtbar",
+        "Auto-actualisation (cron)": "Auto - Aktualisierung (Cron) ",
         "Commentaire": "Kommentar",
         "Virtuel": "Virtuell",
         "Ajouter une info virtuelle": "Virtuelle Info hinzufügen",
@@ -24,7 +28,13 @@
         "Unité": "Unit",
         "Paramètres": "Parameter",
         "Supprimer": "Löschen",
-        "Sauvegarder": "Speichern"
+        "Sauvegarder": "Speichern",
+        "Equipement": "Gerät",
+        "Commandes": "Befehle",
+        "Configuration avancée": "Erweiterte Konfiguration"
+    },
+    "plugins/virtual/core/class/virtual.class.php": {
+        "Rafraichir": "Aktualisieren"
     },
     "plugins/virtual/desktop/js/virtual.js": {
         "Nom": "Name",
@@ -36,8 +46,6 @@
         "Historiser": "Chronik",
         "Afficher": "anzeigen",
         "Inverser": "umgekehrt",
-        "Evènement seulement": "einziges Ereignis",
-        "Lifetime cache": "Lebensdauer Cache",
         "Min": "Min",
         "Max": "Max",
         "Tester": "Test",
@@ -45,8 +53,7 @@
         "Nom information": "Name der Information",
         "Valeur": "Wert"
     },
-    "plugins/virtual/plugin_info/info.xml": {
-        "Plugin pour gérer des équipements virtuels": "Plugin für die Verwaltung von Virtuelle Geräte",
-        "Aucune": "Ohne"
+    "plugins/virtual/plugin_info/info.json": {
+        "Plugin pour gérer des équipements virtuels": "Plugin für die Verwaltung von Virtuelle Geräte"
     }
 }

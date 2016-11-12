@@ -1,9 +1,12 @@
 {
+    "plugins/virtual/plugin_info/info.xml": {
+        "Plugin pour gérer des équipements virtuels": "Plugin para la gestión de dispositivos virtuales",
+        "Aucune": "Ninguna"
+    },
     "plugins/virtual/desktop/php/virtual.php": {
         "Ajouter un équipement": "Añadir un dispositivo",
         "Rechercher": "Buscar",
-        "Mes virtuels": "Mis virtuales",
-        "Vous n'avez pas encore de virtuel, cliquez sur Ajouter un équipement pour commencer": "No tiene virtual, haga clic en Agregar dispositivo para comenzar",
+        "Mes Virtuels": "Mes Virtuels",
         "Général": "Principal",
         "Dupliquer": "Duplicar",
         "Importer équipement": "Importación dispositivo",
@@ -14,6 +17,7 @@
         "Catégorie": "Categoría",
         "Activer": "Activar",
         "Visible": "Visible",
+        "Auto-actualisation (cron)": "Auto-actualización (cron)",
         "Commentaire": "Comentario",
         "Virtuel": "Virtual",
         "Ajouter une info virtuelle": "Añadir una informacion virtual",
@@ -24,7 +28,13 @@
         "Unité": "Unidad",
         "Paramètres": "Parámetros",
         "Supprimer": "Borrar",
-        "Sauvegarder": "Guardar"
+        "Sauvegarder": "Guardar",
+        "Equipement": "Dispositivos",
+        "Commandes": "Órdenes",
+        "Configuration avancée": "Configuración avanzada"
+    },
+    "plugins/virtual/core/class/virtual.class.php": {
+        "Rafraichir": "Actualizar"
     },
     "plugins/virtual/desktop/js/virtual.js": {
         "Nom": "Nombre",
@@ -36,8 +46,6 @@
         "Historiser": "Historizar",
         "Afficher": "Mostrar",
         "Inverser": "Invertir",
-        "Evènement seulement": "sólo Evento",
-        "Lifetime cache": "Duración en caché",
         "Min": "Min",
         "Max": "Max",
         "Tester": "Probar",
@@ -45,8 +53,7 @@
         "Nom information": "Nombre información",
         "Valeur": "Valor"
     },
-    "plugins/virtual/plugin_info/info.xml": {
-        "Plugin pour gérer des équipements virtuels": "Plugin para la gestión de dispositivos virtuales",
-        "Aucune": "Ninguna"
+    "plugins/virtual/plugin_info/info.json": {
+        "Plugin pour gérer des équipements virtuels": "Plugin para la gestión de dispositivos virtuales"
     }
 }
