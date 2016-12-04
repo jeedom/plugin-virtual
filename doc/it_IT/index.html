@@ -549,7 +549,7 @@ Comme à beaucoup d&#8217;endroits sur Jeedom, mettre la souris tout à gauche p
 <div class="ulist">
 <ul>
 <li>
-<p><strong>Importer équipement</strong> : permet de dupliquer un équipement existant dans un virtuel automatiquement (permet de gagner du temps pour scinder un équipement en 2 par exemple),</p>
+<p><strong>Importer équipement</strong> : permet de dupliquer automatiquement un équipement existant dans un virtuel (permet de gagner du temps pour scinder un équipement en 2 par exemple),</p>
 </li>
 <li>
 <p><strong>Dupliquer</strong> : permet de dupliquer l&#8217;équipement courant,</p>
@@ -571,10 +571,10 @@ Comme à beaucoup d&#8217;endroits sur Jeedom, mettre la souris tout à gauche p
 <p>le type et le sous-type,</p>
 </li>
 <li>
-<p>la valeur : permet de donner la valeur de la commande en fonction d&#8217;une autre commande, d&#8217;une clef (cas quand on fait un interrupteur virtuel), d&#8217;un calcul,&#8230;&#8203;</p>
+<p>la valeur : permet de donner la valeur de la commande en fonction d&#8217;une autre commande, d&#8217;une clef (quand on fait un interrupteur virtuel), d&#8217;un calcul,&#8230;&#8203;</p>
 </li>
 <li>
-<p>"Valeur de retour d&#8217;état" et "Durée avant retour d&#8217;état" : permet d&#8217;indiquer à Jeedom qu&#8217;après un changement sur l&#8217;information sa valeur doit revenir à Y, X min après le changement. Exemple : dans le cas d&#8217;un détecteur de présence qui n&#8217;émet que lors d&#8217;une détection de présence, il est utile de mettre par exemple 0 en valeur et 4 en durée, pour que 4 min après une détection de mouvement (et s&#8217;il n&#8217;y a en pas eu de nouvelles depuis) Jeedom remette la valeur de l&#8217;information à 0 (plus de mouvement détecté),</p>
+<p>"Valeur de retour d&#8217;état" et "Durée avant retour d&#8217;état" : permet d&#8217;indiquer à Jeedom qu&#8217;après un changement sur l&#8217;information sa valeur doit revenir à Y, X min après le changement. Exemple : dans le cas d&#8217;un détecteur de présence qui n&#8217;émet que lors d&#8217;une détection de présence, il est utile de mettre par exemple 0 en valeur et 4 en durée, pour que 4 mn après une détection de mouvement (et s&#8217;il n&#8217;y a en pas eu de nouvelle(s) depuis) Jeedom remette la valeur de l&#8217;information à 0 (plus de mouvement détecté),</p>
 </li>
 <li>
 <p>unité : unité de la donnée (peut être vide),</p>
@@ -624,7 +624,7 @@ Comme à beaucoup d&#8217;endroits sur Jeedom, mettre la souris tout à gauche p
 </div>
 </div>
 <div class="paragraph">
-<p>Ajoutez dans les commandes "action" <code>On</code> et <code>Off</code> la commande <code>Etat</code> (cela permet à Jeedom de faire le lien avec la commande état).</p>
+<p>Ajoutez dans les commandes "action" <code>On</code> et <code>Off</code>, la commande <code>Etat</code> (cela permet à Jeedom de faire le lien avec la commande état).</p>
 </div>
 <div class="paragraph">
 <p>Pour avoir un joli widget, il vous faut masquer la commande d&#8217;état :</p>
@@ -696,7 +696,7 @@ Comme à beaucoup d&#8217;endroits sur Jeedom, mettre la souris tout à gauche p
 </div>
 </div>
 <div class="paragraph">
-<p>Ici il faut dans la valeur de la commande action mettre <code>not(#[&#8230;&#8203;][&#8230;&#8203;][Etat]#)</code> (bien remplacer par votre commande à vous) et lier l&#8217;état à la commande action (attention il ne faut pas masquer la commande état cette fois). Il faut aussi passer la commande info en sous-type binaire.</p>
+<p>Ici il faut dans la valeur de la commande action mettre <code>not(#[&#8230;&#8203;][&#8230;&#8203;][Etat]#)</code> (bien remplacer par votre propre commande) et lier l&#8217;état à la commande action (attention, il ne faut pas masquer la commande état cette fois). Il faut aussi passer la commande info en sous-type binaire.</p>
 </div>
 </div>
 </div>
@@ -704,7 +704,7 @@ Comme à beaucoup d&#8217;endroits sur Jeedom, mettre la souris tout à gauche p
 <h2 id="_calcul">6. Calcul</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Pour faire un calcul sur de multiple commandes, c&#8217;est très facile ! Il suffit de créer une commande de type information virtuelle et dans le champs valeur mettre vos calculs. Par exemple, pour faire la moyenne de 2 températures :</p>
+<p>Pour faire un calcul sur de multiples commandes, c&#8217;est très facile ! Il suffit de créer une commande de type information virtuelle et dans le champs valeur mettre vos calculs. Par exemple, pour faire la moyenne de 2 températures :</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -712,7 +712,7 @@ Comme à beaucoup d&#8217;endroits sur Jeedom, mettre la souris tout à gauche p
 </div>
 </div>
 <div class="paragraph">
-<p>Plusieurs points à bien faire :</p>
+<p>Plusieurs points à réaliser correctement :</p>
 </div>
 <div class="ulist">
 <ul>
@@ -720,7 +720,7 @@ Comme à beaucoup d&#8217;endroits sur Jeedom, mettre la souris tout à gauche p
 <p>Bien choisir le sous-type en fonction du type d&#8217;information (ici calcul de moyenne donc c&#8217;est un numérique),</p>
 </li>
 <li>
-<p>Mettre des parenthèses dans les calculs, ça permet d&#8217;être sûr du résultat de l&#8217;opération,</p>
+<p>Mettre des parenthèses dans les calculs, cela permet d&#8217;être sûr du résultat de l&#8217;opération,</p>
 </li>
 <li>
 <p>Bien mettre l&#8217;unité,</p>
@@ -729,7 +729,7 @@ Comme à beaucoup d&#8217;endroits sur Jeedom, mettre la souris tout à gauche p
 <p>Cocher la case pour historiser si nécessaire,</p>
 </li>
 <li>
-<p>Il est conseillé de cocher la case "évènement seulement", ça permet de reduire la charge de Jeedom et d&#8217;avoir vraiment une actualisation en temps réel.</p>
+<p>Il est conseillé de cocher la case "évènement seulement", cela permet de réduire la charge de Jeedom et d&#8217;avoir vraiment une actualisation en temps réel.</p>
 </li>
 </ul>
 </div>
@@ -755,7 +755,7 @@ Comme à beaucoup d&#8217;endroits sur Jeedom, mettre la souris tout à gauche p
 <h2 id="_retour_d_état_virtuel">8. Retour d&#8217;état virtuel</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Lors de l&#8217;utilisation d&#8217;un équipement qui ne possède pas de retour d&#8217;état et si cet équipement est commandé seulement par jeedom, il est possible d&#8217;avoir un retour d&#8217;état virtuel. Il faut pour cela de créer un virtuel de type interrupteur qui reprend les commandes (Ex: On &amp; Off) de l&#8217;équipement et qui possède une commande info (l&#8217;état). Il faut ensuite ajouter un scénario qui s&#8217;occupera de lancer les commandes réelles correspondantes sur l&#8217;équipement. Ce Scénario aura pour déclencheur la commande info du virtuel et lancera les commandes de l&#8217;équipement réel en fonction de la valeur de la commande info.</p>
+<p>Lors de l&#8217;utilisation d&#8217;un équipement qui ne possède pas de retour d&#8217;état et si cet équipement est commandé seulement par Jeedom, il est possible d&#8217;avoir un retour d&#8217;état virtuel. Il faut pour cela créer un virtuel de type interrupteur qui reprend les commandes (ex: On &amp; Off) de l&#8217;équipement et qui possède une commande info (l&#8217;état). Il faut ensuite ajouter un scénario qui s&#8217;occupera de lancer les commandes réelles correspondantes sur l&#8217;équipement. Ce Scénario aura pour déclencheur la commande info du virtuel et lancera les commandes de l&#8217;équipement réel en fonction de la valeur de la commande info.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -768,7 +768,7 @@ Comme à beaucoup d&#8217;endroits sur Jeedom, mettre la souris tout à gauche p
 <h2 id="_affectation_d_une_valeur_par_api">9. Affectation d&#8217;une valeur par API</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Il est possible de changer la valeur d&#8217;une information virtuel par un appels API :</p>
+<p>Il est possible de changer la valeur d&#8217;une information virtuelle par un appels API :</p>
 </div>
 <div class="listingblock">
 <div class="content">
