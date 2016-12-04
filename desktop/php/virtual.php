@@ -112,12 +112,6 @@ foreach (jeedom::getConfiguration('eqLogic:category') as $key => $value) {
                 <i class="fa fa-question-circle cursor floatright" id="bt_cronGenerator"></i>
             </div>
         </div>
-        <div class="form-group">
-            <label class="col-sm-2 control-label">{{Commentaire}}</label>
-            <div class="col-sm-3">
-                <textarea class="eqLogicAttr form-control" data-l1key="configuration" data-l2key="commentaire" ></textarea>
-            </div>
-        </div>
     </fieldset>
 </form>
 
