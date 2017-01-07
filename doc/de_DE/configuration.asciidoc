@@ -7,7 +7,7 @@ image::../images/virtual1.png[]
 
 == Geräte Konfiguration
 
-La configuration des équipements virtuels est accessible à partir du menu plugin :
+Die Konfiguration von Virtuellen-Geräten ist in dem Plugin-Menü verfügbar :
 
 image::../images/virtual2.png[]
 
