@@ -262,6 +262,8 @@ class virtualCmd extends cmd {
 						$value = $_options['slider'];
 					} else if ($this->getSubType() == 'color') {
 						$value = $_options['color'];
+					} else if ($this->getSubType() == 'select'){
+						$value = trim(str_replace('#select#', $_options['select'], $value));
 					} else {
 						$value = $this->getConfiguration('value');
 					}
