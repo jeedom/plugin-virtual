@@ -104,6 +104,7 @@ class virtual extends eqLogic {
 			$cmd->setOrder($cmd_def->getOrder());
 			$cmd->setDisplay('icon', $cmd_def->getDisplay('icon'));
 			$cmd->setDisplay('invertBinary', $cmd_def->getDisplay('invertBinary'));
+			$cmd->setConfiguration('listValue', $cmd_def->getConfiguration('listValue',''));
 			foreach ($cmd_def->getTemplate() as $key => $value) {
 				$cmd->setTemplate($key, $value);
 			}
