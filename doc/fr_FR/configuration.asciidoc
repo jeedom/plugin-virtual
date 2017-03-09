@@ -115,6 +115,7 @@ Plusieurs points à réaliser correctement :
 * Bien mettre l'unité,
 * Cocher la case pour historiser si nécessaire,
 * Il est conseillé de cocher la case "évènement seulement", cela permet de réduire la charge de Jeedom et d'avoir vraiment une actualisation en temps réel.
+Les fonctions utiles pour les calculs sont disponible dans la ../../../../doc/fr_FR/scenario.html#_condition_ou_valeur_d_une_commande_d_action[la documentation des scenarios].
 
 == Multiple commandes
 
