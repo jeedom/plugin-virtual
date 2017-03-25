@@ -126,9 +126,9 @@ Ici, il faut bien que le sous-type de la commande soit le même que les sous-typ
 
 == Retour d'état virtuel
 
-Lors de l'utilisation d'un équipement qui ne possède pas de retour d'état et si cet équipement est commandé seulement par Jeedom, il est possible d'avoir un retour d'état virtuel. Il faut pour cela créer un virtuel de type interrupteur qui reprend les commandes (ex: On & Off) de l'équipement et qui possède une commande info (l'état). Il faut ensuite ajouter un scénario qui s'occupera de lancer les commandes réelles correspondantes sur l'équipement. Ce Scénario aura pour déclencheur la commande info du virtuel et lancera les commandes de l'équipement réel en fonction de la valeur de la commande info.
+Lors de l'utilisation d'un équipement qui ne possède pas de retour d'état et si cet équipement est commandé seulement par Jeedom, il est possible d'avoir un retour d'état virtuel. Il faut pour cela créer un virtuel qui reprend les commandes actions (ex: On & Off) de l'équipement et qui possède une commande info (l'état). Il faut ensuite renseigner la colonne Paramètre pour chaque commande action, en sélectionnant le nom de la commande info (état) et en donnant la valeur qu'elle doit prendre.
 
-image::../images/virtual17.png[]
+On peut aussi imaginer un virtuel qui allume/éteint plusieurs lampes (commandes actions séparées par des &&) et avoir ainsi un état de cette commande générale.
 
 == Affectation d'une valeur par API
 

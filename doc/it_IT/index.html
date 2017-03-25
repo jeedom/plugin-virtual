@@ -755,12 +755,10 @@ Comme à beaucoup d&#8217;endroits sur Jeedom, mettre la souris tout à gauche p
 <h2 id="_retour_d_état_virtuel">8. Retour d&#8217;état virtuel</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Lors de l&#8217;utilisation d&#8217;un équipement qui ne possède pas de retour d&#8217;état et si cet équipement est commandé seulement par Jeedom, il est possible d&#8217;avoir un retour d&#8217;état virtuel. Il faut pour cela créer un virtuel de type interrupteur qui reprend les commandes (ex: On &amp; Off) de l&#8217;équipement et qui possède une commande info (l&#8217;état). Il faut ensuite ajouter un scénario qui s&#8217;occupera de lancer les commandes réelles correspondantes sur l&#8217;équipement. Ce Scénario aura pour déclencheur la commande info du virtuel et lancera les commandes de l&#8217;équipement réel en fonction de la valeur de la commande info.</p>
+<p>Lors de l&#8217;utilisation d&#8217;un équipement qui ne possède pas de retour d&#8217;état et si cet équipement est commandé seulement par Jeedom, il est possible d&#8217;avoir un retour d&#8217;état virtuel. Il faut pour cela créer un virtuel qui reprend les commandes actions (ex: On &amp; Off) de l&#8217;équipement et qui possède une commande info (l&#8217;état). Il faut ensuite renseigner la colonne Paramètre pour chaque commande action, en sélectionnant le nom de la commande info (état) et en donnant la valeur qu&#8217;elle doit prendre.</p>
 </div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/virtual17.png" alt="virtual17">
-</div>
+<div class="paragraph">
+<p>On peut aussi imaginer un virtuel qui allume/éteint plusieurs lampes (commandes actions séparées par des &amp;&amp;) et avoir ainsi un état de cette commande générale.</p>
 </div>
 </div>
 </div>
