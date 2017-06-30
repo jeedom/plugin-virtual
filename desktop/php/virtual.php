@@ -91,7 +91,6 @@ foreach (jeedom::getConfiguration('eqLogic:category') as $key => $value) {
 	echo '</label>';
 }
 ?>
-
                </div>
            </div>
            <div class="form-group">
@@ -110,6 +109,16 @@ foreach (jeedom::getConfiguration('eqLogic:category') as $key => $value) {
                 <i class="fa fa-question-circle cursor floatright" id="bt_cronGenerator"></i>
             </div>
         </div>
+	 <div class="form-group">
+      <label class="col-sm-3 control-label">{{URL de retour}}</label>
+      <div class="col-sm-9 callback">
+        <span>
+	<?php 
+		echo network::getNetworkAccess('external') . '/core/api/jeeApi.php?plugin=virtual&apikey='.jeedom::getApiKey($plugin->getId()).'&type=virtual&id=#cmd_id#&value=#value#';
+		?>
+	</span>
+      </div>
+    </div>   
     </fieldset>
 </form>
 
