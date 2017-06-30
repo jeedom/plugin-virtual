@@ -4,6 +4,6 @@
 	"description" : "Plugin pour gérer des équipements virtuels",
 	"licence" : "AGPL",
 	"author" : "Loïc",
-	"require" : "2.4",
+	"require" : "3.0",
 	"category" : "programming"
 }
