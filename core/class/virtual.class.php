@@ -47,6 +47,27 @@ class virtual extends eqLogic {
 			}
 		}
 	}
+	
+	public static function deadCmd() {
+		$return = array();
+		foreach (eqLogic::byType('virtual') as $virtual){
+			foreach ($virtual->getCmd() as $cmd) {
+				preg_match_all("/#([0-9]*)#/", $cmd->getConfiguration('infoName',''), $matches);
+				foreach ($matches[1] as $cmd_id) {
+				if (!cmd::byId(str_replace('#','',$cmd_id))){
+						$return[]= array('detail' => 'Virtuel ' . $virtual->getHumanName() . ' dans la commande ' . $cmd->getName(),'help' => 'Nom Information','who'=>'#' . $cmd_id . '#');
+					}
+				}
+				preg_match_all("/#([0-9]*)#/", $cmd->getConfiguration('calcul',''), $matches);
+				foreach ($matches[1] as $cmd_id) {
+				if (!cmd::byId(str_replace('#','',$cmd_id))){
+						$return[]= array('detail' => 'Virtuel ' . $virtual->getHumanName() . ' dans la commande ' . $cmd->getName(),'help' => 'Calcul','who'=>'#' . $cmd_id . '#');
+					}
+				}
+			}
+		}
+		return $return;
+	}
 
 	/*     * *********************Methode d'instance************************* */
 	public function refresh() {
