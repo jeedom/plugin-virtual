@@ -1,7 +1,7 @@
 {
     "plugins/virtual/plugin_info/info.xml": {
         "Plugin pour gérer des équipements virtuels": "Plugin to manage virtual devices",
-        "Aucune": "Aucune"
+        "Aucune": "None"
     },
     "plugins/virtual/desktop/php/virtual.php": {
         "Ajouter un équipement": "Add device",
@@ -9,7 +9,7 @@
         "Mes Virtuels": "My virtuals",
         "Général": "Main",
         "Dupliquer": "Duplicate",
-        "Importer équipement": "Import equipment",
+        "Importer équipement": "Import device",
         "Nom de l'équipement virtual": "Virtual equipment name",
         "Nom de l'équipement virtuel": "Virtual equipment name",
         "Objet parent": "Parent object",
@@ -44,7 +44,7 @@
         "Durée avant retour d\\'état (min)": "Duration before feedback (min)",
         "Unité": "Unit",
         "Historiser": "Historize",
-        "Afficher": "Show",
+        "Afficher": "Display",
         "Inverser": "Invert",
         "Min": "Min",
         "Max": "Max",
