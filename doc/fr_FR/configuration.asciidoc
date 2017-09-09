@@ -132,7 +132,7 @@ On peut aussi imaginer un virtuel qui allume/éteint plusieurs lampes (commandes
 
 == Affectation d'une valeur par API
 
-Il est possible de changer la valeur d'une information virtuelle par un appels API :
+Il est possible de changer la valeur d'une information virtuelle par un appel API :
 
 ----
 http://#IP_JEEDOM#/core/api/jeeApi.php?apikey=#APIKEY#&type=virtual&id=#ID#&value=#value#
