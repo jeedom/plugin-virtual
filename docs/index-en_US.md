@@ -1,4 +1,4 @@
-# Présentation
+Presentation
 
 Le plugin Virtual (virtuel) permet la création de périphériques virtuels
 et de leurs propriétés.
@@ -23,7 +23,7 @@ Un périphérique virtuel peut être créé pour les besoins suivants :
 [Sommaire](#toctitle "Sommaire") 
 
 
-# Configuration
+ # Setup
 
 Le plugin ne nécessite aucune configuration, il faut juste l’activer :
 
