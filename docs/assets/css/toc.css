@@ -1,0 +1,213 @@
+/*
+ * jQuery Table of Content Generator for Markdown v1.0
+ *
+ * https://github.com/dafi/tocmd-generator
+ * Examples and documentation at: https://github.com/dafi/tocmd-generator
+ *
+ * Requires: jQuery v1.7+
+ *
+ * Copyright (c) 2013 Davide Ficano
+ *
+ * Dual licensed under the MIT and GPL licenses:
+ *   http://www.opensource.org/licenses/mit-license.php
+ *   http://www.gnu.org/licenses/gpl.html
+ */
+
+#toc, .toc, .mw-warning {
+    background-color: #F9F9F9;
+    border: 1px solid #AAAAAA;
+    font-size: 95%;
+    padding: 5px;
+}
+#toc h2, .toc h2 {
+    border: medium none;
+    display: inline;
+    font-size: 100%;
+    font-weight: bold;
+    padding: 0;
+}
+#toc #toctitle, .toc #toctitle, #toc .toctitle, .toc .toctitle {
+    text-align: center;
+}
+#toc ul, .toc ul {
+    list-style-image: none;
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0;
+    text-align: left;
+}
+#toc ul ul, .toc ul ul {
+    margin: 0 0 0 2em;
+}
+#toc .toctoggle, .toc .toctoggle {
+    font-size: 94%;
+}
+
+#toc ul li {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#toc-container {
+	margin-bottom: 10px;
+}
+
+/*
+*
+* Personnalisation TOC pour le menu sommaire
+* Thème Jeedom
+*
+*/
+
+/* Fixe la taille et la possition pour les sous éléments */
+#main, #page-header{
+	width: 100%;	
+	position: relative;
+}
+
+/* Fixe la position du menu sommaire et le met en flottant*/
+#menu-sommaire{
+	position: fixed;
+	float: left;
+	width: 20%;
+}
+
+/* Ajuste le possitionement du contenu par rapport au sommaire*/
+#main_content{
+	position: relative;
+	left: 20%;
+	width: 80%;
+	margin: 0;
+	padding: 40px 0;	
+}
+
+/*Ajout d'une marge interieur gauche et droite au menu sommaire*/
+#toc td{
+	padding: 0 5px;	
+}
+
+/*Masque les liens de retour au sommaire pour la version ordinateur*/
+a[title="Sommaire"] {
+    display: none;
+}
+
+
+
+/*
+* 
+* Configuration spécifique pour les mobiles
+*
+*/
+@media (max-width: 640px) {
+	* {
+		box-sizing: border-box;
+	}
+/* passer body (et tous les éléments de largeur fixe) en largeur automatique */
+
+	body {
+		width: auto;
+		margin: 0;
+		padding: 0;
+	}
+	
+	/* fixer une largeur maximale de 100% aux éléments potentiellement problématiques */
+
+	img,
+	table,
+	td,
+	blockquote,
+	code,
+	pre,
+	textarea,
+	input,
+	iframe,
+	object,
+	embed,
+	video {
+		max-width: 100%;
+	}
+	
+	/* conserver le ratio des images */
+
+	img {
+		height: auto;
+	}
+	
+	/* gestion des mots longs */
+
+	textarea,
+	table,
+	td,
+	th,
+	code,
+	pre,
+	samp {
+		-webkit-hyphens: auto; /* césure propre */
+		-moz-hyphens: auto;
+		hyphens: auto;
+		word-wrap: break-word; /* passage à la ligne forcé */
+	}
+	
+	code,
+	pre,
+	samp {
+		white-space: pre-wrap; /* passage à la ligne spécifique pour les éléments à châsse fixe */
+	}
+	
+	/* Passer à une seule colonne (à appliquer aux éléments multi-colonnes) */
+
+	.element1,
+	.element2 {
+		float: none;
+		width: auto;
+	}
+	
+	/* masquer les éléments superflus */
+
+	.hide_mobile {
+		display: none !important;
+	}
+	
+	/* Un message personnalisé */
+
+	body:before {
+		content: "Version mobile du site";
+		display: block;
+		text-align: center;
+		font-style: italic;
+		color: #777;
+	}
+	
+	/*Affiche les liens de retours au sommaire version mobile*/
+	a[title="Sommaire"] {
+	    display: block;
+	}
+	
+	/* Fixe le menu sommaire en haut de page*/
+	#menu-sommaire{
+		position: relative;
+		float: none;
+		width: 100%;
+	}
+
+	/* Ajuste le possitionement du contenu par rapport au sommaire*/
+	#main_content{
+		position: relative;
+		left: 0px;
+		width: 100%;
+		margin: 0;
+		padding: 40px 10px;	
+	}
+	
+	/* ajustement de la largeur du menu sommaire */
+	table#toc{
+		width: 100%;	
+	}
+}
+
+@media (max-device-width:768px) and (orientation: landscape) {
+  html {
+   -webkit-text-size-adjust: 100%;
+   -ms-text-size-adjust: 100%;
+  }
+}
