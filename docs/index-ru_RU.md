@@ -218,9 +218,9 @@ Plusieurs points à réaliser correctement :
 -   Il est conseillé de cocher la case "évènement seulement", cela
     permet de réduire la charge de Jeedom et d’avoir vraiment une
     actualisation en temps réel.
-    
+
 [Sommaire](#toctitle "Sommaire") 
-    
+
 
 ## Multiple commandes
 

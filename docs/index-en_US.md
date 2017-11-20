@@ -1,4 +1,4 @@
-Presentation
+# Presentation
 
 Le plugin Virtual (virtuel) permet la création de périphériques virtuels
 et de leurs propriétés.
@@ -23,7 +23,7 @@ Un périphérique virtuel peut être créé pour les besoins suivants :
 [Sommaire](#toctitle "Sommaire") 
 
 
- # Setup
+# Setup
 
 Le plugin ne nécessite aucune configuration, il faut juste l’activer :
 
@@ -218,9 +218,9 @@ Plusieurs points à réaliser correctement :
 -   Il est conseillé de cocher la case "évènement seulement", cela
     permet de réduire la charge de Jeedom et d’avoir vraiment une
     actualisation en temps réel.
-    
+
 [Sommaire](#toctitle "Sommaire") 
-    
+
 
 ## Multiple commandes
 
