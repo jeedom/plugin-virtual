@@ -1,4 +1,4 @@
-# Présentation
+# Präsentation
 
 Le plugin Virtual (virtuel) permet la création de périphériques virtuels
 et de leurs propriétés.

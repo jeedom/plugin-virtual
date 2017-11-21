@@ -1,66 +1,66 @@
-# Présentation
+# Presentación
 
-Le plugin Virtual (virtuel) permet la création de périphériques virtuels
-et de leurs propriétés.
+El plugin Virtual (virtual) permite la creación de dispositivos virtuales
+y sus propiedades.
 
-Nous nommerons un périquérique créé par ce plugin : périphérique
-virtuel.
+Nombraremos un dispositivo creado por este complemento: dispositivo
+virtual
 
-Un périphérique virtuel peut être créé pour les besoins suivants :
+Se puede crear un dispositivo virtual para los siguientes propósitos:
 
--   consolider dans un seul périphérique des informations ou actions de
-    plusieurs périphériques physiques/virtuels ;
+-   consolidar en un solo dispositivo las informaciones o acciones de
+    múltiples dispositivos físicos/virtuales ;
 
--   créer un périphérique alimenté par une source externe à Jeedom
+-   crear un dispositivo alimentado por una fuente externa a Jeedom
     (Zibase, IPX800…) ;
 
--   dupliquer un équipement pour le scinder en 2 par exemple ;
+-   duplicar un dispositivo para dividirlo en 2, por ejemplo ;
 
--   effectuer un calcul sur plusieurs valeurs d'équipement ;
+-   realizar un cálculo en varios valores del dispositivo;
 
--   exécuter de multiples actions (macro).
+-   realizar múltiples acciones (macro).
 
-[Sommaire](#toctitle "Sommaire") 
+[Resumen](#toctitle "Resumen") 
 
 
-# Configuration
+# Configuración
 
-Le plugin ne nécessite aucune configuration, il faut juste l’activer :
+El plugin no requiere ninguna configuración, solo actívelo :
 
 ![virtual1](images/virtual1.png)
 
-[Sommaire](#toctitle "Sommaire") 
+[Resumen](#toctitle "Resumen") 
 
 
-# Configuration des équipements
+# Configuración de los dispositivos
 
-La configuration des équipements virtuels est accessible à partir du
-menu plugin :
+La configuración de los dispositivos virtuales es accesible desde
+el menú plugin:
 
 ![virtual2](images/virtual2.png)
 
-Voilà à quoi ressemble la page du plugin virtuel (ici avec déjà un
-équipement) :
+Así es como se ve la página del plugin virtual (aquí con un
+dispositivo):
 
 ![virtual3](images/virtual3.png)
 
-Voilà à quoi ressemble la page de configuration d’un équipement virtuel
+Así es como se ve la página de configuración de un dispositivo virtual
 :
 
 ![virtual4](images/virtual4.png)
 
-> **Tip**
+> **Sugerencia**
 >
-> Comme à beaucoup d’endroits sur Jeedom, mettre la souris tout à gauche
-> permet de faire apparaître un menu d’accès rapide (vous pouvez à
-> partir de votre profil le laisser toujours visible).
+> Como en muchos lugares en Jeedom, coloque el mouse hacia la izquierda
+> permite abrir un menú de acceso rápido (puede
+>dejarlo siempre visible desde su perfil).
 
-Vous retrouvez ici toute la configuration de votre équipement :
+Aquí encontrará toda la configuración de su dispositivo:
 
--   **Nom de l'équipement virtuel** : nom de votre équipement virtuel,
+-   **Nombre del dispositivo virtual** : nombre de su dispositivo virtual,
 
--   **Objet parent** : indique l’objet parent auquel appartient
-    l'équipement,
+-   **Objeto padre** : especifica el objeto padre al que pertenece
+    dispositivo,
 
 -   **Catégorie** : les catégories de l'équipement (il peut appartenir à
     plusieurs catégories),
@@ -120,7 +120,7 @@ En-dessous vous retrouvez la liste des commandes :
 
 -   supprimer (signe -) : permet de supprimer la commande.
 
-[Sommaire](#toctitle "Sommaire") 
+[Resumen](#toctitle "Resumen") 
 
 
 # Tutoriel
@@ -156,7 +156,7 @@ un joli widget qui changera d'état lors d’un clic :
 
 ![virtual9](images/virtual9.png)
 
-[Sommaire](#toctitle "Sommaire") 
+[Resumen](#toctitle "Resumen") 
 
 
 ## Slider virtuel
@@ -174,7 +174,7 @@ créer la commande info :
 Et comme tout à l’heure il est conseillé de lier l’action à la commande
 d'état et de masquer celle-ci.
 
-[Sommaire](#toctitle "Sommaire") 
+[Resumen](#toctitle "Resumen") 
 
 
 ## Interrupteur de type toggle
@@ -219,7 +219,7 @@ Plusieurs points à réaliser correctement :
     permet de réduire la charge de Jeedom et d’avoir vraiment une
     actualisation en temps réel.
 
-[Sommaire](#toctitle "Sommaire") 
+[Resumen](#toctitle "Resumen") 
 
 
 ## Multiple commandes
@@ -236,7 +236,7 @@ sous-types des commandes pilotées, donc toutes les commandes dans le
 champs valeur doivent avoir le même sous-type (toutes "autre", ou toutes
 "slider", ou toutes de type couleur).
 
-[Sommaire](#toctitle "Sommaire") 
+[Resumen](#toctitle "Resumen") 
 
 
 ## Retour d'état virtuel
@@ -253,7 +253,7 @@ On peut aussi imaginer un virtuel qui allume/éteint plusieurs lampes
 (commandes actions séparées par des &&) et avoir ainsi un état de cette
 commande générale.
 
-[Sommaire](#toctitle "Sommaire") 
+[Resumen](#toctitle "Resumen") 
 
 
 # Affectation d’une valeur par API
@@ -271,4 +271,4 @@ appels API :
 # Changelog détaillé :
 <https://github.com/jeedom/plugin-virtual/commits/stable>
 
-[Sommaire](#toctitle "Sommaire") 
+[Resumen](#toctitle "Resumen") 
