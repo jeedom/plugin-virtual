@@ -25,11 +25,32 @@ class virtual extends eqLogic {
 	/*     * ***********************Methode static*************************** */
 
 	public static function event() {
-		$cmd = virtualCmd::byId(init('id'));
-		if (!is_object($cmd) || $cmd->getEqType() != 'virtual') {
-			throw new Exception(__('Commande ID virtuel inconnu, ou la commande n\'est pas de type virtuel : ', __FILE__) . init('id'));
+		log::add('virtual', 'debug', json_encode($_GET));
+		if (init('id') != '') {
+			$cmd = virtualCmd::byId(init('id'));
+			if (!is_object($cmd) || $cmd->getEqType() != 'virtual') {
+				throw new Exception(__('Commande ID virtuel inconnu, ou la commande n\'est pas de type virtuel : ', __FILE__) . init('id'));
+			}
+		} else if (init('eid') != '') {
+			$eqLogic = virtual::byId(init('eid'));
+			if (!is_object($eqLogic) || $eqLogic->getEqType_name() != 'virtual') {
+				throw new Exception(__('Equipement ID virtuel inconnu : ', __FILE__) . init('eid'));
+			}
+			if (!is_object($eqLogic) || $eqLogic->getEqType_name() != 'virtual') {
+				throw new Exception(__('L\'équipement n\'est pas de type virtuel : ', __FILE__) . $eqLogic->getEqType_name());
+			}
+			$cmd = null;
+			foreach ($eqLogic->getCmd('info') as $eqCmd) {
+				if (strtolower(init('name', init('cn'))) == strtolower($eqCmd->getName())) {
+					$cmd = $eqCmd;
+					break;
+				}
+			}
 		}
-		$cmd->event(init('value'));
+		if (!is_object($cmd)) {
+			throw new Exception(__('Commande introuvable : ', __FILE__) . json_encode($_GET));
+		}
+		$cmd->event(init('value', init('v')));
 	}
 
 	public static function cron() {
@@ -47,21 +68,21 @@ class virtual extends eqLogic {
 			}
 		}
 	}
-	
+
 	public static function deadCmd() {
 		$return = array();
-		foreach (eqLogic::byType('virtual') as $virtual){
+		foreach (eqLogic::byType('virtual') as $virtual) {
 			foreach ($virtual->getCmd() as $cmd) {
-				preg_match_all("/#([0-9]*)#/", $cmd->getConfiguration('infoName',''), $matches);
+				preg_match_all("/#([0-9]*)#/", $cmd->getConfiguration('infoName', ''), $matches);
 				foreach ($matches[1] as $cmd_id) {
-				if (!cmd::byId(str_replace('#','',$cmd_id))){
-						$return[]= array('detail' => 'Virtuel ' . $virtual->getHumanName() . ' dans la commande ' . $cmd->getName(),'help' => 'Nom Information','who'=>'#' . $cmd_id . '#');
+					if (!cmd::byId(str_replace('#', '', $cmd_id))) {
+						$return[] = array('detail' => 'Virtuel ' . $virtual->getHumanName() . ' dans la commande ' . $cmd->getName(), 'help' => 'Nom Information', 'who' => '#' . $cmd_id . '#');
 					}
 				}
-				preg_match_all("/#([0-9]*)#/", $cmd->getConfiguration('calcul',''), $matches);
+				preg_match_all("/#([0-9]*)#/", $cmd->getConfiguration('calcul', ''), $matches);
 				foreach ($matches[1] as $cmd_id) {
-				if (!cmd::byId(str_replace('#','',$cmd_id))){
-						$return[]= array('detail' => 'Virtuel ' . $virtual->getHumanName() . ' dans la commande ' . $cmd->getName(),'help' => 'Calcul','who'=>'#' . $cmd_id . '#');
+					if (!cmd::byId(str_replace('#', '', $cmd_id))) {
+						$return[] = array('detail' => 'Virtuel ' . $virtual->getHumanName() . ' dans la commande ' . $cmd->getName(), 'help' => 'Calcul', 'who' => '#' . $cmd_id . '#');
 					}
 				}
 			}
@@ -125,7 +146,7 @@ class virtual extends eqLogic {
 			$cmd->setOrder($cmd_def->getOrder());
 			$cmd->setDisplay('icon', $cmd_def->getDisplay('icon'));
 			$cmd->setDisplay('invertBinary', $cmd_def->getDisplay('invertBinary'));
-			$cmd->setConfiguration('listValue', $cmd_def->getConfiguration('listValue',''));
+			$cmd->setConfiguration('listValue', $cmd_def->getConfiguration('listValue', ''));
 			foreach ($cmd_def->getTemplate() as $key => $value) {
 				$cmd->setTemplate($key, $value);
 			}
@@ -284,7 +305,7 @@ class virtualCmd extends cmd {
 						$value = $_options['slider'];
 					} else if ($this->getSubType() == 'color') {
 						$value = $_options['color'];
-					} else if ($this->getSubType() == 'select'){
+					} else if ($this->getSubType() == 'select') {
 						$value = $_options['select'];
 					} else {
 						$value = $this->getConfiguration('value');
