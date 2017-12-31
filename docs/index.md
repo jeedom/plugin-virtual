@@ -20,7 +20,7 @@ Un périphérique virtuel peut être créé pour les besoins suivants :
 
 -   exécuter de multiples actions (macro).
 
-[Sommaire](#toctitle "Sommaire") 
+
 
 
 # Configuration
@@ -29,7 +29,7 @@ Le plugin ne nécessite aucune configuration, il faut juste l’activer :
 
 ![virtual1](images/virtual1.png)
 
-[Sommaire](#toctitle "Sommaire") 
+
 
 
 # Configuration des équipements
@@ -120,7 +120,7 @@ En-dessous vous retrouvez la liste des commandes :
 
 -   supprimer (signe -) : permet de supprimer la commande.
 
-[Sommaire](#toctitle "Sommaire") 
+
 
 
 # Tutoriel
@@ -156,7 +156,7 @@ un joli widget qui changera d'état lors d’un clic :
 
 ![virtual9](images/virtual9.png)
 
-[Sommaire](#toctitle "Sommaire") 
+
 
 
 ## Slider virtuel
@@ -174,7 +174,7 @@ créer la commande info :
 Et comme tout à l’heure il est conseillé de lier l’action à la commande
 d'état et de masquer celle-ci.
 
-[Sommaire](#toctitle "Sommaire") 
+
 
 
 ## Interrupteur de type toggle
@@ -219,7 +219,7 @@ Plusieurs points à réaliser correctement :
     permet de réduire la charge de Jeedom et d’avoir vraiment une
     actualisation en temps réel.
     
-[Sommaire](#toctitle "Sommaire") 
+
     
 
 ## Multiple commandes
@@ -236,7 +236,7 @@ sous-types des commandes pilotées, donc toutes les commandes dans le
 champs valeur doivent avoir le même sous-type (toutes "autre", ou toutes
 "slider", ou toutes de type couleur).
 
-[Sommaire](#toctitle "Sommaire") 
+
 
 
 ## Retour d'état virtuel
@@ -253,7 +253,7 @@ On peut aussi imaginer un virtuel qui allume/éteint plusieurs lampes
 (commandes actions séparées par des &&) et avoir ainsi un état de cette
 commande générale.
 
-[Sommaire](#toctitle "Sommaire") 
+
 
 
 # Affectation d’une valeur par API
@@ -271,4 +271,4 @@ appels API :
 # Changelog détaillé :
 <https://github.com/jeedom/plugin-virtual/commits/stable>
 
-[Sommaire](#toctitle "Sommaire") 
+
