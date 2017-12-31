@@ -9,14 +9,14 @@
 </head>
 <body>
   {% include header.html %}
-  <div class="container" style="margin-top : 50px;" id="div_summary">
-    <div class="section">
+  <div class="container" style="margin-top : 50px;">
+    <div class="section"  id="div_summary">
 
 
     </div>
   </div>
   <div class="container">
-    <div class="section">
+    <div class="section" id="div_content">
       {{ content }}
     </div>
   </div>
@@ -29,7 +29,7 @@
       $('.container .section img').addClass('responsive-img');
 
       $('#div_summary').toc({
-        renderIn:'#div_summary',
+        container:'#div_content',
       });
 
     });
