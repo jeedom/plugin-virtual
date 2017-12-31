@@ -1,18 +1,6 @@
 ---
-title: Jekyll Materialize
-email: your-email@domain.com
-author: hugocarreira
-author_github: hugocarreira
-description: |
-  a simple theme for Jekyll using Materializecss
+langs: [fr_FR,en_US,ru_RU,de_DE,es_ES,it_IT,id_ID] 
 baseurl: "/"
-url: http://hugocarreira.github.io/jekyll-materializecss
-paginate: 12
-github:
-  user: hugocarreira
-  repository: jekyll-materializecss
-  url: http://hugocarreira.github.io/jekyll-materializecss/
-  status: true
 home_bgfile: bg.jpg
 sass:
   sass_dir: assets/css

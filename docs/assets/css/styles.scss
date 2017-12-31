@@ -30,6 +30,27 @@ color: #95C12B !important;
 color: #85a835 !important;
 }
 
+h1, h2, h3, h4, h5, h6 {
+font-weight: 300;
+line-height: 1.1;
+}
+.waves-effect.waves-jeedom .waves-ripple {
+/* The alpha value allows the text and background color
+of the button to still show through. */
+background-color: rgba(149, 193, 43, 0.65);
+}
+
+/* footer */
+body {
+display: flex;
+min-height: 100vh;
+flex-direction: column;
+}
+
+main {
+flex: 1 0 auto;
+}
+
 nav {
 -webkit-box-shadow: none;
 box-shadow: none;
