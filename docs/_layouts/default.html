@@ -9,26 +9,13 @@
 </head>
 <body>
   {% include header.html %}
+  <div class="container" style="margin-top : 50px;" id="div_summary">
+    <div class="section">
 
 
-  <ul id="slide-out" class="side-nav">
-    <li><div class="user-view">
-      <div class="background">
-        <img src="images/office.jpg">
-      </div>
-      <a href="#!user"><img class="circle" src="images/yuna.jpg"></a>
-      <a href="#!name"><span class="white-text name">John Doe</span></a>
-      <a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a>
-    </div></li>
-    <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
-    <li><a href="#!">Second Link</a></li>
-    <li><div class="divider"></div></li>
-    <li><a class="subheader">Subheader</a></li>
-    <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
-  </ul>
-
-
-  <div class="container" style="margin-top : 50px;">
+    </div>
+  </div>
+  <div class="container">
     <div class="section">
       {{ content }}
     </div>
@@ -41,8 +28,8 @@
       $(".button-collapse").sideNav();
       $('.container .section img').addClass('responsive-img');
 
-      $('#main_content').toc({
-        renderIn:'body',
+      $('#div_summary').toc({
+        renderIn:'#div_summary',
       });
 
     });
