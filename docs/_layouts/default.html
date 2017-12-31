@@ -35,10 +35,16 @@
   </div>
   <script type="text/javascript" src="{{ site.github.url }}/assets/js/jquery-2.1.1.min.js"></script>
   <script type="text/javascript" src="{{ site.github.url }}/assets/js/materialize.min.js"></script>
+  <script type="text/javascript" src="{{ site.github.url }}/assets/js/jquery.toc.js.js"></script>
   <script type="text/javascript">
     $(document).ready(function() {
       $(".button-collapse").sideNav();
-      $('.container .section img').addClass('responsive-img')
+      $('.container .section img').addClass('responsive-img');
+
+      $('#main_content').toc({
+        renderIn:'body',
+      });
+
     });
   </script>
 </body>
