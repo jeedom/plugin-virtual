@@ -38,15 +38,12 @@
     <section class="page-header">
 	<img id="logo_jeedom" src="{{ site.github.url }}/assets/logo_white.png"></img>
       	<h1 id="nom-plugin" class="project-name">{{ site.github.project_title }}</h1>
-      	{% if site.nameLogo %}		
-			<img id="logo_plugin" class="hide_mobile" 
-			 src="{{ "https://raw.githubusercontent.com/" | append: site.github.owner_name | append: "/" | append: site.github.repository_name | append: "/master/plugin_info/" | append: site.nameLogo}}"></img>
+      	{% if site.nameLogo %}
 		{% endif %}
       	<div id="blocLangs">
 	{% if site.langs.size >= 2 %}
 	  {% for lang in site.langs %}
-	    <a href="index{% if lang != "fr_FR" %}-{{ lang }}{% endif %}.html" 
-	       class="btn {% if lang == page.key_do_not_edit_lang %}langActive{% endif %}" data-lang="{{ lang }}">{{ lang }}</a>
+	    <a href="index{% if lang != "fr_FR" %}-{{ lang }}{% endif %}.html" class="btn {% if lang == page.key_do_not_edit_lang %}langActive{% endif %}" data-lang="{{ lang }}">{{ lang }}</a>
 	  {% endfor %}
 	{% endif %}
 	</div>
