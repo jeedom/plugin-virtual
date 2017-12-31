@@ -1,79 +1,41 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: "fr-FR" }}">
-  <head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    {% seo %}
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
-    <link rel="stylesheet" type="text/css" href="{{ '/assets/css/toc.css?v=' | append: site.github.build_revision | relative_url }}" />
-    <link rel="stylesheet" type="text/css" href="{{ '/assets/css/styleJeedom-' | append: site.design | append: '.css?v=' | append: site.github.build_revision | relative_url }}" />
+<html lang="pt-br">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="{{ '/js/jquery.toc.js?v=' | append: site.github.build_revision | relative_url }}"></script>
-    <script src="{{ '/js/custom.jeedom.js?v=' | append: site.github.build_revision | relative_url }}"></script>
-	 <script src="{{ '/js/jquery.inview.min.js?v=' | append: site.github.build_revision | relative_url }}"></script>
-    <script type="text/javascript">
-	    $(function() {
+    <head>
+        <!--Import Google Icon Font-->
+      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-		/*** Fonction Toc plugin jquery qui crée un menu a partir du contenu de la page ***/
-		$('#main_content').toc({
-		  renderIn:'#menu-sommaire',
-		  contentsText: '{{ page.key_do_not_edit_label.key_do_not_edit_titreMenu }}',
-		  hideText: '{{ page.key_do_not_edit_label.key_do_not_edit_btnMasquer }}',
-		  showText: '{{ page.key_do_not_edit_label.key_do_not_edit_btnAffiche }}'
-		});
+      <!--Import css files-->
+      <link rel="stylesheet" href="{{ site.github.url }}/assets/css/styles.css">
+      <link rel="stylesheet" href="{{ site.github.url }}/assets/css/materialize.css">
 
-		/*** Fonction qui personnalise le comportement des effets pour jeedom ***/
-		$('#main_content').customJS({
-			traduction: JSON.parse('{{ page.key_do_not_edit_label }}'.replace(/=>/g,':'))	
-		});    
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <meta http-equiv="Content-Language" content="pt-br">
+    </head>
+  <body>
 
-	    });
-    </script>
+    {% include header.html %}
 
-  </head>
-  <body data-before="{{ page.key_do_not_edit_label.key_do_not_edit_messageHeadMobile }}">
-    <section class="page-header">
-	<img id="logo_jeedom" src="{{ site.github.url }}/assets/logo_white.png"></img>
-      	<h1 id="nom-plugin" class="project-name">{{ site.github.project_title }}</h1>
-      	{% if site.nameLogo %}
-		{% endif %}
-      	<div id="blocLangs">
-	{% if site.langs.size >= 2 %}
-	  {% for lang in site.langs %}
-	    <a href="index{% if lang != "fr_FR" %}-{{ lang }}{% endif %}.html" class="btn {% if lang == page.key_do_not_edit_lang %}langActive{% endif %}" data-lang="{{ lang }}">{{ lang }}</a>
-	  {% endfor %}
-	{% endif %}
-	</div>
-    </section>
-    <section id="main">
-        <nav id="menu-sommaire" ></nav>
-        <section id="main_content" class="main-content">
-          {{ content }}
-          <footer class="site-footer">
-            <div class="site-footer-credits">Documentation pour Jeedom : {{ site.github.project_title }}.</div>
-	    <div class="site-footer-credits">Dépot de : {{ site.github.owner_name }}.</div>
-	    <div class="site-footer-credits">Url du dépot : <a href="{{ site.github.repository_url }}">{{ site.github.repository_url }}</a>.</div>	  
-            <div class="site-footer-credits">Thème version : {{ site.themeVersion }}.</div>
-  	    <div class="site-footer-credits">Date de conversion : {{ site.dateConversion }}.</div>
-	  {% comment %}   
-		  <div class="site-footer-credits">Test : {{ site.github.url }}.</div> 
-	 {% endcomment %}
-	</footer>
-        </section>
-    </section>
-    {% if site.google_analytics %}
+        {{ content }}
+
+      <script type="text/javascript" src="{{ site.github.url }}/assets/js/jquery-2.1.1.min.js"></script>
+      <script type="text/javascript" src="{{ site.github.url }}/assets/js/materialize.min.js"></script>
+      <script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
       <script type="text/javascript">
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-        ga('create', '{{ site.google_analytics }}', 'auto');
-        ga('send', 'pageview');
+          $(document).ready(function() {
+              $(".button-collapse").sideNav();
+          });
       </script>
-    {% endif %}
+      <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-78209611-3', 'auto');
+          ga('send', 'pageview');
+      </script>
   </body>
+
 </html>
