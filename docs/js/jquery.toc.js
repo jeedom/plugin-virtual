@@ -12,13 +12,13 @@
  *   http://www.opensource.org/licenses/mit-license.php
  *   http://www.gnu.org/licenses/gpl.html
  */
-console.log('Début fichier jquery.toc.js');
+//console.log('Début fichier jquery.toc.js');
 (function($) {
     var toggleHTML = '<div id="toctitle"><h2>%1</h2> <span class="toctoggle">[<a id="toctogglelink" class="internal" href="#">%2</a>]</span></div>';
     var tocContainerHTML = '<div id="toc-container"><table class="toc" id="toc"><tbody><tr><td>%1<ul>%2</ul></td></tr></tbody></table></div>';
 
     function createLevelHTML(anchorId, tocLevel, tocSection, tocNumber, tocText, tocInner) {
- console.log('Début funtion createLevelHTML');
+ //console.log('Début funtion createLevelHTML');
         var link = '<a href="#%1"><span class="tocnumber">%2</span> <span class="toctext">%3</span></a>%4'
             .replace('%1', anchorId)
             .replace('%2', tocNumber)
@@ -31,7 +31,7 @@ console.log('Début fichier jquery.toc.js');
     }
 
     function checkMaxHead($root) {
-console.log('Début funtion checkMaxHead');
+//console.log('Début funtion checkMaxHead');
         if ($root.find('h1').length > 0) {
             return ['h1', 'h2'];
         } else {
@@ -40,7 +40,7 @@ console.log('Début funtion checkMaxHead');
     }
 
     $.fn.toc = function(settings) {
-console.log('Début funtion $.fn.toc');
+//console.log('Début funtion $.fn.toc');
         var config = {
             renderIn: 'self',
             anchorPrefix: 'tocAnchor-',
@@ -157,7 +157,7 @@ console.log('Début funtion $.fn.toc');
                 $('#toctogglelink').click();
             }
         }
- console.log('Fin funtion $.fn.toc',this);    
+// console.log('Fin funtion $.fn.toc',this);    
         return this;
     }
 //console.log('appel $(#main_content).toc();');
