@@ -10,10 +10,12 @@
 <body>
   {% include header.html %}
   <div class="container" style="margin-top : 50px;">
-    <div class="section"  id="div_summary">
+    <center>
+      <div class="section"  id="div_summary">
 
 
-    </div>
+      </div>
+    </center>
   </div>
   <div class="container">
     <div class="section" id="div_content">
@@ -27,11 +29,10 @@
     $(document).ready(function() {
       $(".button-collapse").sideNav();
       $('.container .section img').addClass('responsive-img');
-
-      $('#div_summary').toc({
-        container:'#div_content',
+      $('#div_content').toc({
+        renderIn : "#div_summary"
       });
-
+      $('.toctoggle').hide();
     });
   </script>
 </body>
