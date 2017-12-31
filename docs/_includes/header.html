@@ -1,38 +1,40 @@
 <div>
   <nav>
     <div class="nav-wrapper">
-      <a id="logo-container" href="https://www.jeedom.com/doc" class="brand-logo center"><img src="{{ site.github.url }}/assets/images/logo.png" style="height:50px;margin-top:5px"></a>
-      <ul class="left hide-on-med-and-down">
-        <li>{{ site.github.project_title }}</li>
-      </ul>
-      <ul class="left hide-on-med-and-down">
-        {% if site.langs.size >= 2 %}
-        {% for lang in site.langs %}
-        <li><a href="index{% if lang != "fr_FR" %}-{{ lang }}{% endif %}.html" 
-          class="{% if lang == page.key_do_not_edit_lang %}active{% endif %}" data-lang="{{ lang }}">{{ lang }}</a></li>
-          {% endfor %}
-          {% endif %}
+      <div class="container">
+        <a id="logo-container" href="https://www.jeedom.com/doc" class="brand-logo center"><img src="{{ site.github.url }}/assets/images/logo.png" style="height:50px;margin-top:5px"></a>
+        <ul class="left hide-on-med-and-down">
+          <li>{{ site.github.project_title }}</li>
         </ul>
-        <a href="https://www.jeedom.com/doc" data-activates="nav-mobile" class="button-collapse btn-floating btn-large waves-effect waves-light jeedomcolorbg"><i class="material-icons">menu</i></a>
-        <ul class="right hide-on-med-and-down">
-          <li><a href="https://www.jeedom.com/site">Site</a></li>
-          <li><a href="https://www.jeedom.com/blog">Blog</a></li>
-          <li><a href="https://www.jeedom.com/forum">Forum</a></li>
-          <li><a href="https://www.jeedom.com/market">Market</a></li>
-          <li class="active"><a href="https://www.jeedom.com/doc">Doc</a></li>
-        </ul>
-        <ul class="side-nav" id="nav-mobile">
-         {% if site.langs.size >= 2 %}
-         {% for lang in site.langs %}
-         <li><a href="index{% if lang != "fr_FR" %}-{{ lang }}{% endif %}.html" 
-          class="{% if lang == page.key_do_not_edit_lang %}active{% endif %}" data-lang="{{ lang }}">{{ lang }}</a></li>
-          {% endfor %}
-          {% endif %}
-          <li><a href="https://www.jeedom.com/blog">Blog</a></li>
-          <li><a href="https://www.jeedom.com/forum">Forum</a></li>
-          <li><a href="https://www.jeedom.com/market">Market</a></li>
-          <li><a href="https://www.jeedom.com/doc">Doc</a></li>
-        </ul>
+        <ul class="left hide-on-med-and-down">
+          {% if site.langs.size >= 2 %}
+          {% for lang in site.langs %}
+          <li><a href="index{% if lang != "fr_FR" %}-{{ lang }}{% endif %}.html" 
+            class="{% if lang == page.key_do_not_edit_lang %}active{% endif %}" data-lang="{{ lang }}">{{ lang }}</a></li>
+            {% endfor %}
+            {% endif %}
+          </ul>
+          <a href="https://www.jeedom.com/doc" data-activates="nav-mobile" class="button-collapse btn-floating btn-large waves-effect waves-light jeedomcolorbg"><i class="material-icons">menu</i></a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="https://www.jeedom.com/site">Site</a></li>
+            <li><a href="https://www.jeedom.com/blog">Blog</a></li>
+            <li><a href="https://www.jeedom.com/forum">Forum</a></li>
+            <li><a href="https://www.jeedom.com/market">Market</a></li>
+            <li class="active"><a href="https://www.jeedom.com/doc">Doc</a></li>
+          </ul>
+          <ul class="side-nav" id="nav-mobile">
+           {% if site.langs.size >= 2 %}
+           {% for lang in site.langs %}
+           <li><a href="index{% if lang != "fr_FR" %}-{{ lang }}{% endif %}.html" 
+            class="{% if lang == page.key_do_not_edit_lang %}active{% endif %}" data-lang="{{ lang }}">{{ lang }}</a></li>
+            {% endfor %}
+            {% endif %}
+            <li><a href="https://www.jeedom.com/blog">Blog</a></li>
+            <li><a href="https://www.jeedom.com/forum">Forum</a></li>
+            <li><a href="https://www.jeedom.com/market">Market</a></li>
+            <li><a href="https://www.jeedom.com/doc">Doc</a></li>
+          </ul>
+        </div>
       </div>
     </nav>
   </div>
