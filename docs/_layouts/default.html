@@ -14,26 +14,24 @@
       <div id="div_summary"></div>
     </div>
     <div class="col s12 m8 l9">
-     <div class="container">
-      <div class="section" id="div_content">
+      <div id="div_content">
         {{ content }}
       </div>
     </div>
   </div>
-</div>
 
-<script type="text/javascript" src="{{ site.github.url }}/assets/js/jquery-2.1.1.min.js"></script>
-<script type="text/javascript" src="{{ site.github.url }}/assets/js/materialize.min.js"></script>
-<script type="text/javascript" src="{{ site.github.url }}/assets/js/jquery.toc.js"></script>
-<script type="text/javascript">
-  $(document).ready(function() {
-    $(".button-collapse").sideNav();
-    $('.container .section img').addClass('responsive-img');
-    $('#div_content').toc({
-      renderIn : "#div_summary"
+  <script type="text/javascript" src="{{ site.github.url }}/assets/js/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" src="{{ site.github.url }}/assets/js/materialize.min.js"></script>
+  <script type="text/javascript" src="{{ site.github.url }}/assets/js/jquery.toc.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $(".button-collapse").sideNav();
+      $('#div_content img').addClass('responsive-img');
+      $('#div_content').toc({
+        renderIn : "#div_summary"
+      });
+      $('.toctoggle').hide();
     });
-    $('.toctoggle').hide();
-  });
-</script>
+  </script>
 </body>
 </html>
