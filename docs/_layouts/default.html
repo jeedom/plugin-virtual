@@ -13,7 +13,7 @@
       <div class="nav-wrapper">
         <a id="logo-container" href="https://www.jeedom.com/doc" class="brand-logo center"><img src="{{ site.github.url }}/assets/images/logo.png" style="height:50px;margin-top:5px"></a>
         <ul class="left hide-on-med-and-down">
-          <li>{{ site.github.project_title }}</li>
+          <li>{{site.github.project_title}}</li>
         </ul>
         <ul class="left hide-on-med-and-down">
           {% if site.langs.size >= 2 %}
@@ -46,7 +46,7 @@
         </div>
       </nav>
     </div>
-    <div class="row" style="margin-top : 50px;">
+    <div class="row" style="margin-top : 50px;" id="div_main">
       <div class="col s12 m4 l3">
         <div id="div_summary"></div>
       </div>
@@ -68,6 +68,10 @@
           renderIn : "#div_summary"
         });
         $('.toctoggle').hide();
+        if(window.innerWidth > 992){
+          $('.nav-wrapper').addClass('container');
+          $('#div_main').addClass('container');
+        }
       });
     </script>
   </body>
