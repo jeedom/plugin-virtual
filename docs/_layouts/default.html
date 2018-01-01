@@ -32,9 +32,9 @@
       </div>
     </nav>
   </div>
-  <div class="row" style="margin-top : 50px;" id="div_main">
+  <div class="row" style="margin-top : 40px;" id="div_main">
     <div class="col s12 m4 l3">
-     <select>
+     <select style="margin-top: 30px !important;">
       {% if site.langs.size >= 2 %}
       {% for lang in site.langs %}
       <option href="index{% if lang != "fr_FR" %}-{{ lang }}{% endif %}.html" class="{% if lang == page.key_do_not_edit_lang %}active{% endif %}" data-lang="{{ lang }}">{{ lang }}</option>
@@ -61,6 +61,7 @@
       renderIn : "#div_summary"
     });
     $('.toctoggle').hide();
+    $('select').material_select();
     if(window.innerWidth < 992){
       $('#div_main').addClass('container');
     }
