@@ -30,21 +30,21 @@
       </ul>
     </div>
   </nav>
-  <div class="row" style="margin-top : 40px;" id="div_main">
+  <div class="row" style="margin-top : 40px; background-color:rgb(241,244,240);" id="div_main">
     <div class="col s12 m4 l3">
-      <h1>{{site.github.project_title}}</h1>
+      <h2>{{site.github.project_title}}</h2>
       <div class="input-field">
        <select id="sel_lang">
         {% if site.langs.size >= 2 %}
         {% for lang in site.langs %}
         <option data-href="index{% if lang != "fr_FR" %}-{{ lang }}{% endif %}.html">
           {% if lang == "fr_FR" %}Français{% endif %}
-          {% if lang == "en_US" %}Anglais{% endif %}
-          {% if lang == "ru_RU" %}Russe{% endif %}
-          {% if lang == "de_DE" %}Allemand{% endif %}
-          {% if lang == "es_ES" %}Espagnol{% endif %}
-          {% if lang == "it_IT" %}Italien{% endif %}
-          {% if lang == "id_ID" %}Indien{% endif %}
+          {% if lang == "en_US" %}English{% endif %}
+       <!--      {% if lang == "ru_RU" %}Russe{% endif %}-->
+          {% if lang == "de_DE" %}Deutsch{% endif %}
+          {% if lang == "es_ES" %}Spanish{% endif %}
+       <!--     {% if lang == "it_IT" %}Italien{% endif %}-->
+       <!--   {% if lang == "id_ID" %}Indien{% endif %}-->
         </option>
         {% endfor %}
         {% endif %}
