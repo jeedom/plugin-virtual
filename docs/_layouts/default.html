@@ -38,7 +38,9 @@
        <select>
         {% if site.langs.size >= 2 %}
         {% for lang in site.langs %}
-        <option data-href="index{% if lang != "fr_FR" %}-{{ lang }}{% endif %}.html" {% if lang == page.key_do_not_edit_lang %}selected{% endif %} data-lang="{{ lang }}">{{ lang }}</option>
+        <option data-href="index{% if lang.id != "fr_FR" %}-{{ lang.id }}{% endif %}.html" {% if lang.id == page.key_do_not_edit_lang %}selected{% endif %}>
+        {{ lang.name }}
+      </option>
         {% endfor %}
         {% endif %}
       </select>
