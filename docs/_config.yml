@@ -1,5 +1,5 @@
 ---
-langs: [fr_FR,en_US,ru_RU,de_DE,es_ES,it_IT,id_ID] 
+langs: [fr_FR,en_US,de_DE,es_ES] 
 baseurl: "/"
 home_bgfile: bg.jpg
 sass:
