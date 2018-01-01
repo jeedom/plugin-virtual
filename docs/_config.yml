@@ -1,26 +1,5 @@
 ---
-langs: 
-  - :
-  id : fr_FR 
-  name : Francais 
-  - :
-  id : en_US 
-  name : English
-  - :
-  id : ru_RU 
-  name : Russe 
-  - :
-  id : de_DE 
-  name : Allemand 
-  - :
-  id : es_ES 
-  name : Espagnol 
-  - :
-  id : it_IT 
-  name : Italien 
-  - :
-  id : id_ID 
-  name : Indien
+langs: [fr_FR,en_US,ru_RU,de_DE,es_ES,it_IT,id_ID] 
 baseurl: "/"
 home_bgfile: bg.jpg
 sass:

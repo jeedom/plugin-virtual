@@ -38,9 +38,15 @@
        <select>
         {% if site.langs.size >= 2 %}
         {% for lang in site.langs %}
-        <option data-href="index{% if lang.id != "fr_FR" %}-{{ lang.id }}{% endif %}.html" {% if lang.id == page.key_do_not_edit_lang %}selected{% endif %}>
-        {{ lang.name }}
-      </option>
+        <option data-href="index{% if lang != "fr_FR" %}-{{ lang }}{% endif %}.html">
+          {% if lang == "fr_FR"}Français{% endif %}
+          {% if lang == "en_US"}Anglais{% endif %}
+          {% if lang == "ru_RU"}Russe{% endif %}
+          {% if lang == "de_DE"}Allemand{% endif %}
+          {% if lang == "es_ES"}Espagnol{% endif %}
+          {% if lang == "it_IT"}Italien{% endif %}
+          {% if lang == "id_ID"}Indien{% endif %}
+        </option>
         {% endfor %}
         {% endif %}
       </select>
