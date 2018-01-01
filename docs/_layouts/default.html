@@ -16,62 +16,64 @@
           <li>{{site.github.project_title}}</li>
         </ul>
         <ul class="left hide-on-med-and-down">
+          <select>
+            {% if site.langs.size >= 2 %}
+            {% for lang in site.langs %}
+            <option href="index{% if lang != "fr_FR" %}-{{ lang }}{% endif %}.html" class="{% if lang == page.key_do_not_edit_lang %}active{% endif %}" data-lang="{{ lang }}">{{ lang }}</option>
+            {% endfor %}
+            {% endif %}
+          </select>
+        </ul>
+        <a href="https://www.jeedom.com/doc" data-activates="nav-mobile" class="button-collapse btn-floating btn-large waves-effect waves-light jeedomcolorbg"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="https://www.jeedom.com/site">Site</a></li>
+          <li><a href="https://www.jeedom.com/blog">Blog</a></li>
+          <li><a href="https://www.jeedom.com/forum">Forum</a></li>
+          <li><a href="https://www.jeedom.com/market">Market</a></li>
+          <li class="active"><a href="https://www.jeedom.com/doc">Doc</a></li>
+        </ul>
+        <ul class="side-nav" id="nav-mobile">
+         <select>
           {% if site.langs.size >= 2 %}
           {% for lang in site.langs %}
-          <li><a href="index{% if lang != "fr_FR" %}-{{ lang }}{% endif %}.html" 
-            class="{% if lang == page.key_do_not_edit_lang %}active{% endif %}" data-lang="{{ lang }}">{{ lang }}</a></li>
-            {% endfor %}
-            {% endif %}
-          </ul>
-          <a href="https://www.jeedom.com/doc" data-activates="nav-mobile" class="button-collapse btn-floating btn-large waves-effect waves-light jeedomcolorbg"><i class="material-icons">menu</i></a>
-          <ul class="right hide-on-med-and-down">
-            <li><a href="https://www.jeedom.com/site">Site</a></li>
-            <li><a href="https://www.jeedom.com/blog">Blog</a></li>
-            <li><a href="https://www.jeedom.com/forum">Forum</a></li>
-            <li><a href="https://www.jeedom.com/market">Market</a></li>
-            <li class="active"><a href="https://www.jeedom.com/doc">Doc</a></li>
-          </ul>
-          <ul class="side-nav" id="nav-mobile">
-           {% if site.langs.size >= 2 %}
-           {% for lang in site.langs %}
-           <li><a href="index{% if lang != "fr_FR" %}-{{ lang }}{% endif %}.html" 
-            class="{% if lang == page.key_do_not_edit_lang %}active{% endif %}" data-lang="{{ lang }}">{{ lang }}</a></li>
-            {% endfor %}
-            {% endif %}
-            <li><a href="https://www.jeedom.com/blog">Blog</a></li>
-            <li><a href="https://www.jeedom.com/forum">Forum</a></li>
-            <li><a href="https://www.jeedom.com/market">Market</a></li>
-            <li><a href="https://www.jeedom.com/doc">Doc</a></li>
-          </ul>
-        </div>
-      </nav>
+          <option href="index{% if lang != "fr_FR" %}-{{ lang }}{% endif %}.html" class="{% if lang == page.key_do_not_edit_lang %}active{% endif %}" data-lang="{{ lang }}">{{ lang }}</option>
+          {% endfor %}
+          {% endif %}
+        </select>
+        <li><a href="https://www.jeedom.com/blog">Blog</a></li>
+        <li><a href="https://www.jeedom.com/forum">Forum</a></li>
+        <li><a href="https://www.jeedom.com/market">Market</a></li>
+        <li><a href="https://www.jeedom.com/doc">Doc</a></li>
+      </ul>
     </div>
-    <div class="row" style="margin-top : 50px;" id="div_main">
-      <div class="col s12 m4 l3">
-        <div id="div_summary"></div>
-      </div>
-      <div class="col s12 m8 l9">
-        <div id="div_content">
-          {{ content }}
-        </div>
-      </div>
+  </nav>
+</div>
+<div class="row" style="margin-top : 50px;" id="div_main">
+  <div class="col s12 m4 l3">
+    <div id="div_summary"></div>
+  </div>
+  <div class="col s12 m8 l9">
+    <div id="div_content">
+      {{ content }}
     </div>
+  </div>
+</div>
 
-    <script type="text/javascript" src="{{ site.github.url }}/assets/js/jquery-2.1.1.min.js"></script>
-    <script type="text/javascript" src="{{ site.github.url }}/assets/js/materialize.min.js"></script>
-    <script type="text/javascript" src="{{ site.github.url }}/assets/js/jquery.toc.js"></script>
-    <script type="text/javascript">
-      $(document).ready(function() {
-        $(".button-collapse").sideNav();
-        $('img').addClass('responsive-img');
-        $('#div_content').toc({
-          renderIn : "#div_summary"
-        });
-        $('.toctoggle').hide();
-        if(window.innerWidth < 992){
-          $('#div_main').addClass('container');
-        }
-      });
-    </script>
-  </body>
-  </html>
+<script type="text/javascript" src="{{ site.github.url }}/assets/js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="{{ site.github.url }}/assets/js/materialize.min.js"></script>
+<script type="text/javascript" src="{{ site.github.url }}/assets/js/jquery.toc.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() {
+    $(".button-collapse").sideNav();
+    $('img').addClass('responsive-img');
+    $('#div_content').toc({
+      renderIn : "#div_summary"
+    });
+    $('.toctoggle').hide();
+    if(window.innerWidth < 992){
+      $('#div_main').addClass('container');
+    }
+  });
+</script>
+</body>
+</html>
