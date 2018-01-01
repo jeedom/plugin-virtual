@@ -12,7 +12,7 @@
     <div class="nav-wrapper container">
       <a id="logo-container" href="https://www.jeedom.com/doc" class="brand-logo center"><img src="{{ site.github.url }}/assets/images/logo.png" style="height:50px;margin-top:5px"></a>
       <ul class="left hide-on-med-and-down">
-        <li>{{site.github.project_title}}</li>
+        <li>Documentation</li>
       </ul>
       <a href="https://www.jeedom.com/doc" data-activates="nav-mobile" class="button-collapse btn-floating btn-large waves-effect waves-light jeedomcolorbg"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
@@ -32,8 +32,9 @@
   </nav>
   <div class="row" style="margin-top : 40px;" id="div_main">
     <div class="col s12 m4 l3">
-      <div class="input-field" id="sel_lang">
-       <select>
+      <h1>{{site.github.project_title}}</h1>
+      <div class="input-field">
+       <select id="sel_lang">
         {% if site.langs.size >= 2 %}
         {% for lang in site.langs %}
         <option data-href="index{% if lang != "fr_FR" %}-{{ lang }}{% endif %}.html">
