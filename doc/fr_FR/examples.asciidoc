@@ -1,0 +1,76 @@
+Voici une série d'exemples à utiliser avec le plugin *Virtuel*. Pour la configuration générale, veuillez vous rendre sur link:configuration.asciidoc[cette page].
+
+== Interrupteur virtuel
+
+Pour faire un interrupteur virtuel, il vous faut ajouter 2 commandes virtuelles de type action comme cela :
+
+image::../images/virtual5.png[]
+
+Ajoutez dans les commandes "action" `On` et `Off`, la commande `Etat` (cela permet à Jeedom de faire le lien avec la commande état).
+Puis vous sauvegardez, et là Jeedom va automatiquement ajouter la commande d'information virtuelle :
+
+image::../images/virtual6.png[]
+
+Pour avoir un joli widget, il vous faut masquer la commande d'état :
+
+image::../images/virtual7.png[]
+
+Affectez un widget qui gère le retour d'état aux 2 commandes d'action, par exemple ici le widget light. Pour ce faire, cliquez sur la petite roue crantée en face de la commande `On` et dans le 2ème onglet sélectionnez `light` comme widget :
+
+image::../images/virtual8.png[]
+
+Enregistrez et faites de même pour la commande `Off`. Et vous obtiendrez un joli widget qui changera d'état lors d'un clic :
+
+image::../images/virtual9.png[]
+
+== Slider virtuel
+
+Pour faire un slider virtuel, il faut ajouter une commande virtuelle comme cela :
+
+image::../images/virtual12.png[]
+
+Comme tout à l'heure après la sauvegarde, Jeedom va automatiquement créer la commande info :
+
+image::../images/virtual13.png[]
+
+Et comme tout à l'heure il est conseillé de lier l'action à la commande d'état et de masquer celle-ci.
+
+== Interrupteur de type toggle
+
+Voilà comment faire un interrupteur de type toggle, pour cela il faut créer une commande virtuelle de ce type :
+
+image::../images/virtual14.png[]
+
+Ensuite vous sauvegardez pour voir apparaître la commande d'état :
+
+image::../images/virtual15.png[]
+
+Ici il faut dans la valeur de la commande action mettre `not(\#[...][...][Etat]#)` (bien remplacer par votre propre commande) et lier l'état à la commande action (attention, il ne faut pas masquer la commande état cette fois). Il faut aussi passer la commande info en sous-type binaire.
+
+== Calcul
+
+Pour faire un calcul sur de multiples commandes, c'est très facile ! Il suffit de créer une commande de type information virtuelle et dans le champs valeur mettre vos calculs. Par exemple, pour faire la moyenne de 2 températures :
+
+image::../images/virtual10.png[]
+
+Plusieurs points à réaliser correctement :
+
+* Bien choisir le sous-type en fonction du type d'information (ici calcul de moyenne donc c'est un numérique),
+* Mettre des parenthèses dans les calculs, cela permet d'être sûr du résultat de l'opération,
+* Bien mettre l'unité,
+* Cocher la case pour historiser si nécessaire,
+* Il est conseillé de cocher la case "évènement seulement", cela permet de réduire la charge de Jeedom et d'avoir vraiment une actualisation en temps réel.
+
+== Multiple commandes
+
+Nous allons voir ici comment faire une commande qui va éteindre 2 lumières. Rien de plus simple, il suffit de créer une commande virtuelle et de mettre les 2 commandes séparées par un `&&` :
+
+image::../images/virtual11.png[]
+
+Ici, il faut bien que le sous-type de la commande soit le même que les sous-types des commandes pilotées, donc toutes les commandes dans le champs valeur doivent avoir le même sous-type (toutes "autre", ou toutes "slider", ou toutes de type couleur).
+
+== Retour d'état virtuel
+
+Lors de l'utilisation d'un équipement qui ne possède pas de retour d'état et si cet équipement est commandé seulement par Jeedom, il est possible d'avoir un retour d'état virtuel. Il faut pour cela créer un virtuel qui reprenne les commandes actions (ex: On & Off) de l'équipement et qui possède une commande info (l'état). Il faut ensuite renseigner la colonne Paramètres pour chaque commande action, en sélectionnant le nom de la commande info (état) et en donnant la valeur qu'elle doit prendre.
+
+On peut aussi imaginer un virtuel qui allume/éteint plusieurs lampes (commandes actions séparées par des `&&`) et avoir ainsi un état de cette commande générale.
