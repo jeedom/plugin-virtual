@@ -77,13 +77,10 @@
       }
     });  
     $('.toctoggle').hide();
-    if(window.innerWidth < 992){
-      $('#div_main').addClass('container');
-    }
+    init();
     var regex = /-([a-zA-Z_]*)\.html/g;
     var corresp  = regex.exec(window.location.href)
     if(corresp !== null && corresp[1]){
-      console.log(corresp);
       $('#sel_lang').val(corresp[1])
     }
     $('select').material_select();
@@ -94,7 +91,20 @@
     $('#bt_up').on('click',function(){
       window.scrollTo(0, 0);
     })
-  });
+    $(window).on("orientationchange", function (event) {
+      init();
+    });
+    $(window).on("resize", function (event) {
+      init();
+    });
+    function init(){
+      if(window.innerWidth < 992){
+        $('#div_main').addClass('container');
+      }else{
+       $('#div_main').removeClass('container');
+     }
+   }
+ });
 </script>
 </body>
 </html>
