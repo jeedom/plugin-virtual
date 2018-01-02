@@ -56,7 +56,6 @@
 <script type="text/javascript" src="{{ site.github.url }}/assets/js/jquery-2.1.1.min.js"></script>
 <script type="text/javascript" src="{{ site.github.url }}/assets/js/materialize.min.js"></script>
 <script type="text/javascript" src="{{ site.github.url }}/assets/js/jquery.toc.js"></script>
-<script type="text/javascript" src="{{ site.github.url }}/assets/js/custom.jeedom.js"></script>
 <script type="text/javascript">
   $(document).ready(function() {
     $(".button-collapse").sideNav();
@@ -64,7 +63,19 @@
     $('#div_content').toc({
       renderIn : "#div_summary"
     });
-    $('#div_content').customJS();
+    var i = 1, j = 1;
+    $('h1, h2', contTitres).each(function(){
+      if($(this)[0].tagName.toLowerCase() == 'h1'){
+        $('#'+$(this).attr('id')).text(i + '. ' + $(this).text());
+        i++;
+      } 
+      if($(this)[0].tagName.toLowerCase() == 'h2'){
+        $('#'+$(this).attr('id')).text( (i-1) + '.' + j + ' ' + $(this).text()); 
+        j++;
+      }else{
+        j = 1;
+      }
+    });  
     $('.toctoggle').hide();
     if(window.innerWidth < 992){
       $('#div_main').addClass('container');
