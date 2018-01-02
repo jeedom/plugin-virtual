@@ -69,10 +69,16 @@
       renderIn : "#div_summary"
     });
     $('.toctoggle').hide();
-    $('select').material_select();
     if(window.innerWidth < 992){
       $('#div_main').addClass('container');
     }
+    var regex = /-([a-zA-Z_]*)\.html/g;
+    var url = window.location.href;
+    var corresp  = regex.exec(url)
+    if(corresp !== null && corresp[1]){
+      $('#sel_lang option:selected').val(corresp[1])
+    }
+    $('select').material_select();
     $('#sel_lang').on('change',function(){
       window.location.href = $('#sel_lang option:selected').attr('data-href');
     })
