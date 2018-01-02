@@ -64,7 +64,7 @@
       renderIn : "#div_summary"
     });
     var i = 1, j = 1;
-    $('h1, h2', contTitres).each(function(){
+    $('h1, h2', $('#div_content')).each(function(){
       if($(this)[0].tagName.toLowerCase() == 'h1'){
         $('#'+$(this).attr('id')).text(i + '. ' + $(this).text());
         i++;
