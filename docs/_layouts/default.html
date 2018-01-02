@@ -37,7 +37,7 @@
        <select id="sel_lang">
         {% if site.langs.size >= 2 %}
         {% for lang in site.langs %}
-        <option data-href="index{% if lang != "fr_FR" %}-{{ lang }}{% endif %}.html">
+        <option data-href="index{% if lang != "fr_FR" %}-{{ lang }}{% endif %}.html" value="{{ lang }}">
           {% if lang == "fr_FR" %}Français{% endif %}
           {% if lang == "en_US" %}English{% endif %}
           {% if lang == "ru_RU" %}Russe{% endif %}
