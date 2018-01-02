@@ -32,11 +32,13 @@ h1,h2,h3,h4,h5 {
 }
 
 #div_content ul {
-	list-style-type: initial !important
+	list-style-type: initial !important;
+	margin-left : 20px;
 }
 
 #div_content ul li {
-	list-style-type: initial !important
+	list-style-type: initial !important;
+	margin-left : 20px;
 }
 
 nav ul a,
