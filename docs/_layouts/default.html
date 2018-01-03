@@ -59,7 +59,8 @@
 <script type="text/javascript">
   $(document).ready(function() {
     var title = '{{site.github.project_title}}';
-    $('#doc_title').append(title.replace('plugin-',''))
+    title = title.replace('plugin-','');
+    $('#doc_title').append(title[0].toUpperCase() + title.substring(1))
     $(".button-collapse").sideNav();
     $('img').addClass('responsive-img');
     $('#div_content').toc({
