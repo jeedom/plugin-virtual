@@ -34,7 +34,7 @@
   </div>
   <div class="row" id="div_main">
     <div class="col s12 m4 l2" style="background-color:#F3F3F3;">
-      <h1 class="center-align">{{site.github.project_title}}</h1>
+      <h1 class="center-align" id="doc_title"></h1>
       <div class="input-field">
        <select id="sel_lang">
         {% if site.langs.size >= 2 %}
@@ -58,6 +58,8 @@
 <script type="text/javascript" src="{{ site.github.url }}/assets/js/jquery.toc.js"></script>
 <script type="text/javascript">
   $(document).ready(function() {
+    var title = '{{site.github.project_title}}';
+    $('#doc_title').append(title.replace('plugin-',''))
     $(".button-collapse").sideNav();
     $('img').addClass('responsive-img');
     $('#div_content').toc({
