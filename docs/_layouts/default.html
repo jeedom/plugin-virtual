@@ -33,8 +33,11 @@
     </nav>
   </div>
   <div class="row" id="div_main">
-    <div class="col s12 m4 l2" style="background-color:#F3F3F3;">
-      <h1 class="center-align" id="doc_title"></h1>
+    <div class="side-nav fixed" style="background-color:#F3F3F3; z-index:2; top:70px">
+      <li class="logo">
+        <a id="logo-container" href="/" class="brand-logo" id="doc_title">
+        </a>
+      </li>
       <div class="input-field">
        <select id="sel_lang">
         {% if site.langs.size >= 2 %}
