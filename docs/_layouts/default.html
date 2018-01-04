@@ -39,15 +39,6 @@
           <img src="{{ site.github.url }}/assets/images/logo.png" style="height:70px;" />
         </a>
       </li>
-      <li class="input-field">
-       <select id="sel_lang">
-        {% if site.langs.size >= 2 %}
-        {% for lang in site.langs %}
-        <option data-href="index{% if lang != "fr_FR" %}-{{ lang }}{% endif %}.html" value="{{ lang }}">{% if lang == "fr_FR" %}Français{% endif %}{% if lang == "en_US" %}English{% endif %}{% if lang == "ru_RU" %}Russe{% endif %}{% if lang == "de_DE" %}Deutsch{% endif %}{% if lang == "es_ES" %}Spanish{% endif %}{% if lang == "it_IT" %}Italien{% endif %}{% if lang == "id_ID" %}Indien{% endif %}</option>
-        {% endfor %}
-        {% endif %}
-      </select>
-    </li>
     <li id="div_summary"></li>
   </ul>
   <div class="col s12 m8 l10">
