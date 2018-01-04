@@ -33,13 +33,13 @@
     </nav>
   </div>
   <div class="row" id="div_main">
-    <div class="side-nav fixed" style="background-color:#F3F3F3; z-index:2; top:70px">
+    <ul class="side-nav fixed" style="background-color:#F3F3F3; z-index:2; top:60px;">
       <li class="logo">
-        <a id="logo-container" href="/" class="brand-logo" id="doc_title">
+        <a id="logo-container" href="/" class="brand-logo">
           <img src="{{ site.github.url }}/assets/images/logo.png" style="height:70px;" />
         </a>
       </li>
-      <div class="input-field">
+      <li class="input-field">
        <select id="sel_lang">
         {% if site.langs.size >= 2 %}
         {% for lang in site.langs %}
@@ -47,9 +47,9 @@
         {% endfor %}
         {% endif %}
       </select>
-    </div>
-    <div id="div_summary"></div>
-  </div>
+    </li>
+    <li id="div_summary"></li>
+  </ul>
   <div class="col s12 m8 l10">
     <i class="material-icons" id="bt_up" style="position:fixed;bottom:10px;right:10px;cursor: pointer;font-size:3em;">keyboard_arrow_up</i>
     <div id="div_content">
