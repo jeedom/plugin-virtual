@@ -87,6 +87,7 @@
       }
     });  
     $('#toctitle').html('<h2 style="padding-left:5px !important;">'+titlePlugin+'</h2>');
+    $('toclevel-2').parent().parent().css('color', 'blue');
     init();
     var regex = /-([a-zA-Z_]*)\.html/g;
     var corresp  = regex.exec(window.location.href)
