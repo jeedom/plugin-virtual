@@ -64,8 +64,8 @@
 <script type="text/javascript" src="{{ site.github.url }}/assets/js/jquery.toc.js"></script>
 <script type="text/javascript">
   $(document).ready(function() {
-    var title = '{{site.github.project_title}}';
-    title = title.replace('plugin-','');
+    var titlePlugin = '{{site.github.project_title}}';
+    var title = titlePlugin.replace('plugin-','');
     $('#doc_title').append(title[0].toUpperCase() + title.substring(1))
     $(".button-collapse").sideNav();
     $('img').addClass('responsive-img');
@@ -86,6 +86,7 @@
       }
     });  
     $('.toctoggle').hide();
+    $('#toctitle').html('<h2>'+titlePlugin+'</h2>');
     init();
     var regex = /-([a-zA-Z_]*)\.html/g;
     var corresp  = regex.exec(window.location.href)
