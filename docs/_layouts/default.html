@@ -44,8 +44,8 @@
   <div>
     <i class="material-icons" id="bt_up" style="position:fixed;bottom:10px;right:10px;cursor: pointer;font-size:3em;">keyboard_arrow_up</i>
     <div class="row">
-      <div class="col s2 offset-s10">
-    <select id="sel_lang" style="right:10px !important; witdh:100px;">
+      <div class="col s1 offset-s11">
+    <select id="sel_lang">
         {% if site.langs.size >= 2 %}
         {% for lang in site.langs %}
         <option data-href="index{% if lang != "fr_FR" %}-{{ lang }}{% endif %}.html" value="{{ lang }}">{% if lang == "fr_FR" %}Français{% endif %}{% if lang == "en_US" %}English{% endif %}{% if lang == "ru_RU" %}Russe{% endif %}{% if lang == "de_DE" %}Deutsch{% endif %}{% if lang == "es_ES" %}Spanish{% endif %}{% if lang == "it_IT" %}Italien{% endif %}{% if lang == "id_ID" %}Indien{% endif %}</option>
