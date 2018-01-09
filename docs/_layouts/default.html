@@ -65,7 +65,7 @@
 <script type="text/javascript">
   $(document).ready(function() {
     var title = '{{site.github.project_title}}';
-    title.replace('plugin-','');
+    title = title.replace('plugin-','');
     var titlePlugin = title.charAt(0).toUpperCase() + title.substring(1).toLowerCase()
     $('#doc_title').append(title[0].toUpperCase() + title.substring(1))
     $(".button-collapse").sideNav();
