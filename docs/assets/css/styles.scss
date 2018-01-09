@@ -37,7 +37,17 @@ list-style-type: initial !important;
 
 #div_content ul li {
 list-style-type: initial !important;
-margin-left : 10px !important;
+margin-left : 20px !important;
+}
+
+#div_content {
+padding-left : 300px !important; 
+}
+
+@media only screen and (max-width : 992px) {
+  #div_content {
+    padding-left : 0 !important; 
+  }
 }
 
 .toclevel-2{
@@ -202,4 +212,9 @@ font-size: 2em;
 
 .post-date {
 font-size: 0.8em;
+}
+
+/*** SideNav Bar ***/
+.div_summary ul li{
+  padding-left: 10px !important;
 }
