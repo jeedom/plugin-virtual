@@ -64,8 +64,9 @@
 <script type="text/javascript" src="{{ site.github.url }}/assets/js/jquery.toc.js"></script>
 <script type="text/javascript">
   $(document).ready(function() {
-    var titlePlugin = '{{site.github.project_title}}';
-    var title = titlePlugin.replace('plugin-','');
+    var title = '{{site.github.project_title}}';
+    var titlePlugin = title.charAt(0).toUpperCase() + title.substring(1).toLowerCase()
+    title.replace('plugin-','');
     $('#doc_title').append(title[0].toUpperCase() + title.substring(1))
     $(".button-collapse").sideNav();
     $('img').addClass('responsive-img');
