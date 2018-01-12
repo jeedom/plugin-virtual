@@ -33,7 +33,7 @@
     </nav>
   </div>
   <div class="row" id="div_main">
-    <ul class="side-nav fixed" style="background-color:#F3F3F3; z-index:2; top:60px;">
+    <div class="side-nav fixed" style="background-color:#F3F3F3; z-index:2; top:60px;">
       <div class="container">
         <select id="sel_lang">
           {% if site.langs.size >= 2 %}
@@ -43,8 +43,8 @@
           {% endif %}
         </select>
       </div>
-      <li id="div_summary"></li>
-    </ul>
+      <div id="div_summary"></div>
+    </div>
     <div>
       <i class="material-icons" id="bt_up" style="position:fixed;bottom:10px;right:10px;cursor: pointer;font-size:3em;">keyboard_arrow_up</i>
       <div id="div_content" style="padding-left:300px;">
