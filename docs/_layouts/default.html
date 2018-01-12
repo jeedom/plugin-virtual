@@ -47,6 +47,7 @@
     </div>
     <div>
       <i class="material-icons" id="bt_up" style="position:fixed;bottom:10px;right:10px;cursor: pointer;font-size:3em;">keyboard_arrow_up</i>
+      <div id="div_summary2"></div>
       <div id="div_content">
         {{content}}
       </div>
@@ -65,6 +66,9 @@
       $('img').addClass('responsive-img');
       $('#div_content').toc({
         renderIn : "#div_summary"
+      });
+       $('#div_content').toc({
+        renderIn : "#div_summary2"
       });
       var i = 1, j = 1;
       $('h1, h2', $('#div_content')).each(function(){
