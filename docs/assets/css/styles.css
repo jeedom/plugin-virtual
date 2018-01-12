@@ -75,3 +75,7 @@ nav ul a,nav {
 .toctext{
 	font-size : 0.85rem !important; 
 }
+
+.tocnumber{
+	color : #95C12B !important;
+}
