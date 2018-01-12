@@ -34,7 +34,7 @@
   </div>
   <div class="row" id="div_main">
     <ul class="side-nav fixed" style="background-color:#F3F3F3; z-index:2; top:60px;">
-      <li class="logo">
+      <div class="container">
         <select id="sel_lang">
           {% if site.langs.size >= 2 %}
           {% for lang in site.langs %}
@@ -42,7 +42,7 @@
           {% endfor %}
           {% endif %}
         </select>
-      </li>
+      </div>
       <li id="div_summary"></li>
     </ul>
     <div>
