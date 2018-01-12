@@ -32,6 +32,9 @@ h1,h2,h3,h4,h5 {
 	top:60px !important;
 	width : 350px !important;
 }
+#div_menuMobile {
+	background-color:#F3F3F3 !important;
+}
 @media only screen and (max-width : 992px) {
 	#div_content {
 		padding-left : 0 !important; 
