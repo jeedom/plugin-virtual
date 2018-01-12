@@ -41,7 +41,14 @@ margin-left : 20px !important;
 }
 
 #div_content {
-padding-left : 300px !important; 
+padding-left : 400px !important; 
+}
+
+#side-nav {
+background-color:#F3F3F3 !important;
+z-index:2 !important;
+top:60px !important;
+width : 350px !important;
 }
 
 @media only screen and (max-width : 992px) {
