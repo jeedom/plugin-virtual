@@ -92,6 +92,7 @@
     init();
   });
   function init(){
+    $('#div_summary2,#div_summary').empty();
    var titlePlugin = title.charAt(0).toUpperCase() + title.substring(1).toLowerCase()
    if(window.innerWidth < 992){
     $('#div_main').addClass('container');
@@ -104,8 +105,7 @@
     renderIn : "#div_summary"
   });
  }
- $('#div_summary #toctitle').html('<h2 style="padding-left:5px !important;">'+titlePlugin+'</h2>');
- $('#div_summary2 #toctitle').html('<h2 style="padding-left:5px !important;">'+titlePlugin+'</h2>');
+ $('#toctitle').html('<h2 style="padding-left:5px !important;">'+titlePlugin+'</h2>');
  $('.toclevel-2').parent().css('color', 'blue');
 }
 var i = 1, j = 1;
