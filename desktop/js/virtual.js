@@ -17,9 +17,9 @@
 
  $('#bt_importEqLogic').on('click', function () {
     jeedom.eqLogic.getSelectModal({}, function (result) {
-        $.ajax({// fonction permettant de faire de l'ajax
-            type: "POST", // méthode de transmission des données au fichier php
-            url: "plugins/virtual/core/ajax/virtual.ajax.php", // url du fichier php
+        $.ajax({
+            type: "POST",
+            url: "plugins/virtual/core/ajax/virtual.ajax.php",
             data: {
                 action: "copyFromEqLogic",
                 eqLogic_id: result.id,
@@ -30,7 +30,7 @@
             error: function (request, status, error) {
                 handleAjaxError(request, status, error);
             },
-            success: function (data) { // si l'appel a bien fonctionné
+            success: function (data) {
             if (data.state != 'ok') {
                 $('#div_alert').showAlert({message: data.result, level: 'danger'});
                 return;
@@ -153,7 +153,7 @@ if (init(_cmd.type) == 'action') {
     tr += '<td>';
     tr += '<input class="cmdAttr form-control type input-sm" data-l1key="type" value="action" disabled style="margin-bottom : 5px;" />';
     tr += '<span class="subType" subType="' + init(_cmd.subType) + '"></span>';
-    tr += '<input class="cmdAttr" data-l1key="configuration" data-l2key="virtualAction" value="1" style="display:none;" >';
+    tr += '<input class="cmdAttr" data-l1key="configuration" data-l2key="virtualAction" value="1" style="display:none;" />';
     tr += '</td>';
     tr += '<td>';
     tr += '<input class="cmdAttr form-control input-sm" data-l1key="configuration" data-l2key="infoName" placeholder="{{Nom information}}" style="margin-bottom : 5px;width : 70%; display : inline-block;" />';
