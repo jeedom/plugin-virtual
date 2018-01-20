@@ -27,7 +27,7 @@ Un périphérique virtuel peut être créé pour les besoins suivants :
 
 Le plugin ne nécessite aucune configuration, il faut juste l’activer :
 
-![virtual1](images/virtual1.png)
+![virtual1](../images/virtual1.png)
 
 
 
@@ -37,17 +37,17 @@ Le plugin ne nécessite aucune configuration, il faut juste l’activer :
 La configuration des équipements virtuels est accessible à partir du
 menu plugin :
 
-![virtual2](images/virtual2.png)
+![virtual2](../images/virtual2.png)
 
 Voilà à quoi ressemble la page du plugin virtuel (ici avec déjà un
 équipement) :
 
-![virtual3](images/virtual3.png)
+![virtual3](../images/virtual3.png)
 
 Voilà à quoi ressemble la page de configuration d’un équipement virtuel
 :
 
-![virtual4](images/virtual4.png)
+![virtual4](../images/virtual4.png)
 
 > **Tip**
 >
@@ -130,31 +130,31 @@ En-dessous vous retrouvez la liste des commandes :
 Pour faire un interrupteur virtuel, il vous faut ajouter 2 commandes
 virtuelles comme cela :
 
-![virtual5](images/virtual5.png)
+![virtual5](../images/virtual5.png)
 
 Puis vous sauvegardez, et là Jeedom va automatiquement ajouter la
 commande d’information virtuelle :
 
-![virtual6](images/virtual6.png)
+![virtual6](../images/virtual6.png)
 
 Ajoutez dans les commandes "action" `On` et `Off`, la commande `Etat`
 (cela permet à Jeedom de faire le lien avec la commande état).
 
 Pour avoir un joli widget, il vous faut masquer la commande d'état :
 
-![virtual7](images/virtual7.png)
+![virtual7](../images/virtual7.png)
 
 Affectez un widget qui gère le retour d'état aux 2 commandes d’action,
 par exemple ici le widget light. Pour ce faire cliquez sur la petite
 roue crantée en face de la commande `On` et dans le 2ème onglet
 sélectionnez `light` comme widget :
 
-![virtual8](images/virtual8.png)
+![virtual8](../images/virtual8.png)
 
 Enregistrez et faites de même pour la commande `Off`. Et vous obtiendrez
 un joli widget qui changera d'état lors d’un clic :
 
-![virtual9](images/virtual9.png)
+![virtual9](../images/virtual9.png)
 
 
 
@@ -164,12 +164,12 @@ un joli widget qui changera d'état lors d’un clic :
 Pour faire un slider virtuel, il faut ajouter une commande virtuelle
 comme cela :
 
-![virtual12](images/virtual12.png)
+![virtual12](../images/virtual12.png)
 
 Comme tout à l’heure après la sauvegarde, Jeedom va automatiquement
 créer la commande info :
 
-![virtual13](images/virtual13.png)
+![virtual13](../images/virtual13.png)
 
 Et comme tout à l’heure il est conseillé de lier l’action à la commande
 d'état et de masquer celle-ci.
@@ -182,11 +182,11 @@ d'état et de masquer celle-ci.
 Voilà comment faire un interrupteur de type toggle, pour cela il faut
 créer une commande virtuelle de ce type :
 
-![virtual14](images/virtual14.png)
+![virtual14](../images/virtual14.png)
 
 Ensuite vous sauvegardez pour voir apparaître la commande d'état :
 
-![virtual15](images/virtual15.png)
+![virtual15](../images/virtual15.png)
 
 Ici il faut dans la valeur de la commande action mettre
 `not(\#[...][...][Etat]#)` (bien remplacer par votre propre commande) et
@@ -201,7 +201,7 @@ suffit de créer une commande de type information virtuelle et dans le
 champs valeur mettre vos calculs. Par exemple, pour faire la moyenne de
 2 températures :
 
-![virtual10](images/virtual10.png)
+![virtual10](../images/virtual10.png)
 
 Plusieurs points à réaliser correctement :
 
@@ -229,7 +229,7 @@ Nous allons voir ici comment faire une commande qui va éteindre 2
 lumières. Rien de plus simple, il suffit de créer une commande virtuelle
 et de mettre les 2 commandes séparées par un `&&` :
 
-![virtual11](images/virtual11.png)
+![virtual11](../images/virtual11.png)
 
 Ici, il faut bien que le sous-type de la commande soit le même que les
 sous-types des commandes pilotées, donc toutes les commandes dans le
