@@ -95,9 +95,13 @@
   }
   $('select').material_select();
   $('.sel_lang').on('change',function(){
-    var regex = /(?:.+\/)(.+)/g;
-    var corresp  = regex.exec(window.location.href)
-    window.location.href = $(this).find('option:selected').attr('data-href')+'/'+corresp[1];
+    if(window.location.href.endsWith('/')){
+      window.location.href = $(this).find('option:selected').attr('data-href')+'/';
+    }else{
+      var regex = /(?:.+\/)(.+)/g;
+      var corresp  = regex.exec(window.location.href)
+      window.location.href = $(this).find('option:selected').attr('data-href')+'/'+corresp[1];
+    }
   })
   $('#bt_up').on('click',function(){
     window.scrollTo(0, 0);
