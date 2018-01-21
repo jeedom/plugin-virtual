@@ -85,7 +85,7 @@
    var title = '{{site.github.project_title}}';
    title = title.replace('plugin-','');
    $('#doc_title').append(title[0].toUpperCase() + title.substring(1))
-   document.title = 'Documentation '+ title[0].toUpperCase() + title.substring(1);
+      document.title = 'Documentation '+ title[0].toUpperCase() + title.substring(1)
    $(".button-collapse").sideNav();
    $('img').addClass('responsive-img');
    init();
@@ -97,11 +97,11 @@
   $('select').material_select();
   $('.sel_lang').on('change',function(){
     if(window.location.href.endsWith('/')){
-      window.location.href = $(this).val()+'/';
+      window.location.href = $(this).find('option:selected').attr('value')+'/';
     }else{
       var regex = /(?:.+\/)(.+)/g;
       var corresp  = regex.exec(window.location.href)
-      window.location.href = $(this).val()+'/'+corresp[1];
+      window.location.href = $(this).find('option:selected').attr('value')+'/'+corresp[1];
     }
   })
   $('#bt_up').on('click',function(){
