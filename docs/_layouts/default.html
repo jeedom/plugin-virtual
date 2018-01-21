@@ -85,6 +85,7 @@
    var title = '{{site.github.project_title}}';
    title = title.replace('plugin-','');
    $('#doc_title').append(title[0].toUpperCase() + title.substring(1))
+   document.title = 'Documentation '+ title[0].toUpperCase() + title.substring(1);
    $(".button-collapse").sideNav();
    $('img').addClass('responsive-img');
    init();
