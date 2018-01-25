@@ -23,7 +23,7 @@ Un périphérique virtuel peut être créé pour les besoins suivants :
 
 
 
-# Configuration
+# Setup
 
 Le plugin ne nécessite aucune configuration, il faut juste l’activer :
 
@@ -55,17 +55,17 @@ Voilà à quoi ressemble la page de configuration d’un équipement virtuel
 > permet de faire apparaître un menu d’accès rapide (vous pouvez à
 > partir de votre profil le laisser toujours visible).
 
-Vous retrouvez ici toute la configuration de votre équipement :
+You can find here the full configuration of your device :
 
 -   **Nom de l'équipement virtuel** : nom de votre équipement virtuel,
 
--   **Objet parent** : indique l’objet parent auquel appartient
+-   **Parent Object** : means the parent object the equipment depend
     l'équipement,
 
 -   **Catégorie** : les catégories de l'équipement (il peut appartenir à
     plusieurs catégories),
 
--   **Activer** : permet de rendre votre équipement actif,
+-   ** Enable **: to make your equipment active,
 
 -   **Visible** : le rend visible sur le dashboard,
 

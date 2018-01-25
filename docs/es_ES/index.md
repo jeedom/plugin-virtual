@@ -23,44 +23,44 @@ Se puede crear un dispositivo virtual para los siguientes propósitos:
 
 
 
-# Configuration
+# Configuración
 
-Le plugin ne nécessite aucune configuration, il faut juste l’activer :
+El plugin no requiere ninguna configuración, solo actívelo :
 
 ![virtual1](../images/virtual1.png)
 
 
 
 
-# Configuration des équipements
+# Configuración de los dispositivos
 
-La configuration des équipements virtuels est accessible à partir du
-menu plugin :
+La configuración de los dispositivos virtuales es accesible desde
+el menú plugin:
 
 ![virtual2](../images/virtual2.png)
 
-Voilà à quoi ressemble la page du plugin virtuel (ici avec déjà un
-équipement) :
+Así es como se ve la página del plugin virtual (aquí con un
+dispositivo):
 
 ![virtual3](../images/virtual3.png)
 
-Voilà à quoi ressemble la page de configuration d’un équipement virtuel
+Así es como se ve la página de configuración de un dispositivo virtual
 :
 
 ![virtual4](../images/virtual4.png)
 
-> **Tip**
+> **Sugerencia**
 >
-> Comme à beaucoup d’endroits sur Jeedom, mettre la souris tout à gauche
-> permet de faire apparaître un menu d’accès rapide (vous pouvez à
-> partir de votre profil le laisser toujours visible).
+> Como en muchos lugares en Jeedom, coloque el mouse hacia la izquierda
+> permite abrir un menú de acceso rápido (puede
+>dejarlo siempre visible desde su perfil).
 
-Vous retrouvez ici toute la configuration de votre équipement :
+Aquí encontrará toda la configuración de su dispositivo:
 
--   **Nom de l'équipement virtuel** : nom de votre équipement virtuel,
+-   **Nombre del dispositivo virtual** : nombre de su dispositivo virtual,
 
--   **Objet parent** : indique l’objet parent auquel appartient
-    l'équipement,
+-   **Objeto padre** : especifica el objeto padre al que pertenece
+    dispositivo,
 
 -   **Catégorie** : les catégories de l'équipement (il peut appartenir à
     plusieurs catégories),

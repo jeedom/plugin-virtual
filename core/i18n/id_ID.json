@@ -31,7 +31,7 @@
         "Sauvegarder": "Menyimpan",
         "Equipement": "Peralatan",
         "Commandes": "Perintah",
-        "Configuration avancée": "Configuration avancée"
+        "Configuration avancée": "konfigurasi lanjutan"
     },
     "plugins/virtual/core/class/virtual.class.php": {
         "Rafraichir": "Rafraichir"

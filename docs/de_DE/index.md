@@ -23,7 +23,7 @@ Un périphérique virtuel peut être créé pour les besoins suivants :
 
 
 
-# Configuration
+# Konfiguration
 
 Le plugin ne nécessite aucune configuration, il faut juste l’activer :
 
@@ -55,7 +55,7 @@ Voilà à quoi ressemble la page de configuration d’un équipement virtuel
 > permet de faire apparaître un menu d’accès rapide (vous pouvez à
 > partir de votre profil le laisser toujours visible).
 
-Vous retrouvez ici toute la configuration de votre équipement :
+Hier finden sie die ganze Konfiguration Ihrer Geräte:
 
 -   **Nom de l'équipement virtuel** : nom de votre équipement virtuel,
 
