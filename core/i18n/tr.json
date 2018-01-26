@@ -1,0 +1,59 @@
+{
+    "plugins/virtual/plugin_info/info.xml": {
+        "Plugin pour gérer des équipements virtuels": "Sanal cihazlarımı yönetmek için eklenti",
+        "Aucune": "Hiçbir"
+    },
+    "plugins/virtual/desktop/php/virtual.php": {
+        "Ajouter un équipement": "Ekipman ekle",
+        "Rechercher": "Arayın",
+        "Mes Virtuels": "Sanallarım",
+        "Général": "Genel",
+        "Dupliquer": "Kopyala",
+        "Importer équipement": "Cihaz ithal et",
+        "Nom de l'équipement virtual": "Sanal cihazın ismi",
+        "Nom de l'équipement virtuel": "Sanal cihazın ismi",
+        "Objet parent": "Üst nesne",
+        "Aucun": "Hiçbir",
+        "Catégorie": "Kategori",
+        "Activer": "Etkinleştirmek",
+        "Visible": "Görülebilir",
+        "Auto-actualisation (cron)": "Otomatik güncelleme (cron)",
+        "Commentaire": "İleti",
+        "Virtuel": "Sanal",
+        "Ajouter une info virtuelle": "Snala bilgi ekleyin",
+        "Ajouter une commande virtuelle": "Sanal komuta ekleyin",
+        "Nom": "İsim",
+        "Sous-Type": "alt tipi",
+        "Valeur": "Değer",
+        "Unité": "Ünite",
+        "Paramètres": "Ayarlar ( Séçenekler )",
+        "Supprimer": "Sil",
+        "Sauvegarder": "Kaydet",
+        "Equipement": "Cihaz",
+        "Commandes": "Komutalar",
+        "Configuration avancée": "Gelişmiş ayarlar"
+    },
+    "plugins/virtual/core/class/virtual.class.php": {
+        "Rafraichir": "Yenile"
+    },
+    "plugins/virtual/desktop/js/virtual.js": {
+        "Nom": "İsim",
+        "Calcul": "Hesap",
+        "Rechercher équipement": "Ekipman ara",
+        "Valeur retour d\\'état": "İade durumu değeri",
+        "Durée avant retour d\\'état (min)": "İade durumu değerinden önceki süre (dak.)",
+        "Unité": "Ünite",
+        "Historiser": "Tarihe göre sırala",
+        "Afficher": "Göster",
+        "Inverser": "Ters çevir",
+        "Min": "Minimum",
+        "Max": "Maximum",
+        "Tester": "Dene",
+        "La valeur de la commande vaut par défaut la commande": "Komutanın varsayılan değeri komuta ile eşit",
+        "Nom information": "Bilgi ismi",
+        "Valeur": "Değer"
+    },
+    "plugins/virtual/plugin_info/info.json": {
+        "Plugin pour gérer des équipements virtuels": "Sanal cihazlarımı yönetmek için eklenti"
+    }
+}

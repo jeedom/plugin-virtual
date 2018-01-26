@@ -6,7 +6,7 @@
     "plugins/virtual/desktop/php/virtual.php": {
         "Ajouter un équipement": "Aggiungi dispositivo",
         "Rechercher": "Cerca",
-        "Mes Virtuels": "Mes Virtuels",
+        "Mes Virtuels": "My Virtual",
         "Général": "Principale",
         "Dupliquer": "Duplica",
         "Importer équipement": "Importa dispositivo",
@@ -17,7 +17,7 @@
         "Catégorie": "Categoria",
         "Activer": "Attivare",
         "Visible": "Visibile",
-        "Auto-actualisation (cron)": "Auto-actualisation (cron)",
+        "Auto-actualisation (cron)": "Auto-realizzazione (cron)",
         "Commentaire": "Commento",
         "Virtuel": "Virtuale",
         "Ajouter une info virtuelle": "Aggiungi informazioni dispositivo virtuale",

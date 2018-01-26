@@ -6,7 +6,7 @@
     "plugins/virtual/desktop/php/virtual.php": {
         "Ajouter un équipement": "Tambahan peralatan",
         "Rechercher": "Mencari",
-        "Mes Virtuels": "Mes Virtuels",
+        "Mes Virtuels": "saya virtual",
         "Général": "Umum",
         "Dupliquer": "Duplikat",
         "Importer équipement": "Peralatan impor",
@@ -34,7 +34,7 @@
         "Configuration avancée": "konfigurasi lanjutan"
     },
     "plugins/virtual/core/class/virtual.class.php": {
-        "Rafraichir": "Rafraichir"
+        "Rafraichir": "menyegarkan"
     },
     "plugins/virtual/desktop/js/virtual.js": {
         "Nom": "Nama",
