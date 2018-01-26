@@ -31,10 +31,13 @@
         "Sauvegarder": "Guardar",
         "Equipement": "Dispositivos",
         "Commandes": "Órdenes",
-        "Configuration avancée": "Configuración avanzada"
+        "Configuration avancée": "Configuración avanzada",
+        "URL de retour": "URL de retorno"
     },
     "plugins/virtual/core/class/virtual.class.php": {
-        "Rafraichir": "Actualizar"
+        "Rafraichir": "Actualizar",
+        "Equipement ID virtuel inconnu, ou l'équipement n'est pas de type virtuel : ": "Equipement ID virtuel inconnu, ou l'équipement n'est pas de type virtuel :",
+        "Equipement ID virtuel inconnu : ": "Equipement ID virtuel inconnu :"
     },
     "plugins/virtual/desktop/js/virtual.js": {
         "Nom": "Nombre",
@@ -51,7 +54,9 @@
         "Tester": "Probar",
         "La valeur de la commande vaut par défaut la commande": "El valor de la orden es el orden predeterminado",
         "Nom information": "Nombre información",
-        "Valeur": "Valor"
+        "Valeur": "Valor",
+        "Liste de valeur|texte séparé par ;": "Liste de valeur|texte séparé par ;",
+        "Liste": "Liste"
     },
     "plugins/virtual/plugin_info/info.json": {
         "Plugin pour gérer des équipements virtuels": "Plugin para la gestión de dispositivos virtuales"

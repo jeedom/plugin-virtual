@@ -31,10 +31,13 @@
         "Sauvegarder": "Menyimpan",
         "Equipement": "Peralatan",
         "Commandes": "Perintah",
-        "Configuration avancée": "konfigurasi lanjutan"
+        "Configuration avancée": "konfigurasi lanjutan",
+        "URL de retour": "URL Kembali"
     },
     "plugins/virtual/core/class/virtual.class.php": {
-        "Rafraichir": "menyegarkan"
+        "Rafraichir": "menyegarkan",
+        "Equipement ID virtuel inconnu, ou l'équipement n'est pas de type virtuel : ": "Equipement ID virtuel inconnu, ou l'équipement n'est pas de type virtuel :",
+        "Equipement ID virtuel inconnu : ": "Equipement ID virtuel inconnu :"
     },
     "plugins/virtual/desktop/js/virtual.js": {
         "Nom": "Nama",
@@ -51,7 +54,9 @@
         "Tester": "Coba",
         "La valeur de la commande vaut par défaut la commande": "Nilai pesanan adalah perintah default",
         "Nom information": "Nama Informasi",
-        "Valeur": "Nilai"
+        "Valeur": "Nilai",
+        "Liste de valeur|texte séparé par ;": "Liste de valeur|texte séparé par ;",
+        "Liste": "Liste"
     },
     "plugins/virtual/plugin_info/info.json": {
         "Plugin pour gérer des équipements virtuels": "Plugin untuk mengelola peralatan maya"

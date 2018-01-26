@@ -31,10 +31,13 @@
         "Sauvegarder": "Сохранить",
         "Equipement": "Оборудование",
         "Commandes": "Команды",
-        "Configuration avancée": "Расширенные настройки"
+        "Configuration avancée": "Расширенные настройки",
+        "URL de retour": "URL возвращения"
     },
     "plugins/virtual/core/class/virtual.class.php": {
-        "Rafraichir": "Обновить"
+        "Rafraichir": "Обновить",
+        "Equipement ID virtuel inconnu, ou l'équipement n'est pas de type virtuel : ": "Equipement ID virtuel inconnu, ou l'équipement n'est pas de type virtuel :",
+        "Equipement ID virtuel inconnu : ": "Equipement ID virtuel inconnu :"
     },
     "plugins/virtual/desktop/js/virtual.js": {
         "Nom": "Имя",
@@ -51,7 +54,9 @@
         "Tester": "Тест",
         "La valeur de la commande vaut par défaut la commande": "Значение запроса - это команда по умолчанию",
         "Nom information": "Имя информации",
-        "Valeur": "Значение"
+        "Valeur": "Значение",
+        "Liste de valeur|texte séparé par ;": "Liste de valeur|texte séparé par ;",
+        "Liste": "Liste"
     },
     "plugins/virtual/plugin_info/info.json": {
         "Plugin pour gérer des équipements virtuels": "Плагин для управления виртуальным оборудованием"

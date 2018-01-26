@@ -31,10 +31,13 @@
         "Sauvegarder": "Kaydet",
         "Equipement": "Cihaz",
         "Commandes": "Komutalar",
-        "Configuration avancée": "Gelişmiş ayarlar"
+        "Configuration avancée": "Gelişmiş ayarlar",
+        "URL de retour": "Dönüş URL"
     },
     "plugins/virtual/core/class/virtual.class.php": {
-        "Rafraichir": "Yenile"
+        "Rafraichir": "Yenile",
+        "Equipement ID virtuel inconnu, ou l'équipement n'est pas de type virtuel : ": "Equipement ID virtuel inconnu, ou l'équipement n'est pas de type virtuel :",
+        "Equipement ID virtuel inconnu : ": "Equipement ID virtuel inconnu :"
     },
     "plugins/virtual/desktop/js/virtual.js": {
         "Nom": "İsim",
@@ -51,7 +54,9 @@
         "Tester": "Dene",
         "La valeur de la commande vaut par défaut la commande": "Komutanın varsayılan değeri komuta ile eşit",
         "Nom information": "Bilgi ismi",
-        "Valeur": "Değer"
+        "Valeur": "Değer",
+        "Liste de valeur|texte séparé par ;": "Liste de valeur|texte séparé par ;",
+        "Liste": "Liste"
     },
     "plugins/virtual/plugin_info/info.json": {
         "Plugin pour gérer des équipements virtuels": "Sanal cihazlarımı yönetmek için eklenti"

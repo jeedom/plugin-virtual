@@ -31,10 +31,13 @@
         "Sauvegarder": "セーブ",
         "Equipement": "設備",
         "Commandes": "コマンド",
-        "Configuration avancée": "高度な設定"
+        "Configuration avancée": "高度な設定",
+        "URL de retour": "リターンURL"
     },
     "plugins/virtual/core/class/virtual.class.php": {
-        "Rafraichir": "リフレッシュ"
+        "Rafraichir": "リフレッシュ",
+        "Equipement ID virtuel inconnu, ou l'équipement n'est pas de type virtuel : ": "Equipement ID virtuel inconnu, ou l'équipement n'est pas de type virtuel :",
+        "Equipement ID virtuel inconnu : ": "Equipement ID virtuel inconnu :"
     },
     "plugins/virtual/desktop/js/virtual.js": {
         "Nom": "表題",
@@ -51,7 +54,9 @@
         "Tester": "テスト",
         "La valeur de la commande vaut par défaut la commande": "順序の値はデフォルトのコマンドであります",
         "Nom information": "情報に名前を付けます",
-        "Valeur": "値"
+        "Valeur": "値",
+        "Liste de valeur|texte séparé par ;": "Liste de valeur|texte séparé par ;",
+        "Liste": "Liste"
     },
     "plugins/virtual/plugin_info/info.json": {
         "Plugin pour gérer des équipements virtuels": "仮想機器を管理するためのプラグイン"

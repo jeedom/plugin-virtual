@@ -31,10 +31,13 @@
         "Sauvegarder": "Save",
         "Equipement": "Device",
         "Commandes": "Commands",
-        "Configuration avancée": "Advanced configuration"
+        "Configuration avancée": "Advanced configuration",
+        "URL de retour": "Return URL"
     },
     "plugins/virtual/core/class/virtual.class.php": {
-        "Rafraichir": "Refresh"
+        "Rafraichir": "Refresh",
+        "Equipement ID virtuel inconnu, ou l'équipement n'est pas de type virtuel : ": "Equipement ID virtuel inconnu, ou l'équipement n'est pas de type virtuel :",
+        "Equipement ID virtuel inconnu : ": "Equipement ID virtuel inconnu :"
     },
     "plugins/virtual/desktop/js/virtual.js": {
         "Nom": "Name",
@@ -51,7 +54,9 @@
         "Tester": "Test",
         "La valeur de la commande vaut par défaut la commande": "The value of the command defaults to the command",
         "Nom information": "Information name",
-        "Valeur": "Value"
+        "Valeur": "Value",
+        "Liste de valeur|texte séparé par ;": "Liste de valeur|texte séparé par ;",
+        "Liste": "Liste"
     },
     "plugins/virtual/plugin_info/info.json": {
         "Plugin pour gérer des équipements virtuels": "Plugin to manage virtual devices"
