@@ -36,8 +36,8 @@
     },
     "plugins/virtual/core/class/virtual.class.php": {
         "Rafraichir": "Aktualisieren",
-        "Equipement ID virtuel inconnu, ou l'équipement n'est pas de type virtuel : ": "Equipement ID virtuel inconnu, ou l'équipement n'est pas de type virtuel :",
-        "Equipement ID virtuel inconnu : ": "Equipement ID virtuel inconnu :"
+        "Equipement ID virtuel inconnu, ou l'équipement n'est pas de type virtuel : ": "Virtuelle Geräte-ID unbekannt oder das Gerät ist kein virtueller Typ :",
+        "Equipement ID virtuel inconnu : ": "Unbekannte virtuelle Geräte-ID :"
     },
     "plugins/virtual/desktop/js/virtual.js": {
         "Nom": "Name",
@@ -55,7 +55,7 @@
         "La valeur de la commande vaut par défaut la commande": "Der Wert des Befehles ist der Standardbefehl",
         "Nom information": "Name der Information",
         "Valeur": "Wert",
-        "Liste de valeur|texte séparé par ;": "Liste de valeur|texte séparé par ;",
+        "Liste de valeur|texte séparé par ;": "Liste der Werte|Texte getrennt durch ;",
         "Liste": "Liste"
     },
     "plugins/virtual/plugin_info/info.json": {
