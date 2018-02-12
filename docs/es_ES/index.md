@@ -65,7 +65,7 @@ Aquí encontrará toda la configuración de su dispositivo:
 -   **Catégorie** : les catégories de l'équipement (il peut appartenir à
     plusieurs catégories),
 
--   **Activer** : permet de rendre votre équipement actif,
+-   ** ** Activar: para que su equipo activo,
 
 -   **Visible** : le rend visible sur le dashboard,
 
