@@ -113,7 +113,7 @@ En-dessous vous retrouvez la liste des commandes :
 -   min/max : bornes de la donnée (peuvent être vides),
 
 -   configuration avancée (petites roues crantées) : permet d’afficher
-    la configuration avancée de la commande (méthode d’historisation,
+    el control prolongado de la configuración (método de tala,
     widget…),
 
 -   "Tester" : permet de tester la commande,

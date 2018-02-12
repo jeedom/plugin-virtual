@@ -113,7 +113,7 @@ En-dessous vous retrouvez la liste des commandes :
 -   min/max : bornes de la donnée (peuvent être vides),
 
 -   configuration avancée (petites roues crantées) : permet d’afficher
-    la configuration avancée de la commande (méthode d’historisation,
+    the advanced configuration of the command (historization method,
     widget…),
 
 -   "Tester" : permet de tester la commande,
