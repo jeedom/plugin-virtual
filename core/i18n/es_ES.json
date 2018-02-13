@@ -36,8 +36,8 @@
     },
     "plugins/virtual/core/class/virtual.class.php": {
         "Rafraichir": "Actualizar",
-        "Equipement ID virtuel inconnu, ou l'équipement n'est pas de type virtuel : ": "Equipement ID virtuel inconnu, ou l'équipement n'est pas de type virtuel :",
-        "Equipement ID virtuel inconnu : ": "Equipement ID virtuel inconnu :"
+        "Equipement ID virtuel inconnu, ou l'équipement n'est pas de type virtuel : ": "ID virtual del equipo desconocido, o el equipo no es de tipo virtual :",
+        "Equipement ID virtuel inconnu : ": "Equipo de ID virtual desconocido :"
     },
     "plugins/virtual/desktop/js/virtual.js": {
         "Nom": "Nombre",
@@ -55,8 +55,8 @@
         "La valeur de la commande vaut par défaut la commande": "El valor de la orden es el orden predeterminado",
         "Nom information": "Nombre información",
         "Valeur": "Valor",
-        "Liste de valeur|texte séparé par ;": "Liste de valeur|texte séparé par ;",
-        "Liste": "Liste"
+        "Liste de valeur|texte séparé par ;": "Lista de valores|separados por ;",
+        "Liste": "Listado"
     },
     "plugins/virtual/plugin_info/info.json": {
         "Plugin pour gérer des équipements virtuels": "Plugin para la gestión de dispositivos virtuales"
