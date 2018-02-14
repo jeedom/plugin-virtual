@@ -1,1 +1,1 @@
-{\rtf1}
+-		Correction de l'erreur lors de la copie d'un équipement si la commande Rafraichir existe.

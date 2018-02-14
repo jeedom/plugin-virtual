@@ -108,17 +108,26 @@ class virtual extends eqLogic {
 	}
 
 	public function postSave() {
+		$createRefreshCmd = true;
 		$refresh = $this->getCmd(null, 'refresh');
 		if (!is_object($refresh)) {
-			$refresh = new virtualCmd();
-			$refresh->setLogicalId('refresh');
-			$refresh->setIsVisible(1);
-			$refresh->setName(__('Rafraichir', __FILE__));
+			$refresh = cmd::byEqLogicIdCmdName($this->getId(), __('Rafraichir', __FILE__));
+			if (is_object($refresh)) {
+				$createRefreshCmd = false;
+			}
 		}
-		$refresh->setType('action');
-		$refresh->setSubType('other');
-		$refresh->setEqLogic_id($this->getId());
-		$refresh->save();
+		if ($createRefreshCmd) {
+			if (!is_object($refresh)) {
+				$refresh = new virtualCmd();
+				$refresh->setLogicalId('refresh');
+				$refresh->setIsVisible(1);
+				$refresh->setName(__('Rafraichir', __FILE__));
+			}
+			$refresh->setType('action');
+			$refresh->setSubType('other');
+			$refresh->setEqLogic_id($this->getId());
+			$refresh->save();
+		}
 	}
 
 	public function copyFromEqLogic($_eqLogic_id) {
