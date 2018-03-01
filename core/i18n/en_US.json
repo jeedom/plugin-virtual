@@ -36,8 +36,8 @@
     },
     "plugins/virtual/core/class/virtual.class.php": {
         "Rafraichir": "Refresh",
-        "Equipement ID virtuel inconnu, ou l'équipement n'est pas de type virtuel : ": "Equipement ID virtuel inconnu, ou l'équipement n'est pas de type virtuel :",
-        "Equipement ID virtuel inconnu : ": "Equipement ID virtuel inconnu :"
+        "Equipement ID virtuel inconnu, ou l'équipement n'est pas de type virtuel : ": "Unknown virtual ID equipment, or the equipment is not virtual type :",
+        "Equipement ID virtuel inconnu : ": "Unknown Virtual ID Equipment :"
     },
     "plugins/virtual/desktop/js/virtual.js": {
         "Nom": "Name",
@@ -55,8 +55,8 @@
         "La valeur de la commande vaut par défaut la commande": "The value of the command defaults to the command",
         "Nom information": "Information name",
         "Valeur": "Value",
-        "Liste de valeur|texte séparé par ;": "Liste de valeur|texte séparé par ;",
-        "Liste": "Liste"
+        "Liste de valeur|texte séparé par ;": "List of value|text separated by ;",
+        "Liste": "Listing"
     },
     "plugins/virtual/plugin_info/info.json": {
         "Plugin pour gérer des équipements virtuels": "Plugin to manage virtual devices"
