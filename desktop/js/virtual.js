@@ -31,13 +31,13 @@
                 handleAjaxError(request, status, error);
             },
             success: function (data) {
-            if (data.state != 'ok') {
-                $('#div_alert').showAlert({message: data.result, level: 'danger'});
-                return;
+                if (data.state != 'ok') {
+                    $('#div_alert').showAlert({message: data.result, level: 'danger'});
+                    return;
+                }
+                $('#ul_eqLogic .li_eqLogic.active').click();
             }
-            $('#ul_eqLogic .li_eqLogic.active').click();
-        }
-    });
+        });
     });
 });
 
@@ -55,6 +55,11 @@
  $("#bt_addVirtualAction").on('click', function (event) {
     var _cmd = {type: 'action'};
     addCmdToTable(_cmd);
+});
+
+ $('.bt_showExpressionTest').off('click').on('click', function () {
+  $('#md_modal').dialog({title: "{{Testeur d'expression}}"});
+  $("#md_modal").load('index.php?v=d&modal=expression.test').dialog('open');
 });
 
  $('#table_cmd tbody').delegate('tr .remove', 'click', function (event) {
@@ -88,36 +93,36 @@
         _cmd.configuration = {};
     }
     if (init(_cmd.logicalId) == 'refresh') {
-     return;
- }
+       return;
+   }
 
- if (init(_cmd.type) == 'info') {
-     var disabled = (init(_cmd.configuration.virtualAction) == '1') ? 'disabled' : '';
-     var tr = '<tr class="cmd" data-cmd_id="' + init(_cmd.id) + '" virtualAction="' + init(_cmd.configuration.virtualAction) + '">';
-     tr += '<td>';
-     tr += '<span class="cmdAttr" data-l1key="id"></span>';
-     tr += '</td>';
-     tr += '<td>';
-     tr += '<input class="cmdAttr form-control input-sm" data-l1key="name" style="width : 140px;" placeholder="{{Nom}}"></td>';
-     tr += '<td>';
-     tr += '<input class="cmdAttr form-control type input-sm" data-l1key="type" value="info" disabled style="margin-bottom : 5px;" />';
-     tr += '<span class="subType" subType="' + init(_cmd.subType) + '"></span>';
-     tr += '</td>';
-     tr += '<td><textarea class="cmdAttr form-control input-sm" data-l1key="configuration" data-l2key="calcul" style="height : 33px;" ' + disabled + ' placeholder="{{Calcul}}"></textarea>';
-     tr += '<a class="btn btn-default cursor listEquipementInfo btn-sm" data-input="calcul"><i class="fa fa-list-alt "></i> {{Rechercher équipement}}</a>';
-     tr += '<input class="cmdAttr form-control input-sm" data-l1key="configuration" data-l2key="returnStateValue" placeholder="{{Valeur retour d\'état}}" style="margin : 5px;width : 30%;display : inline-block;">';
-     tr += '<input class="cmdAttr form-control input-sm" data-l1key="configuration" data-l2key="returnStateTime" placeholder="{{Durée avant retour d\'état (min)}}" style="margin : 5px;width : 30%;display : inline-block;">';
-     tr += '</td>';
-     tr += '<td><input class="cmdAttr form-control input-sm" data-l1key="unite" style="width : 90px;" placeholder="{{Unité}}"></td>';
-     tr += '<td>';
-     tr += '<span><label class="checkbox-inline"><input type="checkbox" class="cmdAttr checkbox-inline" data-l1key="isVisible" checked/>{{Afficher}}</label></span> ';
-     tr += '<span><label class="checkbox-inline"><input type="checkbox" class="cmdAttr checkbox-inline" data-l1key="isHistorized" checked/>{{Historiser}}</label></span> ';
-     tr += '<span><label class="checkbox-inline"><input type="checkbox" class="cmdAttr expertModeVisible" data-l1key="display" data-l2key="invertBinary"/>{{Inverser}}</label></span><br/>';
-     tr += '<input class="tooltips cmdAttr form-control input-sm" data-l1key="configuration" data-l2key="minValue" placeholder="{{Min}}" title="{{Min}}" style="width : 40%;display : inline-block;"> ';
-     tr += '<input class="tooltips cmdAttr form-control input-sm" data-l1key="configuration" data-l2key="maxValue" placeholder="{{Max}}" title="{{Max}}" style="width : 40%;display : inline-block;">';
-     tr += '</td>';
-     tr += '<td>';
-     if (is_numeric(_cmd.id)) {
+   if (init(_cmd.type) == 'info') {
+       var disabled = (init(_cmd.configuration.virtualAction) == '1') ? 'disabled' : '';
+       var tr = '<tr class="cmd" data-cmd_id="' + init(_cmd.id) + '" virtualAction="' + init(_cmd.configuration.virtualAction) + '">';
+       tr += '<td>';
+       tr += '<span class="cmdAttr" data-l1key="id"></span>';
+       tr += '</td>';
+       tr += '<td>';
+       tr += '<input class="cmdAttr form-control input-sm" data-l1key="name" style="width : 140px;" placeholder="{{Nom}}"></td>';
+       tr += '<td>';
+       tr += '<input class="cmdAttr form-control type input-sm" data-l1key="type" value="info" disabled style="margin-bottom : 5px;" />';
+       tr += '<span class="subType" subType="' + init(_cmd.subType) + '"></span>';
+       tr += '</td>';
+       tr += '<td><textarea class="cmdAttr form-control input-sm" data-l1key="configuration" data-l2key="calcul" style="height : 33px;" ' + disabled + ' placeholder="{{Calcul}}"></textarea>';
+       tr += '<a class="btn btn-default cursor listEquipementInfo btn-sm" data-input="calcul"><i class="fa fa-list-alt "></i> {{Rechercher équipement}}</a>';
+       tr += '<input class="cmdAttr form-control input-sm" data-l1key="configuration" data-l2key="returnStateValue" placeholder="{{Valeur retour d\'état}}" style="margin : 5px;width : 30%;display : inline-block;">';
+       tr += '<input class="cmdAttr form-control input-sm" data-l1key="configuration" data-l2key="returnStateTime" placeholder="{{Durée avant retour d\'état (min)}}" style="margin : 5px;width : 30%;display : inline-block;">';
+       tr += '</td>';
+       tr += '<td><input class="cmdAttr form-control input-sm" data-l1key="unite" style="width : 90px;" placeholder="{{Unité}}"></td>';
+       tr += '<td>';
+       tr += '<span><label class="checkbox-inline"><input type="checkbox" class="cmdAttr checkbox-inline" data-l1key="isVisible" checked/>{{Afficher}}</label></span> ';
+       tr += '<span><label class="checkbox-inline"><input type="checkbox" class="cmdAttr checkbox-inline" data-l1key="isHistorized" checked/>{{Historiser}}</label></span> ';
+       tr += '<span><label class="checkbox-inline"><input type="checkbox" class="cmdAttr expertModeVisible" data-l1key="display" data-l2key="invertBinary"/>{{Inverser}}</label></span><br/>';
+       tr += '<input class="tooltips cmdAttr form-control input-sm" data-l1key="configuration" data-l2key="minValue" placeholder="{{Min}}" title="{{Min}}" style="width : 40%;display : inline-block;"> ';
+       tr += '<input class="tooltips cmdAttr form-control input-sm" data-l1key="configuration" data-l2key="maxValue" placeholder="{{Max}}" title="{{Max}}" style="width : 40%;display : inline-block;">';
+       tr += '</td>';
+       tr += '<td>';
+       if (is_numeric(_cmd.id)) {
         tr += '<a class="btn btn-default btn-xs cmdAction expertModeVisible" data-action="configure"><i class="fa fa-cogs"></i></a> ';
         tr += '<a class="btn btn-default btn-xs cmdAction" data-action="test"><i class="fa fa-rss"></i> {{Tester}}</a>';
     }
