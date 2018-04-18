@@ -116,7 +116,7 @@ En-dessous vous retrouvez la liste des commandes :
 
 -   min/max : bornes de la donnée (peuvent être vides),
 
--   configuration avancée (petites roues crantées) : permet d’afficher
+-   Erweiterte Konfiguration (kleine Zahnräder) : Erlaubt die erweiterte
     Die erweiterte Steuerung der Konfiguration (Methode der Protokollierung,
     widget, etc.),
 
