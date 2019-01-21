@@ -1,29 +1,29 @@
 <?php
 
 /* This file is part of Jeedom.
- *
- * Jeedom is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * Jeedom is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with Jeedom. If not, see <http://www.gnu.org/licenses/>.
- */
+*
+* Jeedom is free software: you can redistribute it and/or modify
+* it under the terms of the GNU General Public License as published by
+* the Free Software Foundation, either version 3 of the License, or
+* (at your option) any later version.
+*
+* Jeedom is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+* GNU General Public License for more details.
+*
+* You should have received a copy of the GNU General Public License
+* along with Jeedom. If not, see <http://www.gnu.org/licenses/>.
+*/
 
 /* * ***************************Includes********************************* */
 require_once dirname(__FILE__) . '/../../../../core/php/core.inc.php';
 
 class virtual extends eqLogic {
 	/*     * *************************Attributs****************************** */
-
+	
 	/*     * ***********************Methode static*************************** */
-
+	
 	public static function event() {
 		log::add('virtual', 'debug', json_encode($_GET));
 		if (init('id') != '') {
@@ -52,7 +52,7 @@ class virtual extends eqLogic {
 		}
 		$cmd->event(init('value', init('v')));
 	}
-
+	
 	public static function cron() {
 		foreach (eqLogic::byType('virtual', true) as $eqLogic) {
 			$autorefresh = $eqLogic->getConfiguration('autorefresh');
@@ -68,7 +68,7 @@ class virtual extends eqLogic {
 			}
 		}
 	}
-
+	
 	public static function deadCmd() {
 		$return = array();
 		foreach (eqLogic::byType('virtual') as $virtual) {
@@ -89,7 +89,7 @@ class virtual extends eqLogic {
 		}
 		return $return;
 	}
-
+	
 	/*     * *********************Methode d'instance************************* */
 	public function refresh() {
 		try {
@@ -106,7 +106,7 @@ class virtual extends eqLogic {
 			log::add('virtual', 'error', __('Erreur pour ', __FILE__) . $eqLogic->getHumanName() . ' : ' . $exc->getMessage());
 		}
 	}
-
+	
 	public function postSave() {
 		$createRefreshCmd = true;
 		$refresh = $this->getCmd(null, 'refresh');
@@ -129,7 +129,7 @@ class virtual extends eqLogic {
 			$refresh->save();
 		}
 	}
-
+	
 	public function copyFromEqLogic($_eqLogic_id) {
 		$eqLogic = eqLogic::byId($_eqLogic_id);
 		if (!is_object($eqLogic)) {
@@ -170,29 +170,29 @@ class virtual extends eqLogic {
 			try {
 				$cmd->save();
 			} catch (Exception $e) {
-
+				
 			}
 		}
 		$this->save();
 	}
-
+	
 	/*     * **********************Getteur Setteur*************************** */
 }
 
 class virtualCmd extends cmd {
 	/*     * *************************Attributs****************************** */
-
+	
 	/*     * ***********************Methode static*************************** */
-
+	
 	/*     * *********************Methode d'instance************************* */
-
+	
 	public function dontRemoveCmd() {
 		if ($this->getLogicalId() == 'refresh') {
 			return true;
 		}
 		return false;
 	}
-
+	
 	public function preSave() {
 		if ($this->getLogicalId() == 'refresh') {
 			return;
@@ -217,11 +217,11 @@ class virtualCmd extends cmd {
 					$actionInfo->setType('info');
 					switch ($this->getSubType()) {
 						case 'slider':
-							$actionInfo->setSubType('numeric');
-							break;
+						$actionInfo->setSubType('numeric');
+						break;
 						default:
-							$actionInfo->setSubType('string');
-							break;
+						$actionInfo->setSubType('string');
+						break;
 					}
 				}
 				$actionInfo->setConfiguration('virtualAction', 1);
@@ -249,18 +249,16 @@ class virtualCmd extends cmd {
 			foreach ($matches[1] as $variable) {
 				$value .= '#variable(' . $variable . ')#';
 			}
-			if ($value != '') {
-				$this->setValue($value);
-			}
+			$this->setValue($value);
 		}
 	}
-
+	
 	public function postSave() {
 		if ($this->getType() == 'info' && $this->getConfiguration('virtualAction', 0) == '0' && $this->getConfiguration('calcul') != '') {
 			$this->event($this->execute());
 		}
 	}
-
+	
 	public function execute($_options = null) {
 		if ($this->getLogicalId() == 'refresh') {
 			$this->getEqLogic()->refresh();
@@ -268,67 +266,67 @@ class virtualCmd extends cmd {
 		}
 		switch ($this->getType()) {
 			case 'info':
-				if ($this->getConfiguration('virtualAction', 0) == '0') {
-					try {
-						$result = jeedom::evaluateExpression($this->getConfiguration('calcul'));
-						if ($this->getSubType() == 'numeric') {
-							if (is_numeric($result)) {
-								$result = number_format($result, 2);
-							} else {
-								$result = str_replace('"', '', $result);
-							}
-							if (strpos($result, '.') !== false) {
-								$result = str_replace(',', '', $result);
-							} else {
-								$result = str_replace(',', '.', $result);
-							}
+			if ($this->getConfiguration('virtualAction', 0) == '0') {
+				try {
+					$result = jeedom::evaluateExpression($this->getConfiguration('calcul'));
+					if ($this->getSubType() == 'numeric') {
+						if (is_numeric($result)) {
+							$result = number_format($result, 2);
+						} else {
+							$result = str_replace('"', '', $result);
 						}
-						return $result;
-					} catch (Exception $e) {
-						log::add('virtual', 'info', $e->getMessage());
-						return jeedom::evaluateExpression($this->getConfiguration('calcul'));
+						if (strpos($result, '.') !== false) {
+							$result = str_replace(',', '', $result);
+						} else {
+							$result = str_replace(',', '.', $result);
+						}
 					}
+					return $result;
+				} catch (Exception $e) {
+					log::add('virtual', 'info', $e->getMessage());
+					return jeedom::evaluateExpression($this->getConfiguration('calcul'));
 				}
-				break;
+			}
+			break;
 			case 'action':
-				$virtualCmd = virtualCmd::byId($this->getConfiguration('infoId'));
-				if (!is_object($virtualCmd)) {
-					$cmds = explode('&&', $this->getConfiguration('infoName'));
-					if (is_array($cmds)) {
-						foreach ($cmds as $cmd_id) {
-							$cmd = cmd::byId(str_replace('#', '', $cmd_id));
-							if (is_object($cmd)) {
-								$cmd->execCmd($_options);
-							}
+			$virtualCmd = virtualCmd::byId($this->getConfiguration('infoId'));
+			if (!is_object($virtualCmd)) {
+				$cmds = explode('&&', $this->getConfiguration('infoName'));
+				if (is_array($cmds)) {
+					foreach ($cmds as $cmd_id) {
+						$cmd = cmd::byId(str_replace('#', '', $cmd_id));
+						if (is_object($cmd)) {
+							$cmd->execCmd($_options);
 						}
-						return;
-					} else {
-						$cmd = cmd::byId(str_replace('#', '', $this->getConfiguration('infoName')));
-						return $cmd->execCmd($_options);
 					}
+					return;
 				} else {
-					if ($virtualCmd->getEqType() != 'virtual') {
-						throw new Exception(__('La cible de la commande virtuel n\'est pas un équipement de type virtuel', __FILE__));
-					}
-					if ($this->getSubType() == 'slider') {
-						$value = $_options['slider'];
-					} else if ($this->getSubType() == 'color') {
-						$value = $_options['color'];
-					} else if ($this->getSubType() == 'select') {
-						$value = $_options['select'];
-					} else {
-						$value = $this->getConfiguration('value');
-					}
-					$result = jeedom::evaluateExpression($value);
-					if ($this->getSubtype() == 'message') {
-						$result = $_options['title'] . ' ' . $_options['message'];
-					}
-					$virtualCmd->event($result);
+					$cmd = cmd::byId(str_replace('#', '', $this->getConfiguration('infoName')));
+					return $cmd->execCmd($_options);
 				}
-				break;
+			} else {
+				if ($virtualCmd->getEqType() != 'virtual') {
+					throw new Exception(__('La cible de la commande virtuel n\'est pas un équipement de type virtuel', __FILE__));
+				}
+				if ($this->getSubType() == 'slider') {
+					$value = $_options['slider'];
+				} else if ($this->getSubType() == 'color') {
+					$value = $_options['color'];
+				} else if ($this->getSubType() == 'select') {
+					$value = $_options['select'];
+				} else {
+					$value = $this->getConfiguration('value');
+				}
+				$result = jeedom::evaluateExpression($value);
+				if ($this->getSubtype() == 'message') {
+					$result = $_options['title'] . ' ' . $_options['message'];
+				}
+				$virtualCmd->event($result);
+			}
+			break;
 		}
 	}
-
+	
 	/*     * **********************Getteur Setteur*************************** */
 }
 
