@@ -51,6 +51,7 @@ foreach ($eqLogics as $eqLogic) {
   <a class="btn btn-default eqLogicAction pull-right" data-action="configure"><i class="fa fa-cogs"></i> {{Configuration avancée}}</a>
   <a class="btn btn-default eqLogicAction pull-right" data-action="copy"><i class="fa fa-files-o"></i> {{Dupliquer}}</a>
   <a class="btn btn-default pull-right" id="bt_importEqLogic"><i class="fa fa-share"></i> {{Importer équipement}}</a>
+  <a class="btn btn-primary pull-right bt_showExpressionTest"><i class="fa fa-check"></i> {{Expression}}</a>
   <ul class="nav nav-tabs" role="tablist">
     <li role="presentation"><a href="#" class="eqLogicAction" aria-controls="home" role="tab" data-toggle="tab" data-action="returnToThumbnailDisplay"><i class="fa fa-arrow-circle-left"></i></a></li>
     <li role="presentation" class="active"><a href="#eqlogictab" aria-controls="home" role="tab" data-toggle="tab"><i class="fa fa-tachometer"></i> {{Equipement}}</a></li>
@@ -113,12 +114,12 @@ foreach (jeedom::getConfiguration('eqLogic:category') as $key => $value) {
       <label class="col-sm-3 control-label">{{URL de retour}}</label>
       <div class="col-sm-9 callback">
         <span>
-	<?php 
-		echo network::getNetworkAccess('external') . '/core/api/jeeApi.php?plugin=virtual&apikey='.jeedom::getApiKey($plugin->getId()).'&type=virtual&id=#cmd_id#&value=#value#';
-		?>
+	<?php
+echo network::getNetworkAccess('external') . '/core/api/jeeApi.php?plugin=virtual&apikey=' . jeedom::getApiKey($plugin->getId()) . '&type=virtual&id=#cmd_id#&value=#value#';
+?>
 	</span>
       </div>
-    </div>   
+    </div>
     </fieldset>
 </form>
 

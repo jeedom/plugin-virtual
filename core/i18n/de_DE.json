@@ -31,10 +31,13 @@
         "Sauvegarder": "Speichern",
         "Equipement": "Gerät",
         "Commandes": "Befehle",
-        "Configuration avancée": "Erweiterte Konfiguration"
+        "Configuration avancée": "Erweiterte Konfiguration",
+        "URL de retour": "URL zurück"
     },
     "plugins/virtual/core/class/virtual.class.php": {
-        "Rafraichir": "Aktualisieren"
+        "Rafraichir": "Aktualisieren",
+        "Equipement ID virtuel inconnu, ou l'équipement n'est pas de type virtuel : ": "Virtuelle Geräte-ID unbekannt oder das Gerät ist kein virtueller Typ :",
+        "Equipement ID virtuel inconnu : ": "Unbekannte virtuelle Geräte-ID :"
     },
     "plugins/virtual/desktop/js/virtual.js": {
         "Nom": "Name",
@@ -51,7 +54,9 @@
         "Tester": "Test",
         "La valeur de la commande vaut par défaut la commande": "Der Wert des Befehles ist der Standardbefehl",
         "Nom information": "Name der Information",
-        "Valeur": "Wert"
+        "Valeur": "Wert",
+        "Liste de valeur|texte séparé par ;": "Liste der Werte|Texte getrennt durch ;",
+        "Liste": "Liste"
     },
     "plugins/virtual/plugin_info/info.json": {
         "Plugin pour gérer des équipements virtuels": "Plugin für die Verwaltung von Virtuelle Geräte"

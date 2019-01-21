@@ -1,0 +1,64 @@
+{
+    "plugins/virtual/plugin_info/info.xml": {
+        "Plugin pour gérer des équipements virtuels": "Plugin para o gerenciamento de equipamentos virtuais",
+        "Aucune": "Nenhum"
+    },
+    "plugins/virtual/desktop/php/virtual.php": {
+        "Ajouter un équipement": "a adição de equipamentos",
+        "Rechercher": "Pesquisar",
+        "Mes Virtuels": "meu Virtual",
+        "Général": "Geral",
+        "Dupliquer": "duplicar",
+        "Importer équipement": "equipamentos de importação",
+        "Nom de l'équipement virtual": "Nome de equipamentos virtuais",
+        "Nom de l'équipement virtuel": "Nome de equipamentos virtuais",
+        "Objet parent": "objeto pai",
+        "Aucun": "Nemhum",
+        "Catégorie": "categoria",
+        "Activer": "Ativar",
+        "Visible": "Visível",
+        "Auto-actualisation (cron)": "Auto-realização (cron)",
+        "Commentaire": "comentário",
+        "Virtuel": "virtual",
+        "Ajouter une info virtuelle": "Adicionar uma informação virtual",
+        "Ajouter une commande virtuelle": "Adicionar uma unidade virtual",
+        "Nom": "Nome",
+        "Sous-Type": "subtipo",
+        "Valeur": "valor",
+        "Unité": "unidade",
+        "Paramètres": "configurações",
+        "Supprimer": "remover",
+        "Sauvegarder": "Salvar",
+        "Equipement": "Equipamento",
+        "Commandes": "comandos",
+        "Configuration avancée": "configuração avançada",
+        "URL de retour": "URL de retorno"
+    },
+    "plugins/virtual/core/class/virtual.class.php": {
+        "Rafraichir": "refrescar",
+        "Equipement ID virtuel inconnu, ou l'équipement n'est pas de type virtuel : ": "Equipement ID virtuel inconnu, ou l'équipement n'est pas de type virtuel :",
+        "Equipement ID virtuel inconnu : ": "Equipement ID virtuel inconnu :"
+    },
+    "plugins/virtual/desktop/js/virtual.js": {
+        "Nom": "Nome",
+        "Calcul": "cálculo",
+        "Rechercher équipement": "equipamentos de pesquisa",
+        "Valeur retour d\\'état": "Estado Valor de retorno \\ 's",
+        "Durée avant retour d\\'état (min)": "Tempo para voltar \\ estado (min)",
+        "Unité": "unidade",
+        "Historiser": "historicizar",
+        "Afficher": "display",
+        "Inverser": "inverter",
+        "Min": "baixo",
+        "Max": "Max",
+        "Tester": "teste",
+        "La valeur de la commande vaut par défaut la commande": "O valor do pedido é o comando padrão",
+        "Nom information": "Nome informações",
+        "Valeur": "valor",
+        "Liste de valeur|texte séparé par ;": "Liste de valeur|texte séparé par ;",
+        "Liste": "Liste"
+    },
+    "plugins/virtual/plugin_info/info.json": {
+        "Plugin pour gérer des équipements virtuels": "Plugin para o gerenciamento de equipamentos virtuais"
+    }
+}

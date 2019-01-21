@@ -23,7 +23,7 @@ Un périphérique virtuel peut être créé pour les besoins suivants :
 
 
 
-# Configuration
+# Setup
 
 Le plugin ne nécessite aucune configuration, il faut juste l’activer :
 
@@ -55,28 +55,32 @@ Voilà à quoi ressemble la page de configuration d’un équipement virtuel
 > permet de faire apparaître un menu d’accès rapide (vous pouvez à
 > partir de votre profil le laisser toujours visible).
 
-Vous retrouvez ici toute la configuration de votre équipement :
+You can find here the full configuration of your device :
 
 -   **Nom de l'équipement virtuel** : nom de votre équipement virtuel,
 
--   **Objet parent** : indique l’objet parent auquel appartient
+-   **Parent Object** : means the parent object the equipment depend
     l'équipement,
 
 -   **Catégorie** : les catégories de l'équipement (il peut appartenir à
     plusieurs catégories),
 
--   **Activer** : permet de rendre votre équipement actif,
+-   **Enable**: to make your equipment active,
 
 -   **Visible** : le rend visible sur le dashboard,
 
 -   **Commentaire** : vous permet de mettre des commentaires sur
     l'équipement.
 
-En haut à droite vous avez accès à 3 boutons :
+En haut à droite vous avez accès à 4 boutons :
+
+-   **Expression** : le testeur d'expressions identique à celui des scénarios
+    pour vous faciliter la mise au point de certains virtuels
 
 -   **Importer équipement** : permet de dupliquer automatiquement un
     équipement existant dans un virtuel (permet de gagner du temps pour
     scinder un équipement en 2 par exemple),
+
 -   **Dupliquer** : permet de dupliquer l'équipement courant,
 
 -   **Avancée (roues crantées)** : permet d’afficher les options
@@ -90,7 +94,7 @@ En-dessous vous retrouvez la liste des commandes :
 
 -   la valeur : permet de donner la valeur de la commande en fonction
     d’une autre commande, d’une clef (quand on fait un interrupteur
-    virtuel), d’un calcul,…
+    virtuel), d’un calcul, etc.
 
 -   "Valeur de retour d'état" et "Durée avant retour d'état" : permet
     d’indiquer à Jeedom qu’après un changement sur l’information sa
@@ -113,8 +117,8 @@ En-dessous vous retrouvez la liste des commandes :
 -   min/max : bornes de la donnée (peuvent être vides),
 
 -   configuration avancée (petites roues crantées) : permet d’afficher
-    la configuration avancée de la commande (méthode d’historisation,
-    widget…),
+    the advanced configuration of the command (historization method,
+    widget, etc.),
 
 -   "Tester" : permet de tester la commande,
 
@@ -132,7 +136,7 @@ virtuelles comme cela :
 
 ![virtual5](../images/virtual5.png)
 
-Puis vous sauvegardez, et là Jeedom va automatiquement ajouter la
+Puis vous sauvegardez et là Jeedom va automatiquement ajouter la
 commande d’information virtuelle :
 
 ![virtual6](../images/virtual6.png)
@@ -198,7 +202,8 @@ Calcul
 
 Pour faire un calcul sur de multiples commandes, c’est très facile ! Il
 suffit de créer une commande de type information virtuelle et dans le
-champs valeur mettre vos calculs. Par exemple, pour faire la moyenne de
+champs valeur mettre vos calculs. Le testeur d'expression peut vous aider
+à cette étape pour valider. Par exemple, pour faire la moyenne de
 2 températures :
 
 ![virtual10](../images/virtual10.png)
