@@ -80,7 +80,7 @@ En haut à droite vous avez accès à 4 boutons :
 -   **Importer équipement** : permet de dupliquer automatiquement un
     équipement existant dans un virtuel (permet de gagner du temps pour
     scinder un équipement en 2 par exemple),
-    
+
 -   **Dupliquer** : permet de dupliquer l'équipement courant,
 
 -   **Avancée (roues crantées)** : permet d’afficher les options
@@ -223,9 +223,9 @@ Plusieurs points à réaliser correctement :
 -   Il est conseillé de cocher la case "évènement seulement", cela
     permet de réduire la charge de Jeedom et d’avoir vraiment une
     actualisation en temps réel.
-    
 
-    
+
+
 
 ## Multiple commandes
 
@@ -272,8 +272,3 @@ appels API :
 >
 > Attention à bien rajouter un /jeedom après \#IP\_JEEDOM\# si
 > nécessaire
-
-# Changelog détaillé :
-<https://github.com/jeedom/plugin-virtual/commits/stable>
-
-
