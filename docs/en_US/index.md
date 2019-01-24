@@ -272,8 +272,3 @@ appels API :
 >
 > Attention à bien rajouter un /jeedom après \#IP\_JEEDOM\# si
 > nécessaire
-
-# Changelog détaillé :
-<https://github.com/jeedom/plugin-virtual/commits/stable>
-
-
