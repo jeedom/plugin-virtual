@@ -1,12 +1,10 @@
 # Presentation
 
-Le plugin Virtual (virtuel) permet la création de périphériques virtuels
-et de leurs propriétés.
+The virtual plugin allows the creation of virtual devices and their properties.
 
-Nous nommerons un périquérique créé par ce plugin : périphérique
-virtuel.
+We will name a device created by this plugin: virtual device.
 
-Un périphérique virtuel peut être créé pour les besoins suivants :
+A virtual device can be created for the following purposes:
 
 -   consolider dans un seul périphérique des informations ou actions de
     plusieurs périphériques physiques/virtuels ;
@@ -14,38 +12,35 @@ Un périphérique virtuel peut être créé pour les besoins suivants :
 -   créer un périphérique alimenté par une source externe à Jeedom
     (Zibase, IPX800…) ;
 
--   dupliquer un équipement pour le scinder en 2 par exemple ;
+-   duplicate equipment to split it into 2 e.g.;
 
--   effectuer un calcul sur plusieurs valeurs d'équipement ;
+-   perform a calculation on several equipment values;
 
--   exécuter de multiples actions (macro).
+-   perform multiple actions (macro).
 
 
 
 
 # Setup
 
-Le plugin ne nécessite aucune configuration, il faut juste l’activer :
+The plugin does not require any configuration, just activate it:
 
 ![virtual1](../images/virtual1.png)
 
 
 
 
-# Configuration des équipements
+# Device configuration
 
-La configuration des équipements virtuels est accessible à partir du
-menu plugin :
+The configuration of the virtual device is accessible from the plugin menu:
 
 ![virtual2](../images/virtual2.png)
 
-Voilà à quoi ressemble la page du plugin virtuel (ici avec déjà un
-équipement) :
+That's what the virtual plugin page looks like (here with already one device) :
 
 ![virtual3](../images/virtual3.png)
 
-Voilà à quoi ressemble la page de configuration d’un équipement virtuel
-:
+That's what the configuration page of a virtual device looks like:
 
 ![virtual4](../images/virtual4.png)
 
@@ -57,7 +52,7 @@ Voilà à quoi ressemble la page de configuration d’un équipement virtuel
 
 You can find here the full configuration of your device :
 
--   **Nom de l'équipement virtuel** : nom de votre équipement virtuel,
+-   ** Name of virtual device**: name of your virtual device,
 
 -   **Parent Object** : means the parent object the equipment depend
     l'équipement,
@@ -67,30 +62,30 @@ You can find here the full configuration of your device :
 
 -   **Enable**: to make your equipment active,
 
--   **Visible** : le rend visible sur le dashboard,
+-   **Visible**: makes it visible on the dashboard,
 
 -   **Commentaire** : vous permet de mettre des commentaires sur
     l'équipement.
 
-En haut à droite vous avez accès à 4 boutons :
+At the top right you have access to 4 buttons:
 
--   **Expression** : le testeur d'expressions identique à celui des scénarios
+-   **Expression**: the expression tester identical as in the scenarios
     pour vous faciliter la mise au point de certains virtuels
 
 -   **Importer équipement** : permet de dupliquer automatiquement un
     équipement existant dans un virtuel (permet de gagner du temps pour
     scinder un équipement en 2 par exemple),
 
--   **Dupliquer** : permet de dupliquer l'équipement courant,
+-   **Duplicate**: duplicates the current equipment,
 
 -   **Avancée (roues crantées)** : permet d’afficher les options
     avancées de l'équipement (commun à tous les plugins Jeedom).
 
-En-dessous vous retrouvez la liste des commandes :
+Below you will find the list of commands:
 
--   le nom affiché sur le dashboard,
+-   the name displayed on the dashboard,
 
--   le type et le sous-type,
+-   the type and the subtype,
 
 -   la valeur : permet de donner la valeur de la commande en fonction
     d’une autre commande, d’une clef (quand on fait un interrupteur
@@ -127,24 +122,22 @@ En-dessous vous retrouvez la liste des commandes :
 
 
 
-# Tutoriel
+# Tutorial
 
-## Interrupteur virtuel
+## Virtual switch
 
-Pour faire un interrupteur virtuel, il vous faut ajouter 2 commandes
-virtuelles comme cela :
+To make a virtual switch, you need to add 2 virtual commands like this:
 
 ![virtual5](../images/virtual5.png)
 
-Puis vous sauvegardez et là Jeedom va automatiquement ajouter la
-commande d’information virtuelle :
+Then you save and Jeedom will automatically add the virtual information command:
 
 ![virtual6](../images/virtual6.png)
 
 Ajoutez dans les commandes "action" `On` et `Off`, la commande `Etat`
 (cela permet à Jeedom de faire le lien avec la commande état).
 
-Pour avoir un joli widget, il vous faut masquer la commande d'état :
+To have a nice widget, you have to hide the state command:
 
 ![virtual7](../images/virtual7.png)
 
@@ -163,32 +156,28 @@ un joli widget qui changera d'état lors d’un clic :
 
 
 
-## Slider virtuel
+## Virtual slider
 
-Pour faire un slider virtuel, il faut ajouter une commande virtuelle
-comme cela :
+To make a virtual slider, you have to add a virtual command like this :
 
 ![virtual12](../images/virtual12.png)
 
-Comme tout à l’heure après la sauvegarde, Jeedom va automatiquement
-créer la commande info :
+Like before after saving, Jeedom will automatically create the info command:
 
 ![virtual13](../images/virtual13.png)
 
-Et comme tout à l’heure il est conseillé de lier l’action à la commande
-d'état et de masquer celle-ci.
+And as before, it is advisable to link the action to the state command and hide it.
 
 
 
 
-## Interrupteur de type toggle
+## Toggle switch
 
-Voilà comment faire un interrupteur de type toggle, pour cela il faut
-créer une commande virtuelle de ce type :
+To make a switch toggle type, it is needed to create a virtual command of this type:
 
 ![virtual14](../images/virtual14.png)
 
-Ensuite vous sauvegardez pour voir apparaître la commande d'état :
+Then you save to see the state command:
 
 ![virtual15](../images/virtual15.png)
 
