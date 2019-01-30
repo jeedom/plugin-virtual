@@ -1,4 +1,6 @@
-- Correction de bugs
+# 22/01/2019
+
+-   Correction de bugs
 
 # 21/01/2019
 
