@@ -1,3 +1,7 @@
+# 22/01/2019
+
+-   Fehlerbehebungen
+
 # 21/01/2019
 
 -   Correction d'un bug sur les valeurs declenchant une mise à jour d'une commande info
