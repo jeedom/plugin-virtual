@@ -153,6 +153,7 @@ class virtual extends eqLogic {
 			$cmd->setType($cmd_def->getType());
 			$cmd->setUnite($cmd_def->getUnite());
 			$cmd->setOrder($cmd_def->getOrder());
+			$cmd->setGeneric_type($cmd_def->getGeneric_type());
 			$cmd->setDisplay('icon', $cmd_def->getDisplay('icon'));
 			$cmd->setDisplay('invertBinary', $cmd_def->getDisplay('invertBinary'));
 			$cmd->setConfiguration('listValue', $cmd_def->getConfiguration('listValue', ''));
@@ -210,6 +211,7 @@ class virtualCmd extends cmd {
 			$cmd = cmd::byId(str_replace('#', '', $this->getConfiguration('infoName')));
 			if (is_object($cmd)) {
 				$this->setSubType($cmd->getSubType());
+				$this->setConfiguration('infoId', '');
 			} else {
 				$actionInfo = virtualCmd::byEqLogicIdCmdName($this->getEqLogic_id(), $this->getConfiguration('infoName'));
 				if (!is_object($actionInfo)) {
