@@ -3,7 +3,7 @@
 Le plugin Virtual (virtuel) permet la création de périphériques virtuels
 et de leurs propriétés.
 
-Nous nommerons un périquérique créé par ce plugin : périphérique
+Nous nommerons un périphérique créé par ce plugin : périphérique
 virtuel.
 
 Un périphérique virtuel peut être créé pour les besoins suivants :
@@ -16,7 +16,7 @@ Un périphérique virtuel peut être créé pour les besoins suivants :
 
 -   dupliquer un équipement pour le scinder en 2 par exemple ;
 
--   effectuer un calcul sur plusieurs valeurs d'équipement ;
+-   effectuer un calcul sur plusieurs valeurs d'équipements ;
 
 -   exécuter de multiples actions (macro).
 
@@ -219,11 +219,6 @@ Plusieurs points à réaliser correctement :
 -   Bien mettre l’unité,
 
 -   Cocher la case pour historiser si nécessaire,
-
--   Il est conseillé de cocher la case "évènement seulement", cela
-    permet de réduire la charge de Jeedom et d’avoir vraiment une
-    actualisation en temps réel.
-
 
 
 
