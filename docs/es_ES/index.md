@@ -3,8 +3,8 @@
 El plugin Virtual (virtual) permite la creación de dispositivos virtuales
 y sus propiedades.
 
-Nombraremos un dispositivo creado por este complemento: dispositivo
-virtual
+Nous nommerons un périphérique créé par ce plugin : périphérique
+virtuel.
 
 Se puede crear un dispositivo virtual para los siguientes propósitos:
 
@@ -16,7 +16,7 @@ Se puede crear un dispositivo virtual para los siguientes propósitos:
 
 -   duplicar un dispositivo para dividirlo en 2, por ejemplo ;
 
--   realizar un cálculo en varios valores del dispositivo;
+-   effectuer un calcul sur plusieurs valeurs d'équipements ;
 
 -   realizar múltiples acciones (macro).
 
@@ -219,11 +219,6 @@ Plusieurs points à réaliser correctement :
 -   Bien mettre l’unité,
 
 -   Cocher la case pour historiser si nécessaire,
-
--   Il est conseillé de cocher la case "évènement seulement", cela
-    permet de réduire la charge de Jeedom et d’avoir vraiment une
-    actualisation en temps réel.
-
 
 
 
