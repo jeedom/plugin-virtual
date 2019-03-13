@@ -58,7 +58,7 @@ class virtual extends eqLogic {
 			$autorefresh = $eqLogic->getConfiguration('autorefresh');
 			if ($autorefresh != '') {
 				try {
-					$c = new Cron\CronExpression($autorefresh, new Cron\FieldFactory);
+					$c = new Cron\CronExpression(checkAndFixCron($autorefresh), new Cron\FieldFactory);
 					if ($c->isDue()) {
 						$eqLogic->refresh();
 					}
@@ -153,6 +153,7 @@ class virtual extends eqLogic {
 			$cmd->setType($cmd_def->getType());
 			$cmd->setUnite($cmd_def->getUnite());
 			$cmd->setOrder($cmd_def->getOrder());
+			$cmd->setGeneric_type($cmd_def->getGeneric_type());
 			$cmd->setDisplay('icon', $cmd_def->getDisplay('icon'));
 			$cmd->setDisplay('invertBinary', $cmd_def->getDisplay('invertBinary'));
 			$cmd->setConfiguration('listValue', $cmd_def->getConfiguration('listValue', ''));

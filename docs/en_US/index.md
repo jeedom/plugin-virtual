@@ -2,7 +2,8 @@
 
 The virtual plugin allows the creation of virtual devices and their properties.
 
-We will name a device created by this plugin: virtual device.
+Nous nommerons un périphérique créé par ce plugin : périphérique
+virtuel.
 
 A virtual device can be created for the following purposes:
 
@@ -14,7 +15,7 @@ A virtual device can be created for the following purposes:
 
 -   duplicate equipment to split it into 2 e.g.;
 
--   perform a calculation on several equipment values;
+-   effectuer un calcul sur plusieurs valeurs d'équipements ;
 
 -   perform multiple actions (macro).
 
@@ -208,11 +209,6 @@ Plusieurs points à réaliser correctement :
 -   Bien mettre l’unité,
 
 -   Cocher la case pour historiser si nécessaire,
-
--   Il est conseillé de cocher la case "évènement seulement", cela
-    permet de réduire la charge de Jeedom et d’avoir vraiment une
-    actualisation en temps réel.
-
 
 
 
