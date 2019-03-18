@@ -23,7 +23,7 @@ $('#bt_importEqLogic').on('click', function () {
       data: {
         action: "copyFromEqLogic",
         eqLogic_id: result.id,
-        id: $('#ul_eqLogic .li_eqLogic.active').attr('data-eqLogic_id')
+        id: $('.eqLogicAttr[data-l1key=id]').value()
       },
       dataType: 'json',
       global: false,
