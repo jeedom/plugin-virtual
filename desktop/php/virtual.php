@@ -12,7 +12,7 @@ $eqLogics = eqLogic::byType($plugin->getId());
 		<legend><i class="icon loisir-two28"></i> {{Gestion}}</legend>
 		<div class="eqLogicThumbnailContainer">
 			<div class="cursor eqLogicAction success" data-action="add" >
-				<i class="fa fa-plus-circle"></i>
+				<i class="fas fa-plus-circle"></i>
 				<br>
 				<span>{{Ajouter}}</span>
 			</div>
