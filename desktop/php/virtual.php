@@ -112,8 +112,8 @@ $eqLogics = eqLogic::byType($plugin->getId());
 				
 			</div>
 			<div role="tabpanel" class="tab-pane" id="commandtab">
-				<a class="btn btn-default btn-sm pull-right" id="bt_addVirtualInfo" style="margin-top:5px;"><i class="fa fa-plus-circle"></i> {{Ajouter une info virtuelle}}</a>
-				<a class="btn btn-default btn-sm  pull-right" id="bt_addVirtualAction" style="margin-top:5px;"><i class="fa fa-plus-circle"></i> {{Ajouter une commande virtuelle}}</a><br/><br/>
+				<a class="btn btn-default btn-sm pull-right" id="bt_addVirtualInfo" style="margin-top:5px;"><i class="fas fa-plus-circle"></i> {{Ajouter une info virtuelle}}</a>
+				<a class="btn btn-default btn-sm  pull-right" id="bt_addVirtualAction" style="margin-top:5px;"><i class="fas fa-plus-circle"></i> {{Ajouter une commande virtuelle}}</a><br/><br/>
 				<table id="table_cmd" class="table table-bordered table-condensed">
 					<thead>
 						<tr>
