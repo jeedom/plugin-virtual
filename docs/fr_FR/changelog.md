@@ -1,6 +1,7 @@
 # 18/03/2019
 
 - Correction de bugs
+- Ajout d'une securité en cas de boucle infini
 
 # 13/03/2019
 

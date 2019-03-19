@@ -11,10 +11,10 @@ $eqLogics = eqLogic::byType($plugin->getId());
 	<div class="col-xs-12 eqLogicThumbnailDisplay" style="padding-left: 25px;">
 		<legend><i class="icon loisir-two28"></i> {{Gestion}}</legend>
 		<div class="eqLogicThumbnailContainer">
-			<div class="cursor eqLogicAction" data-action="add" style="text-align: center; background-color : #ffffff; height : 120px;margin-bottom : 10px;padding : 5px;border-radius: 2px;width : 160px;margin-left : 10px;" >
-				<i class="fa fa-plus-circle" style="font-size : 6em;color:#94ca02;"></i>
+			<div class="cursor eqLogicAction success" data-action="add" >
+				<i class="fas fa-plus-circle"></i>
 				<br>
-				<span style="font-size : 1.1em;position:relative; top : 23px;word-break: break-all;white-space: pre-wrap;word-wrap: break-word;color:#94ca02">{{Ajouter}}</span>
+				<span>{{Ajouter}}</span>
 			</div>
 		</div>
 		<legend><i class="fa fa-table"></i> {{Mes virtuels}}</legend>
@@ -62,7 +62,7 @@ $eqLogics = eqLogic::byType($plugin->getId());
 								<select class="form-control eqLogicAttr" data-l1key="object_id">
 									<option value="">{{Aucun}}</option>
 									<?php
-									foreach (object::all() as $object) {
+									foreach (jeeObject::all() as $object) {
 										echo '<option value="' . $object->getId() . '">' . $object->getName() . '</option>';
 									}
 									?>

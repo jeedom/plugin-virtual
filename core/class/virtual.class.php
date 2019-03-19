@@ -210,6 +210,9 @@ class virtualCmd extends cmd {
 			}
 			$cmd = cmd::byId(str_replace('#', '', $this->getConfiguration('infoName')));
 			if (is_object($cmd)) {
+				if($cmd->getId() == $this->getId()){
+					throw new Exception(__('Vous ne pouvez appeller la commande elle meme (boucle infinie) sur : ', __FILE__).$this->getName());
+				}
 				$this->setSubType($cmd->getSubType());
 				$this->setConfiguration('infoId', '');
 			} else {
@@ -235,7 +238,7 @@ class virtualCmd extends cmd {
 		} else {
 			$calcul = $this->getConfiguration('calcul');
 			if (strpos($calcul, '#' . $this->getId() . '#') !== false) {
-				throw new Exception(__('Vous ne pouvez faire un calcul sur la valeur elle meme (boucle infinie)!!!', __FILE__));
+				throw new Exception(__('Vous ne pouvez faire un calcul sur la valeur elle meme (boucle infinie) : ', __FILE__).$this->getName());
 			}
 			preg_match_all("/#([0-9]*)#/", $calcul, $matches);
 			$value = '';
