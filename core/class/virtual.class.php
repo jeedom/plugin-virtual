@@ -144,7 +144,7 @@ class virtual extends eqLogic {
 		}
 		foreach ($eqLogic->getCmd() as $cmd_def) {
 			$cmd_name = $cmd_def->getName();
-			if ($cmd_name == __('Rafraichir')) {
+			if ($cmd_name == __('Rafraichir',__FILE__)) {
 				$cmd_name .= '_1';
 			}
 			$cmd = new virtualCmd();
