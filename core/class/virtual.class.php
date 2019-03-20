@@ -132,6 +132,7 @@ class virtual extends eqLogic {
 	
 	public function copyFromEqLogic($_eqLogic_id) {
 		$eqLogic = eqLogic::byId($_eqLogic_id);
+		
 		if (!is_object($eqLogic)) {
 			throw new Exception(__('Impossible de trouver l\'équipement : ', __FILE__) . $_eqLogic_id);
 		}

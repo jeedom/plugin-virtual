@@ -35,7 +35,7 @@ $('#bt_importEqLogic').on('click', function () {
           $('#div_alert').showAlert({message: data.result, level: 'danger'});
           return;
         }
-        $('#ul_eqLogic .li_eqLogic.active').click();
+        $('.eqLogicDisplayCard[data-eqLogic_id='+$('.eqLogicAttr[data-l1key=id]').value()+']').click();
       }
     });
   });
