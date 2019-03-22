@@ -228,6 +228,10 @@ class virtualCmd extends cmd {
 						$actionInfo->setSubType('string');
 						break;
 					}
+				}else{
+					if($actionInfo->getId() == $this->getId()){
+						throw new Exception(__('Vous ne pouvez appeller la commande elle meme (boucle infinie) sur : ', __FILE__).$this->getName());
+					}
 				}
 				$actionInfo->setConfiguration('virtualAction', 1);
 				$actionInfo->setName($this->getConfiguration('infoName'));
