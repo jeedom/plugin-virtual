@@ -13,7 +13,7 @@ $eqLogics = eqLogic::byType($plugin->getId());
 		<div class="eqLogicThumbnailContainer">
 			<div class="cursor eqLogicAction logoPrimary" data-action="add" >
 				<i class="fas fa-plus-circle"></i>
-				<br>
+				<br/>
 				<span>{{Ajouter}}</span>
 			</div>
 		</div>
