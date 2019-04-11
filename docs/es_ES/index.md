@@ -63,14 +63,14 @@ Aquí encontrará toda la configuración de su dispositivo:
     dispositivo,
 
 -   **Catégorie** : les catégories de l'équipement (il peut appartenir à
-    plusieurs catégories),
+    varias categorías),
 
 -   ** ** Activar: para que su equipo activo,
 
 -   **Visible** : le rend visible sur le dashboard,
 
 -   **Commentaire** : vous permet de mettre des commentaires sur
-    l'équipement.
+    el equipo.
 
 En haut à droite vous avez accès à 4 boutons :
 
@@ -92,9 +92,9 @@ En-dessous vous retrouvez la liste des commandes :
 
 -   le type et le sous-type,
 
--   la valeur : permet de donner la valeur de la commande en fonction
+-   el valor: permite dar el valor del comando de acuerdo.
     d’une autre commande, d’une clef (quand on fait un interrupteur
-    virtuel), d’un calcul, etc.
+    virtual), de un cálculo, etc.
 
 -   "Valeur de retour d'état" et "Durée avant retour d'état" : permet
     d’indiquer à Jeedom qu’après un changement sur l’information sa
@@ -127,9 +127,9 @@ En-dessous vous retrouvez la liste des commandes :
 
 
 
-# Tutoriel
+# Tutorial
 
-## Interrupteur virtuel
+## Interruptor virtual
 
 Pour faire un interrupteur virtuel, il vous faut ajouter 2 commandes
 virtuelles comme cela :
@@ -163,7 +163,7 @@ un joli widget qui changera d'état lors d’un clic :
 
 
 
-## Slider virtuel
+## Slider virtual
 
 Pour faire un slider virtuel, il faut ajouter une commande virtuelle
 comme cela :
@@ -198,7 +198,7 @@ lier l'état à la commande action (attention, il ne faut pas masquer la
 commande état cette fois). Il faut aussi passer la commande info en
 sous-type binaire.
 
-Calcul
+Cálculo
 
 Pour faire un calcul sur de multiples commandes, c’est très facile ! Il
 suffit de créer une commande de type information virtuelle et dans le
@@ -216,13 +216,13 @@ Plusieurs points à réaliser correctement :
 -   Mettre des parenthèses dans les calculs, cela permet d'être sûr du
     résultat de l’opération,
 
--   Bien mettre l’unité,
+-   Tiene que poner bien la unidad,
 
 -   Cocher la case pour historiser si nécessaire,
 
 
 
-## Multiple commandes
+## Comandos multiples
 
 
 Nous allons voir ici comment faire une commande qui va éteindre 2
@@ -239,7 +239,7 @@ champs valeur doivent avoir le même sous-type (toutes "autre", ou toutes
 
 
 
-## Retour d'état virtuel
+## Estado virtual de retorno
 
 Lors de l’utilisation d’un équipement qui ne possède pas de retour
 d'état et si cet équipement est commandé seulement par Jeedom, il est
@@ -256,7 +256,7 @@ commande générale.
 
 
 
-# Affectation d’une valeur par API
+# Asignando un valor por API
 
 Il est possible de changer la valeur d’une information virtuelle par un
 appels API :
