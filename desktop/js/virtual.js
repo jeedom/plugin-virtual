@@ -129,11 +129,11 @@ function addCmdToTable(_cmd) {
     tr += '<i class="fas fa-minus-circle pull-right cmdAction cursor" data-action="remove"></i></td>';
     tr += '</tr>';
     $('#table_cmd tbody').append(tr);
-    $('#table_cmd tbody tr:last').setValues(_cmd, '.cmdAttr');
+    $('#table_cmd tbody tr').last().setValues(_cmd, '.cmdAttr');
     if (isset(_cmd.type)) {
       $('#table_cmd tbody tr:last .cmdAttr[data-l1key=type]').value(init(_cmd.type));
     }
-    jeedom.cmd.changeType($('#table_cmd tbody tr:last'), init(_cmd.subType));
+    jeedom.cmd.changeType($('#table_cmd tbody tr').last(), init(_cmd.subType));
   }
   
   if (init(_cmd.type) == 'action') {
@@ -188,8 +188,8 @@ function addCmdToTable(_cmd) {
     tr += '</tr>';
     
     $('#table_cmd tbody').append(tr);
-    $('#table_cmd tbody tr:last').setValues(_cmd, '.cmdAttr');
-    var tr = $('#table_cmd tbody tr:last');
+    $('#table_cmd tbody tr').last().setValues(_cmd, '.cmdAttr');
+    var tr = $('#table_cmd tbody tr').last();
     jeedom.eqLogic.builSelectCmd({
       id:  $('.eqLogicAttr[data-l1key=id]').value(),
       filter: {type: 'info'},
