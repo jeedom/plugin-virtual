@@ -204,6 +204,7 @@ class virtualCmd extends cmd {
 			if (is_object($actionInfo)) {
 				$this->setId($actionInfo->getId());
 			}
+			$this->setConfiguration('calcul','');
 		}
 		if ($this->getType() == 'action') {
 			if ($this->getConfiguration('infoName') == '') {
