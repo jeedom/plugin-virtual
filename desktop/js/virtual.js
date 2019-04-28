@@ -1,4 +1,3 @@
-
 /* This file is part of Jeedom.
 *
 * Jeedom is free software: you can redistribute it and/or modify
@@ -95,12 +94,12 @@ function addCmdToTable(_cmd) {
   if (init(_cmd.logicalId) == 'refresh') {
     return;
   }
-  
+
   if (init(_cmd.type) == 'info') {
     var disabled = (init(_cmd.configuration.virtualAction) == '1') ? 'disabled' : '';
     var tr = '<tr class="cmd" data-cmd_id="' + init(_cmd.id) + '" virtualAction="' + init(_cmd.configuration.virtualAction) + '">';
     tr += '<td>';
-    tr += '<span class="cmdAttr" data-l1key="id"></span>';
+    tr += '<span class="cmdAttr label label-info" data-l1key="id"></span>';
     tr += '</td>';
     tr += '<td>';
     tr += '<input class="cmdAttr form-control input-sm" data-l1key="name" style="width : 140px;" placeholder="{{Nom}}"></td>';
@@ -117,16 +116,18 @@ function addCmdToTable(_cmd) {
     tr += '<td>';
     tr += '<span><label class="checkbox-inline"><input type="checkbox" class="cmdAttr checkbox-inline" data-l1key="isVisible" checked/>{{Afficher}}</label></span> ';
     tr += '<span><label class="checkbox-inline"><input type="checkbox" class="cmdAttr checkbox-inline" data-l1key="isHistorized" checked/>{{Historiser}}</label></span> ';
-    tr += '<span><label class="checkbox-inline"><input type="checkbox" class="cmdAttr expertModeVisible" data-l1key="display" data-l2key="invertBinary"/>{{Inverser}}</label></span><br/>';
-    tr += '<input class="tooltips cmdAttr form-control input-sm" data-l1key="configuration" data-l2key="minValue" placeholder="{{Min}}" title="{{Min}}" style="width : 40%;display : inline-block;"> ';
-    tr += '<input class="tooltips cmdAttr form-control input-sm" data-l1key="configuration" data-l2key="maxValue" placeholder="{{Max}}" title="{{Max}}" style="width : 40%;display : inline-block;">';
+    tr += '<span><label class="checkbox-inline"><input type="checkbox" class="cmdAttr expertModeVisible" data-l1key="display" data-l2key="invertBinary"/>{{Inverser}}</label></span>';
+    tr += '<span class="input-group">';
+    tr += '<input class="tooltips cmdAttr form-control input-sm" data-l1key="configuration" data-l2key="minValue" placeholder="{{Min}}" title="{{Min}}" style="width:49%;margin-right:1%;"> ';
+    tr += '<input class="tooltips cmdAttr form-control input-sm" data-l1key="configuration" data-l2key="maxValue" placeholder="{{Max}}" title="{{Max}}" style="width:50%;">';
+    tr += '<span>';
     tr += '</td>';
-    tr += '<td>';
+    tr += '<td style="width:125px">';
     if (is_numeric(_cmd.id)) {
       tr += '<a class="btn btn-default btn-xs cmdAction expertModeVisible" data-action="configure"><i class="fas fa-cogs"></i></a> ';
       tr += '<a class="btn btn-default btn-xs cmdAction" data-action="test"><i class="fa fa-rss"></i> {{Tester}}</a>';
     }
-    tr += '<i class="fas fa-minus-circle pull-right cmdAction cursor" data-action="remove"></i></td>';
+    tr += ' <i class="fas fa-minus-circle cmdAction cursor" data-action="remove" style="line-height:unset"></i></td>';
     tr += '</tr>';
     $('#table_cmd tbody').append(tr);
     $('#table_cmd tbody tr').last().setValues(_cmd, '.cmdAttr');
@@ -135,11 +136,11 @@ function addCmdToTable(_cmd) {
     }
     jeedom.cmd.changeType($('#table_cmd tbody tr').last(), init(_cmd.subType));
   }
-  
+
   if (init(_cmd.type) == 'action') {
     var tr = '<tr class="cmd" data-cmd_id="' + init(_cmd.id) + '">';
     tr += '<td>';
-    tr += '<span class="cmdAttr" data-l1key="id"></span>';
+    tr += '<span class="cmdAttr  label label-info" data-l1key="id"></span>';
     tr += '</td>';
     tr += '<td>';
     tr += '<div class="row">';
@@ -175,18 +176,18 @@ function addCmdToTable(_cmd) {
     tr += '<span><label class="checkbox-inline"><input type="checkbox" class="cmdAttr checkbox-inline" data-l1key="isVisible" checked/>{{Afficher}}</label></span> ';
     tr += '<input class="tooltips cmdAttr form-control input-sm expertModeVisible" data-l1key="configuration" data-l2key="listValue" placeholder="{{Liste de valeur|texte séparé par ;}}" title="{{Liste}}" style="margin-top : 5px;">';
     tr += '<span class="input-group">';
-    tr += '<input class="tooltips cmdAttr form-control input-sm" data-l1key="configuration" data-l2key="minValue" placeholder="{{Min}}" title="{{Min}}" style="width : 40%;display : inline-block;" /> ';
-    tr += '<input class="tooltips cmdAttr form-control input-sm" data-l1key="configuration" data-l2key="maxValue" placeholder="{{Max}}" title="{{Max}}" style="width : 40%;display : inline-block;" />';
+    tr += '<input class="tooltips cmdAttr form-control input-sm" data-l1key="configuration" data-l2key="minValue" placeholder="{{Min}}" title="{{Min}}" style="width:49%;margin-right:1%;" /> ';
+    tr += '<input class="tooltips cmdAttr form-control input-sm" data-l1key="configuration" data-l2key="maxValue" placeholder="{{Max}}" title="{{Max}}" style="width:50%;" />';
     tr += '</span>';
     tr += '</td>';
-    tr += '<td>';
+    tr += '<td style="width:125px">';
     if (is_numeric(_cmd.id)) {
       tr += '<a class="btn btn-default btn-xs cmdAction expertModeVisible" data-action="configure"><i class="fas fa-cogs"></i></a> ';
       tr += '<a class="btn btn-default btn-xs cmdAction" data-action="test"><i class="fa fa-rss"></i> {{Tester}}</a>';
     }
-    tr += '<i class="fas fa-minus-circle pull-right cmdAction cursor" data-action="remove"></i></td>';
+    tr += ' <i class="fas fa-minus-circle cmdAction cursor" data-action="remove" style="line-height:unset"></i></td>';
     tr += '</tr>';
-    
+
     $('#table_cmd tbody').append(tr);
     $('#table_cmd tbody tr').last().setValues(_cmd, '.cmdAttr');
     var tr = $('#table_cmd tbody tr').last();
