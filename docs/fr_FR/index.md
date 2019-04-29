@@ -259,11 +259,10 @@ commande générale.
 # Affectation d’une valeur par API
 
 Il est possible de changer la valeur d’une information virtuelle par un
-appels API :
+appel API :
 
     http://#IP_JEEDOM#/core/api/jeeApi.php?apikey=#APIKEY_VIRTUEL#&plugin=virtual&type=virtual&id=#ID#&value=#value#
 
 > **Note**
 >
-> Attention à bien rajouter un /jeedom après \#IP\_JEEDOM\# si
-> nécessaire
+> Attention à bien rajouter un /jeedom après \#IP\_JEEDOM\# si nécessaire
