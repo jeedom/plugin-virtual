@@ -108,7 +108,7 @@ function addCmdToTable(_cmd) {
     tr += '<span class="subType" subType="' + init(_cmd.subType) + '"></span>';
     tr += '</td>';
     tr += '<td>';
-    if(init(_cmd.configuration.virtualAction) == '1'){
+    if(init(_cmd.configuration.virtualAction) != '1'){
       tr += '<textarea class="cmdAttr form-control input-sm" data-l1key="configuration" data-l2key="calcul" style="height : 33px;" placeholder="{{Calcul}}"></textarea>';
       tr += '<a class="btn btn-default cursor listEquipementInfo btn-sm" data-input="calcul" style="width:100%;margin-top:2px;"><i class="fa fa-list-alt"></i> {{Rechercher équipement}}</a>';
     }
