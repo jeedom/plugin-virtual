@@ -32,7 +32,7 @@ $eqLogics = eqLogic::byType($plugin->getId());
 			?>
 		</div>
 	</div>
-
+	
 	<div class="col-xs-12 eqLogic" style="display: none;">
 		<div class="input-group pull-right" style="display:inline-flex">
 			<span class="input-group-btn">
@@ -98,7 +98,7 @@ $eqLogics = eqLogic::byType($plugin->getId());
 							</div>
 						</div>
 						<div class="form-group">
-							<label class="col-sm-3 control-label">{{URL de retour}}</label>
+							<label class="col-sm-2 control-label">{{URL de retour}}</label>
 							<div class="col-sm-9 callback">
 								<span>
 									<?php
@@ -109,7 +109,7 @@ $eqLogics = eqLogic::byType($plugin->getId());
 						</div>
 					</fieldset>
 				</form>
-
+				
 			</div>
 			<div role="tabpanel" class="tab-pane" id="commandtab">
 				<a class="btn btn-default btn-sm pull-right" id="bt_addVirtualInfo" style="margin-top:5px;"><i class="fas fa-plus-circle"></i> {{Ajouter une info virtuelle}}</a>
@@ -127,13 +127,13 @@ $eqLogics = eqLogic::byType($plugin->getId());
 						</tr>
 					</thead>
 					<tbody>
-
+						
 					</tbody>
 				</table>
-
+				
 			</div>
 		</div>
-
+		
 	</div>
 </div>
 
