@@ -48,13 +48,13 @@ $('#bt_cronGenerator').on('click',function(){
 });
 
 $("#bt_addVirtualInfo").on('click', function (event) {
-  var _cmd = {type: 'info'};
-  addCmdToTable(_cmd);
+  addCmdToTable({type: 'info'});
+  modifyWithoutSave = true;
 });
 
 $("#bt_addVirtualAction").on('click', function (event) {
-  var _cmd = {type: 'action'};
-  addCmdToTable(_cmd);
+  addCmdToTable({type: 'action'});
+  modifyWithoutSave = true;
 });
 
 $('.bt_showExpressionTest').off('click').on('click', function () {
