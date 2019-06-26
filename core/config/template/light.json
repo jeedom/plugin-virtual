@@ -1,0 +1,49 @@
+{
+  "light": {
+    "name" : "Lumière",
+    "commands": [
+      {
+        "name":"Etat",
+        "type":"info",
+        "subType":"binary",
+        "generic_type": "LIGHT_STATE",
+        "configuration":{
+          "virtualAction":1
+        }
+      },
+      {
+        "name":"On",
+        "type":"action",
+        "subType":"other",
+        "value" : "Etat",
+        "generic_type": "LIGHT_ON",
+        "unite":"",
+        "configuration":{
+          "virtualAction":"1",
+          "infoName":"Etat",
+          "value":"1"
+        },
+        "template": {
+          "dashboard": "light",
+          "mobile": "light"
+        }
+      },
+      {
+        "name":"Off",
+        "type":"action",
+        "subType":"other",
+        "value" : "Etat",
+        "generic_type": "LIGHT_OFF",
+        "configuration":{
+          "virtualAction":"1",
+          "infoName":"Etat",
+          "value":"0"
+        },
+        "template": {
+          "dashboard": "light",
+          "mobile": "light"
+        }
+      }
+    ]
+  }
+}

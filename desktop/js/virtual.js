@@ -15,7 +15,53 @@
 * along with Jeedom. If not, see <http://www.gnu.org/licenses/>.
 */
 
-$('#bt_importEqLogic').on('click', function () {
+$('#bt_importTemplate').off('click').on('click', function () {
+  $.ajax({
+    type: "POST",
+    url: "plugins/virtual/core/ajax/virtual.ajax.php",
+    data: {
+      action: "getTemplateList",
+    },
+    dataType: 'json',
+    error: function (request, status, error) {
+      handleAjaxError(request, status, error);
+    },
+    success: function (data) {
+      var inputOptions = [];
+      for(var i in data.result){
+        inputOptions.push({
+          text : data.result[i].name,
+          value : i
+        })
+      }
+      bootbox.prompt({
+        title: "Quel template ?",
+        inputType: 'select',
+        inputOptions: inputOptions,
+        callback: function (result) {
+          $.ajax({
+            type: "POST",
+            url: "plugins/virtual/core/ajax/virtual.ajax.php",
+            data: {
+              action: "applyTemplate",
+              id: $('.eqLogicAttr[data-l1key=id]').value(),
+              name : result
+            },
+            dataType: 'json',
+            error: function (request, status, error) {
+              handleAjaxError(request, status, error);
+            },
+            success: function (data) {
+              $('.eqLogicDisplayCard[data-eqLogic_id='+$('.eqLogicAttr[data-l1key=id]').value()+']').click();
+            }
+          });
+        }
+      });
+    }
+  });
+});
+
+$('#bt_importEqLogic').off('click').on('click', function () {
   jeedom.eqLogic.getSelectModal({}, function (result) {
     $.ajax({
       type: "POST",

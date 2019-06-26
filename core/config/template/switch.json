@@ -1,0 +1,49 @@
+{
+  "switch": {
+    "name" : "Interrupteur",
+    "commands": [
+      {
+        "name":"Etat",
+        "type":"info",
+        "subType":"binary",
+        "generic_type": "ENERGY_STATE",
+        "configuration":{
+          "virtualAction":1
+        }
+      },
+      {
+        "name":"On",
+        "type":"action",
+        "subType":"other",
+        "value" : "Etat",
+        "generic_type": "ENERGY_ON",
+        "unite":"",
+        "configuration":{
+          "virtualAction":"1",
+          "infoName":"Etat",
+          "value":"1"
+        },
+        "template": {
+          "dashboard": "prise",
+          "mobile": "prise"
+        }
+      },
+      {
+        "name":"Off",
+        "type":"action",
+        "subType":"other",
+        "value" : "Etat",
+        "generic_type": "ENERGY_OFF",
+        "configuration":{
+          "virtualAction":"1",
+          "infoName":"Etat",
+          "value":"0"
+        },
+        "template": {
+          "dashboard": "prise",
+          "mobile": "prise"
+        }
+      }
+    ]
+  }
+}
