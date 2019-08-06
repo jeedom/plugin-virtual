@@ -183,7 +183,7 @@ d'état et de masquer celle-ci.
 
 ## Interrupteur de type toggle
 
-Voilà comment faire un interrupteur de type toggle, pour cela il faut
+Voilà comment faire un interrupteur de type toggle (ou bouton poussoir), pour cela il faut
 créer une commande virtuelle de ce type :
 
 ![virtual14](../images/virtual14.png)
