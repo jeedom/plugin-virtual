@@ -1,6 +1,8 @@
 # 10/09/2019
 
 - Correction de l'arrondit forcé sur 2 chiffres sur les commandes numérique
+- Ajout d'un systeme de template pour créer des équipements rapidement
+- Correction de bugs
 
 # 26/04/2019
 
