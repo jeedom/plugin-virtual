@@ -314,7 +314,7 @@ class virtualCmd extends cmd {
 					$result = jeedom::evaluateExpression($this->getConfiguration('calcul'));
 					if ($this->getSubType() == 'numeric') {
 						if (is_numeric($result)) {
-							$result = number_format($result, 2);
+							$result = $result;
 						} else {
 							$result = str_replace('"', '', $result);
 						}
