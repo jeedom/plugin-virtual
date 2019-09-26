@@ -69,6 +69,27 @@ class virtual extends eqLogic {
 		}
 	}
 	
+	public static function templateParameters($_template = ''){
+		$return = array();
+		foreach (ls(dirname(__FILE__) . '/../config/template', '*.json', false, array('files', 'quiet')) as $file) {
+			try {
+				$content = file_get_contents(dirname(__FILE__) . '/../config/template/' . $file);
+				if (is_json($content)) {
+					$return += json_decode($content, true);
+				}
+			} catch (Exception $e) {
+				
+			}
+		}
+		if (isset($_template) && $_template != '') {
+			if (isset($return[$_template])) {
+				return $return[$_template];
+			}
+			return array();
+		}
+		return $return;
+	}
+	
 	public static function deadCmd() {
 		$return = array();
 		foreach (eqLogic::byType('virtual') as $virtual) {
@@ -91,6 +112,14 @@ class virtual extends eqLogic {
 	}
 	
 	/*     * *********************Methode d'instance************************* */
+	public function applyTemplate($_template){
+		$template = self::templateParameters($_template);
+		if (!is_array($template)) {
+			return true;
+		}
+		$this->import($template);
+	}
+	
 	public function refresh() {
 		try {
 			foreach ($this->getCmd('info') as $cmd) {
@@ -285,7 +314,7 @@ class virtualCmd extends cmd {
 					$result = jeedom::evaluateExpression($this->getConfiguration('calcul'));
 					if ($this->getSubType() == 'numeric') {
 						if (is_numeric($result)) {
-							$result = number_format($result, 2);
+							$result = $result;
 						} else {
 							$result = str_replace('"', '', $result);
 						}
