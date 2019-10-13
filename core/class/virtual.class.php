@@ -311,13 +311,8 @@ class virtualCmd extends cmd {
 			case 'info':
 			if ($this->getConfiguration('virtualAction', 0) == '0') {
 				try {
-					$result = jeedom::evaluateExpression($this->getConfiguration('calcul'));
+					$result = str_replace('"', '', jeedom::evaluateExpression($this->getConfiguration('calcul')));
 					if ($this->getSubType() == 'numeric') {
-						if (is_numeric($result)) {
-							$result = $result;
-						} else {
-							$result = str_replace('"', '', $result);
-						}
 						if (strpos($result, '.') !== false) {
 							$result = str_replace(',', '', $result);
 						} else {
