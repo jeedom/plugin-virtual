@@ -1,3 +1,6 @@
+- Actualización de la documentación
+- Supression forcé des " lors d'un calcul sur une commande
+
 # 10/09/2019
 
 - Correction de l'arrondit forcé sur 2 chiffres sur les commandes numérique

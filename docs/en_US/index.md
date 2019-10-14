@@ -251,7 +251,7 @@ commande générale.
 Il est possible de changer la valeur d’une information virtuelle par un
 appel API :
 
-    http://#IP_JEEDOM#/core/api/jeeApi.php?apikey=#APIKEY_VIRTUEL#&plugin=virtual&type=virtual&id=#ID#&value=#value#
+    http://#IP_JEEDOM#/core/api/jeeApi.php?apikey=#APIKEY_VIRTUEL#&type=virtual&type=virtual&id=#ID#&value=#value#
 
 > **Note**
 >
