@@ -311,18 +311,14 @@ class virtualCmd extends cmd {
 			case 'info':
 			if ($this->getConfiguration('virtualAction', 0) == '0') {
 				try {
-					$result = str_replace('"', '', jeedom::evaluateExpression($this->getConfiguration('calcul')));
-					if ($this->getSubType() == 'numeric') {
-						if (strpos($result, '.') !== false) {
-							$result = str_replace(',', '', $result);
-						} else {
-							$result = str_replace(',', '.', $result);
-						}
+					$result = jeedom::evaluateExpression($this->getConfiguration('calcul'));
+					if(is_string($result)){
+						$result = str_replace('"', '', $result);
 					}
 					return $result;
 				} catch (Exception $e) {
 					log::add('virtual', 'info', $e->getMessage());
-					return str_replace('"','',jeedom::evaluateExpression($this->getConfiguration('calcul')));
+					return $this->formatValue(str_replace('"','',jeedom::evaluateExpression($this->getConfiguration('calcul'))));
 				}
 			}
 			break;
