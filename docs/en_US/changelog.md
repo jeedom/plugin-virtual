@@ -1,5 +1,8 @@
+# 23/10/2019
+
 - Mise à jour de la doc
 - Supression forcé des " lors d'un calcul sur une commande
+- Correction de bug de calcul si le résultat à pour valeur"Faux"
 
 # 10/09/2019
 
