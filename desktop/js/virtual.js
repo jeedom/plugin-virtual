@@ -156,7 +156,7 @@ function addCmdToTable(_cmd) {
     tr += '<td>';
     if(init(_cmd.configuration.virtualAction) != '1'){
       tr += '<textarea class="cmdAttr form-control input-sm" data-l1key="configuration" data-l2key="calcul" style="height : 33px;" placeholder="{{Calcul}}"></textarea>';
-      tr += '<a class="btn btn-default cursor listEquipementInfo btn-sm" data-input="calcul" style="width:100%;margin-top:2px;"><i class="fa fa-list-alt"></i> {{Rechercher équipement}}</a>';
+      tr += '<a class="btn btn-default cursor listEquipementInfo btn-sm" data-input="calcul" style="width:100%;margin-top:2px;"><i class="fas fa-list-alt"></i> {{Rechercher équipement}}</a>';
     }
     tr += '</td>';
     
@@ -200,7 +200,7 @@ function addCmdToTable(_cmd) {
     tr += '<td>';
     tr += '<div class="row">';
     tr += '<div class="col-sm-6">';
-    tr += '<a class="cmdAction btn btn-default btn-sm" data-l1key="chooseIcon"><i class="fa fa-flag"></i> Icône</a>';
+    tr += '<a class="cmdAction btn btn-default btn-sm" data-l1key="chooseIcon"><i class="fas fa-flag"></i> Icône</a>';
     tr += '<span class="cmdAttr" data-l1key="display" data-l2key="icon" style="margin-left : 10px;"></span>';
     tr += '</div>';
     tr += '<div class="col-sm-6">';
@@ -220,13 +220,13 @@ function addCmdToTable(_cmd) {
     tr += '<div class="input-group" style="margin-bottom : 5px;">';
     tr += '<input class="cmdAttr form-control input-sm roundedLeft" data-l1key="configuration" data-l2key="infoName" placeholder="{{Nom information}}"/>';
     tr += '<span class="input-group-btn">';
-    tr += '<a class="btn btn-default btn-sm cursor listEquipementAction roundedRight" data-input="infoName"><i class="fa fa-list-alt "></i></a>';
+    tr += '<a class="btn btn-default btn-sm cursor listEquipementAction roundedRight" data-input="infoName"><i class="fas fa-list-alt "></i></a>';
     tr += '</span>';
     tr += '</div>';
     tr += '<div class="input-group">';
     tr += '<input class="cmdAttr form-control input-sm roundedLeft" data-l1key="configuration" data-l2key="value" placeholder="{{Valeur}}" />';
     tr += '<span class="input-group-btn">';
-    tr += '<a class="btn btn-default btn-sm cursor listEquipementInfo roundedRight" data-input="value"><i class="fa fa-list-alt "></i></a>';
+    tr += '<a class="btn btn-default btn-sm cursor listEquipementInfo roundedRight" data-input="value"><i class="fas fa-list-alt "></i></a>';
     tr += '</span>';
     tr += '</div>';
     tr += '</td>';
