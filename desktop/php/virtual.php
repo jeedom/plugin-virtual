@@ -94,7 +94,7 @@ $eqLogics = eqLogic::byType($plugin->getId());
 								<label class="checkbox-inline"><input type="checkbox" class="eqLogicAttr" data-l1key="isVisible" checked/>{{Visible}}</label>
 							</div>
 						</div>
-						<div class="form-group expertModeVisible">
+						<div class="form-group">
 							<label class="col-sm-2 control-label">{{Auto-actualisation (cron)}}</label>
 							<div class="col-sm-2">
 								<input type="text" class="eqLogicAttr form-control" data-l1key="configuration" data-l2key="autorefresh" placeholder="{{Auto-actualisation (cron)}}"/>
