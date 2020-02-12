@@ -324,6 +324,7 @@ class virtualCmd extends cmd {
 							$result = str_replace(',', '.', $result);
 						}
 					}
+					$this->event($result);
 					return $result;
 				} catch (Exception $e) {
 					log::add('virtual', 'info', $e->getMessage());
