@@ -36,7 +36,13 @@ $eqLogics = eqLogic::byType($plugin->getId());
 	<div class="col-xs-12 eqLogic" style="display: none;">
 		<div class="input-group pull-right" style="display:inline-flex">
 			<span class="input-group-btn">
-				<a class="btn btn-primary btn-sm bt_showExpressionTest roundedLeft"><i class="fas fa-check"></i> {{Expression}}</a><a class="btn btn-default btn-sm" id="bt_importTemplate"><i class="fas fa-cubes"></i> {{Template}}</a><a class="btn btn-default btn-sm" id="bt_importEqLogic"><i class="fa fa-share"></i> {{Importer équipement}}</a><a class="btn btn-default btn-sm eqLogicAction" data-action="configure"><i class="fas fa-cogs"></i> {{Configuration avancée}}</a><a class="btn btn-default btn-sm eqLogicAction" data-action="copy"><i class="fas fa-copy"></i> {{Dupliquer}}</a><a class="btn btn-sm btn-success eqLogicAction" data-action="save"><i class="fas fa-check-circle"></i> {{Sauvegarder}}</a><a class="btn btn-danger btn-sm eqLogicAction roundedRight" data-action="remove"><i class="fas fa-minus-circle"></i> {{Supprimer}}</a>
+				<a class="btn btn-primary btn-sm bt_showExpressionTest roundedLeft"><i class="fas fa-check"></i> {{Expression}}
+                </a><a class="btn btn-default btn-sm" id="bt_importTemplate"><i class="fas fa-cubes"></i> {{Template}}
+                </a><a class="btn btn-default btn-sm" id="bt_importEqLogic"><i class="fas fa-share"></i> {{Importer équipement}}
+                </a><a class="btn btn-default btn-sm eqLogicAction" data-action="configure"><i class="fas fa-cogs"></i> {{Configuration avancée}}
+                </a><a class="btn btn-default btn-sm eqLogicAction" data-action="copy"><i class="fas fa-copy"></i> {{Dupliquer}}
+                </a><a class="btn btn-sm btn-success eqLogicAction" data-action="save"><i class="fas fa-check-circle"></i> {{Sauvegarder}}
+                <a class="btn btn-danger btn-sm eqLogicAction roundedRight" data-action="remove"><i class="fas fa-minus-circle"></i> {{Supprimer}}</a>
 			</span>
 		</div>
 		<ul class="nav nav-tabs" role="tablist">
@@ -88,13 +94,13 @@ $eqLogics = eqLogic::byType($plugin->getId());
 								<label class="checkbox-inline"><input type="checkbox" class="eqLogicAttr" data-l1key="isVisible" checked/>{{Visible}}</label>
 							</div>
 						</div>
-						<div class="form-group expertModeVisible">
+						<div class="form-group">
 							<label class="col-sm-2 control-label">{{Auto-actualisation (cron)}}</label>
 							<div class="col-sm-2">
 								<input type="text" class="eqLogicAttr form-control" data-l1key="configuration" data-l2key="autorefresh" placeholder="{{Auto-actualisation (cron)}}"/>
 							</div>
 							<div class="col-sm-1">
-								<i class="fa fa-question-circle cursor floatright" id="bt_cronGenerator"></i>
+								<i class="fas fa-question-circle cursor floatright" id="bt_cronGenerator"></i>
 							</div>
 						</div>
 						<div class="form-group">
@@ -113,7 +119,8 @@ $eqLogics = eqLogic::byType($plugin->getId());
 			</div>
 			<div role="tabpanel" class="tab-pane" id="commandtab">
 				<a class="btn btn-default btn-sm pull-right" id="bt_addVirtualInfo" style="margin-top:5px;"><i class="fas fa-plus-circle"></i> {{Ajouter une info virtuelle}}</a>
-				<a class="btn btn-default btn-sm  pull-right" id="bt_addVirtualAction" style="margin-top:5px;"><i class="fas fa-plus-circle"></i> {{Ajouter une commande virtuelle}}</a><br/><br/>
+				<a class="btn btn-default btn-sm  pull-right" id="bt_addVirtualAction" style="margin-top:5px;"><i class="fas fa-plus-circle"></i> {{Ajouter une commande virtuelle}}</a>
+                <br/><br/>
 				<table id="table_cmd" class="table table-bordered table-condensed">
 					<thead>
 						<tr>
@@ -136,6 +143,7 @@ $eqLogics = eqLogic::byType($plugin->getId());
 		
 	</div>
 </div>
-
-<?php include_file('desktop', 'virtual', 'js', 'virtual');?>
-<?php include_file('core', 'plugin.template', 'js');?>
+<?php 
+    include_file('desktop', 'virtual', 'js', 'virtual');
+    include_file('core', 'plugin.template', 'js');
+?>

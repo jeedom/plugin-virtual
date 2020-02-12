@@ -312,23 +312,14 @@ class virtualCmd extends cmd {
 			if ($this->getConfiguration('virtualAction', 0) == '0') {
 				try {
 					$result = jeedom::evaluateExpression($this->getConfiguration('calcul'));
-					if ($this->getSubType() == 'numeric') {
-						if (is_numeric($result)) {
-							$result = $result;
-						} else {
-							$result = str_replace('"', '', $result);
-						}
-						if (strpos($result, '.') !== false) {
-							$result = str_replace(',', '', $result);
-						} else {
-							$result = str_replace(',', '.', $result);
-						}
+					if(is_string($result)){
+						$result = str_replace('"', '', $result);
 					}
 					$this->event($result);
 					return $result;
 				} catch (Exception $e) {
 					log::add('virtual', 'info', $e->getMessage());
-					return jeedom::evaluateExpression($this->getConfiguration('calcul'));
+					return $this->formatValue(str_replace('"','',jeedom::evaluateExpression($this->getConfiguration('calcul'))));
 				}
 			}
 			break;
@@ -340,7 +331,11 @@ class virtualCmd extends cmd {
 					foreach ($cmds as $cmd_id) {
 						$cmd = cmd::byId(str_replace('#', '', $cmd_id));
 						if (is_object($cmd)) {
-							$cmd->execCmd($_options);
+							try {
+								$cmd->execCmd($_options);
+							} catch (\Exception $e) {
+								
+							}
 						}
 					}
 					return;
