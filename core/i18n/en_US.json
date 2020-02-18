@@ -1,16 +1,39 @@
 {
-    "plugins/virtual/plugin_info/info.xml": {
-        "Plugin pour gérer des équipements virtuels": "Plugin to manage virtual devices",
-        "Aucune": "None"
+    "desktop\/js\/virtual.js": {
+        "Testeur d'expression": "Expression tester",
+        "Nom": "Name",
+        "Calcul": "Calculation",
+        "Rechercher équipement": "Search for device",
+        "Valeur retour d\\'état": "State return value",
+        "Durée avant retour d\\'état (min)": "Duration before state return (min)",
+        "Min": "Low",
+        "Max": "Max",
+        "Unité": "Unit",
+        "Liste de valeur|texte séparé par ;": "List of value|text separated by ;",
+        "Liste": "Listing",
+        "Afficher": "Display",
+        "Historiser": "Historize",
+        "Inverser": "Invert",
+        "Tester": "Test",
+        "La valeur de la commande vaut par défaut la commande": "By default the value of the command equal the command",
+        "Nom information": "Information name",
+        "Valeur": "Value"
     },
-    "plugins/virtual/desktop/php/virtual.php": {
-        "Ajouter un équipement": "Add device",
+    "desktop\/php\/virtual.php": {
+        "401 - Accès non autorisé": "401 - Unauthorized access",
+        "Gestion": "Management",
+        "Ajouter": "Add",
+        "Mes virtuels": "My virtual",
         "Rechercher": "Search",
-        "Mes Virtuels": "My virtuals",
-        "Général": "Main",
-        "Dupliquer": "Duplicate",
+        "Expression": "Expression",
+        "Template": "template",
         "Importer équipement": "Import device",
-        "Nom de l'équipement virtual": "Virtual device name",
+        "Configuration avancée": "Advanced configuration",
+        "Dupliquer": "Duplicate",
+        "Sauvegarder": "Save",
+        "Supprimer": "Delete",
+        "Equipement": "Device",
+        "Commandes": "Commands",
         "Nom de l'équipement virtuel": "Virtual device name",
         "Objet parent": "Parent object",
         "Aucun": "None",
@@ -18,47 +41,33 @@
         "Activer": "Activate",
         "Visible": "Visible",
         "Auto-actualisation (cron)": "Auto-update (cron)",
-        "Commentaire": "Comment",
-        "Virtuel": "Virtual",
+        "URL de retour": "Return URL",
         "Ajouter une info virtuelle": "Add a virtual info",
         "Ajouter une commande virtuelle": "Add a virtual command",
         "Nom": "Name",
         "Sous-Type": "Sub-Type",
         "Valeur": "Value",
-        "Unité": "Unit",
         "Paramètres": "Settings",
-        "Supprimer": "Delete",
-        "Sauvegarder": "Save",
-        "Equipement": "Device",
-        "Commandes": "Commands",
-        "Configuration avancée": "Advanced configuration",
-        "URL de retour": "Return URL"
+        "Options": "options"
     },
-    "plugins/virtual/core/class/virtual.class.php": {
+    "core\/ajax\/virtual.ajax.php": {
+        "401 - Accès non autorisé": "401 - Unauthorized access",
+        "Equipement virtuel introuvable : ": "Virtual equipment not found:",
+        "Aucune methode correspondante à : ": "No method corresponding to:"
+    },
+    "core\/class\/virtual.class.php": {
+        "Commande ID virtuel inconnu": "Unknown virtual ID command",
+        "Equipement ID virtuel inconnu : ": "Unknown virtual ID device:",
+        "L\\'équipement n\\'est pas de type virtuel : ": "The equipment is not of virtual type:",
+        "Commande introuvable : ": "Order not found:",
+        "Expression cron non valide pour ": "Invalid cron expression for",
+        "Erreur pour ": "Error for",
         "Rafraichir": "Refresh",
-        "Equipement ID virtuel inconnu, ou l'équipement n'est pas de type virtuel : ": "Unknown virtual ID device, or not a virtual device type :",
-        "Equipement ID virtuel inconnu : ": "Unknown virtual ID device:"
-    },
-    "plugins/virtual/desktop/js/virtual.js": {
-        "Nom": "Name",
-        "Calcul": "Calculation",
-        "Rechercher équipement": "Search for device",
-        "Valeur retour d\\'état": "State return value",
-        "Durée avant retour d\\'état (min)": "Duration before state return (min)",
-        "Unité": "Unit",
-        "Historiser": "Historize",
-        "Afficher": "Display",
-        "Inverser": "Invert",
-        "Min": "Min",
-        "Max": "Max",
-        "Tester": "Test",
-        "La valeur de la commande vaut par défaut la commande": "By default the value of the command equal the command",
-        "Nom information": "Information name",
-        "Valeur": "Value",
-        "Liste de valeur|texte séparé par ;": "List of value|text separated by ;",
-        "Liste": "Listing"
-    },
-    "plugins/virtual/plugin_info/info.json": {
-        "Plugin pour gérer des équipements virtuels": "Plugin to manage virtual devices"
+        "Impossible de trouver l\\'équipement : ": "Unable to find the equipment:",
+        "Vous ne pouvez importer la configuration d\\'un équipement virtuel": "You cannot import the configuration of a virtual device",
+        "Le nom de la commande info ne peut etre vide": "The name of the info command cannot be empty",
+        "Vous ne pouvez appeller la commande elle meme (boucle infinie) sur : ": "You cannot call the command itself (infinite loop) on:",
+        "Vous ne pouvez faire un calcul sur la valeur elle meme (boucle infinie) : ": "You cannot do a calculation on the value itself (infinite loop):",
+        "La cible de la commande virtuel n\\'est pas un équipement de type virtuel": "The target of the virtual command is not a virtual device"
     }
 }

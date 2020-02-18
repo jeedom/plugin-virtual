@@ -1,16 +1,39 @@
 {
-    "plugins/virtual/plugin_info/info.xml": {
-        "Plugin pour gérer des équipements virtuels": "Plugin untuk mengelola peralatan maya",
-        "Aucune": "Tak ada"
+    "desktop\/js\/virtual.js": {
+        "Testeur d'expression": "Testeur d'expression",
+        "Nom": "Nama",
+        "Calcul": "Perhitungan",
+        "Rechercher équipement": "Peralatan pencarian",
+        "Valeur retour d\\'état": "Nilai kondisi kembali ",
+        "Durée avant retour d\\'état (min)": "Waktu untuk kembali kondisi (min)",
+        "Min": "Min",
+        "Max": "Max",
+        "Unité": "Satuan",
+        "Liste de valeur|texte séparé par ;": "Liste de valeur|texte séparé par ;",
+        "Liste": "Liste",
+        "Afficher": "Memenitikan",
+        "Historiser": "Historicize",
+        "Inverser": "Membalikkan",
+        "Tester": "Coba",
+        "La valeur de la commande vaut par défaut la commande": "Nilai pesanan adalah perintah default",
+        "Nom information": "Nama Informasi",
+        "Valeur": "Nilai"
     },
-    "plugins/virtual/desktop/php/virtual.php": {
-        "Ajouter un équipement": "Tambahan peralatan",
+    "desktop\/php\/virtual.php": {
+        "401 - Accès non autorisé": "401 - Accès non autorisé",
+        "Gestion": "Gestion",
+        "Ajouter": "Ajouter",
+        "Mes virtuels": "Mes virtuels",
         "Rechercher": "Mencari",
-        "Mes Virtuels": "saya virtual",
-        "Général": "Umum",
-        "Dupliquer": "Duplikat",
+        "Expression": "Expression",
+        "Template": "Template",
         "Importer équipement": "Peralatan impor",
-        "Nom de l'équipement virtual": "Nama peralatan maya",
+        "Configuration avancée": "konfigurasi lanjutan",
+        "Dupliquer": "Duplikat",
+        "Sauvegarder": "Menyimpan",
+        "Supprimer": "Menghapus",
+        "Equipement": "Peralatan",
+        "Commandes": "Perintah",
         "Nom de l'équipement virtuel": "Nama peralatan maya",
         "Objet parent": "Objek induk",
         "Aucun": "Tak ada",
@@ -18,47 +41,21 @@
         "Activer": "Mengaktifkan",
         "Visible": "Terlihat",
         "Auto-actualisation (cron)": "\nAktualisasi diri (cron)",
-        "Commentaire": "Komentar",
-        "Virtuel": "Maya",
+        "URL de retour": "URL Kembali",
         "Ajouter une info virtuelle": "Tambahan Informasi maya",
         "Ajouter une commande virtuelle": "Tambahan pesanan maya",
         "Nom": "Nama",
         "Sous-Type": "Subtipe",
         "Valeur": "Nilai",
-        "Unité": "Satuan",
         "Paramètres": "Parameter²",
-        "Supprimer": "Menghapus",
-        "Sauvegarder": "Menyimpan",
-        "Equipement": "Peralatan",
-        "Commandes": "Perintah",
-        "Configuration avancée": "konfigurasi lanjutan",
-        "URL de retour": "URL Kembali"
+        "Options": "Options"
     },
-    "plugins/virtual/core/class/virtual.class.php": {
-        "Rafraichir": "menyegarkan",
-        "Equipement ID virtuel inconnu, ou l'équipement n'est pas de type virtuel : ": "Equipement ID virtuel inconnu, ou l'équipement n'est pas de type virtuel :",
-        "Equipement ID virtuel inconnu : ": "Equipement ID virtuel inconnu :"
+    "core\/ajax\/virtual.ajax.php": {
+        "401 - Accès non autorisé": "401 - Accès non autorisé",
+        "Equipement virtuel introuvable : ": "Equipement virtuel introuvable : ",
+        "Aucune methode correspondante à : ": "Aucune methode correspondante à : "
     },
-    "plugins/virtual/desktop/js/virtual.js": {
-        "Nom": "Nama",
-        "Calcul": "Perhitungan",
-        "Rechercher équipement": "Peralatan pencarian",
-        "Valeur retour d\\'état": "Nilai kondisi kembali ",
-        "Durée avant retour d\\'état (min)": "Waktu untuk kembali kondisi (min)",
-        "Unité": "Satuan",
-        "Historiser": "Historicize",
-        "Afficher": "Memenitikan",
-        "Inverser": "Membalikkan",
-        "Min": "Min",
-        "Max": "Max",
-        "Tester": "Coba",
-        "La valeur de la commande vaut par défaut la commande": "Nilai pesanan adalah perintah default",
-        "Nom information": "Nama Informasi",
-        "Valeur": "Nilai",
-        "Liste de valeur|texte séparé par ;": "Liste de valeur|texte séparé par ;",
-        "Liste": "Liste"
-    },
-    "plugins/virtual/plugin_info/info.json": {
+    "core\/class\/virtual.class.php": {
         "Plugin pour gérer des équipements virtuels": "Plugin untuk mengelola peralatan maya"
     }
 }

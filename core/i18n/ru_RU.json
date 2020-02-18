@@ -1,16 +1,39 @@
 {
-    "plugins/virtual/plugin_info/info.xml": {
-        "Plugin pour gérer des équipements virtuels": "Плагин для управления виртуальным оборудованием",
-        "Aucune": "Нет"
+    "desktop\/js\/virtual.js": {
+        "Testeur d'expression": "Testeur d'expression",
+        "Nom": "Имя",
+        "Calcul": "Расчёт",
+        "Rechercher équipement": "Поиск оборудования",
+        "Valeur retour d\\'état": "Состояние обратной связи",
+        "Durée avant retour d\\'état (min)": "Время обратной связи (мин)",
+        "Min": "Мин",
+        "Max": "Макс",
+        "Unité": "Устройство",
+        "Liste de valeur|texte séparé par ;": "Liste de valeur|texte séparé par ;",
+        "Liste": "Liste",
+        "Afficher": "Отобразить",
+        "Historiser": "История",
+        "Inverser": "Обратный",
+        "Tester": "Тест",
+        "La valeur de la commande vaut par défaut la commande": "Значение запроса - это команда по умолчанию",
+        "Nom information": "Имя информации",
+        "Valeur": "Значение"
     },
-    "plugins/virtual/desktop/php/virtual.php": {
-        "Ajouter un équipement": "Добавить оборудование",
+    "desktop\/php\/virtual.php": {
+        "401 - Accès non autorisé": "401 - Accès non autorisé",
+        "Gestion": "Gestion",
+        "Ajouter": "Ajouter",
+        "Mes virtuels": "Mes virtuels",
         "Rechercher": "Искать",
-        "Mes Virtuels": "мой виртуальный",
-        "Général": "Главная",
-        "Dupliquer": "Дублировать",
+        "Expression": "Expression",
+        "Template": "Template",
         "Importer équipement": "Импорт оборудования",
-        "Nom de l'équipement virtual": "Имя оборудования Virtual",
+        "Configuration avancée": "Расширенные настройки",
+        "Dupliquer": "Дублировать",
+        "Sauvegarder": "Сохранить",
+        "Supprimer": "Удалить",
+        "Equipement": "Оборудование",
+        "Commandes": "Команды",
         "Nom de l'équipement virtuel": "Имя оборудования Virtual",
         "Objet parent": "Родительский объект",
         "Aucun": "Нет",
@@ -18,47 +41,21 @@
         "Activer": "Активировать",
         "Visible": "Видимый",
         "Auto-actualisation (cron)": "Авто-обновление (cron)",
-        "Commentaire": "Комментарии",
-        "Virtuel": "Виртуальный",
+        "URL de retour": "URL возвращения",
         "Ajouter une info virtuelle": "Добавьте виртуальный данные",
         "Ajouter une commande virtuelle": "Добавьте виртуальное управление",
         "Nom": "Имя",
         "Sous-Type": "Под-Тип",
         "Valeur": "Значение",
-        "Unité": "Устройство",
         "Paramètres": "Параметры",
-        "Supprimer": "Удалить",
-        "Sauvegarder": "Сохранить",
-        "Equipement": "Оборудование",
-        "Commandes": "Команды",
-        "Configuration avancée": "Расширенные настройки",
-        "URL de retour": "URL возвращения"
+        "Options": "Options"
     },
-    "plugins/virtual/core/class/virtual.class.php": {
-        "Rafraichir": "Обновить",
-        "Equipement ID virtuel inconnu, ou l'équipement n'est pas de type virtuel : ": "Equipement ID virtuel inconnu, ou l'équipement n'est pas de type virtuel :",
-        "Equipement ID virtuel inconnu : ": "Equipement ID virtuel inconnu :"
+    "core\/ajax\/virtual.ajax.php": {
+        "401 - Accès non autorisé": "401 - Accès non autorisé",
+        "Equipement virtuel introuvable : ": "Equipement virtuel introuvable : ",
+        "Aucune methode correspondante à : ": "Aucune methode correspondante à : "
     },
-    "plugins/virtual/desktop/js/virtual.js": {
-        "Nom": "Имя",
-        "Calcul": "Расчёт",
-        "Rechercher équipement": "Поиск оборудования",
-        "Valeur retour d\\'état": "Состояние обратной связи",
-        "Durée avant retour d\\'état (min)": "Время обратной связи (мин)",
-        "Unité": "Устройство",
-        "Historiser": "История",
-        "Afficher": "Отобразить",
-        "Inverser": "Обратный",
-        "Min": "Мин",
-        "Max": "Макс",
-        "Tester": "Тест",
-        "La valeur de la commande vaut par défaut la commande": "Значение запроса - это команда по умолчанию",
-        "Nom information": "Имя информации",
-        "Valeur": "Значение",
-        "Liste de valeur|texte séparé par ;": "Liste de valeur|texte séparé par ;",
-        "Liste": "Liste"
-    },
-    "plugins/virtual/plugin_info/info.json": {
+    "core\/class\/virtual.class.php": {
         "Plugin pour gérer des équipements virtuels": "Плагин для управления виртуальным оборудованием"
     }
 }

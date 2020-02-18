@@ -1,16 +1,39 @@
 {
-    "plugins/virtual/plugin_info/info.xml": {
-        "Plugin pour gérer des équipements virtuels": "Plugin per gestire i dispositivi virtuali",
-        "Aucune": "Nessuno"
+    "desktop\/js\/virtual.js": {
+        "Testeur d'expression": "Testeur d'expression",
+        "Nom": "Nome",
+        "Calcul": "Calcolo",
+        "Rechercher équipement": "Ricerca strumentazione",
+        "Valeur retour d\\'état": "Valore di feedback",
+        "Durée avant retour d\\'état (min)": "Durata prima del feedback (min)",
+        "Min": "Min",
+        "Max": "Max",
+        "Unité": "Unità",
+        "Liste de valeur|texte séparé par ;": "Liste de valeur|texte séparé par ;",
+        "Liste": "Liste",
+        "Afficher": "Mostra",
+        "Historiser": "Storicizza",
+        "Inverser": "Inverti",
+        "Tester": "Prova",
+        "La valeur de la commande vaut par défaut la commande": "Il valore del comando predefinito al comando",
+        "Nom information": "Nome informazione",
+        "Valeur": "Valore"
     },
-    "plugins/virtual/desktop/php/virtual.php": {
-        "Ajouter un équipement": "Aggiungi dispositivo",
+    "desktop\/php\/virtual.php": {
+        "401 - Accès non autorisé": "401 - Accès non autorisé",
+        "Gestion": "Gestion",
+        "Ajouter": "Ajouter",
+        "Mes virtuels": "Mes virtuels",
         "Rechercher": "Cerca",
-        "Mes Virtuels": "My Virtual",
-        "Général": "Principale",
-        "Dupliquer": "Duplica",
+        "Expression": "Expression",
+        "Template": "Template",
         "Importer équipement": "Importa dispositivo",
-        "Nom de l'équipement virtual": "Nome dispositivo virtuale",
+        "Configuration avancée": "Configurazione avanzata",
+        "Dupliquer": "Duplica",
+        "Sauvegarder": "Salva",
+        "Supprimer": "Elimina",
+        "Equipement": "Dispositivo",
+        "Commandes": "Comandi",
         "Nom de l'équipement virtuel": "Nome dispositivo virtuale",
         "Objet parent": "Oggetto padre",
         "Aucun": "Nessuno",
@@ -18,47 +41,21 @@
         "Activer": "Attivare",
         "Visible": "Visibile",
         "Auto-actualisation (cron)": "Auto-realizzazione (cron)",
-        "Commentaire": "Commento",
-        "Virtuel": "Virtuale",
+        "URL de retour": "URL di ritorno",
         "Ajouter une info virtuelle": "Aggiungi informazioni dispositivo virtuale",
         "Ajouter une commande virtuelle": "Aggiungi un comando dispositivo virtuale",
         "Nom": "Nome",
         "Sous-Type": "Sotto-tipo",
         "Valeur": "Valore",
-        "Unité": "Unità",
         "Paramètres": "Parametri",
-        "Supprimer": "Elimina",
-        "Sauvegarder": "Salva",
-        "Equipement": "Dispositivo",
-        "Commandes": "Comandi",
-        "Configuration avancée": "Configurazione avanzata",
-        "URL de retour": "URL di ritorno"
+        "Options": "Options"
     },
-    "plugins/virtual/core/class/virtual.class.php": {
-        "Rafraichir": "Ricarica",
-        "Equipement ID virtuel inconnu, ou l'équipement n'est pas de type virtuel : ": "Equipement ID virtuel inconnu, ou l'équipement n'est pas de type virtuel :",
-        "Equipement ID virtuel inconnu : ": "Equipement ID virtuel inconnu :"
+    "core\/ajax\/virtual.ajax.php": {
+        "401 - Accès non autorisé": "401 - Accès non autorisé",
+        "Equipement virtuel introuvable : ": "Equipement virtuel introuvable : ",
+        "Aucune methode correspondante à : ": "Aucune methode correspondante à : "
     },
-    "plugins/virtual/desktop/js/virtual.js": {
-        "Nom": "Nome",
-        "Calcul": "Calcolo",
-        "Rechercher équipement": "Ricerca strumentazione",
-        "Valeur retour d\\'état": "Valore di feedback",
-        "Durée avant retour d\\'état (min)": "Durata prima del feedback (min)",
-        "Unité": "Unità",
-        "Historiser": "Storicizza",
-        "Afficher": "Mostra",
-        "Inverser": "Inverti",
-        "Min": "Min",
-        "Max": "Max",
-        "Tester": "Prova",
-        "La valeur de la commande vaut par défaut la commande": "Il valore del comando predefinito al comando",
-        "Nom information": "Nome informazione",
-        "Valeur": "Valore",
-        "Liste de valeur|texte séparé par ;": "Liste de valeur|texte séparé par ;",
-        "Liste": "Liste"
-    },
-    "plugins/virtual/plugin_info/info.json": {
+    "core\/class\/virtual.class.php": {
         "Plugin pour gérer des équipements virtuels": "Plugin per gestire i dispositivi virtuali"
     }
 }

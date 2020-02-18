@@ -1,16 +1,39 @@
 {
-    "plugins\/virtual\/plugin_info\/info.xml": {
-        "Plugin pour gérer des équipements virtuels": "Plugin pour gérer des équipements virtuels",
-        "Aucune": "Aucune"
+    "desktop\/js\/virtual.js": {
+        "Testeur d'expression": "Testeur d'expression",
+        "Nom": "Nom",
+        "Calcul": "Calcul",
+        "Rechercher équipement": "Rechercher équipement",
+        "Valeur retour d\\'état": "Valeur retour d\\'état",
+        "Durée avant retour d\\'état (min)": "Durée avant retour d\\'état (min)",
+        "Min": "Min",
+        "Max": "Max",
+        "Unité": "Unité",
+        "Liste de valeur|texte séparé par ;": "Liste de valeur|texte séparé par ;",
+        "Liste": "Liste",
+        "Afficher": "Afficher",
+        "Historiser": "Historiser",
+        "Inverser": "Inverser",
+        "Tester": "Tester",
+        "La valeur de la commande vaut par défaut la commande": "La valeur de la commande vaut par défaut la commande",
+        "Nom information": "Nom information",
+        "Valeur": "Valeur"
     },
-    "plugins\/virtual\/desktop\/php\/virtual.php": {
-        "Ajouter un équipement": "Ajouter un équipement",
+    "desktop\/php\/virtual.php": {
+        "401 - Accès non autorisé": "401 - Accès non autorisé",
+        "Gestion": "Gestion",
+        "Ajouter": "Ajouter",
+        "Mes virtuels": "Mes virtuels",
         "Rechercher": "Rechercher",
-        "Mes Virtuels": "Mes Virtuels",
-        "Général": "Général",
-        "Dupliquer": "Dupliquer",
+        "Expression": "Expression",
+        "Template": "Template",
         "Importer équipement": "Importer équipement",
-        "Nom de l'équipement virtual": "Nom de l'équipement virtual",
+        "Configuration avancée": "Configuration avancée",
+        "Dupliquer": "Dupliquer",
+        "Sauvegarder": "Sauvegarder",
+        "Supprimer": "Supprimer",
+        "Equipement": "Equipement",
+        "Commandes": "Commandes",
         "Nom de l'équipement virtuel": "Nom de l'équipement virtuel",
         "Objet parent": "Objet parent",
         "Aucun": "Aucun",
@@ -18,47 +41,33 @@
         "Activer": "Activer",
         "Visible": "Visible",
         "Auto-actualisation (cron)": "Auto-actualisation (cron)",
-        "Commentaire": "Commentaire",
-        "Virtuel": "Virtuel",
+        "URL de retour": "URL de retour",
         "Ajouter une info virtuelle": "Ajouter une info virtuelle",
         "Ajouter une commande virtuelle": "Ajouter une commande virtuelle",
         "Nom": "Nom",
         "Sous-Type": "Sous-Type",
         "Valeur": "Valeur",
-        "Unité": "Unité",
         "Paramètres": "Paramètres",
-        "Supprimer": "Supprimer",
-        "Sauvegarder": "Sauvegarder",
-        "Equipement": "Equipement",
-        "Commandes": "Commandes",
-        "Configuration avancée": "Configuration avancée",
-        "URL de retour": "URL de retour"
+        "Options": "Options"
     },
-    "plugins\/virtual\/core\/class\/virtual.class.php": {
+    "core\/ajax\/virtual.ajax.php": {
+        "401 - Accès non autorisé": "401 - Accès non autorisé",
+        "Equipement virtuel introuvable : ": "Equipement virtuel introuvable : ",
+        "Aucune methode correspondante à : ": "Aucune methode correspondante à : "
+    },
+    "core\/class\/virtual.class.php": {
+        "Commande ID virtuel inconnu": "Commande ID virtuel inconnu",
+        "Equipement ID virtuel inconnu : ": "Equipement ID virtuel inconnu : ",
+        "L\\'équipement n\\'est pas de type virtuel : ": "L\\'équipement n\\'est pas de type virtuel : ",
+        "Commande introuvable : ": "Commande introuvable : ",
+        "Expression cron non valide pour ": "Expression cron non valide pour ",
+        "Erreur pour ": "Erreur pour ",
         "Rafraichir": "Rafraichir",
-        "Equipement ID virtuel inconnu, ou l'équipement n'est pas de type virtuel : ": "Equipement ID virtuel inconnu, ou l'équipement n'est pas de type virtuel : ",
-        "Equipement ID virtuel inconnu : ": "Equipement ID virtuel inconnu : "
-    },
-    "plugins\/virtual\/desktop\/js\/virtual.js": {
-        "Nom": "Nom",
-        "Calcul": "Calcul",
-        "Rechercher équipement": "Rechercher équipement",
-        "Valeur retour d\\'état": "Valeur retour d\\'état",
-        "Durée avant retour d\\'état (min)": "Durée avant retour d\\'état (min)",
-        "Unité": "Unité",
-        "Historiser": "Historiser",
-        "Afficher": "Afficher",
-        "Inverser": "Inverser",
-        "Min": "Min",
-        "Max": "Max",
-        "Tester": "Tester",
-        "La valeur de la commande vaut par défaut la commande": "La valeur de la commande vaut par défaut la commande",
-        "Nom information": "Nom information",
-        "Valeur": "Valeur",
-        "Liste de valeur|texte séparé par ;": "Liste de valeur|texte séparé par ;",
-        "Liste": "Liste"
-    },
-    "plugins\/virtual\/plugin_info\/info.json": {
-        "Plugin pour gérer des équipements virtuels": "Plugin pour gérer des équipements virtuels"
+        "Impossible de trouver l\\'équipement : ": "Impossible de trouver l\\'équipement : ",
+        "Vous ne pouvez importer la configuration d\\'un équipement virtuel": "Vous ne pouvez importer la configuration d\\'un équipement virtuel",
+        "Le nom de la commande info ne peut etre vide": "Le nom de la commande info ne peut etre vide",
+        "Vous ne pouvez appeller la commande elle meme (boucle infinie) sur : ": "Vous ne pouvez appeller la commande elle meme (boucle infinie) sur : ",
+        "Vous ne pouvez faire un calcul sur la valeur elle meme (boucle infinie) : ": "Vous ne pouvez faire un calcul sur la valeur elle meme (boucle infinie) : ",
+        "La cible de la commande virtuel n\\'est pas un équipement de type virtuel": "La cible de la commande virtuel n\\'est pas un équipement de type virtuel"
     }
 }

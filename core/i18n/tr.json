@@ -1,16 +1,39 @@
 {
-    "plugins/virtual/plugin_info/info.xml": {
-        "Plugin pour gérer des équipements virtuels": "Sanal cihazlarımı yönetmek için eklenti",
-        "Aucune": "Hiçbir"
+    "desktop\/js\/virtual.js": {
+        "Testeur d'expression": "Testeur d'expression",
+        "Nom": "İsim",
+        "Calcul": "Hesap",
+        "Rechercher équipement": "Ekipman ara",
+        "Valeur retour d\\'état": "İade durumu değeri",
+        "Durée avant retour d\\'état (min)": "İade durumu değerinden önceki süre (dak.)",
+        "Min": "Minimum",
+        "Max": "Maximum",
+        "Unité": "Ünite",
+        "Liste de valeur|texte séparé par ;": "Liste de valeur|texte séparé par ;",
+        "Liste": "Liste",
+        "Afficher": "Göster",
+        "Historiser": "Tarihe göre sırala",
+        "Inverser": "Ters çevir",
+        "Tester": "Dene",
+        "La valeur de la commande vaut par défaut la commande": "Komutanın varsayılan değeri komuta ile eşit",
+        "Nom information": "Bilgi ismi",
+        "Valeur": "Değer"
     },
-    "plugins/virtual/desktop/php/virtual.php": {
-        "Ajouter un équipement": "Ekipman ekle",
+    "desktop\/php\/virtual.php": {
+        "401 - Accès non autorisé": "401 - Accès non autorisé",
+        "Gestion": "Gestion",
+        "Ajouter": "Ajouter",
+        "Mes virtuels": "Mes virtuels",
         "Rechercher": "Arayın",
-        "Mes Virtuels": "Sanallarım",
-        "Général": "Genel",
-        "Dupliquer": "Kopyala",
+        "Expression": "Expression",
+        "Template": "Template",
         "Importer équipement": "Cihaz ithal et",
-        "Nom de l'équipement virtual": "Sanal cihazın ismi",
+        "Configuration avancée": "Gelişmiş ayarlar",
+        "Dupliquer": "Kopyala",
+        "Sauvegarder": "Kaydet",
+        "Supprimer": "Sil",
+        "Equipement": "Cihaz",
+        "Commandes": "Komutalar",
         "Nom de l'équipement virtuel": "Sanal cihazın ismi",
         "Objet parent": "Üst nesne",
         "Aucun": "Hiçbir",
@@ -18,47 +41,21 @@
         "Activer": "Etkinleştirmek",
         "Visible": "Görülebilir",
         "Auto-actualisation (cron)": "Otomatik güncelleme (cron)",
-        "Commentaire": "İleti",
-        "Virtuel": "Sanal",
+        "URL de retour": "Dönüş URL",
         "Ajouter une info virtuelle": "Snala bilgi ekleyin",
         "Ajouter une commande virtuelle": "Sanal komuta ekleyin",
         "Nom": "İsim",
         "Sous-Type": "alt tipi",
         "Valeur": "Değer",
-        "Unité": "Ünite",
         "Paramètres": "Ayarlar ( Séçenekler )",
-        "Supprimer": "Sil",
-        "Sauvegarder": "Kaydet",
-        "Equipement": "Cihaz",
-        "Commandes": "Komutalar",
-        "Configuration avancée": "Gelişmiş ayarlar",
-        "URL de retour": "Dönüş URL"
+        "Options": "Options"
     },
-    "plugins/virtual/core/class/virtual.class.php": {
-        "Rafraichir": "Yenile",
-        "Equipement ID virtuel inconnu, ou l'équipement n'est pas de type virtuel : ": "Equipement ID virtuel inconnu, ou l'équipement n'est pas de type virtuel :",
-        "Equipement ID virtuel inconnu : ": "Equipement ID virtuel inconnu :"
+    "core\/ajax\/virtual.ajax.php": {
+        "401 - Accès non autorisé": "401 - Accès non autorisé",
+        "Equipement virtuel introuvable : ": "Equipement virtuel introuvable : ",
+        "Aucune methode correspondante à : ": "Aucune methode correspondante à : "
     },
-    "plugins/virtual/desktop/js/virtual.js": {
-        "Nom": "İsim",
-        "Calcul": "Hesap",
-        "Rechercher équipement": "Ekipman ara",
-        "Valeur retour d\\'état": "İade durumu değeri",
-        "Durée avant retour d\\'état (min)": "İade durumu değerinden önceki süre (dak.)",
-        "Unité": "Ünite",
-        "Historiser": "Tarihe göre sırala",
-        "Afficher": "Göster",
-        "Inverser": "Ters çevir",
-        "Min": "Minimum",
-        "Max": "Maximum",
-        "Tester": "Dene",
-        "La valeur de la commande vaut par défaut la commande": "Komutanın varsayılan değeri komuta ile eşit",
-        "Nom information": "Bilgi ismi",
-        "Valeur": "Değer",
-        "Liste de valeur|texte séparé par ;": "Liste de valeur|texte séparé par ;",
-        "Liste": "Liste"
-    },
-    "plugins/virtual/plugin_info/info.json": {
+    "core\/class\/virtual.class.php": {
         "Plugin pour gérer des équipements virtuels": "Sanal cihazlarımı yönetmek için eklenti"
     }
 }

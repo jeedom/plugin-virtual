@@ -1,16 +1,39 @@
 {
-    "plugins/virtual/plugin_info/info.xml": {
-        "Plugin pour gérer des équipements virtuels": "Plugin para o gerenciamento de equipamentos virtuais",
-        "Aucune": "Nenhum"
+    "desktop\/js\/virtual.js": {
+        "Testeur d'expression": "Testeur d'expression",
+        "Nom": "Nome",
+        "Calcul": "cálculo",
+        "Rechercher équipement": "equipamentos de pesquisa",
+        "Valeur retour d\\'état": "Estado Valor de retorno \\ 's",
+        "Durée avant retour d\\'état (min)": "Tempo para voltar \\ estado (min)",
+        "Min": "baixo",
+        "Max": "Max",
+        "Unité": "unidade",
+        "Liste de valeur|texte séparé par ;": "Liste de valeur|texte séparé par ;",
+        "Liste": "Liste",
+        "Afficher": "display",
+        "Historiser": "historicizar",
+        "Inverser": "inverter",
+        "Tester": "teste",
+        "La valeur de la commande vaut par défaut la commande": "O valor do pedido é o comando padrão",
+        "Nom information": "Nome informações",
+        "Valeur": "valor"
     },
-    "plugins/virtual/desktop/php/virtual.php": {
-        "Ajouter un équipement": "a adição de equipamentos",
+    "desktop\/php\/virtual.php": {
+        "401 - Accès non autorisé": "401 - Accès non autorisé",
+        "Gestion": "Gestion",
+        "Ajouter": "Ajouter",
+        "Mes virtuels": "Mes virtuels",
         "Rechercher": "Pesquisar",
-        "Mes Virtuels": "meu Virtual",
-        "Général": "Geral",
-        "Dupliquer": "duplicar",
+        "Expression": "Expression",
+        "Template": "Template",
         "Importer équipement": "equipamentos de importação",
-        "Nom de l'équipement virtual": "Nome de equipamentos virtuais",
+        "Configuration avancée": "configuração avançada",
+        "Dupliquer": "duplicar",
+        "Sauvegarder": "Salvar",
+        "Supprimer": "remover",
+        "Equipement": "Equipamento",
+        "Commandes": "comandos",
         "Nom de l'équipement virtuel": "Nome de equipamentos virtuais",
         "Objet parent": "objeto pai",
         "Aucun": "Nemhum",
@@ -18,47 +41,21 @@
         "Activer": "Ativar",
         "Visible": "Visível",
         "Auto-actualisation (cron)": "Auto-realização (cron)",
-        "Commentaire": "comentário",
-        "Virtuel": "virtual",
+        "URL de retour": "URL de retorno",
         "Ajouter une info virtuelle": "Adicionar uma informação virtual",
         "Ajouter une commande virtuelle": "Adicionar uma unidade virtual",
         "Nom": "Nome",
         "Sous-Type": "subtipo",
         "Valeur": "valor",
-        "Unité": "unidade",
         "Paramètres": "configurações",
-        "Supprimer": "remover",
-        "Sauvegarder": "Salvar",
-        "Equipement": "Equipamento",
-        "Commandes": "comandos",
-        "Configuration avancée": "configuração avançada",
-        "URL de retour": "URL de retorno"
+        "Options": "Options"
     },
-    "plugins/virtual/core/class/virtual.class.php": {
-        "Rafraichir": "refrescar",
-        "Equipement ID virtuel inconnu, ou l'équipement n'est pas de type virtuel : ": "Equipement ID virtuel inconnu, ou l'équipement n'est pas de type virtuel :",
-        "Equipement ID virtuel inconnu : ": "Equipement ID virtuel inconnu :"
+    "core\/ajax\/virtual.ajax.php": {
+        "401 - Accès non autorisé": "401 - Accès non autorisé",
+        "Equipement virtuel introuvable : ": "Equipement virtuel introuvable : ",
+        "Aucune methode correspondante à : ": "Aucune methode correspondante à : "
     },
-    "plugins/virtual/desktop/js/virtual.js": {
-        "Nom": "Nome",
-        "Calcul": "cálculo",
-        "Rechercher équipement": "equipamentos de pesquisa",
-        "Valeur retour d\\'état": "Estado Valor de retorno \\ 's",
-        "Durée avant retour d\\'état (min)": "Tempo para voltar \\ estado (min)",
-        "Unité": "unidade",
-        "Historiser": "historicizar",
-        "Afficher": "display",
-        "Inverser": "inverter",
-        "Min": "baixo",
-        "Max": "Max",
-        "Tester": "teste",
-        "La valeur de la commande vaut par défaut la commande": "O valor do pedido é o comando padrão",
-        "Nom information": "Nome informações",
-        "Valeur": "valor",
-        "Liste de valeur|texte séparé par ;": "Liste de valeur|texte séparé par ;",
-        "Liste": "Liste"
-    },
-    "plugins/virtual/plugin_info/info.json": {
+    "core\/class\/virtual.class.php": {
         "Plugin pour gérer des équipements virtuels": "Plugin para o gerenciamento de equipamentos virtuais"
     }
 }

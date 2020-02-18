@@ -1,16 +1,39 @@
 {
-    "plugins/virtual/plugin_info/info.xml": {
-        "Plugin pour gérer des équipements virtuels": "Plugin für die Verwaltung von Virtuelle Geräte",
-        "Aucune": "Ohne"
+    "desktop\/js\/virtual.js": {
+        "Testeur d'expression": "Expressionstester",
+        "Nom": "Name",
+        "Calcul": "Berechnung",
+        "Rechercher équipement": "Suche nach Geräte",
+        "Valeur retour d\\'état": "Statuswert zurück",
+        "Durée avant retour d\\'état (min)": "Zustand vor Rückkehr gedauert (min)",
+        "Min": "niedrig",
+        "Max": "Max",
+        "Unité": "Unit",
+        "Liste de valeur|texte séparé par ;": "Liste der Werte|Texte getrennt durch ;",
+        "Liste": "Liste",
+        "Afficher": "anzeigen",
+        "Historiser": "Chronik",
+        "Inverser": "umgekehrt",
+        "Tester": "Test",
+        "La valeur de la commande vaut par défaut la commande": "Der Wert des Befehles ist der Standardbefehl",
+        "Nom information": "Name der Information",
+        "Valeur": "Wert"
     },
-    "plugins/virtual/desktop/php/virtual.php": {
-        "Ajouter un équipement": "Gerät hinzufügen",
+    "desktop\/php\/virtual.php": {
+        "401 - Accès non autorisé": "401 - Nicht autorisierter Zugriff",
+        "Gestion": "Management",
+        "Ajouter": "hinzufügen",
+        "Mes virtuels": "Mein virtueller",
         "Rechercher": "Suchen nach",
-        "Mes Virtuels": "Mein virtuelles Gerät",
-        "Général": "Allgemein",
-        "Dupliquer": "Kopieren",
+        "Expression": "Ausdruck",
+        "Template": "schablone",
         "Importer équipement": "Gerät hinzufügen",
-        "Nom de l'équipement virtual": "Name des virtuellen Gerätes",
+        "Configuration avancée": "Erweiterte Konfiguration",
+        "Dupliquer": "Kopieren",
+        "Sauvegarder": "Speichern",
+        "Supprimer": "Löschen",
+        "Equipement": "Gerät",
+        "Commandes": "Befehle",
         "Nom de l'équipement virtuel": "Name des virtuellen Gerätes",
         "Objet parent": "Eltern-Objekt",
         "Aucun": "Ohne",
@@ -18,47 +41,21 @@
         "Activer": "aktivieren",
         "Visible": "Sichtbar",
         "Auto-actualisation (cron)": "Auto - Aktualisierung (Cron) ",
-        "Commentaire": "Kommentar",
-        "Virtuel": "Virtuell",
+        "URL de retour": "URL zurück",
         "Ajouter une info virtuelle": "Virtuelle Info hinzufügen",
         "Ajouter une commande virtuelle": "virtuellen Befehl hinzufügen",
         "Nom": "Name",
         "Sous-Type": "Untertyp",
         "Valeur": "Wert",
-        "Unité": "Unit",
         "Paramètres": "Parameter",
-        "Supprimer": "Löschen",
-        "Sauvegarder": "Speichern",
-        "Equipement": "Gerät",
-        "Commandes": "Befehle",
-        "Configuration avancée": "Erweiterte Konfiguration",
-        "URL de retour": "URL zurück"
+        "Options": "Optionen"
     },
-    "plugins/virtual/core/class/virtual.class.php": {
-        "Rafraichir": "Aktualisieren",
-        "Equipement ID virtuel inconnu, ou l'équipement n'est pas de type virtuel : ": "Virtuelle Geräte-ID unbekannt oder das Gerät ist kein virtueller Typ :",
-        "Equipement ID virtuel inconnu : ": "Unbekannte virtuelle Geräte-ID :"
+    "core\/ajax\/virtual.ajax.php": {
+        "401 - Accès non autorisé": "401 - Nicht autorisierter Zugriff",
+        "Equipement virtuel introuvable : ": "Virtuelle Ausrüstung nicht gefunden:",
+        "Aucune methode correspondante à : ": "Keine Methode entsprechend:"
     },
-    "plugins/virtual/desktop/js/virtual.js": {
-        "Nom": "Name",
-        "Calcul": "Berechnung",
-        "Rechercher équipement": "Suche nach Geräte",
-        "Valeur retour d\\'état": "Statuswert zurück",
-        "Durée avant retour d\\'état (min)": "Zustand vor Rückkehr gedauert (min)",
-        "Unité": "Unit",
-        "Historiser": "Chronik",
-        "Afficher": "anzeigen",
-        "Inverser": "umgekehrt",
-        "Min": "Min",
-        "Max": "Max",
-        "Tester": "Test",
-        "La valeur de la commande vaut par défaut la commande": "Der Wert des Befehles ist der Standardbefehl",
-        "Nom information": "Name der Information",
-        "Valeur": "Wert",
-        "Liste de valeur|texte séparé par ;": "Liste der Werte|Texte getrennt durch ;",
-        "Liste": "Liste"
-    },
-    "plugins/virtual/plugin_info/info.json": {
+    "core\/class\/virtual.class.php": {
         "Plugin pour gérer des équipements virtuels": "Plugin für die Verwaltung von Virtuelle Geräte"
     }
 }
