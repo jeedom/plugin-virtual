@@ -1,268 +1,268 @@
-# Présentation
+# Präsentation
 
-Le plugin Virtual (virtuel) permet la création de périphériques virtuels
-et de leurs propriétés.
+Das virtuellle Plugin ermöglicht die Erstellung virtuelller Geräte
+und ihre Eigenschaften.
 
-Nous nommerons un périphérique créé par ce plugin : périphérique
-virtuel.
+Wir werden ein Gerät benennen, das von diesem Plugin erstellt wurde : peripher
+virtuell.
 
-Un périphérique virtuel peut être créé pour les besoins suivants :
+Ein virtuellles Gerät kann für die folgenden Anforderungen erstellt werden :
 
--   consolider dans un seul périphérique des informations ou actions de
-    plusieurs périphériques physiques/virtuels ;
+-   Konsolidieren Sie Informationen oder Aktionen von einem einzigen Gerät
+    mehrere physische / virtuellle Geräte;
 
--   créer un périphérique alimenté par une source externe à Jeedom
-    (Zibase, IPX800…) ;
+-   Erstellen Sie ein Gerät, das von einer Quelle außerhalb von Jeedom gespeist wird
+    (Zibase, IPX800…);
 
--   dupliquer un équipement pour le scinder en 2 par exemple ;
+-   doppelte Ausrüstung, um sie beispielsweise in zwei Teile zu teilen;
 
--   effectuer un calcul sur plusieurs valeurs d'équipements ;
+-   eine Berechnung für mehrere Gerätewerte durchführen;
 
--   exécuter de multiples actions (macro).
-
-
+-   mehrere Aktionen ausführen (Makro).
 
 
-# Configuration
 
-Le plugin ne nécessite aucune configuration, il faut juste l’activer :
+
+# Konfiguration
+
+Das Plugin benötigt keine Konfiguration, Sie müssen es nur aktivieren :
 
 ![virtual1](../images/virtual1.png)
 
 
 
 
-# Configuration des équipements
+# Gerätekonfiguration
 
-La configuration des équipements virtuels est accessible à partir du
-menu plugin :
+Auf die Konfiguration der virtuelllen Geräte kann über das zugegriffen werden
+Plugin-Menü :
 
 ![virtual2](../images/virtual2.png)
 
-Voilà à quoi ressemble la page du plugin virtuel (ici avec déjà un
-équipement) :
+So sieht die virtuellle Plugin-Seite aus (hier mit bereits einem
+Ausrüstung) :
 
 ![virtual3](../images/virtual3.png)
 
-Voilà à quoi ressemble la page de configuration d’un équipement virtuel
+So sieht die Konfigurationsseite eines virtuelllen Geräts aus
 :
 
 ![virtual4](../images/virtual4.png)
 
-> **Tip**
+> **Spitze**
 >
-> Comme à beaucoup d’endroits sur Jeedom, mettre la souris tout à gauche
-> permet de faire apparaître un menu d’accès rapide (vous pouvez à
-> partir de votre profil le laisser toujours visible).
+> Setzen Sie die Maus wie an vielen Stellen auf Jeedom ganz links
+> ruft ein Schnellzugriffsmenü auf (Sie können
+> von deinem Profil immer sichtbar lassen).
 
-Sie werden hier alle die Konfiguration Ihrer Geräte finden:
+Hier finden Sie die gesamte Konfiguration Ihrer Geräte :
 
--   **Nom de l'équipement virtuel** : nom de votre équipement virtuel,
+-   **Name des virtuelllen Geräts** : Name Ihrer virtuelllen Ausrüstung,
 
--   **Übergeordnete Objekt** zeigt das übergeordnete Objekt gehört
-    l'équipement,
+-   **Übergeordnetes Objekt** : gibt das übergeordnete Objekt an, zu dem es gehört
+    Ausrüstung,
 
--   **Catégorie** : les catégories de l'équipement (il peut appartenir à
-    plusieurs catégories),
+-   **Kategorie** : Gerätekategorien (es kann gehören
+    mehrere Kategorien),
 
--   **Aktivieren**: auf Ihre aktive Ausrüstung zu machen,
+-   **Aktivieren** : macht Ihre Ausrüstung aktiv,
 
--   **Visible** : le rend visible sur le dashboard,
+-   **Sichtbar** : macht es auf dem Dashboard sichtbar,
 
--   **Commentaire** : vous permet de mettre des commentaires sur
-    l'équipement.
+-   **Kommentar** : ermöglicht es Ihnen zu kommentieren
+    Ausrüstung.
 
-En haut à droite vous avez accès à 4 boutons :
+Oben rechts haben Sie Zugriff auf 4 Schaltflächen :
 
--   **Expression** : le testeur d'expressions identique à celui des scénarios
-    pour vous faciliter la mise au point de certains virtuels
+-   **Ausdruck** : Der Ausdruckstester ist identisch mit dem der Szenarien
+    um die Entwicklung einiger virtuelller zu erleichtern
 
--   **Importer équipement** : permet de dupliquer automatiquement un
-    équipement existant dans un virtuel (permet de gagner du temps pour
-    scinder un équipement en 2 par exemple),
+-   **Ausrüstung importieren** : ermöglicht das automatische Duplizieren von a
+    vorhandene Geräte in einer virtuelllen (spart Zeit für
+    Split Ausrüstung in 2 zum Beispiel),
 
--   **Dupliquer** : permet de dupliquer l'équipement courant,
+-   **Duplikat** : dupliziert aktuelle Geräte,
 
--   **Avancée (roues crantées)** : permet d’afficher les options
-    avancées de l'équipement (commun à tous les plugins Jeedom).
+-   **Fortgeschrittene (gekerbte Räder)** : zeigt Optionen an
+    Gerätefortschritte (allen Jeedom-Plugins gemeinsam).
 
-En-dessous vous retrouvez la liste des commandes :
+Nachfolgend finden Sie die Liste der Bestellungen :
 
--   le nom affiché sur le dashboard,
+-   Der im Dashboard angezeigte Name,
 
--   le type et le sous-type,
+-   Typ und Subtyp,
 
--   la valeur : permet de donner la valeur de la commande en fonction
-    d’une autre commande, d’une clef (quand on fait un interrupteur
-    virtuel), d’un calcul, etc.
+-   der Wert : ermöglicht es, den Wert der Bestellung entsprechend anzugeben
+    ein anderer Befehl, eine Taste (wenn Sie einen Wechsel vornehmen
+    ), eine Berechnung usw..
 
--   "Valeur de retour d'état" et "Durée avant retour d'état" : permet
-    d’indiquer à Jeedom qu’après un changement sur l’information sa
-    valeur doit revenir à Y, X min après le changement. Exemple : dans
-    le cas d’un détecteur de présence qui n'émet que lors d’une
-    détection de présence, il est utile de mettre par exemple 0 en
-    valeur et 4 en durée, pour que 4 mn après une détection de mouvement
-    (et s’il n’y a en pas eu de nouvelle(s) depuis) Jeedom remette la
-    valeur de l’information à 0 (plus de mouvement détecté),
+-   "Statusrückmeldungswert "und" Dauer vor Statusrückmeldung" : erlaubt
+    Jeedom darauf hinzuweisen, dass nach einer Änderung der Informationen
+    Der Wert muss nach der Änderung auf Y, X min zurückkehren. Beispiel : IN
+    der Fall eines Anwesenheitsdetektors, der nur während a emittiert
+    Anwesenheitserkennung ist es nützlich, zum Beispiel 0 zu setzen
+    Wert und 4 in der Dauer, so dass 4 min nach Bewegungserkennung
+    (und wenn es seitdem keine Neuigkeiten mehr gibt) Jeedom setzt das zurück
+    Informationswert bei 0 (keine Bewegung mehr erkannt),
 
--   unité : unité de la donnée (peut être vide),
+-   Unit : Dateneinheit (kann leer sein),
 
--   historiser : permet d’historiser la donnée,
+-   Chronik : ermöglicht das Historisieren der Daten,
 
--   afficher : permet d’afficher la donnée sur le dashboard,
+-   Anzeige : ermöglicht die Anzeige der Daten im Dashboard,
 
--   événement : dans le cas du RFXcom cette case doit toujours être
-    cochée car on ne peut pas interroger un module RFXcom,
+-   Ereignis : Bei RFXcom muss diese Box immer sein
+    aktiviert, da Sie kein RFXcom-Modul abfragen können,
 
--   min/max : bornes de la donnée (peuvent être vides),
+-   min / max : Datengrenzen (können leer sein),
 
--   Erweiterte Konfiguration (kleine Zahnräder) : Erlaubt die erweiterte
-    Die erweiterte Steuerung der Konfiguration (Methode der Protokollierung,
-    widget, etc.),
+-   erweiterte Konfiguration (kleine gekerbte Räder) : Anzeigen
+    Erweiterte Konfiguration des Befehls (Historisierungsmethode,
+    Widget usw.),
 
--   "Tester" : permet de tester la commande,
+-   "Test" : Wird zum Testen des Befehls verwendet,
 
--   supprimer (signe -) : permet de supprimer la commande.
-
-
+-   löschen (unterschreiben -) : ermöglicht das Löschen des Befehls.
 
 
-# Tutoriel
 
-## Interrupteur virtuel
 
-Pour faire un interrupteur virtuel, il vous faut ajouter 2 commandes
-virtuelles comme cela :
+# Tutorial
+
+## Virtueller Switch
+
+Um einen virtuelllen Switch durchzuführen, müssen Sie 2 Befehle hinzufügen
+virtuelll so :
 
 ![virtual5](../images/virtual5.png)
 
-Puis vous sauvegardez et là Jeedom va automatiquement ajouter la
-commande d’information virtuelle :
+Dann speichern Sie und dort fügt Jeedom automatisch das hinzu
+virtuellle Informationsreihenfolge :
 
 ![virtual6](../images/virtual6.png)
 
-Ajoutez dans les commandes "action" `On` et `Off`, la commande `Etat`
-(cela permet à Jeedom de faire le lien avec la commande état).
+Ajoutez IN les commandes "action" `On` et `Off`, la commande `Etat`
+(Dadurch kann Jeedom die Verknüpfung mit dem Statusbefehl herstellen.).
 
-Pour avoir un joli widget, il vous faut masquer la commande d'état :
+Um ein schönes Widget zu haben, müssen Sie den Statusbefehl ausblenden :
 
 ![virtual7](../images/virtual7.png)
 
-Affectez un widget qui gère le retour d'état aux 2 commandes d’action,
-par exemple ici le widget light. Pour ce faire cliquez sur la petite
-roue crantée en face de la commande `On` et dans le 2ème onglet
-sélectionnez `light` comme widget :
+Weisen Sie den beiden Aktionsbefehlen ein Widget zu, das die Statusrückmeldung verwaltet,
+Zum Beispiel hier das Licht-Widget. Klicken Sie dazu auf das kleine
+Zahnrad vor dem Befehl "Ein" und in der 2. Registerkarte
+Wählen Sie "Licht" als Widget :
 
 ![virtual8](../images/virtual8.png)
 
-Enregistrez et faites de même pour la commande `Off`. Et vous obtiendrez
-un joli widget qui changera d'état lors d’un clic :
+Enregistrez et faites de même pour la commande `Off`. Und du wirst bekommen
+Ein nettes Widget, das beim Klicken den Status ändert :
 
 ![virtual9](../images/virtual9.png)
 
 
 
 
-## Slider virtuel
+## Virtueller Schieberegler
 
-Pour faire un slider virtuel, il faut ajouter une commande virtuelle
-comme cela :
+Fügen Sie einen virtuelllen Befehl hinzu, um einen virtuelllen Schieberegler zu erstellen
+so :
 
 ![virtual12](../images/virtual12.png)
 
-Comme tout à l’heure après la sauvegarde, Jeedom va automatiquement
-créer la commande info :
+Wie zuvor nach dem Backup wird Jeedom automatisch
+Erstellen Sie den Befehl info :
 
 ![virtual13](../images/virtual13.png)
 
-Et comme tout à l’heure il est conseillé de lier l’action à la commande
-d'état et de masquer celle-ci.
+Und wie zuvor ist es ratsam, die Aktion mit dem Befehl zu verknüpfen
+und verstecke es.
 
 
 
 
-## Interrupteur de type toggle
+## Kippschalter
 
-Voilà comment faire un interrupteur de type toggle, pour cela il faut
-créer une commande virtuelle de ce type :
+So machen Sie einen Kippschalter.
+Erstellen Sie eine solche virtuellle Bestellung :
 
 ![virtual14](../images/virtual14.png)
 
-Ensuite vous sauvegardez pour voir apparaître la commande d'état :
+Anschließend speichern Sie, um den Statusbefehl anzuzeigen :
 
 ![virtual15](../images/virtual15.png)
 
-Ici il faut dans la valeur de la commande action mettre
+Hier muss im Wert des Aktionsbefehls gesetzt werden
 `not(\#[...][...][Etat]#)` (bien remplacer par votre propre commande) et
-lier l'état à la commande action (attention, il ne faut pas masquer la
-commande état cette fois). Il faut aussi passer la commande info en
-sous-type binaire.
+Verknüpfen Sie den Status mit dem Aktionsbefehl (seien Sie vorsichtig, verstecken Sie den nicht
+diesmal Staatsbefehl). Sie müssen auch den Befehl info in platzieren
+binärer Subtyp.
 
-Calcul
+Berechnung
 
-Pour faire un calcul sur de multiples commandes, c’est très facile ! Il
-suffit de créer une commande de type information virtuelle et dans le
-champs valeur mettre vos calculs. Le testeur d'expression peut vous aider
-à cette étape pour valider. Par exemple, pour faire la moyenne de
-2 températures :
+Es ist sehr einfach, eine Berechnung für mehrere Bestellungen durchzuführen ! Er
+Erstellen Sie einfach einen Befehl für den virtuelllen Informationstyp und in der
+Wertfelder setzen Ihre Berechnungen. Der Ausdruckstester kann Ihnen helfen
+zu diesem Zeitpunkt zu validieren. Zum Beispiel zu durchschnittlich
+2 Temperaturen :
 
 ![virtual10](../images/virtual10.png)
 
-Plusieurs points à réaliser correctement :
+Einige Punkte müssen richtig gemacht werden :
 
--   Bien choisir le sous-type en fonction du type d’information (ici
-    calcul de moyenne donc c’est un numérique),
+-   Wählen Sie den Subtyp entsprechend der Art der Informationen (hier
+    Mittelwertbildung, also eine Zahl),
 
--   Mettre des parenthèses dans les calculs, cela permet d'être sûr du
-    résultat de l’opération,
+-   Setzen Sie Klammern in die Berechnungen ein, damit Sie sicher sein können, dass
+    Ergebnis der Operation,
 
--   Bien mettre l’unité,
+-   Stellen Sie das Gerät gut auf,
 
--   Cocher la case pour historiser si nécessaire,
-
-
-
-## Multiple commandes
+-   Aktivieren Sie das Kontrollkästchen, um bei Bedarf zu protokollieren,
 
 
-Nous allons voir ici comment faire une commande qui va éteindre 2
-lumières. Rien de plus simple, il suffit de créer une commande virtuelle
+
+## Mehrfachbestellungen
+
+
+Wir werden hier sehen, wie Sie eine Bestellung aufgeben, die sich ausschaltet 2
+Lichter. Nichts ist einfacher, erstellen Sie einfach eine virtuellle Bestellung
 et de mettre les 2 commandes séparées par un `&&` :
 
 ![virtual11](../images/virtual11.png)
 
-Ici, il faut bien que le sous-type de la commande soit le même que les
-sous-types des commandes pilotées, donc toutes les commandes dans le
-champs valeur doivent avoir le même sous-type (toutes "autre", ou toutes
-"slider", ou toutes de type couleur).
+Hier muss der Befehlssubtyp mit dem identisch sein
+Untertypen der gesteuerten Befehle, daher alle Befehle in der
+Wertefelder müssen denselben Untertyp haben (alle "anderen" oder alle
+"Schieberegler "oder alle Farbtypen).
 
 
 
 
-## Retour d'état virtuel
+## Virtuelles Statusfeedback
 
-Lors de l’utilisation d’un équipement qui ne possède pas de retour
-d'état et si cet équipement est commandé seulement par Jeedom, il est
-possible d’avoir un retour d'état virtuel. Il faut pour cela créer un
-virtuel qui reprend les commandes actions (ex: On & Off) de l'équipement
-et qui possède une commande info (l'état). Il faut ensuite renseigner la
-colonne Paramètre pour chaque commande action, en sélectionnant le nom
-de la commande info (état) et en donnant la valeur qu’elle doit prendre.
+Bei Verwendung von Geräten ohne Rückgabe
+Status und wenn dieses Gerät nur von Jeedom bestellt wird, ist es
+möglich, ein virtuellles Feedback zu haben. Dies erfordert das Erstellen eines
+virtuelll, das Aktionsbefehle entgegennimmt (z: Ein & Aus) der Ausrüstung
+und wer hat einen Infobefehl (Status). Dann müssen Sie die ausfüllen
+Parameterspalte für jeden Aktionsbefehl durch Auswahl des Namens
+des Info-Befehls (Status) und Angabe des Wertes, den er annehmen soll.
 
-On peut aussi imaginer un virtuel qui allume/éteint plusieurs lampes
-(commandes actions séparées par des &&) et avoir ainsi un état de cette
-commande générale.
-
-
+Wir können uns auch eine virtuellle vorstellen, die mehrere Lampen ein- und ausschaltet
+(Aktionsbefehle durch && getrennt) und haben daher einen Status davon
+allgemeine Ordnung.
 
 
-# Affectation d’une valeur par API
 
-Il est possible de changer la valeur d’une information virtuelle par un
-appel API :
+
+# Zuweisen eines Werts per API
+
+Es ist möglich, den Wert virtuelller Informationen durch a zu ändern
+API-Aufruf :
 
     http://#IP_JEEDOM#/core/api/jeeApi.php?apikey=#APIKEY_VIRTUEL#&type=virtual&type=virtual&id=#ID#&value=#value#
 
-> **Note**
+> **Notiz**
 >
-> Attention à bien rajouter un /jeedom après \#IP\_JEEDOM\# si nécessaire
+> Achten Sie darauf, bei Bedarf nach / #IP \ _JEEDOM \ # ein / jeedom hinzuzufügen

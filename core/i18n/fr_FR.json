@@ -1,25 +1,5 @@
 {
-    "desktop\/js\/virtual.js": {
-        "Testeur d'expression": "Testeur d'expression",
-        "Nom": "Nom",
-        "Calcul": "Calcul",
-        "Rechercher équipement": "Rechercher équipement",
-        "Valeur retour d\\'état": "Valeur retour d\\'état",
-        "Durée avant retour d\\'état (min)": "Durée avant retour d\\'état (min)",
-        "Min": "Min",
-        "Max": "Max",
-        "Unité": "Unité",
-        "Liste de valeur|texte séparé par ;": "Liste de valeur|texte séparé par ;",
-        "Liste": "Liste",
-        "Afficher": "Afficher",
-        "Historiser": "Historiser",
-        "Inverser": "Inverser",
-        "Tester": "Tester",
-        "La valeur de la commande vaut par défaut la commande": "La valeur de la commande vaut par défaut la commande",
-        "Nom information": "Nom information",
-        "Valeur": "Valeur"
-    },
-    "desktop\/php\/virtual.php": {
+    "plugins\/virtual\/desktop\/php\/virtual.php": {
         "401 - Accès non autorisé": "401 - Accès non autorisé",
         "Gestion": "Gestion",
         "Ajouter": "Ajouter",
@@ -50,13 +30,33 @@
         "Paramètres": "Paramètres",
         "Options": "Options"
     },
-    "core\/ajax\/virtual.ajax.php": {
+    "plugins\/virtual\/desktop\/js\/virtual.js": {
+        "Testeur d'expression": "Testeur d'expression",
+        "Nom": "Nom",
+        "Calcul": "Calcul",
+        "Rechercher équipement": "Rechercher équipement",
+        "Valeur retour d\\'état": "Valeur retour d\\'état",
+        "Durée avant retour d\\'état (min)": "Durée avant retour d\\'état (min)",
+        "Min": "Min",
+        "Max": "Max",
+        "Unité": "Unité",
+        "Liste de valeur|texte séparé par ;": "Liste de valeur|texte séparé par ;",
+        "Liste": "Liste",
+        "Afficher": "Afficher",
+        "Historiser": "Historiser",
+        "Inverser": "Inverser",
+        "Tester": "Tester",
+        "La valeur de la commande vaut par défaut la commande": "La valeur de la commande vaut par défaut la commande",
+        "Nom information": "Nom information",
+        "Valeur": "Valeur"
+    },
+    "plugins\/virtual\/core\/ajax\/virtual.ajax.php": {
         "401 - Accès non autorisé": "401 - Accès non autorisé",
         "Equipement virtuel introuvable : ": "Equipement virtuel introuvable : ",
         "Aucune methode correspondante à : ": "Aucune methode correspondante à : "
     },
-    "core\/class\/virtual.class.php": {
-        "Commande ID virtuel inconnu": "Commande ID virtuel inconnu",
+    "plugins\/virtual\/core\/class\/virtual.class.php": {
+        "Commande ID virtuel inconnu, ou la commande n\\'est pas de type virtuel : ": "Commande ID virtuel inconnu, ou la commande n\\'est pas de type virtuel : ",
         "Equipement ID virtuel inconnu : ": "Equipement ID virtuel inconnu : ",
         "L\\'équipement n\\'est pas de type virtuel : ": "L\\'équipement n\\'est pas de type virtuel : ",
         "Commande introuvable : ": "Commande introuvable : ",

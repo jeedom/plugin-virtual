@@ -1,38 +1,38 @@
-# 23/10/2019
+# 23.10.2019
 
-- Aktualisierung des Dokuments
-- Supression forcé des " lors d'un calcul sur une commande
-- Correction de bug de calcul si le résultat à pour valeur"Faux"
+- Aktualisieren des Dokuments
+- Erzwungenes Löschen von "während einer Berechnung einer Bestellung
+- Korrektur des Berechnungsfehlers, wenn das Ergebnis "False" ist"
 
-# 10/09/2019
+# 09/10/2019
 
-- Correction de l'arrondit forcé sur 2 chiffres sur les commandes numérique
-- Ajout d'un systeme de template pour créer des équipements rapidement
+- Korrektur der erzwungenen Rundung auf 2 Stellen bei digitalen Steuerungen
+- Hinzufügen eines Vorlagensystems zum schnellen Erstellen von Geräten
 - Fehlerbehebungen
 
-# 26/04/2019
+# 26.04.2019
 
-- Optimisation
+- Optimierung
 
-# 22/03/2019
+# 22.03.2019
 
-- Ajout d'une securité en cas de boucle infini
+- Zusätzliche Sicherheit bei Endlosschleife
 
-# 18/03/2019
+# 18.03.2019
 
 - Fehlerbehebungen
-- Ajout d'une securité en cas de boucle infini
+- Zusätzliche Sicherheit bei Endlosschleife
 
-# 13/03/2019
+# 13.03.2019
 
-- Aktualisierung des Dokuments
+- Aktualisieren des Dokuments
 
-# 22/01/2019
+# 22.01.2019
 
 -   Fehlerbehebungen
 
-# 21/01/2019
+# 21.01.2019
 
--   Correction d'un bug sur les valeurs déclenchant une mise à jour d'une commande info
--       Correction de l'erreur lors de la copie d'un équipement si la commande Rafraichir existe.
--   Ajout du testeur d'expressions
+-   Korrektur eines Fehlers bei den Werten, der eine Aktualisierung eines Infobefehls auslöst
+-		Korrektur des Fehlers beim Kopieren eines Geräts, wenn der Befehl Aktualisieren vorhanden ist.
+-   Zugabe des Expressionstesters

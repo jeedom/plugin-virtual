@@ -1,38 +1,38 @@
-# 23/10/2019
+# 10/23/2019
 
-- Mise à jour de la doc
-- Supression forcé des " lors d'un calcul sur une commande
-- Correction de bug de calcul si le résultat à pour valeur"Faux"
+- Updating the doc
+- Forced deletion of "during a calculation on an order
+- Correction of calculation bug if the result is "False""
 
-# 10/09/2019
+# 09/10/2019
 
-- Correction de l'arrondit forcé sur 2 chiffres sur les commandes numérique
-- Ajout d'un systeme de template pour créer des équipements rapidement
-- Correction de bugs
+- Correction of forced rounding to 2 digits on digital controls
+- Adding a template system to quickly create equipment
+- Bugfix
 
-# 26/04/2019
+# 04/26/2019
 
-- Optimisation
+- Optimization
 
-# 22/03/2019
+# 03/22/2019
 
-- Ajout d'une securité en cas de boucle infini
+- Addition of security in case of infinite loop
 
-# 18/03/2019
+# 03/18/2019
 
-- Correction de bugs
-- Ajout d'une securité en cas de boucle infini
+- Bugfix
+- Addition of security in case of infinite loop
 
-# 13/03/2019
+# 03/13/2019
 
-- Mise à jour de la doc
+- Updating the doc
 
-# 22/01/2019
+# 01/22/2019
 
--   Correction de bugs
+-   Bugfix
 
-# 21/01/2019
+# 01/21/2019
 
--   Correction d'un bug sur les valeurs déclenchant une mise à jour d'une commande info
--       Correction de l'erreur lors de la copie d'un équipement si la commande Rafraichir existe.
--   Ajout du testeur d'expressions
+-   Correction of a bug on the values triggering an update of an info command
+-		Correction of the error when copying a device if the Refresh command exists.
+-   Addition of the expression tester
