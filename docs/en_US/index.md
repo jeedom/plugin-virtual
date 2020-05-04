@@ -4,7 +4,7 @@ The Virtual plugin allows the creation of virtual devices
 and their properties.
 
 We will name a device created by this plugin : peripheral
-virtual.
+virtuel.
 
 A virtual device can be created for the following needs :
 
@@ -23,7 +23,7 @@ A virtual device can be created for the following needs :
 
 
 
-# Setup
+# Configuration
 
 The plugin does not require any configuration, you just have to activate it :
 
@@ -65,11 +65,11 @@ Here you find all the configuration of your equipment :
 -   **Category** : equipment categories (it may belong to
     multiple categories),
 
--   **Activate** : makes your equipment active,
+-   **Activer** : makes your equipment active,
 
 -   **Visible** : makes it visible on the dashboard,
 
--   **Comment** : allows you to comment on
+-   **Commentaire** : allows you to comment on
     equipment.
 
 At the top right you have access to 4 buttons :
@@ -81,7 +81,7 @@ At the top right you have access to 4 buttons :
     existing equipment in a virtual (saves time for
     split equipment in 2 for example),
 
--   **Duplicate** : duplicates current equipment,
+-   **Dupliquer** : duplicates current equipment,
 
 -   **Advanced (notched wheels)** : displays options
     equipment advances (common to all Jeedom plugins).
@@ -96,9 +96,9 @@ Below you find the list of orders :
     another command, a key (when you make a switch
     ), a calculation, etc..
 
--   "Status feedback value "and" Duration before status feedback" : allows
+-   "Status feedback value "and" Duration before status feedback" : permet
     to indicate to Jeedom that after a change in the information
-    value must return to Y, X min after the change. Example : IN
+    value must return to Y, X min after the change. Example : dans
     the case of a presence detector which emits only during a
     presence detection, it is useful to set for example 0
     value and 4 in duration, so that 4 min after motion detection
@@ -120,14 +120,14 @@ Below you find the list of orders :
     advanced configuration of the command (historization method,
     widget, etc.),
 
--   "Test" : Used to test the command,
+-   "Tester" : Used to test the command,
 
 -   delete (sign -) : allows to delete the command.
 
 
 
 
-# Tutorial
+# Tutoriel
 
 ## Virtual switch
 
@@ -141,7 +141,7 @@ virtual information order :
 
 ![virtual6](../images/virtual6.png)
 
-Ajoutez IN les commandes "action" `On` et `Off`, la commande `Etat`
+Add in the "action" commands `On` and` Off`, the command `State`
 (this allows Jeedom to make the link with the state command).
 
 To have a nice widget, you need to hide the status command :
@@ -155,7 +155,7 @@ select `light` as widget :
 
 ![virtual8](../images/virtual8.png)
 
-Enregistrez et faites de même pour la commande `Off`. And you will get
+Save and do the same for the `Off` command. And you will get
 a nice widget that will change state when clicked :
 
 ![virtual9](../images/virtual9.png)
@@ -193,14 +193,14 @@ Then you save to see the status command appear :
 ![virtual15](../images/virtual15.png)
 
 Here it is necessary in the value of the action command to put
-`not(\#[...][...][Etat]#)` (bien remplacer par votre propre commande) et
+`not (\# [...] [...] [State] #)` (replace with your own command) and
 link the status to the action command (be careful, do not hide the
 state command this time). You must also place the info command in
 binary subtype.
 
-Calculation
+Calcul
 
-To do a calculation on multiple orders, it's very easy ! He
+To do a calculation on multiple orders, it's very easy ! Il
 just create a virtual information type command and in the
 value fields put your calculations. The expression tester can help you
 at this stage to validate. For example, to average
@@ -227,7 +227,7 @@ Several points to be done correctly :
 
 We will see here how to make an order that will turn off 2
 lights. Nothing simpler, just create a virtual order
-et de mettre les 2 commandes séparées par un `&&` :
+and put the 2 commands separated by a `&&` :
 
 ![virtual11](../images/virtual11.png)
 
@@ -263,6 +263,6 @@ API call :
 
     http://#IP_JEEDOM#/core/api/jeeApi.php?apikey=#APIKEY_VIRTUEL#&type=virtual&type=virtual&id=#ID#&value=#value#
 
-> **NOTE**
+> **Note**
 >
-> Be careful to add a / jeedom after \ #IP \ _JEEDOM \ # if necessary
+> Be careful to add a / jeedom after \#IP\_JEEDOM \# if necessary

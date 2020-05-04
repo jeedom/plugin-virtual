@@ -12,7 +12,7 @@
 
 # 26.04.2019
 
-- Optimierung
+- Optimisation
 
 # 22.03.2019
 

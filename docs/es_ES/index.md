@@ -4,7 +4,7 @@ El complemento virtual permite la creación de dispositivos virtuales
 y sus propiedades.
 
 Vamos a nombrar un dispositivo creado por este complemento : periférico
-virtual.
+virtuel.
 
 Se puede crear un dispositivo virtual para las siguientes necesidades :
 
@@ -23,7 +23,7 @@ Se puede crear un dispositivo virtual para las siguientes necesidades :
 
 
 
-# Configuración
+# Configuration
 
 El complemento no requiere ninguna configuración, solo tiene que activarlo :
 
@@ -49,7 +49,7 @@ Así es como se ve la página de configuración de un dispositivo virtual
 
 ![virtual4](../images/virtual4.png)
 
-> **Punta**
+> **Tip**
 >
 > Como en muchos lugares de Jeedom, coloca el mouse en el extremo izquierdo
 > abre un menú de acceso rápido (puedes
@@ -65,23 +65,23 @@ Aquí encontrarás toda la configuración de tu equipo :
 -   **Categoría** : categorías de equipos (puede pertenecer a
     categorías múltiples),
 
--   **Activar** : activa su equipo,
+-   **Activer** : activa su equipo,
 
 -   **Visible** : lo hace visible en el tablero,
 
--   **Comentario** : le permite comentar
+-   **Commentaire** : le permite comentar
     equipo.
 
 En la parte superior derecha tiene acceso a 4 botones. :
 
--   **Expresión** : el probador de expresión idéntico al de los escenarios
+-   **Expression** : el probador de expresión idéntico al de los escenarios
     para facilitar el desarrollo de algunos virtuales
 
 -   **Equipo de importación** : permite duplicar automáticamente un
     equipo existente en un virtual (ahorra tiempo para
     dividir el equipo en 2, por ejemplo),
 
--   **Duplicar** : duplica el equipo actual,
+-   **Dupliquer** : duplica el equipo actual,
 
 -   **Avanzado (ruedas con muescas)** : muestra opciones
     avances de equipo (comunes a todos los complementos de Jeedom).
@@ -96,9 +96,9 @@ A continuación encontrará la lista de pedidos. :
     otro comando, una tecla (cuando haces un cambio
     ), un cálculo, etc..
 
--   "Valor de retroalimentación de estado "y" Duración antes de la retroalimentación de estado" : permite
+-   "Valor de retroalimentación de estado "y" Duración antes de la retroalimentación de estado" : permet
     para indicarle a Jeedom que después de un cambio en la información
-    el valor debe volver a Y, X min después del cambio. Ejemplo : DENTRO
+    el valor debe volver a Y, X min después del cambio. Ejemplo : dans
     el caso de un detector de presencia que emite solo durante un
     detección de presencia, es útil establecer por ejemplo 0
     valor y 4 de duración, de modo que 4 minutos después de la detección de movimiento
@@ -120,14 +120,14 @@ A continuación encontrará la lista de pedidos. :
     configuración avanzada del comando (método de historización,
     widget, etc.),
 
--   "Probar" : Se usa para probar el comando,
+-   "Tester" : Se usa para probar el comando,
 
 -   eliminar (firmar -) : permite eliminar el comando.
 
 
 
 
-# Tutorial
+# Tutoriel
 
 ## Interruptor virtual
 
@@ -141,7 +141,7 @@ orden de información virtual :
 
 ![virtual6](../images/virtual6.png)
 
-Ajoutez DENTRO les commandes "action" `On` et `Off`, la commande `Etat`
+Agregue los comandos de "acción" `On` y` Off`, el comando `State`
 (esto le permite a Jeedom hacer el enlace con el comando de estado).
 
 Para tener un buen widget, debes ocultar el comando de estado :
@@ -155,7 +155,7 @@ seleccione `light` como widget :
 
 ![virtual8](../images/virtual8.png)
 
-Enregistrez et faites de même pour la commande `Off`. Y obtendrás
+Guarde y haga lo mismo para el comando `Off`. Y obtendrás
 un buen widget que cambiará de estado al hacer clic :
 
 ![virtual9](../images/virtual9.png)
@@ -193,14 +193,14 @@ Luego guarda para ver aparecer el comando de estado :
 ![virtual15](../images/virtual15.png)
 
 Aquí es necesario en el valor del comando de acción poner
-`not(\#[...][...][Etat]#)` (bien remplacer par votre propre commande) et
+`not (\# [...] [...] [State] #)` (reemplace con su propio comando) y
 vincular el estado al comando de acción (tenga cuidado, no oculte el
 comando estatal esta vez). También debe colocar el comando de información en
 subtipo binario.
 
-Cálculo
+Calcul
 
-Para hacer un cálculo en múltiples pedidos, es muy fácil ! Él
+Para hacer un cálculo en múltiples pedidos, es muy fácil ! Il
 simplemente cree un comando de tipo de información virtual y en el
 campos de valor ponen sus cálculos. El probador de expresiones puede ayudarte
 en esta etapa para validar. Por ejemplo, para promediar
@@ -227,7 +227,7 @@ Varios puntos para hacer correctamente :
 
 Veremos aquí cómo hacer un pedido que se apagará 2
 luces Nada más simple, solo crea un pedido virtual
-et de mettre les 2 commandes séparées par un `&&` :
+y poner los 2 comandos separados por un `&&` :
 
 ![virtual11](../images/virtual11.png)
 
@@ -263,6 +263,6 @@ Llamada API :
 
     http://#IP_JEEDOM#/core/api/jeeApi.php?apikey=#APIKEY_VIRTUEL#&type=virtual&type=virtual&id=#ID#&value=#value#
 
-> **Nota**
+> **Note**
 >
-> Tenga cuidado de agregar un / jeedom después de \ #IP \ _JEEDOM \ # si es necesario
+> Tenga cuidado de agregar un / jeedom después de \#IP\_JEEDOM \# si es necesario
