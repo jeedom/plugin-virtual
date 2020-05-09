@@ -313,7 +313,7 @@ class virtualCmd extends cmd {
 				try {
 					$result = jeedom::evaluateExpression($this->getConfiguration('calcul'));
 					if(is_string($result)){
-						$result = str_replace('"', '', $result);
+						preg_replace('/^"|"$/', '', $result);
 					}
 					$this->event($result);
 					return $result;
