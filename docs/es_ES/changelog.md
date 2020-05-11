@@ -1,6 +1,6 @@
->**IMPORTANT**
+>**Importante**
 >
->Como recordatorio si no hay información sobre la actualización, significa que solo se refiere a la actualización de documentación, traducción o texto.
+>Como recordatorio si no hay información sobre la actualización, significa que solo se refiere a la actualización de documentación, traducción o texto
 
 # 23/10/2019
 
@@ -20,12 +20,12 @@
 
 # 22/03/2019
 
-- Adición de seguridad en caso de bucle infinito.
+- Adición de seguridad en caso de bucle infinito
 
 # 18/03/2019
 
 - Correcciones de errores
-- Adición de seguridad en caso de bucle infinito.
+- Adición de seguridad en caso de bucle infinito
 
 # 13/03/2019
 

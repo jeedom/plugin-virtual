@@ -7,7 +7,7 @@ Wir werden ein Gerät benennen, das von diesem Plugin erstellt wurde : virtuelle
 Ein virtuelles Gerät kann für die folgenden Anforderungen erstellt werden :
 
 -   Konsolidieren von Informationen oder Aktionen von mehreren physischen / virtuellen Geräten zu einem einzigen Gerät;
--   Erstellen Sie ein Peripheriegerät, das von einer Quelle außerhalb von Jeedom (Zibase, IPX800 usw.) gespeist wird.
+-   Erstellen Sie ein Peripheriegerät, das von einer Quelle außerhalb von Jeedom (Zibase, IPX800 usw.) gespeist wird
 -   doppelte Ausrüstung, um sie beispielsweise in zwei Teile zu teilen;
 -   eine Berechnung für mehrere Gerätewerte durchführen;
 -   mehrere Aktionen ausführen (Makro).
@@ -32,32 +32,32 @@ So sieht die Konfigurationsseite eines virtuellen Geräts aus :
 
 ![virtual4](../images/virtual4.png)
 
-> **Tip**
+> **Spitze**
 >
-> Wie an vielen Stellen in Jeedom wird durch einfaches Bewegen der Maus ganz links ein Schnellzugriffsmenü angezeigt (Sie können es jederzeit in Ihrem Profil sichtbar lassen)..
+> Wie an vielen Stellen in Jeedom wird durch einfaches Bewegen der Maus ganz links ein Schnellzugriffsmenü angezeigt (Sie können es jederzeit in Ihrem Profil sichtbar lassen).
 
 Hier finden Sie die gesamte Konfiguration Ihrer Geräte :
 
 -   **Name des virtuellen Geräts** : Name Ihrer virtuellen Ausrüstung,
 -   **Übergeordnetes Objekt** : Gibt das übergeordnete Objekt an, zu dem das Gerät gehört,
 -   **Kategorie** : Gerätekategorien (es kann zu mehreren Kategorien gehören),
--   **Activer** : macht Ihre Ausrüstung aktiv,
--   **Visible** : macht es auf dem Dashboard sichtbar,
--   **Commentaire** : ermöglicht es Ihnen, Geräte zu kommentieren.
+-   **Aktivieren** : macht Ihre Ausrüstung aktiv,
+-   **Sichtbar** : macht es auf dem Dashboard sichtbar,
+-   **Kommentar** : ermöglicht es Ihnen, Geräte zu kommentieren.
 
 Oben rechts haben Sie Zugriff auf 4 Schaltflächen :
 
--   **Expression** : Der Ausdruckstester ist mit dem der Szenarien identisch, um die Entwicklung einiger virtueller Systeme zu erleichtern
--   **Ausrüstung importieren** : Ermöglicht das automatische Duplizieren eines vorhandenen Geräts in ein virtuelles Gerät (spart Zeit, um ein Gerät beispielsweise in zwei Teile zu teilen).,
--   **Dupliquer** : dupliziert aktuelle Geräte,
+-   **Ausdruck** : Der Ausdruckstester ist mit dem der Szenarien identisch, um die Entwicklung einiger virtueller Systeme zu erleichtern
+-   **Ausrüstung importieren** : Ermöglicht das automatische Duplizieren eines vorhandenen Geräts in ein virtuelles Gerät (spart Zeit, um ein Gerät beispielsweise in zwei Teile zu teilen),
+-   **Duplikat** : dupliziert aktuelle Geräte,
 -   **Fortgeschrittene (gekerbte Räder)** : zeigt erweiterte Ausstattungsoptionen an (allen Jeedom-Plugins gemeinsam).
 
 Nachfolgend finden Sie die Liste der Bestellungen :
 
 -   Der im Dashboard angezeigte Name,
 -   Typ und Subtyp,
--   der Wert : ermöglicht es, den Wert des Befehls gemäß einem anderen Befehl, einem Schlüssel (wenn wir einen virtuellen Wechsel vornehmen), einer Berechnung usw. anzugeben..
--   "Statusrückmeldungswert "und" Dauer vor Statusrückmeldung" : ermöglicht es Jeedom anzuzeigen, dass nach einer Änderung der Informationen der Wert auf Y, X min nach der Änderung zurückkehren muss. Beispiel : Im Fall eines Anwesenheitsdetektors, der nur während einer Anwesenheitserkennung emittiert, ist es nützlich, beispielsweise 0 im Wert und 4 in der Dauer einzustellen, so dass 4 Minuten nach einer Bewegungserkennung (und s ') Seitdem gab es keine Neuigkeiten.) Jeedom setzt den Wert der Informationen auf 0 zurück (mehr Bewegung erkannt).,
+-   der Wert : ermöglicht es, den Wert des Befehls gemäß einem anderen Befehl, einem Schlüssel (wenn wir einen virtuellen Wechsel vornehmen), einer Berechnung usw. anzugeben.
+-   "Statusrückmeldungswert "und" Dauer vor Statusrückmeldung" : ermöglicht es Jeedom anzuzeigen, dass nach einer Änderung der Informationen der Wert auf Y, X min nach der Änderung zurückkehren muss. Beispiel : Im Fall eines Anwesenheitsdetektors, der nur während einer Anwesenheitserkennung emittiert, ist es nützlich, beispielsweise 0 im Wert und 4 in der Dauer einzustellen, so dass 4 Minuten nach einer Bewegungserkennung (und s ') Seitdem gab es keine Neuigkeiten.) Jeedom setzt den Wert der Informationen auf 0 zurück (mehr Bewegung erkannt),
 -   Unit : Dateneinheit (kann leer sein),
 -   Chronik : ermöglicht das Historisieren der Daten,
 -   Anzeige : ermöglicht die Anzeige der Daten im Dashboard,
@@ -115,7 +115,7 @@ Anschließend speichern Sie, um den Statusbefehl anzuzeigen :
 
 ![virtual15](../images/virtual15.png)
 
-Hier muss im Wert des Aktionsbefehls gesetzt werden ``not(\#[...][...][Etat]#)`` (durch Ihren eigenen Befehl ersetzen) und verknüpfen Sie den Status mit dem Aktionsbefehl (Vorsicht, diesmal sollten Sie den Statusbefehl nicht ausblenden).. Sie müssen den Befehl info auch im binären Subtyp platzieren.
+Hier muss im Wert des Aktionsbefehls gesetzt werden ``not(\#[...][...][Etat]#)`` (durch Ihren eigenen Befehl ersetzen) und verknüpfen Sie den Status mit dem Aktionsbefehl (Vorsicht, diesmal sollten Sie den Statusbefehl nicht ausblenden). Sie müssen den Befehl info auch im binären Subtyp platzieren.
 
 Es ist sehr einfach, eine Berechnung für mehrere Bestellungen durchzuführen ! Erstellen Sie einfach eine virtuelle Informationstypreihenfolge und geben Sie im Wertefeld Ihre Berechnungen ein. Der Ausdruckstester kann Ihnen bei diesem Schritt bei der Validierung helfen. Zum Beispiel, um 2 Temperaturen zu mitteln :
 
@@ -152,6 +152,6 @@ API-Aufruf :
 
 ``http://#IP_JEEDOM#/core/api/jeeApi.php?apikey=#APIKEY_VIRTUEL#&type=virtual&type=virtual&id=#ID#&value=#value#``
 
-> **Note**
+> **Notiz**
 >
 > Achten Sie darauf, nach \ ein / jeedom hinzuzufügen#IP\_JEEDOM\# falls erforderlich

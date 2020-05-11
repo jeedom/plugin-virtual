@@ -35,7 +35,7 @@
         "Nom": "Nama",
         "Calcul": "Perhitungan",
         "Rechercher équipement": "Peralatan pencarian",
-        "Valeur retour d\\'état": "Nilai kondisi kembali ",
+        "Valeur retour d\\'état": "Nilai kondisi kembali",
         "Durée avant retour d\\'état (min)": "Waktu untuk kembali kondisi (min)",
         "Min": "",
         "Max": "",
@@ -53,7 +53,7 @@
     "plugins\/virtual\/core\/ajax\/virtual.ajax.php": {
         "401 - Accès non autorisé": "401 - Akses tidak sah",
         "Equipement virtuel introuvable : ": "",
-        "Aucune methode correspondante à : ": "Aucune methode correspondante à : "
+        "Aucune methode correspondante à : ": "Aucune methode correspondante à :"
     },
     "plugins\/virtual\/core\/class\/virtual.class.php": {
         "Commande ID virtuel inconnu, ou la commande n\\'est pas de type virtuel : ": "",

@@ -53,7 +53,7 @@
     "plugins\/virtual\/core\/ajax\/virtual.ajax.php": {
         "401 - Accès non autorisé": "401 - Acesso não autorizado",
         "Equipement virtuel introuvable : ": "Equipamento virtual não encontrado:",
-        "Aucune methode correspondante à : ": "Aucune methode correspondante à : "
+        "Aucune methode correspondante à : ": "Aucune methode correspondante à :"
     },
     "plugins\/virtual\/core\/class\/virtual.class.php": {
         "Commande ID virtuel inconnu, ou la commande n\\'est pas de type virtuel : ": "Comando desconhecido de ID virtual ou o comando não é do tipo virtual:",

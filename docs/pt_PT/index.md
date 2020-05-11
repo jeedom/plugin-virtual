@@ -32,7 +32,7 @@ A configuração de dispositivos virtuais pode ser acessada no menu do plug-in :
 
 ![virtual4](../images/virtual4.png)
 
-> **Tip**
+> **Dica**
 >
 > Como em muitos lugares do Jeedom, colocar o mouse na extremidade esquerda permite que um menu de acesso rápido seja exibido (você sempre pode deixá-lo visível em seu perfil).
 
@@ -41,22 +41,22 @@ Aqui você encontra toda a configuração do seu equipamento :
 -   **Nome do dispositivo virtual** : nome do seu equipamento virtual,
 -   **Objeto pai** : indica o objeto pai ao qual o equipamento pertence,
 -   **Categoria** : categorias de equipamentos (pode pertencer a várias categorias),
--   **Activer** : torna seu equipamento ativo,
--   **Visible** : torna visível no painel,
--   **Commentaire** : permite comentar sobre o equipamento.
+-   **Ativar** : torna seu equipamento ativo,
+-   **Visivél** : torna visível no painel,
+-   **COMMENTAIRE** : permite comentar sobre o equipamento.
 
 No canto superior direito, você tem acesso a 4 botões :
 
--   **Expression** : o testador de expressão idêntico ao dos cenários para facilitar o desenvolvimento de algumas configurações virtuais
+-   **Expressão** : o testador de expressão idêntico ao dos cenários para facilitar o desenvolvimento de algumas configurações virtuais
 -   **Equipamento de importação** : permite duplicar automaticamente um equipamento existente em um virtual (economiza tempo para dividir um equipamento em 2, por exemplo),
--   **Dupliquer** : duplica o equipamento atual,
+-   **Duplicar** : duplica o equipamento atual,
 -   **Avançado (rodas dentadas)** : exibe opções avançadas de equipamento (comuns a todos os plugins Jeedom).
 
 Abaixo você encontra a lista de pedidos :
 
 -   o nome exibido no painel,
 -   tipo e subtipo,
--   o valor : permite dar o valor do comando de acordo com outro comando, uma chave (quando fazemos uma troca virtual), um cálculo, etc..
+-   o valor : permite dar o valor do comando de acordo com outro comando, uma chave (quando fazemos uma troca virtual), um cálculo, etc.
 -   "Valor do feedback do status "e" Duração antes do feedback do status" : permite indicar a Jeedom que após uma alteração nas informações, seu valor deve retornar a Y, X min após a alteração. Exemplo : no caso de um detector de presença que emite apenas durante uma detecção de presença, é útil definir, por exemplo, 0 em valor e 4 em duração, de modo que 4 minutos após a detecção de movimento (e s ' não houve notícias desde então) Jeedom redefine o valor das informações para 0 (mais movimento detectado),
 -   Unidade : unidade de dados (pode estar vazia),
 -   Historicizar : permite historiar os dados,
@@ -152,6 +152,6 @@ Chamada de API :
 
 ``http://#IP_JEEDOM#/core/api/jeeApi.php?apikey=#APIKEY_VIRTUEL#&type=virtual&type=virtual&id=#ID#&value=#value#``
 
-> **Note**
+> **NOTA**
 >
 > Tenha cuidado para adicionar um / jeedom após \#IP\_JEEDOM\# se necessário

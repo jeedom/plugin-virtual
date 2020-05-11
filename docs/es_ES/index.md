@@ -1,6 +1,6 @@
 # Complemento virtual
 
-El complemento virtual permite la creación de dispositivos virtuales y sus propiedades..
+El complemento virtual permite la creación de dispositivos virtuales y sus propiedades.
 
 Vamos a nombrar un dispositivo creado por este complemento : dispositivo virtual.
 
@@ -32,31 +32,31 @@ Así es como se ve la página de configuración de un dispositivo virtual :
 
 ![virtual4](../images/virtual4.png)
 
-> **Tip**
+> **Punta**
 >
 > Como en muchos lugares de Jeedom, al colocar el mouse en el extremo izquierdo, aparece un menú de acceso rápido (siempre puede dejarlo visible desde su perfil).
 
 Aquí encontrarás toda la configuración de tu equipo :
 
--   **Nombre del dispositivo virtual.** : nombre de su equipo virtual,
+-   **Nombre del dispositivo virtual** : nombre de su equipo virtual,
 -   **Objeto padre** : indica el objeto padre al que pertenece el equipo,
 -   **Categoría** : categorías de equipos (puede pertenecer a varias categorías),
--   **Activer** : activa su equipo,
+-   **Activar** : activa su equipo,
 -   **Visible** : lo hace visible en el tablero,
--   **Commentaire** : le permite comentar sobre el equipo.
+-   **Comentario** : le permite comentar sobre el equipo.
 
-En la parte superior derecha tiene acceso a 4 botones. :
+En la parte superior derecha tiene acceso a 4 botones :
 
--   **Expression** : El probador de expresión idéntico al de los escenarios para facilitar el desarrollo de algunos
+-   **Expresión** : El probador de expresión idéntico al de los escenarios para facilitar el desarrollo de algunos
 -   **Equipo de importación** : permite duplicar automáticamente un equipo existente en uno virtual (ahorra tiempo para dividir un equipo en 2, por ejemplo),
--   **Dupliquer** : duplica el equipo actual,
+-   **Duplicar** : duplica el equipo actual,
 -   **Avanzado (ruedas con muescas)** : muestra opciones de equipos avanzados (comunes a todos los complementos de Jeedom).
 
-A continuación encontrará la lista de pedidos. :
+A continuación encontrará la lista de pedidos :
 
 -   el nombre que se muestra en el tablero,
 -   tipo y subtipo,
--   el valor : permite dar el valor del comando de acuerdo con otro comando, una tecla (cuando hacemos un cambio virtual), un cálculo, etc..
+-   el valor : permite dar el valor del comando de acuerdo con otro comando, una tecla (cuando hacemos un cambio virtual), un cálculo, etc.
 -   "Valor de retroalimentación de estado "y" Duración antes de la retroalimentación de estado" : permite indicar a Jeedom que después de un cambio en la información, su valor debe volver a Y, X min después del cambio. Ejemplo : en el caso de un detector de presencia que emite solo durante una detección de presencia, es útil establecer, por ejemplo, 0 en valor y 4 en duración, de modo que 4 minutos después de una detección de movimiento (y s ' no ha habido noticias desde entonces) Jeedom restablece el valor de la información a 0 (se detecta más movimiento),
 -   Unidad : unidad de datos (puede estar vacía),
 -   Guardar historial : permite historizar los datos,
@@ -103,7 +103,7 @@ Como antes después de la copia de seguridad, Jeedom creará automáticamente el
 
 ![virtual13](../images/virtual13.png)
 
-Y como antes, es recomendable vincular la acción al comando de estado y ocultarlo..
+Y como antes, es recomendable vincular la acción al comando de estado y ocultarlo.
 
 ## Interruptor de palanca
 
@@ -124,7 +124,7 @@ Para hacer un cálculo en múltiples pedidos, es muy fácil ! Simplemente cree u
 Varios puntos para hacer correctamente :
 
 -   Elija el subtipo de acuerdo con el tipo de información (aquí promediando, entonces es un valor numérico),
--   Ponga paréntesis en los cálculos, esto le permite estar seguro del resultado de la operación.,
+-   Ponga paréntesis en los cálculos, esto le permite estar seguro del resultado de la operación,
 -   Pon la unidad bien,
 -   Marque la casilla para iniciar sesión si es necesario,
 
@@ -141,7 +141,7 @@ Aquí, el subtipo de comando debe ser el mismo que los subtipos de comando contr
 
 ## Retroalimentación de estado virtual
 
-Cuando se utiliza un equipo que no tiene una retroalimentación de estado y si este equipo está controlado solo por Jeedom, es posible tener una retroalimentación de estado virtual. Esto requiere crear un virtual que tome los comandos de acciones (ej.: On & Off) del equipo y que tiene un comando de información (el estado). Luego debe completar la columna Parámetro para cada comando de acción, seleccionando el nombre del comando de información (estado) y dando el valor que debe tomar.
+Cuando se utiliza un equipo que no tiene una retroalimentación de estado y si este equipo está controlado solo por Jeedom, es posible tener una retroalimentación de estado virtual. Esto requiere crear un virtual que tome los comandos de acciones (ej: On & Off) del equipo y que tiene un comando de información (el estado). Luego debe completar la columna Parámetro para cada comando de acción, seleccionando el nombre del comando de información (estado) y dando el valor que debe tomar.
 
 También podemos imaginar una virtual que enciende / apaga varias lámparas (comandos de acciones separados por &&) y, por lo tanto, tiene un estado de este comando general.
 
@@ -152,6 +152,6 @@ Llamada API :
 
 ``http://#IP_JEEDOM#/core/api/jeeApi.php?apikey=#APIKEY_VIRTUEL#&type=virtual&type=virtual&id=#ID#&value=#value#``
 
-> **Note**
+> **Nota**
 >
 > Tenga cuidado de agregar un / jeedom después de \#IP\_JEEDOM\# si es necesario

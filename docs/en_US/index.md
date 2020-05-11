@@ -41,22 +41,22 @@ Here you find all the configuration of your equipment :
 -   **Name of the virtual device** : name of your virtual equipment,
 -   **Parent object** : indicates the parent object to which the equipment belongs,
 -   **Category** : equipment categories (it can belong to several categories),
--   **Activer** : makes your equipment active,
+-   **Activate** : makes your equipment active,
 -   **Visible** : makes it visible on the dashboard,
--   **Commentaire** : allows you to comment on equipment.
+-   **Comment** : allows you to comment on equipment.
 
 At the top right you have access to 4 buttons :
 
 -   **Expression** : the expression tester identical to that of the scenarios to facilitate the development of some virtual
 -   **Import equipment** : allows to automatically duplicate an existing equipment in a virtual one (saves time to split an equipment in 2 for example),
--   **Dupliquer** : duplicates current equipment,
+-   **Duplicate** : duplicates current equipment,
 -   **Advanced (notched wheels)** : displays advanced equipment options (common to all Jeedom plugins).
 
 Below you find the list of orders :
 
 -   the name displayed on the dashboard,
 -   type and subtype,
--   the value : allows to give the value of the command according to another command, a key (when we make a virtual switch), a calculation, etc..
+-   the value : allows to give the value of the command according to another command, a key (when we make a virtual switch), a calculation, etc.
 -   "Status feedback value "and" Duration before status feedback" : allows to indicate to Jeedom that after a change on the information its value must return to Y, X min after the change. Example : in the case of a presence detector which emits only during a presence detection, it is useful to set for example 0 in value and 4 in duration, so that 4 minutes after a detection of movement (and s' there has been no news since) Jeedom resets the value of the information to 0 (more movement detected),
 -   Unit : data unit (can be empty),
 -   Historize : allows to historize the data,
@@ -152,6 +152,6 @@ API call :
 
 ``http://#IP_JEEDOM#/core/api/jeeApi.php?apikey=#APIKEY_VIRTUEL#&type=virtual&type=virtual&id=#ID#&value=#value#``
 
-> **Note**
+> **NOTE**
 >
 > Be careful to add a / jeedom after \#IP\_JEEDOM\# if necessary

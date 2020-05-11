@@ -14,7 +14,7 @@
         "Supprimer": "Borrar",
         "Equipement": "Dispositivos",
         "Commandes": "Comandos",
-        "Nom de l'équipement virtuel": "Nombre del dispositivo virtual.",
+        "Nom de l'équipement virtuel": "Nombre del dispositivo virtual",
         "Objet parent": "Objeto padre",
         "Aucun": "Ninguna",
         "Catégorie": "Categoría",
@@ -65,7 +65,7 @@
         "Rafraichir": "Refrescar",
         "Impossible de trouver l\\'équipement : ": "Incapaz de encontrar el equipo:",
         "Vous ne pouvez importer la configuration d\\'un équipement virtuel": "No puede importar la configuración de un dispositivo virtual",
-        "Le nom de la commande info ne peut etre vide": "El nombre del comando info no puede estar vacío.",
+        "Le nom de la commande info ne peut etre vide": "El nombre del comando info no puede estar vacío",
         "Vous ne pouvez appeller la commande elle meme (boucle infinie) sur : ": "No puede invocar el comando en sí (bucle infinito) en:",
         "Vous ne pouvez faire un calcul sur la valeur elle meme (boucle infinie) : ": "No puede hacer un cálculo sobre el valor en sí (bucle infinito):",
         "La cible de la commande virtuel n\\'est pas un équipement de type virtuel": "El objetivo del comando virtual no es un dispositivo virtual"
