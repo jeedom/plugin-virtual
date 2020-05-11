@@ -1,11 +1,11 @@
 {
-    "id": "virtual",
-    "name": "Virtuel",
-    "description": "Plugin pour gérer des équipements virtuels",
-    "licence": "AGPL",
-    "author": "Loïc",
-    "require": "3.3",
-    "category": "programming",
-    "changelog": "https:\/\/doc.jeedom.com\/#language#\/plugins\/programming\/virtual\/changelog",
-    "documentation": "https:\/\/doc.jeedom.com\/#language#\/plugins\/programming\/virtual\/"
+  "id": "virtual",
+  "name": "Virtuel",
+  "description": "Plugin ajoutant le support pour créer des équipements virtuels dans Jeedom",
+  "licence": "AGPL",
+  "author": "Loïc",
+  "require": "3.3",
+  "category": "programming",
+  "changelog": "https:\/\/doc.jeedom.com\/#language#\/plugins\/programming\/virtual\/changelog",
+  "documentation": "https:\/\/doc.jeedom.com\/#language#\/plugins\/programming\/virtual\/"
 }
