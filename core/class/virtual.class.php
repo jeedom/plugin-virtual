@@ -316,11 +316,9 @@ class virtualCmd extends cmd {
 					if(is_string($result)){
 						$result = str_replace('"', '', $result);
 					}
-					//$this->event($result);
 					return $result;
 				} catch (Exception $e) {
 					log::add('virtual', 'info', $e->getMessage());
-					//$this->event($this->getConfiguration('calcul'));
 					return $this->getConfiguration('calcul');
 				}
 			}
