@@ -2,6 +2,8 @@
     "changelog.md": {
         "Changelog Virtuel": "Changelog Virtual",
         "Pour rappel s'il n'y a pas d'information sur la mise à jour, c'est que celle-ci concerne uniquement de la mise à jour de documentation, de traduction ou de texte": "Zur Erinnerung: Wenn keine Informationen zum Update vorhanden sind, bedeutet dies, dass es sich nur um die Aktualisierung von Dokumentation, Übersetzung oder Text handelt",
+        "16\/05\/2020": "16.05.2020",
+        "Correction d'un soucis de remonté en double des commandes de type information": "Behebung eines Problems mit doppelten Befehlen vom Typ Information",
         "23\/10\/2019": "23.10.2019",
         "Mise à jour de la doc": "Aktualisieren des Dokuments",
         "Supression forcé des \" lors d'un calcul sur une commande": "Erzwungenes Löschen von \"während einer Berechnung einer Bestellung",

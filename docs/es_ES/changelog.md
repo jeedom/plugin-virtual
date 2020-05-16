@@ -4,6 +4,10 @@
 >
 >Como recordatorio si no hay información sobre la actualización, significa que solo se refiere a la actualización de documentación, traducción o texto
 
+# 16/05/2020
+
+- Corrección de un problema con comandos de tipo de información duplicados
+
 # 23/10/2019
 
 - Actualizando el documento
