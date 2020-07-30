@@ -7,5 +7,7 @@
     "require": "3.3",
     "category": "programming",
     "changelog": "https:\/\/doc.jeedom.com\/#language#\/plugins\/programming\/virtual\/changelog",
-    "documentation": "https:\/\/doc.jeedom.com\/#language#\/plugins\/programming\/virtual\/"
+    "documentation": "https:\/\/doc.jeedom.com\/#language#\/plugins\/programming\/virtual\/",
+    "language" : ["fr_FR","en_US","de_DE","sp_SP"],
+    "compatibility" : ["miniplus","smart","rpi","docker","diy","mobile","v4"]
 }
