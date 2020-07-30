@@ -24,7 +24,7 @@ A configuração de dispositivos virtuais pode ser acessada no menu do plug-in :
 
 ![virtual2](../images/virtual2.png)
 
-É assim que a página do plugin virtual se parece (aqui já com um equipamento) :
+É assim que a página do plug-in virtual se parece (aqui, já com um) :
 
 ![virtual3](../images/virtual3.png)
 
@@ -34,7 +34,7 @@ A configuração de dispositivos virtuais pode ser acessada no menu do plug-in :
 
 > **Dica**
 >
-> Como em muitos lugares do Jeedom, colocar o mouse na extremidade esquerda permite que um menu de acesso rápido seja exibido (você sempre pode deixá-lo visível em seu perfil).
+> Como em muitos lugares do Jeedom, posicionar o mouse à extrema esquerda exibe um menu de acesso rápido (você pode, a partir do seu perfil, deixá-lo sempre visível).
 
 Aqui você encontra toda a configuração do seu equipamento :
 
@@ -48,24 +48,24 @@ Aqui você encontra toda a configuração do seu equipamento :
 No canto superior direito, você tem acesso a 4 botões :
 
 -   **Expressão** : o testador de expressão idêntico ao dos cenários para facilitar o desenvolvimento de algumas configurações virtuais
--   **Equipamento de importação** : permite duplicar automaticamente um equipamento existente em um virtual (economiza tempo para dividir um equipamento em 2, por exemplo),
+-   **Equipamento de importação** : permite duplicar automaticamente um dispositivo existente em um virtual (economiza tempo para dividir um dispositivo em 2, por exemplo),
 -   **Duplicar** : duplica o equipamento atual,
--   **Avançado (rodas dentadas)** : exibe opções avançadas de equipamento (comuns a todos os plugins Jeedom).
+-   **Avançado (rodas dentadas)** : permite exibir as opções avançadas do equipamento (comuns a todos os plugins Jeedom).
 
 Abaixo você encontra a lista de pedidos :
 
 -   o nome exibido no painel,
 -   tipo e subtipo,
 -   o valor : permite dar o valor do comando de acordo com outro comando, uma chave (quando fazemos uma troca virtual), um cálculo, etc.
--   "Valor do feedback do status "e" Duração antes do feedback do status" : permite indicar a Jeedom que após uma alteração nas informações, seu valor deve retornar a Y, X min após a alteração. Exemplo : no caso de um detector de presença que emite apenas durante uma detecção de presença, é útil definir, por exemplo, 0 em valor e 4 em duração, de modo que 4 minutos após a detecção de movimento (e s ' não houve notícias desde então) Jeedom redefine o valor das informações para 0 (mais movimento detectado),
+-   "Valor do feedback do status "e" Duração antes do feedback do status" : permite indicar a Jeedom que após uma alteração nas informações, seu valor deve retornar a Y, X min após a alteração. Exemplo : no caso de um detector de presença que emite apenas durante uma detecção de presença, é útil colocar, por exemplo, 0 em valor e 4 em duração, de modo que 4 minutos após a detecção de movimento (e se não houve nenhuma notícia desde então) O Jeedom redefine o valor da informação para 0 (nenhum movimento detectado),
 -   Unidade : unidade de dados (pode estar vazia),
 -   Historicizar : permite historiar os dados,
 -   Display : permite exibir os dados no painel,
 -   Evento : no caso do RFXcom, essa caixa sempre deve ser marcada, porque você não pode interrogar um módulo do RFXcom,
 -   min / max : limites de dados (podem estar vazios),
--   configuração avançada (pequenas rodas dentadas) : exibe a configuração avançada do comando (método de registro, widget etc.),
+-   Configuração avançada (pequenas rodas dentadas) : exibe a configuração avançada do comando (método de registro, widget etc.).),
 -   "Tester" : permite testar o comando,
--   excluir (assinar -) : permite excluir o comando.
+-   Excluir (assinar -) : permite excluir o comando.
 
 # Tutoriel
 
@@ -115,7 +115,7 @@ Em seguida, salve para ver o comando status aparecer :
 
 ![virtual15](../images/virtual15.png)
 
-Aqui é necessário no valor do comando action colocar ``not(\#[...][...][Etat]#)`` (substitua por seu próprio comando) e vincule o estado ao comando action (tenha cuidado, você não deve ocultar o comando state desta vez). Você também deve colocar o comando info no subtipo binário.
+Aqui é necessário no valor do comando action colocar ``not(\#[...][...][Etat]#)`` (substitua-o por seu próprio comando) e vincule o estado ao comando action (tenha cuidado, você não deve ocultar o comando state desta vez). Você também deve colocar o comando info no subtipo binário.
 
 Para fazer um cálculo em vários pedidos, é muito fácil ! Basta criar uma ordem do tipo de informação virtual e, no campo valor, colocar seus cálculos. O testador de expressão pode ajudá-lo com esta etapa para validar. Por exemplo, para média de 2 temperaturas :
 
@@ -123,7 +123,7 @@ Para fazer um cálculo em vários pedidos, é muito fácil ! Basta criar uma ord
 
 Vários pontos a serem feitos corretamente :
 
--   Escolha o subtipo de acordo com o tipo de informação (aqui a média é um número),
+-   Escolha o subtipo de acordo com o tipo de informação (aqui cálculo da média para que seja um numérico),
 -   Coloque parênteses nos cálculos, para ter certeza do resultado da operação,
 -   Coloque a unidade bem,
 -   Marque a caixa para registrar, se necessário,
@@ -137,11 +137,11 @@ Veremos aqui como fazer um pedido que desligará 2 luzes. Nada poderia ser mais 
 
 ![virtual11](../images/virtual11.png)
 
-Aqui, o subtipo de comando deve ser o mesmo que os subtipos de comando controlado; portanto, todos os comandos no campo de valor devem ter o mesmo subtipo (controle deslizante "todos os outros" ou todos " "ou todas as cores).
+Aqui, o subtipo do comando deve ser o mesmo que os subtipos dos comandos controlados, portanto, todos os comandos no campo de valor devem ter o mesmo subtipo (controle deslizante "todos os outros" ou todos " "ou todas as cores do tipo).
 
 ## Feedback do status virtual
 
-Ao usar equipamentos que não possuem feedback de status e se este equipamento é controlado apenas pela Jeedom, é possível ter um feedback de status virtual. Isso requer a criação de um virtual que execute os comandos de ações (ex: On & Off) do equipamento e que possui um comando info (o status). Em seguida, você deve preencher a coluna Parâmetro para cada comando de ação, selecionando o nome do comando info (status) e fornecendo o valor que ele deve assumir.
+Ao usar equipamentos que não possuem feedback de status e se este equipamento é controlado apenas pela Jeedom, é possível ter um feedback de status virtual. Isso requer a criação de um virtual que execute os comandos de ações (ex: On & Off) do equipamento e que possui um comando info (o). Em seguida, você deve preencher a coluna Parâmetro para cada comando de ação, selecionando o nome do comando info (status) e fornecendo o valor que ele deve assumir.
 
 Também podemos imaginar um virtual que liga / desliga várias lâmpadas (comandos de ações separados por &&) e, portanto, tem um status desse comando geral.
 

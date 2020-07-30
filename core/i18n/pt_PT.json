@@ -69,5 +69,8 @@
         "Vous ne pouvez appeller la commande elle meme (boucle infinie) sur : ": "Você não pode chamar o próprio comando (loop infinito) em:",
         "Vous ne pouvez faire un calcul sur la valeur elle meme (boucle infinie) : ": "Você não pode fazer um cálculo no próprio valor (loop infinito):",
         "La cible de la commande virtuel n\\'est pas un équipement de type virtuel": "O destino do comando virtual não é um dispositivo virtual"
+    },
+    "info.json": {
+        "Plugin ajoutant le support pour créer des équipements virtuels dans Jeedom": "Plugin adicionando suporte para criar equipamentos virtuais no Jeedom"
     }
 }

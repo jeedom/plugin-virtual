@@ -69,5 +69,8 @@
         "Vous ne pouvez appeller la commande elle meme (boucle infinie) sur : ": "Vous ne pouvez appeller la commande elle meme (boucle infinie) sur : ",
         "Vous ne pouvez faire un calcul sur la valeur elle meme (boucle infinie) : ": "Vous ne pouvez faire un calcul sur la valeur elle meme (boucle infinie) : ",
         "La cible de la commande virtuel n\\'est pas un équipement de type virtuel": "La cible de la commande virtuel n\\'est pas un équipement de type virtuel"
+    },
+    "info.json": {
+        "Plugin ajoutant le support pour créer des équipements virtuels dans Jeedom": "Plugin ajoutant le support pour créer des équipements virtuels dans Jeedom"
     }
 }

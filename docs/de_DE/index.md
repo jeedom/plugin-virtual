@@ -10,7 +10,7 @@ Ein virtuelles Gerät kann für die folgenden Anforderungen erstellt werden :
 -   Erstellen Sie ein Peripheriegerät, das von einer Quelle außerhalb von Jeedom (Zibase, IPX800 usw.) gespeist wird
 -   doppelte Ausrüstung, um sie beispielsweise in zwei Teile zu teilen;
 -   eine Berechnung für mehrere Gerätewerte durchführen;
--   mehrere Aktionen ausführen (Makro).
+-   Führen Sie mehrere Aktionen aus (Makro).
 
 # Configuration
 
@@ -24,7 +24,7 @@ Auf die Konfiguration virtueller Geräte kann über das Plugin-Menü zugegriffen
 
 ![virtual2](../images/virtual2.png)
 
-So sieht die virtuelle Plugin-Seite aus (hier mit bereits vorhandenem Gerät) :
+So sieht die virtuelle Plugin-Seite aus (hier mit bereits einem) :
 
 ![virtual3](../images/virtual3.png)
 
@@ -34,7 +34,7 @@ So sieht die Konfigurationsseite eines virtuellen Geräts aus :
 
 > **Spitze**
 >
-> Wie an vielen Stellen in Jeedom wird durch einfaches Bewegen der Maus ganz links ein Schnellzugriffsmenü angezeigt (Sie können es jederzeit in Ihrem Profil sichtbar lassen).
+> Wie an vielen Stellen in Jeedom wird durch einfaches Bewegen der Maus ganz links ein Schnellzugriffsmenü angezeigt (Sie können es in Ihrem Profil immer sichtbar lassen).
 
 Hier finden Sie die gesamte Konfiguration Ihrer Geräte :
 
@@ -48,24 +48,24 @@ Hier finden Sie die gesamte Konfiguration Ihrer Geräte :
 Oben rechts haben Sie Zugriff auf 4 Schaltflächen :
 
 -   **Ausdruck** : Der Ausdruckstester ist mit dem der Szenarien identisch, um die Entwicklung einiger virtueller Systeme zu erleichtern
--   **Ausrüstung importieren** : Ermöglicht das automatische Duplizieren eines vorhandenen Geräts in ein virtuelles Gerät (spart Zeit, um ein Gerät beispielsweise in zwei Teile zu teilen),
+-   **Ausrüstung importieren** : Mit dieser Option können Sie ein vorhandenes Gerät automatisch in ein virtuelles Gerät duplizieren (dies spart beispielsweise Zeit, um ein Gerät in zwei Teile aufzuteilen),
 -   **Duplikat** : dupliziert aktuelle Geräte,
--   **Fortgeschrittene (gekerbte Räder)** : zeigt erweiterte Ausstattungsoptionen an (allen Jeedom-Plugins gemeinsam).
+-   **Fortgeschrittene (Zahnräder)** : Ermöglicht die Anzeige der erweiterten Optionen des Geräts (allen Jeedom-Plugins gemeinsam).
 
 Nachfolgend finden Sie die Liste der Bestellungen :
 
 -   Der im Dashboard angezeigte Name,
 -   Typ und Subtyp,
 -   der Wert : ermöglicht es, den Wert des Befehls gemäß einem anderen Befehl, einem Schlüssel (wenn wir einen virtuellen Wechsel vornehmen), einer Berechnung usw. anzugeben.
--   "Statusrückmeldungswert "und" Dauer vor Statusrückmeldung" : ermöglicht es Jeedom anzuzeigen, dass nach einer Änderung der Informationen der Wert auf Y, X min nach der Änderung zurückkehren muss. Beispiel : Im Fall eines Anwesenheitsdetektors, der nur während einer Anwesenheitserkennung emittiert, ist es nützlich, beispielsweise 0 im Wert und 4 in der Dauer einzustellen, so dass 4 Minuten nach einer Bewegungserkennung (und s ') Seitdem gab es keine Neuigkeiten.) Jeedom setzt den Wert der Informationen auf 0 zurück (mehr Bewegung erkannt),
+-   "Statusrückmeldungswert "und" Dauer vor Statusrückmeldung" : ermöglicht es Jeedom anzuzeigen, dass nach einer Änderung der Informationen der Wert auf Y, X min nach der Änderung zurückkehren muss. Beispiel : Bei einem Anwesenheitsdetektor, der nur während einer Anwesenheitserkennung emittiert, ist es sinnvoll, beispielsweise 0 als Wert und 4 als Dauer anzugeben, so dass 4 Minuten nach einer Bewegungserkennung (und wenn Seitdem gab es keine Neuigkeiten mehr.) Jeedom setzt den Informationswert auf 0 zurück (keine Bewegung mehr erkannt),
 -   Unit : Dateneinheit (kann leer sein),
 -   Chronik : ermöglicht das Historisieren der Daten,
 -   Anzeige : ermöglicht die Anzeige der Daten im Dashboard,
 -   Ereignis : Bei RFXcom muss dieses Kontrollkästchen immer aktiviert sein, da Sie ein RFXcom-Modul nicht abfragen können,
 -   min / max : Datengrenzen (können leer sein),
--   erweiterte Konfiguration (kleine gekerbte Räder) : Zeigt die erweiterte Konfiguration des Befehls an (Protokollierungsmethode, Widget usw.),
+-   Erweiterte Konfiguration (kleine gekerbte Räder) : Zeigt die erweiterte Konfiguration des Befehls an (Protokollierungsmethode, Widget usw.).),
 -   "Tester" : Wird zum Testen des Befehls verwendet,
--   löschen (unterschreiben -) : ermöglicht das Löschen des Befehls.
+-   Löschen (unterschreiben -) : ermöglicht das Löschen des Befehls.
 
 # Tutoriel
 
@@ -79,7 +79,7 @@ Dann speichern Sie und dort fügt Jeedom automatisch den Befehl für virtuelle I
 
 ![virtual6](../images/virtual6.png)
 
-Fügen Sie in der Bestellung "Aktion hinzu" ``On`` und ``Off``, Die Bestellung ``Etat`` (Dadurch kann Jeedom die Verknüpfung mit dem Statusbefehl herstellen.).
+Fügen Sie in der Bestellung "Aktion hinzu" ``On`` und ``Off``, Die Bestellung ``Etat`` (Dadurch kann Jeedom die Verknüpfung mit dem Statusbefehl herstellen).
 
 Um ein schönes Widget zu haben, müssen Sie den Statusbefehl ausblenden :
 
@@ -115,7 +115,7 @@ Anschließend speichern Sie, um den Statusbefehl anzuzeigen :
 
 ![virtual15](../images/virtual15.png)
 
-Hier muss im Wert des Aktionsbefehls gesetzt werden ``not(\#[...][...][Etat]#)`` (durch Ihren eigenen Befehl ersetzen) und verknüpfen Sie den Status mit dem Aktionsbefehl (Vorsicht, diesmal sollten Sie den Statusbefehl nicht ausblenden). Sie müssen den Befehl info auch im binären Subtyp platzieren.
+Hier muss im Wert des Aktionsbefehls gesetzt werden ``not(\#[...][...][Etat]#)`` (Ersetzen Sie es durch Ihren eigenen Befehl) und verknüpfen Sie den Status mit dem Aktionsbefehl (Vorsicht, diesmal dürfen Sie den Statusbefehl nicht ausblenden). Sie müssen den Befehl info auch im binären Subtyp platzieren.
 
 Es ist sehr einfach, eine Berechnung für mehrere Bestellungen durchzuführen ! Erstellen Sie einfach eine virtuelle Informationstypreihenfolge und geben Sie im Wertefeld Ihre Berechnungen ein. Der Ausdruckstester kann Ihnen bei diesem Schritt bei der Validierung helfen. Zum Beispiel, um 2 Temperaturen zu mitteln :
 
@@ -123,7 +123,7 @@ Es ist sehr einfach, eine Berechnung für mehrere Bestellungen durchzuführen ! 
 
 Einige Punkte müssen richtig gemacht werden :
 
--   Wählen Sie den Subtyp entsprechend der Art der Informationen (hier gemittelt, also numerisch),
+-   Wählen Sie den Subtyp entsprechend der Art der Informationen (hier Berechnung des Durchschnitts, so dass es sich um eine Zahl handelt),
 -   Setzen Sie Klammern in die Berechnungen ein, damit Sie sicher sein können, dass das Ergebnis der Operation vorliegt,
 -   Stellen Sie das Gerät gut auf,
 -   Aktivieren Sie das Kontrollkästchen, um bei Bedarf zu protokollieren,
@@ -137,11 +137,11 @@ Wir werden hier sehen, wie man eine Bestellung aufgibt, die 2 Lichter ausschalte
 
 ![virtual11](../images/virtual11.png)
 
-Hier muss der Befehlssubtyp mit den gesteuerten Befehlssubtypen identisch sein, sodass alle Befehle im Wertefeld denselben Subtyp haben müssen (alle "andere" oder alle "Schieberegler) "oder alle Farben).
+Hier muss der Subtyp des Befehls mit den Subtypen der gesteuerten Befehle identisch sein, daher müssen alle Befehle im Wertefeld denselben Subtyp haben (alle "anderen" oder alle "Schieberegler) "oder alle vom Typ Farbe).
 
 ## Virtuelles Statusfeedback
 
-Bei Verwendung von Geräten ohne Statusrückmeldung und wenn dieses Gerät nur von Jeedom gesteuert wird, ist eine virtuelle Statusrückmeldung möglich. Dies erfordert das Erstellen einer virtuellen Datei, die die Aktionsbefehle ausführt (z: Ein & Aus) des Geräts und mit einem Info-Befehl (Status). Anschließend müssen Sie die Spalte Parameter für jeden Aktionsbefehl ausfüllen, indem Sie den Namen des Infobefehls (Status) auswählen und den Wert angeben, den er annehmen muss.
+Bei Verwendung von Geräten ohne Statusrückmeldung und wenn dieses Gerät nur von Jeedom gesteuert wird, ist eine virtuelle Statusrückmeldung möglich. Dies erfordert das Erstellen einer virtuellen Datei, die die Aktionsbefehle ausführt (z: Ein & Aus) des Geräts, das über einen Infobefehl verfügt (das). Anschließend müssen Sie die Spalte Parameter für jeden Aktionsbefehl ausfüllen, indem Sie den Namen des Infobefehls (Status) auswählen und den Wert angeben, den er annehmen muss.
 
 Wir können uns auch eine virtuelle vorstellen, die mehrere Lampen ein- und ausschaltet (durch && getrennte Aktionsbefehle) und somit den Status dieses allgemeinen Befehls hat.
 

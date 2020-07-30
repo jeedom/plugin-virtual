@@ -23,7 +23,7 @@
         "Auto-actualisation (cron)": "Actualización automática (cron)",
         "URL de retour": "URL de retorno",
         "Ajouter une info virtuelle": "Agregar información virtual",
-        "Ajouter une commande virtuelle": "Agregar un pedido virtual",
+        "Ajouter une commande virtuelle": "Agregar una acción virtual",
         "Nom": "Nombre",
         "Sous-Type": "Sub-tipo",
         "Valeur": "Valor",
@@ -69,5 +69,8 @@
         "Vous ne pouvez appeller la commande elle meme (boucle infinie) sur : ": "No puede invocar el comando en sí (bucle infinito) en:",
         "Vous ne pouvez faire un calcul sur la valeur elle meme (boucle infinie) : ": "No puede hacer un cálculo sobre el valor en sí (bucle infinito):",
         "La cible de la commande virtuel n\\'est pas un équipement de type virtuel": "El objetivo del comando virtual no es un dispositivo virtual"
+    },
+    "info.json": {
+        "Plugin ajoutant le support pour créer des équipements virtuels dans Jeedom": "Complemento que agrega soporte para crear equipos virtuales en Jeedom"
     }
 }
