@@ -1,0 +1,17 @@
+<div style="min-width:115px;min-height:100px;position: relative; top : -7px;padding:0px !important;" class="cmd tooltips cmd-widget cursor container-fluid history" data-type="info" data-subtype="numeric" data-cmd_id="#id#" data-cmd_uid="#uid#">
+		<div class="cmdName" style="margin-top:7px;font-size : 12px;">#name#</div>
+  		<div class="iconCmd#uid#" style="margin-bottom:0px;font-size: 3.3em;color: #A1C849"><i class="icon jeedom-thermometre"></i></div>
+  		<div>
+        <span style="font-size: 20px;font-weight: bold;color: #A1C849">#state# #unite#</span>
+  		</div>
+	<script>
+		$(".iconCmd#uid#").empty();
+		if (parseInt('#state#') < 18) {
+			$('.iconCmd#uid#').html('<i class="icon jeedom-thermo-froid"></i>');
+		} else if (parseInt('#state#') <= 24) {
+			$('.iconCmd#uid#').html('<i class="icon jeedom-thermo-moyen"></i>');
+		} else if (parseInt('#state#') > 24) {
+			$('.iconCmd#uid#').html('<i class="icon jeedom-thermo-chaud"></i>');
+		}
+	</script>
+</div>

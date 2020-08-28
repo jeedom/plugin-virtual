@@ -1,0 +1,48 @@
+{
+  "info_binaire": {
+    "name" : "Info Binaire",   
+   	"isEnable" :"1",
+   	"isVisible" :"1",
+    "category":{
+        "heating":"0",
+		"security":"0",
+		"energy":"0",
+		"light":"0",
+		"automatism":"1",
+		"multimedia":"0",
+		"default":"0"
+	  },
+	"configuration": {
+      "icone": "info_binaire"
+    },
+    "display":{
+      	"height":"312px",
+      	"width":"352px",
+      	"layout::dashboard": "table",
+        "layout::dashboard::table::parameters":{
+            "center":1,
+            "styletd":"padding:3px;"
+        },
+        "layout::dashboard::table::nbColumn":1,
+        "layout::dashboard::table::nbLine":2,
+      	"showNameOndashboard": 0
+     }, 
+
+    "commands": [
+      {
+        "name":"(Nom de l'info binaire)",
+        "type":"info",
+        "subType":"binary",
+        "isVisible":1,
+        "generic_type": "GENERIC_INFO",
+        "configuration":{
+          "calcul":""
+        },
+        "template": {
+          "dashboard": "virtual::Info_Binaire",
+          "mobile": "virtual::Info_Binaire"
+        }
+      }
+    ]
+  }
+}

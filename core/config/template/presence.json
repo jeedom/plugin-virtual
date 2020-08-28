@@ -1,0 +1,90 @@
+{
+  "presence": {
+    "name" : "Présence",  
+   	"isEnable" :"1",
+   	"isVisible" :"1",
+    "category":{
+        "heating":"0",
+		"security":"0",
+		"energy":"0",
+		"light":"0",
+		"automatism":"1",
+		"multimedia":"0",
+		"default":"0"
+	  },
+	"configuration": {
+      "icone": "presence"
+    },
+    "display":{
+      	"height":"312px",
+      	"width":"352px",
+      	"layout::dashboard": "table",
+        "layout::dashboard::table::parameters":{
+            "center":1,
+            "styletd":"padding:3px;"
+        },
+        "layout::dashboard::table::nbColumn":1,
+        "layout::dashboard::table::nbLine":2,
+      	"showNameOndashboard": 0
+     }, 
+
+    "commands": [
+      {
+        "name":"(Entrée le prénom de l'homme)",
+        "type":"info",
+        "subType":"binary",
+        "isVisible":1,
+        "generic_type": "PRESENCE",
+        "configuration":{
+          "calcul":""
+        },
+        "template": {
+          "dashboard": "virtual::Presence_Homme",
+          "mobile": "virtual::Presence_Homme"
+        }
+      },
+      {
+        "name":"(Entrée le prénom de la Femme)",
+        "type":"info",
+        "subType":"binary",
+        "isVisible":1,
+        "generic_type": "PRESENCE",
+        "configuration":{
+          "calcul":""
+        },
+        "template": {
+          "dashboard": "virtual::Presence_Femme",
+          "mobile": "virtual::Presence_Femme"
+        }
+      },
+      {
+        "name":"(Entrée le prénom du Garçon)",
+        "type":"info",
+        "subType":"binary",
+        "isVisible":1,
+        "generic_type": "PRESENCE",
+        "configuration":{
+          "calcul":""
+        },
+        "template": {
+          "dashboard": "virtual::Presence_Garcon",
+          "mobile": "virtual::Presence_Garcon"
+        }
+      },
+      {
+        "name":"(Entrée le prénom de la Fille)",
+        "type":"info",
+        "subType":"binary",
+        "isVisible":1,
+        "generic_type": "PRESENCE",
+        "configuration":{
+          "calcul":""
+        },
+        "template": {
+          "dashboard": "virtual::Presence_Fille",
+          "mobile": "virtual::Presence_Fille"
+        }
+      }
+    ]
+  }
+}

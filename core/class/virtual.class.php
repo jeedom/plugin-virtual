@@ -158,6 +158,127 @@ class virtual extends eqLogic {
 			$refresh->save();
 		}
 	}
+  
+  
+  	/*     * ***********Systeme de template pour les widgets***************** */
+  	public static function templateWidget(){
+      
+    $return = array('action' => array('string' => array()));
+	$return['action']['other']['Lum_ON_OFF'] = array(
+		'template' => 'tmplicon',
+		'replace' => array(
+			'#_icon_on_#' => '<img src=\'plugins/virtual/core/template/images/LumON.png\'>',
+			'#_icon_off_#' => '<img src=\'plugins/virtual/core/template/images/LumOFF.png\'>'
+			)
+	);
+    $return['action']['other']['ON_OFF'] = array(
+		'template' => 'tmplicon',
+		'replace' => array(
+			'#_icon_on_#' => '<img src=\'plugins/virtual/core/template/images/ToggleCircle_ON.png\'>',
+			'#_icon_off_#' => '<img src=\'plugins/virtual/core/template/images/ToggleCircle_OFF.png\'>'
+			)
+	);
+    $return['action']['other']['MANU_AUTO'] = array(
+		'template' => 'tmplicon',
+		'replace' => array(
+			'#_icon_on_#' => '<img src=\'plugins/virtual/core/template/images/AUTO.png\' style=\'width:65px;height:28px;\'>',
+			'#_icon_off_#' => '<img src=\'plugins/virtual/core/template/images/MANU.png\' style=\'width:65px;height:28px;\'>'
+			)
+	);
+    $return['action']['other']['Porte'] = array(
+		'template' => 'tmplicon',
+		'replace' => array(
+			'#_icon_on_#' => '<img src=\'plugins/virtual/core/template/images/DoorOpen.png\' >',
+			'#_icon_off_#' => '<img src=\'plugins/virtual/core/template/images/DoorClose.png\' >'
+			)
+	);  
+    $return['info']['binary']['Presence_Homme'] = array(
+		'template' => 'tmplicon',
+		'replace' => array(
+			'#_icon_on_#' => '<img src=\'plugins/virtual/core/template/images/icon_homme_prs.png\' >',
+			'#_icon_off_#' => '<img src=\'plugins/virtual/core/template/images/icon_homme_abs.png\' >'
+			)
+	);
+    $return['info']['binary']['Presence_Femme'] = array(
+		'template' => 'tmplicon',
+		'replace' => array(
+			'#_icon_on_#' => '<img src=\'plugins/virtual/core/template/images/icon_femme_prs.png\' >',
+			'#_icon_off_#' => '<img src=\'plugins/virtual/core/template/images/icon_femme_abs.png\' >'
+			)
+	);
+    $return['info']['binary']['Presence_Garcon'] = array(
+		'template' => 'tmplicon',
+		'replace' => array(
+			'#_icon_on_#' => '<img src=\'plugins/virtual/core/template/images/icon_garcon_prs.png\' >',
+			'#_icon_off_#' => '<img src=\'plugins/virtual/core/template/images/icon_garcon_abs.png\' >'
+			)
+	);
+    $return['info']['binary']['Presence_Fille'] = array(
+		'template' => 'tmplicon',
+		'replace' => array(
+			'#_icon_on_#' => '<img src=\'plugins/virtual/core/template/images/icon_fille_prs.png\' >',
+			'#_icon_off_#' => '<img src=\'plugins/virtual/core/template/images/icon_fille_abs.png\' >'
+			)
+	);
+    $return['info']['binary']['Info_Binaire'] = array(
+		'template' => 'tmplicon',
+		'replace' => array(
+			'#_icon_on_#' => '<img src=\'plugins/virtual/core/template/images/EnCours.png\' >',
+			'#_icon_off_#' => '<img src=\'plugins/virtual/core/template/images/Arret.png\' >'
+			)
+	);
+
+	$return['info']['numeric']['Volet'] = array(
+		'template' => 'tmplmultistate',
+		'test' => array(
+			array('operation' => '#value# == 0','state_light' => '<img src=\'plugins/virtual/core/template/images/Store-0.png\' >'),
+          	array('operation' => '#value# > 0 && #value# <= 35','state_light' => '<img src=\'plugins/virtual/core/template/images/Store-10.png\' >'),
+          	array('operation' => '#value# > 35 && #value# <= 45','state_light' => '<img src=\'plugins/virtual/core/template/images/Store-20.png\' >'),
+          	array('operation' => '#value# > 45 && #value# <= 55','state_light' => '<img src=\'plugins/virtual/core/template/images/Store-30.png\' >'),
+          	array('operation' => '#value# > 55 && #value# <= 63','state_light' => '<img src=\'plugins/virtual/core/template/images/Store-40.png\' >'),
+          	array('operation' => '#value# > 63 && #value# <= 73','state_light' => '<img src=\'plugins/virtual/core/template/images/Store-50.png\' >'),
+          	array('operation' => '#value# > 73 && #value# <= 84','state_light' => '<img src=\'plugins/virtual/core/template/images/Store-60.png\' >'),
+          	array('operation' => '#value# > 84 && #value# <= 92','state_light' => '<img src=\'plugins/virtual/core/template/images/Store-70.png\' >'),
+          	array('operation' => '#value# > 92 && #value# <= 95','state_light' => '<img src=\'plugins/virtual/core/template/images/Store-80.png\' >'),
+          	array('operation' => '#value# > 95','state_light' => '<img src=\'plugins/virtual/core/template/images/Store-99.png\' >')
+		)
+	);
+      
+    $return['action']['other']['Garage'] = array(
+		'template' => 'tmplicon',
+		'replace' => array(
+			'#_icon_on_#' => '<img src=\'plugins/virtual/core/template/images/garage_on.png\' >',
+			'#_icon_off_#' => '<img src=\'plugins/virtual/core/template/images/garage_off.png\' >'
+			)
+	);
+      
+    $return['action']['other']['Portail'] = array(
+		'template' => 'tmplicon',
+		'replace' => array(
+			'#_icon_on_#' => '<img src=\'plugins/virtual/core/template/images/Portail-100.png\' >',
+			'#_icon_off_#' => '<img src=\'plugins/virtual/core/template/images/Portail-00.png\' >'
+			)
+	);
+      
+    $return['action']['message']['Horaire'] = array(
+      	'template' => 'horaire'
+	);
+    
+    $return['info']['numeric']['Info_Numeric'] = array(
+      	'template' => 'num'
+	);  
+      
+    $return['info']['numeric']['Thermometreflat'] = array(
+      	'template' => 'thermometreflat'
+	); 
+      
+    $return['info']['numeric']['Humiditeflat'] = array(
+      	'template' => 'humiditeflat'
+	);
+      
+	return $return;
+      
+	}
 	
 	public function copyFromEqLogic($_eqLogic_id) {
 		$eqLogic = eqLogic::byId($_eqLogic_id);
