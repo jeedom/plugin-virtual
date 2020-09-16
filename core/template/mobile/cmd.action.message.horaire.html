@@ -1,9 +1,0 @@
-<div class="cmd cmd-widget reportModeHidden" data-type="action" data-subtype="message" data-cmd_id="#id#" data-cmd_uid="#uid#" data-version="#version#" data-eqLogic_id="#eqLogic_id#" style="width: 100px;">
-	<input type="time" class="form-control input-sm message" style="width: 90px;height: 30px;border-radius: 5px !important;" data-cmd_uid="#uid#" data-cmd_id="#id#" step="300" value="#state#">
-    <center><a class='btn btn-success btn-xs execute cmdName' style="background-color:#A1C849 !important;color:white !important;border-radius: 5px !important;">#valueName#</a></center>
-	<script>
-		$('.cmd[data-cmd_uid=#uid#]:last .execute').on('click', function() {
-			jeedom.cmd.execute({id: '#id#', value: {message: $('.cmd[data-cmd_uid=#uid#] .message').value()}});
-		});
-  </script>
-</div>

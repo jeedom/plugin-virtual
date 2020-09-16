@@ -21,9 +21,9 @@ require_once dirname(__FILE__) . '/../../../../core/php/core.inc.php';
 
 class virtual extends eqLogic {
 	/*     * *************************Attributs****************************** */
-	
+
 	/*     * ***********************Methode static*************************** */
-	
+
 	public static function event() {
 		log::add('virtual', 'debug', json_encode($_GET));
 		if (init('id') != '') {
@@ -52,7 +52,7 @@ class virtual extends eqLogic {
 		}
 		$cmd->event(init('value', init('v')));
 	}
-	
+
 	public static function cron() {
 		foreach (eqLogic::byType('virtual', true) as $eqLogic) {
 			$autorefresh = $eqLogic->getConfiguration('autorefresh');
@@ -68,7 +68,7 @@ class virtual extends eqLogic {
 			}
 		}
 	}
-	
+
 	public static function templateParameters($_template = ''){
 		$return = array();
 		foreach (ls(dirname(__FILE__) . '/../config/template', '*.json', false, array('files', 'quiet')) as $file) {
@@ -78,7 +78,7 @@ class virtual extends eqLogic {
 					$return += json_decode($content, true);
 				}
 			} catch (Exception $e) {
-				
+
 			}
 		}
 		if (isset($_template) && $_template != '') {
@@ -89,7 +89,7 @@ class virtual extends eqLogic {
 		}
 		return $return;
 	}
-	
+
 	public static function deadCmd() {
 		$return = array();
 		foreach (eqLogic::byType('virtual') as $virtual) {
@@ -110,7 +110,7 @@ class virtual extends eqLogic {
 		}
 		return $return;
 	}
-	
+
 	/*     * *********************Methode d'instance************************* */
 	public function applyTemplate($_template){
 		$template = self::templateParameters($_template);
@@ -119,7 +119,7 @@ class virtual extends eqLogic {
 		}
 		$this->import($template);
 	}
-	
+
 	public function refresh() {
 		try {
 			foreach ($this->getCmd('info') as $cmd) {
@@ -135,7 +135,7 @@ class virtual extends eqLogic {
 			log::add('virtual', 'error', __('Erreur pour ', __FILE__) . $eqLogic->getHumanName() . ' : ' . $exc->getMessage());
 		}
 	}
-	
+
 	public function postSave() {
 		$createRefreshCmd = true;
 		$refresh = $this->getCmd(null, 'refresh');
@@ -158,131 +158,12 @@ class virtual extends eqLogic {
 			$refresh->save();
 		}
 	}
-  
-  
-  	/*     * ***********Systeme de template pour les widgets***************** */
-  	public static function templateWidget(){
-      
-    $return = array('action' => array('string' => array()));
-	$return['action']['other']['Lum_ON_OFF'] = array(
-		'template' => 'tmplicon',
-		'replace' => array(
-			'#_icon_on_#' => '<img src=\'plugins/virtual/core/template/images/LumON.png\'>',
-			'#_icon_off_#' => '<img src=\'plugins/virtual/core/template/images/LumOFF.png\'>'
-			)
-	);
-    $return['action']['other']['ON_OFF'] = array(
-		'template' => 'tmplicon',
-		'replace' => array(
-			'#_icon_on_#' => '<img src=\'plugins/virtual/core/template/images/ToggleCircle_ON.png\'>',
-			'#_icon_off_#' => '<img src=\'plugins/virtual/core/template/images/ToggleCircle_OFF.png\'>'
-			)
-	);
-    $return['action']['other']['MANU_AUTO'] = array(
-		'template' => 'tmplicon',
-		'replace' => array(
-			'#_icon_on_#' => '<img src=\'plugins/virtual/core/template/images/AUTO.png\' style=\'width:65px;height:28px;\'>',
-			'#_icon_off_#' => '<img src=\'plugins/virtual/core/template/images/MANU.png\' style=\'width:65px;height:28px;\'>'
-			)
-	);
-    $return['action']['other']['Porte'] = array(
-		'template' => 'tmplicon',
-		'replace' => array(
-			'#_icon_on_#' => '<img src=\'plugins/virtual/core/template/images/DoorOpen.png\' >',
-			'#_icon_off_#' => '<img src=\'plugins/virtual/core/template/images/DoorClose.png\' >'
-			)
-	);  
-    $return['info']['binary']['Presence_Homme'] = array(
-		'template' => 'tmplicon',
-		'replace' => array(
-			'#_icon_on_#' => '<img src=\'plugins/virtual/core/template/images/icon_homme_prs.png\' >',
-			'#_icon_off_#' => '<img src=\'plugins/virtual/core/template/images/icon_homme_abs.png\' >'
-			)
-	);
-    $return['info']['binary']['Presence_Femme'] = array(
-		'template' => 'tmplicon',
-		'replace' => array(
-			'#_icon_on_#' => '<img src=\'plugins/virtual/core/template/images/icon_femme_prs.png\' >',
-			'#_icon_off_#' => '<img src=\'plugins/virtual/core/template/images/icon_femme_abs.png\' >'
-			)
-	);
-    $return['info']['binary']['Presence_Garcon'] = array(
-		'template' => 'tmplicon',
-		'replace' => array(
-			'#_icon_on_#' => '<img src=\'plugins/virtual/core/template/images/icon_garcon_prs.png\' >',
-			'#_icon_off_#' => '<img src=\'plugins/virtual/core/template/images/icon_garcon_abs.png\' >'
-			)
-	);
-    $return['info']['binary']['Presence_Fille'] = array(
-		'template' => 'tmplicon',
-		'replace' => array(
-			'#_icon_on_#' => '<img src=\'plugins/virtual/core/template/images/icon_fille_prs.png\' >',
-			'#_icon_off_#' => '<img src=\'plugins/virtual/core/template/images/icon_fille_abs.png\' >'
-			)
-	);
-    $return['info']['binary']['Info_Binaire'] = array(
-		'template' => 'tmplicon',
-		'replace' => array(
-			'#_icon_on_#' => '<img src=\'plugins/virtual/core/template/images/EnCours.png\' >',
-			'#_icon_off_#' => '<img src=\'plugins/virtual/core/template/images/Arret.png\' >'
-			)
-	);
 
-	$return['info']['numeric']['Volet'] = array(
-		'template' => 'tmplmultistate',
-		'test' => array(
-			array('operation' => '#value# == 0','state_light' => '<img src=\'plugins/virtual/core/template/images/Store-0.png\' >'),
-          	array('operation' => '#value# > 0 && #value# <= 35','state_light' => '<img src=\'plugins/virtual/core/template/images/Store-10.png\' >'),
-          	array('operation' => '#value# > 35 && #value# <= 45','state_light' => '<img src=\'plugins/virtual/core/template/images/Store-20.png\' >'),
-          	array('operation' => '#value# > 45 && #value# <= 55','state_light' => '<img src=\'plugins/virtual/core/template/images/Store-30.png\' >'),
-          	array('operation' => '#value# > 55 && #value# <= 63','state_light' => '<img src=\'plugins/virtual/core/template/images/Store-40.png\' >'),
-          	array('operation' => '#value# > 63 && #value# <= 73','state_light' => '<img src=\'plugins/virtual/core/template/images/Store-50.png\' >'),
-          	array('operation' => '#value# > 73 && #value# <= 84','state_light' => '<img src=\'plugins/virtual/core/template/images/Store-60.png\' >'),
-          	array('operation' => '#value# > 84 && #value# <= 92','state_light' => '<img src=\'plugins/virtual/core/template/images/Store-70.png\' >'),
-          	array('operation' => '#value# > 92 && #value# <= 95','state_light' => '<img src=\'plugins/virtual/core/template/images/Store-80.png\' >'),
-          	array('operation' => '#value# > 95','state_light' => '<img src=\'plugins/virtual/core/template/images/Store-99.png\' >')
-		)
-	);
-      
-    $return['action']['other']['Garage'] = array(
-		'template' => 'tmplicon',
-		'replace' => array(
-			'#_icon_on_#' => '<img src=\'plugins/virtual/core/template/images/garage_on.png\' >',
-			'#_icon_off_#' => '<img src=\'plugins/virtual/core/template/images/garage_off.png\' >'
-			)
-	);
-      
-    $return['action']['other']['Portail'] = array(
-		'template' => 'tmplicon',
-		'replace' => array(
-			'#_icon_on_#' => '<img src=\'plugins/virtual/core/template/images/Portail-100.png\' >',
-			'#_icon_off_#' => '<img src=\'plugins/virtual/core/template/images/Portail-00.png\' >'
-			)
-	);
-      
-    $return['action']['message']['Horaire'] = array(
-      	'template' => 'horaire'
-	);
-    
-    $return['info']['numeric']['Info_Numeric'] = array(
-      	'template' => 'num'
-	);  
-      
-    $return['info']['numeric']['Thermometreflat'] = array(
-      	'template' => 'thermometreflat'
-	); 
-      
-    $return['info']['numeric']['Humiditeflat'] = array(
-      	'template' => 'humiditeflat'
-	);
-      
-	return $return;
-      
-	}
-	
+
+
 	public function copyFromEqLogic($_eqLogic_id) {
 		$eqLogic = eqLogic::byId($_eqLogic_id);
-		
+
 		if (!is_object($eqLogic)) {
 			throw new Exception(__('Impossible de trouver l\'équipement : ', __FILE__) . $_eqLogic_id);
 		}
@@ -322,29 +203,29 @@ class virtual extends eqLogic {
 			try {
 				$cmd->save();
 			} catch (Exception $e) {
-				
+
 			}
 		}
 		$this->save();
 	}
-	
+
 	/*     * **********************Getteur Setteur*************************** */
 }
 
 class virtualCmd extends cmd {
 	/*     * *************************Attributs****************************** */
-	
+
 	/*     * ***********************Methode static*************************** */
-	
+
 	/*     * *********************Methode d'instance************************* */
-	
+
 	public function dontRemoveCmd() {
 		if ($this->getLogicalId() == 'refresh') {
 			return true;
 		}
 		return false;
 	}
-	
+
 	public function preSave() {
 		if ($this->getLogicalId() == 'refresh') {
 			return;
@@ -416,13 +297,13 @@ class virtualCmd extends cmd {
 			$this->setValue($value);
 		}
 	}
-	
+
 	public function postSave() {
 		if ($this->getType() == 'info' && $this->getConfiguration('virtualAction', 0) == '0' && $this->getConfiguration('calcul') != '') {
 			$this->event($this->execute());
 		}
 	}
-	
+
 	public function execute($_options = null) {
 		$eqLogic = $this->getEqLogic();
 		if ($this->getLogicalId() == 'refresh') {
@@ -455,7 +336,7 @@ class virtualCmd extends cmd {
 							try {
 								$cmd->execCmd($_options);
 							} catch (\Exception $e) {
-								
+
 							}
 						}
 					}
@@ -486,7 +367,7 @@ class virtualCmd extends cmd {
 			break;
 		}
 	}
-	
+
 	/*     * **********************Getteur Setteur*************************** */
 }
 

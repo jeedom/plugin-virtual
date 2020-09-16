@@ -12,9 +12,6 @@
 		"multimedia":"0",
 		"default":"0"
 	  },
-	"configuration": {
-      "icone": "volet"
-    },
     "display":{
       	"height":"312px",
       	"width":"352px",
@@ -40,10 +37,6 @@
           "minValue":0,
           "maxValue":99
         },
-        "template": {
-          "dashboard": "virtual::Volet",
-          "mobile": "virtual::Volet"
-        },
         "display":{
           "showNameOndashboard":0,
           "showNameOnmobile":0
@@ -68,10 +61,6 @@
           "infoName":"Bouton",
           "value":""
         },
-        "template": {
-          "dashboard": "",
-          "mobile": ""
-        },
         "display":{
           "showNameOndashboard":0,
           "showNameOnmobile":0,
@@ -89,10 +78,6 @@
           "infoName":"Bouton",
           "value":""
         },
-        "template": {
-          "dashboard": "",
-          "mobile": ""
-        },
         "display":{
           "showNameOndashboard":0,
           "showNameOnmobile":0,
@@ -109,10 +94,6 @@
           "virtualAction":"1",
           "infoName":"Bouton",
           "value":""
-        },
-        "template": {
-          "dashboard": "",
-          "mobile": ""
         },
         "display":{
           "showNameOndashboard":0,

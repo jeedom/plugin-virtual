@@ -12,9 +12,6 @@
 		"multimedia":"0",
 		"default":"0"
 	  },
-	"configuration": {
-      "icone": "plage_horaire"
-    },
     "display":{
       	"height":"312px",
       	"width":"352px",
@@ -51,10 +48,6 @@
           "infoName":"Lundi ON",
           "value":""
         },
-        "template": {
-          "dashboard": "virtual::Horaire",
-          "mobile": "virtual::Horaire"
-        },
         "display":{
           "showNameOndashboard":1,
           "showNameOnmobile":1
@@ -81,10 +74,6 @@
           "virtualAction":"1",
           "infoName":"Mardi ON",
           "value":""
-        },
-        "template": {
-          "dashboard": "virtual::Horaire",
-          "mobile": "virtual::Horaire"
         },
         "display":{
           "showNameOndashboard":1,
@@ -113,10 +102,6 @@
           "infoName":"Mercredi ON",
           "value":""
         },
-        "template": {
-          "dashboard": "virtual::Horaire",
-          "mobile": "virtual::Horaire"
-        },
         "display":{
           "showNameOndashboard":1,
           "showNameOnmobile":1
@@ -143,10 +128,6 @@
           "virtualAction":"1",
           "infoName":"Jeudi ON",
           "value":""
-        },
-        "template": {
-          "dashboard": "virtual::Horaire",
-          "mobile": "virtual::Horaire"
         },
         "display":{
           "showNameOndashboard":1,
@@ -175,10 +156,6 @@
           "infoName":"Vendredi ON",
           "value":""
         },
-        "template": {
-          "dashboard": "virtual::Horaire",
-          "mobile": "virtual::Horaire"
-        },
         "display":{
           "showNameOndashboard":1,
           "showNameOnmobile":1
@@ -205,10 +182,6 @@
           "virtualAction":"1",
           "infoName":"Samedi ON",
           "value":""
-        },
-        "template": {
-          "dashboard": "virtual::Horaire",
-          "mobile": "virtual::Horaire"
         },
         "display":{
           "showNameOndashboard":1,
@@ -237,10 +210,6 @@
           "infoName":"Dimanche ON",
           "value":""
         },
-        "template": {
-          "dashboard": "virtual::Horaire",
-          "mobile": "virtual::Horaire"
-        },
         "display":{
           "showNameOndashboard":1,
           "showNameOnmobile":1
@@ -267,10 +236,6 @@
           "virtualAction":"1",
           "infoName":"Lundi OFF",
           "value":""
-        },
-        "template": {
-          "dashboard": "virtual::Horaire",
-          "mobile": "virtual::Horaire"
         },
         "display":{
           "showNameOndashboard":1,
@@ -299,10 +264,6 @@
           "infoName":"Mardi OFF",
           "value":""
         },
-        "template": {
-          "dashboard": "virtual::Horaire",
-          "mobile": "virtual::Horaire"
-        },
         "display":{
           "showNameOndashboard":1,
           "showNameOnmobile":1
@@ -329,10 +290,6 @@
           "virtualAction":"1",
           "infoName":"Mercredi OFF",
           "value":""
-        },
-        "template": {
-          "dashboard": "virtual::Horaire",
-          "mobile": "virtual::Horaire"
         },
         "display":{
           "showNameOndashboard":1,
@@ -361,10 +318,6 @@
           "infoName":"Jeudi OFF",
           "value":""
         },
-        "template": {
-          "dashboard": "virtual::Horaire",
-          "mobile": "virtual::Horaire"
-        },
         "display":{
           "showNameOndashboard":1,
           "showNameOnmobile":1
@@ -391,10 +344,6 @@
           "virtualAction":"1",
           "infoName":"Vendredi OFF",
           "value":""
-        },
-        "template": {
-          "dashboard": "virtual::Horaire",
-          "mobile": "virtual::Horaire"
         },
         "display":{
           "showNameOndashboard":1,
@@ -423,10 +372,6 @@
           "infoName":"Samedi OFF",
           "value":""
         },
-        "template": {
-          "dashboard": "virtual::Horaire",
-          "mobile": "virtual::Horaire"
-        },
         "display":{
           "showNameOndashboard":1,
           "showNameOnmobile":1
@@ -453,10 +398,6 @@
           "virtualAction":"1",
           "infoName":"Dimanche OFF",
           "value":""
-        },
-        "template": {
-          "dashboard": "virtual::Horaire",
-          "mobile": "virtual::Horaire"
         },
         "display":{
           "showNameOndashboard":1,
@@ -485,10 +426,6 @@
           "infoName":"Etat",
           "value":"1"
         },
-        "template": {
-          "dashboard": "virtual::ON_OFF",
-          "mobile": "virtual::ON_OFF"
-        },
         "display":{
           "showNameOndashboard":0,
           "showNameOnmobile":0
@@ -504,10 +441,6 @@
           "virtualAction":"1",
           "infoName":"Etat",
           "value":"0"
-        },
-        "template": {
-          "dashboard": "virtual::ON_OFF",
-          "mobile": "virtual::ON_OFF"
         },
         "display":{
           "showNameOndashboard":0,

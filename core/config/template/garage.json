@@ -12,9 +12,6 @@
 		"multimedia":"0",
 		"default":"0"
 	  },
-	"configuration": {
-      "icone": "garage"
-    },
     "display":{
       	"height":"312px",
       	"width":"352px",
@@ -51,10 +48,6 @@
           "infoName":"Etat",
           "value":"1"
         },
-        "template": {
-          "dashboard": "virtual::Garage",
-          "mobile": "virtual::Garage"
-        },
         "display":{
           "showNameOndashboard":0,
           "showNameOnmobile":0
@@ -70,10 +63,6 @@
           "virtualAction":"1",
           "infoName":"Etat",
           "value":"0"
-        },
-        "template": {
-          "dashboard": "virtual::Garage",
-          "mobile": "virtual::Garage"
         },
         "display":{
           "showNameOndashboard":0,

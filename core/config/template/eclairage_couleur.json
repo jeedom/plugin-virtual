@@ -12,9 +12,6 @@
 		"multimedia":"0",
 		"default":"0"
 	  },
-	"configuration": {
-      "icone": "eclairage_couleur"
-    },
     "display":{
       	"height":"312px",
       	"width":"352px",
@@ -51,10 +48,6 @@
           "infoName":"Etat",
           "value":"1"
         },
-        "template": {
-          "dashboard": "virtual::Lum_ON_OFF",
-          "mobile": "virtual::Lum_ON_OFF"
-        },
         "display":{
           "showNameOndashboard":0,
           "showNameOnmobile":0
@@ -70,10 +63,6 @@
           "virtualAction":"1",
           "infoName":"Etat",
           "value":"0"
-        },
-        "template": {
-          "dashboard": "virtual::Lum_ON_OFF",
-          "mobile": "virtual::Lum_ON_OFF"
         },
         "display":{
           "showNameOndashboard":0,
@@ -91,10 +80,6 @@
           "maxValue":"99",
           "infoName":"Etat"
         },
-        "template": {
-          "dashboard": "",
-          "mobile": ""
-        },
         "display":{
           "showNameOndashboard":0,
           "showNameOnmobile":0
@@ -109,10 +94,6 @@
         "configuration":{
           "calcul":""
         },
-        "template": {
-          "dashboard": "core::line",
-          "mobile": "core::line"
-        },
         "display":{
           "showNameOndashboard":0,
           "showNameOnmobile":0
@@ -126,10 +107,6 @@
         "generic_type": "LIGHT_SET_COLOR",
         "configuration":{
           "infoName":"Etat couleur"
-        },
-        "template": {
-          "dashboard": "",
-          "mobile": ""
         },
         "display":{
           "showNameOndashboard":0,
