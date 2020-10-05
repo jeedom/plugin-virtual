@@ -1,0 +1,106 @@
+{
+  "volet": {
+    "name" : "Volet",   
+   	"isEnable" :"1",
+   	"isVisible" :"1",
+    "category":{
+        "heating":"0",
+		"security":"0",
+		"energy":"0",
+		"light":"0",
+		"automatism":"1",
+		"multimedia":"0",
+		"default":"0"
+	  },
+    "display":{
+      	"height":"312px",
+      	"width":"352px",
+      	"layout::dashboard": "table",
+        "layout::dashboard::table::parameters":{
+            "center":1,
+            "styletd":"padding:3px;"
+        },
+        "layout::dashboard::table::nbColumn":1,
+        "layout::dashboard::table::nbLine":2,
+      	"showNameOndashboard": 0
+     },
+
+    "commands": [
+      {
+        "name":"Etat",
+        "type":"info",
+        "subType":"numeric",
+        "isVisible":1,
+        "generic_type": "FLAP_STATE",
+        "configuration":{
+          "calcul":"",
+          "minValue":0,
+          "maxValue":99
+        },
+        "display":{
+          "showNameOndashboard":0,
+          "showNameOnmobile":0
+      	}
+      },
+      {
+        "name":"Bouton",
+        "type":"info",
+        "subType":"string",
+        "isVisible":0,
+        "generic_type": ""
+      },
+      {
+        "name":"up",
+        "type":"action",
+        "subType":"other",
+        "value" : "up",
+        "generic_type": "FLAP_UP",
+        "unite":"",
+        "configuration":{
+          "virtualAction":"1",
+          "infoName":"Bouton",
+          "value":""
+        },
+        "display":{
+          "showNameOndashboard":0,
+          "showNameOnmobile":0,
+          "icon":"<i class=\"fas fa-chevron-up\"><\/i>"
+      	}
+      },
+      {
+        "name":"stop",
+        "type":"action",
+        "subType":"other",
+        "value" : "stop",
+        "generic_type": "FLAP_STOP",
+        "configuration":{
+          "virtualAction":"1",
+          "infoName":"Bouton",
+          "value":""
+        },
+        "display":{
+          "showNameOndashboard":0,
+          "showNameOnmobile":0,
+          "icon":"<i class=\"fas fa-stop\"><\/i>"
+      	}
+      },
+      {
+        "name":"down",
+        "type":"action",
+        "subType":"other",
+        "value" : "down",
+        "generic_type": "FLAP_DOWN",
+        "configuration":{
+          "virtualAction":"1",
+          "infoName":"Bouton",
+          "value":""
+        },
+        "display":{
+          "showNameOndashboard":0,
+          "showNameOnmobile":0,
+          "icon":"<i class=\"fas fa-chevron-down\"><\/i>"
+      	}
+      }
+    ]
+  }
+}

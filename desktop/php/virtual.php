@@ -21,14 +21,18 @@ $eqLogics = eqLogic::byType($plugin->getId());
 		<input class="form-control" placeholder="{{Rechercher}}" id="in_searchEqlogic" />
 		<div class="eqLogicThumbnailContainer">
 			<?php
-			foreach ($eqLogics as $eqLogic) {
-				$opacity = ($eqLogic->getIsEnable()) ? '' : 'disableCard';
-				echo '<div class="eqLogicDisplayCard cursor '.$opacity.'" data-eqLogic_id="' . $eqLogic->getId() . '" >';
-				echo '<img src="' . $plugin->getPathImgIcon() . '" />';
-				echo '<br>';
-				echo '<span class="name">' . $eqLogic->getHumanName(true, true) . '</span>';
-				echo '</div>';
-			}
+					foreach ($eqLogics as $eqLogic) {
+						$opacity = ($eqLogic->getIsEnable()) ? '' : 'disableCard';
+						echo '<div class="eqLogicDisplayCard cursor '.$opacity.'" data-eqLogic_id="' . $eqLogic->getId() . '">';
+						$file='plugins/virtual/core/config/template/'.$eqLogic->getConfiguration('icone').'.png';
+						if(file_exists($file))					
+							echo '<img src="'.$file.'" height="105" width="95" />';
+						else
+							echo '<img src="' . $plugin->getPathImgIcon() . '"/>';
+						echo '<br>';
+						echo '<span class="name">' . $eqLogic->getHumanName(true, true) . '</span>';
+						echo '</div>';
+					}
 			?>
 		</div>
 	</div>

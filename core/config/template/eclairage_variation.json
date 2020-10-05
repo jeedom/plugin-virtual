@@ -1,0 +1,90 @@
+{
+  "eclairage_variation": {
+    "name" : "Eclairage Variation",   
+   	"isEnable" :"1",
+   	"isVisible" :"1",
+    "category":{
+        "heating":"0",
+		"security":"0",
+		"energy":"0",
+		"light":"1",
+		"automatism":"0",
+		"multimedia":"0",
+		"default":"0"
+	  },
+    "display":{
+      	"height":"312px",
+      	"width":"352px",
+      	"layout::dashboard": "table",
+        "layout::dashboard::table::parameters":{
+            "center":1,
+            "styletd":"padding:3px;"
+        },
+        "layout::dashboard::table::nbColumn":1,
+        "layout::dashboard::table::nbLine":2,
+      	"showNameOndashboard": 0
+     },
+
+    "commands": [
+      {
+        "name":"Etat",
+        "type":"info",
+        "subType":"numeric",
+        "isVisible":0,
+        "generic_type": "LIGHT_STATE",
+        "configuration":{
+          "calcul":""
+        }
+      },
+      {
+        "name":"on",
+        "type":"action",
+        "subType":"other",
+        "value" : "Etat",
+        "generic_type": "LIGHT_ON",
+        "unite":"",
+        "configuration":{
+          "virtualAction":"1",
+          "infoName":"Etat",
+          "value":"1"
+        },
+        "display":{
+          "showNameOndashboard":0,
+          "showNameOnmobile":0
+      	}
+      },
+      {
+        "name":"off",
+        "type":"action",
+        "subType":"other",
+        "value" : "Etat",
+        "generic_type": "LIGHT_OFF",
+        "configuration":{
+          "virtualAction":"1",
+          "infoName":"Etat",
+          "value":"0"
+        },
+        "display":{
+          "showNameOndashboard":0,
+          "showNameOnmobile":0
+      	}
+      },
+      {
+        "name":"variation",
+        "type":"action",
+        "subType":"slider",
+        "value" : "Etat",
+        "generic_type": "LIGHT_SLIDER",
+        "configuration":{
+          "minValue":"0",
+          "maxValue":"99",
+          "infoName":"Etat"
+        },
+        "display":{
+          "showNameOndashboard":0,
+          "showNameOnmobile":0
+      	}
+      }
+    ]
+  }
+}

@@ -1,0 +1,452 @@
+{
+  "plage_horaire": {
+    "name" : "Plage Horaire",   
+   	"isEnable" :"1",
+   	"isVisible" :"1",
+    "category":{
+        "heating":"0",
+		"security":"0",
+		"energy":"0",
+		"light":"0",
+		"automatism":"1",
+		"multimedia":"0",
+		"default":"0"
+	  },
+    "display":{
+      	"height":"312px",
+      	"width":"352px",
+      	"layout::dashboard": "table",
+        "layout::dashboard::table::parameters":{
+            "center":1,
+            "styletd":"padding:3px;"
+        },
+        "layout::dashboard::table::nbColumn":7,
+        "layout::dashboard::table::nbLine":2,
+      	"showNameOndashboard": 0
+     },
+
+    "commands": [
+      {
+        "name":"Lundi ON",
+        "type":"info",
+        "subType":"string",
+        "isVisible":0,
+        "generic_type": "",
+        "configuration":{
+          "calcul":""
+        }
+      },
+      {
+        "name":"Lundi_action_ON",
+        "type":"action",
+        "subType":"message",
+        "value" : "Lundi ON",
+        "generic_type": "",
+        "unite":"",
+        "configuration":{
+          "virtualAction":"1",
+          "infoName":"Lundi ON",
+          "value":""
+        },
+        "display":{
+          "showNameOndashboard":1,
+          "showNameOnmobile":1
+      	}
+      },
+      {
+        "name":"Mardi ON",
+        "type":"info",
+        "subType":"string",
+        "isVisible":0,
+        "generic_type": "",
+        "configuration":{
+          "calcul":""
+        }
+      },
+      {
+        "name":"Mardi_action_ON",
+        "type":"action",
+        "subType":"message",
+        "value" : "Mardi ON",
+        "generic_type": "",
+        "unite":"",
+        "configuration":{
+          "virtualAction":"1",
+          "infoName":"Mardi ON",
+          "value":""
+        },
+        "display":{
+          "showNameOndashboard":1,
+          "showNameOnmobile":1
+      	}
+      },
+      {
+        "name":"Mercredi ON",
+        "type":"info",
+        "subType":"string",
+        "isVisible":0,
+        "generic_type": "",
+        "configuration":{
+          "calcul":""
+        }
+      },
+      {
+        "name":"Mercredi_action_ON",
+        "type":"action",
+        "subType":"message",
+        "value" : "Mercredi ON",
+        "generic_type": "",
+        "unite":"",
+        "configuration":{
+          "virtualAction":"1",
+          "infoName":"Mercredi ON",
+          "value":""
+        },
+        "display":{
+          "showNameOndashboard":1,
+          "showNameOnmobile":1
+      	}
+      },
+      {
+        "name":"Jeudi ON",
+        "type":"info",
+        "subType":"string",
+        "isVisible":0,
+        "generic_type": "",
+        "configuration":{
+          "calcul":""
+        }
+      },
+      {
+        "name":"Jeudi_action_ON",
+        "type":"action",
+        "subType":"message",
+        "value" : "Jeudi ON",
+        "generic_type": "",
+        "unite":"",
+        "configuration":{
+          "virtualAction":"1",
+          "infoName":"Jeudi ON",
+          "value":""
+        },
+        "display":{
+          "showNameOndashboard":1,
+          "showNameOnmobile":1
+      	}
+      },
+      {
+        "name":"Vendredi ON",
+        "type":"info",
+        "subType":"string",
+        "isVisible":0,
+        "generic_type": "",
+        "configuration":{
+          "calcul":""
+        }
+      },
+      {
+        "name":"Vendredi_action_ON",
+        "type":"action",
+        "subType":"message",
+        "value" : "Vendredi ON",
+        "generic_type": "",
+        "unite":"",
+        "configuration":{
+          "virtualAction":"1",
+          "infoName":"Vendredi ON",
+          "value":""
+        },
+        "display":{
+          "showNameOndashboard":1,
+          "showNameOnmobile":1
+      	}
+      },
+      {
+        "name":"Samedi ON",
+        "type":"info",
+        "subType":"string",
+        "isVisible":0,
+        "generic_type": "",
+        "configuration":{
+          "calcul":""
+        }
+      },
+      {
+        "name":"Samedi_action_ON",
+        "type":"action",
+        "subType":"message",
+        "value" : "Samedi ON",
+        "generic_type": "",
+        "unite":"",
+        "configuration":{
+          "virtualAction":"1",
+          "infoName":"Samedi ON",
+          "value":""
+        },
+        "display":{
+          "showNameOndashboard":1,
+          "showNameOnmobile":1
+      	}
+      },
+      {
+        "name":"Dimanche ON",
+        "type":"info",
+        "subType":"string",
+        "isVisible":0,
+        "generic_type": "",
+        "configuration":{
+          "calcul":""
+        }
+      },
+      {
+        "name":"Dimanche_action_ON",
+        "type":"action",
+        "subType":"message",
+        "value" : "Dimanche ON",
+        "generic_type": "",
+        "unite":"",
+        "configuration":{
+          "virtualAction":"1",
+          "infoName":"Dimanche ON",
+          "value":""
+        },
+        "display":{
+          "showNameOndashboard":1,
+          "showNameOnmobile":1
+      	}
+      },
+      {
+        "name":"Lundi OFF",
+        "type":"info",
+        "subType":"string",
+        "isVisible":0,
+        "generic_type": "",
+        "configuration":{
+          "calcul":""
+        }
+      },
+      {
+        "name":"Lundi_action_OFF",
+        "type":"action",
+        "subType":"message",
+        "value" : "Lundi OFF",
+        "generic_type": "",
+        "unite":"",
+        "configuration":{
+          "virtualAction":"1",
+          "infoName":"Lundi OFF",
+          "value":""
+        },
+        "display":{
+          "showNameOndashboard":1,
+          "showNameOnmobile":1
+      	}
+      },
+      {
+        "name":"Mardi OFF",
+        "type":"info",
+        "subType":"string",
+        "isVisible":0,
+        "generic_type": "",
+        "configuration":{
+          "calcul":""
+        }
+      },
+      {
+        "name":"Mardi_action_OFF",
+        "type":"action",
+        "subType":"message",
+        "value" : "Mardi OFF",
+        "generic_type": "",
+        "unite":"",
+        "configuration":{
+          "virtualAction":"1",
+          "infoName":"Mardi OFF",
+          "value":""
+        },
+        "display":{
+          "showNameOndashboard":1,
+          "showNameOnmobile":1
+      	}
+      },
+      {
+        "name":"Mercredi OFF",
+        "type":"info",
+        "subType":"string",
+        "isVisible":0,
+        "generic_type": "",
+        "configuration":{
+          "calcul":""
+        }
+      },
+      {
+        "name":"Mercredi_action_OFF",
+        "type":"action",
+        "subType":"message",
+        "value" : "Mercredi OFF",
+        "generic_type": "",
+        "unite":"",
+        "configuration":{
+          "virtualAction":"1",
+          "infoName":"Mercredi OFF",
+          "value":""
+        },
+        "display":{
+          "showNameOndashboard":1,
+          "showNameOnmobile":1
+      	}
+      },
+      {
+        "name":"Jeudi OFF",
+        "type":"info",
+        "subType":"string",
+        "isVisible":0,
+        "generic_type": "",
+        "configuration":{
+          "calcul":""
+        }
+      },
+      {
+        "name":"Jeudi_action_OFF",
+        "type":"action",
+        "subType":"message",
+        "value" : "Jeudi OFF",
+        "generic_type": "",
+        "unite":"",
+        "configuration":{
+          "virtualAction":"1",
+          "infoName":"Jeudi OFF",
+          "value":""
+        },
+        "display":{
+          "showNameOndashboard":1,
+          "showNameOnmobile":1
+      	}
+      },
+      {
+        "name":"Vendredi OFF",
+        "type":"info",
+        "subType":"string",
+        "isVisible":0,
+        "generic_type": "",
+        "configuration":{
+          "calcul":""
+        }
+      },
+      {
+        "name":"Vendredi_action_OFF",
+        "type":"action",
+        "subType":"message",
+        "value" : "Vendredi OFF",
+        "generic_type": "",
+        "unite":"",
+        "configuration":{
+          "virtualAction":"1",
+          "infoName":"Vendredi OFF",
+          "value":""
+        },
+        "display":{
+          "showNameOndashboard":1,
+          "showNameOnmobile":1
+      	}
+      },
+      {
+        "name":"Samedi OFF",
+        "type":"info",
+        "subType":"string",
+        "isVisible":0,
+        "generic_type": "",
+        "configuration":{
+          "calcul":""
+        }
+      },
+      {
+        "name":"Samedi_action_OFF",
+        "type":"action",
+        "subType":"message",
+        "value" : "Samedi OFF",
+        "generic_type": "",
+        "unite":"",
+        "configuration":{
+          "virtualAction":"1",
+          "infoName":"Samedi OFF",
+          "value":""
+        },
+        "display":{
+          "showNameOndashboard":1,
+          "showNameOnmobile":1
+      	}
+      },
+      {
+        "name":"Dimanche OFF",
+        "type":"info",
+        "subType":"string",
+        "isVisible":0,
+        "generic_type": "",
+        "configuration":{
+          "calcul":""
+        }
+      },
+      {
+        "name":"Dimanche_action_OFF",
+        "type":"action",
+        "subType":"message",
+        "value" : "Dimanche OFF",
+        "generic_type": "",
+        "unite":"",
+        "configuration":{
+          "virtualAction":"1",
+          "infoName":"Dimanche OFF",
+          "value":""
+        },
+        "display":{
+          "showNameOndashboard":1,
+          "showNameOnmobile":1
+      	}
+      },
+      {
+        "name":"Etat",
+        "type":"info",
+        "subType":"binary",
+        "isVisible":0,
+        "generic_type": "",
+        "configuration":{
+          "calcul":""
+        }
+      },
+      {
+        "name":"on",
+        "type":"action",
+        "subType":"other",
+        "value" : "Etat",
+        "generic_type": "",
+        "unite":"",
+        "configuration":{
+          "virtualAction":"1",
+          "infoName":"Etat",
+          "value":"1"
+        },
+        "display":{
+          "showNameOndashboard":0,
+          "showNameOnmobile":0
+      	}
+      },
+      {
+        "name":"off",
+        "type":"action",
+        "subType":"other",
+        "value" : "Etat",
+        "generic_type": "",
+        "configuration":{
+          "virtualAction":"1",
+          "infoName":"Etat",
+          "value":"0"
+        },
+        "display":{
+          "showNameOndashboard":0,
+          "showNameOnmobile":0
+      	}
+      }
+    ]
+  }
+}
