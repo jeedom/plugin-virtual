@@ -21,9 +21,9 @@ require_once dirname(__FILE__) . '/../../../../core/php/core.inc.php';
 
 class virtual extends eqLogic {
 	/*     * *************************Attributs****************************** */
-
+	
 	/*     * ***********************Methode static*************************** */
-
+	
 	public static function event() {
 		log::add('virtual', 'debug', json_encode($_GET));
 		if (init('id') != '') {
@@ -52,7 +52,7 @@ class virtual extends eqLogic {
 		}
 		$cmd->event(init('value', init('v')));
 	}
-
+	
 	public static function cron() {
 		foreach (eqLogic::byType('virtual', true) as $eqLogic) {
 			$autorefresh = $eqLogic->getConfiguration('autorefresh');
@@ -68,7 +68,7 @@ class virtual extends eqLogic {
 			}
 		}
 	}
-
+	
 	public static function templateParameters($_template = ''){
 		$return = array();
 		foreach (ls(dirname(__FILE__) . '/../config/template', '*.json', false, array('files', 'quiet')) as $file) {
@@ -78,7 +78,7 @@ class virtual extends eqLogic {
 					$return += json_decode($content, true);
 				}
 			} catch (Exception $e) {
-
+				
 			}
 		}
 		if (isset($_template) && $_template != '') {
@@ -89,7 +89,7 @@ class virtual extends eqLogic {
 		}
 		return $return;
 	}
-
+	
 	public static function deadCmd() {
 		$return = array();
 		foreach (eqLogic::byType('virtual') as $virtual) {
@@ -110,7 +110,7 @@ class virtual extends eqLogic {
 		}
 		return $return;
 	}
-
+	
 	/*     * *********************Methode d'instance************************* */
 	public function applyTemplate($_template){
 		$template = self::templateParameters($_template);
@@ -119,7 +119,7 @@ class virtual extends eqLogic {
 		}
 		$this->import($template);
 	}
-
+	
 	public function refresh() {
 		try {
 			foreach ($this->getCmd('info') as $cmd) {
@@ -135,7 +135,7 @@ class virtual extends eqLogic {
 			log::add('virtual', 'error', __('Erreur pour ', __FILE__) . $eqLogic->getHumanName() . ' : ' . $exc->getMessage());
 		}
 	}
-
+	
 	public function postSave() {
 		$createRefreshCmd = true;
 		$refresh = $this->getCmd(null, 'refresh');
@@ -158,12 +158,12 @@ class virtual extends eqLogic {
 			$refresh->save();
 		}
 	}
-
-
-
+	
+	
+	
 	public function copyFromEqLogic($_eqLogic_id) {
 		$eqLogic = eqLogic::byId($_eqLogic_id);
-
+		
 		if (!is_object($eqLogic)) {
 			throw new Exception(__('Impossible de trouver l\'équipement : ', __FILE__) . $_eqLogic_id);
 		}
@@ -203,29 +203,29 @@ class virtual extends eqLogic {
 			try {
 				$cmd->save();
 			} catch (Exception $e) {
-
+				
 			}
 		}
 		$this->save();
 	}
-
+	
 	/*     * **********************Getteur Setteur*************************** */
 }
 
 class virtualCmd extends cmd {
 	/*     * *************************Attributs****************************** */
-
+	
 	/*     * ***********************Methode static*************************** */
-
+	
 	/*     * *********************Methode d'instance************************* */
-
+	
 	public function dontRemoveCmd() {
 		if ($this->getLogicalId() == 'refresh') {
 			return true;
 		}
 		return false;
 	}
-
+	
 	public function preSave() {
 		if ($this->getLogicalId() == 'refresh') {
 			return;
@@ -243,6 +243,9 @@ class virtualCmd extends cmd {
 		if ($this->getType() == 'action') {
 			if ($this->getConfiguration('infoName') == '') {
 				throw new Exception(__('Le nom de la commande info ne peut etre vide', __FILE__));
+			}
+			if (strpos($this->getConfiguration('infoName'),'core::jeeObject::summary') !== false) {
+				return;
 			}
 			$cmd = cmd::byId(str_replace('#', '', $this->getConfiguration('infoName')));
 			if (is_object($cmd)) {
@@ -297,13 +300,13 @@ class virtualCmd extends cmd {
 			$this->setValue($value);
 		}
 	}
-
+	
 	public function postSave() {
 		if ($this->getType() == 'info' && $this->getConfiguration('virtualAction', 0) == '0' && $this->getConfiguration('calcul') != '') {
 			$this->event($this->execute());
 		}
 	}
-
+	
 	public function execute($_options = null) {
 		$eqLogic = $this->getEqLogic();
 		if ($this->getLogicalId() == 'refresh') {
@@ -326,6 +329,10 @@ class virtualCmd extends cmd {
 			}
 			break;
 			case 'action':
+			if (strpos($this->getConfiguration('infoName'),'core::jeeObject::summary') !== false) {
+				jeeObject::actionOnSummary($this,$_options);
+				return;
+			}
 			$virtualCmd = virtualCmd::byId($this->getConfiguration('infoId'));
 			if (!is_object($virtualCmd)) {
 				$cmds = explode('&&', $this->getConfiguration('infoName'));
@@ -336,7 +343,7 @@ class virtualCmd extends cmd {
 							try {
 								$cmd->execCmd($_options);
 							} catch (\Exception $e) {
-
+								
 							}
 						}
 					}
@@ -367,7 +374,7 @@ class virtualCmd extends cmd {
 			break;
 		}
 	}
-
+	
 	/*     * **********************Getteur Setteur*************************** */
 }
 
