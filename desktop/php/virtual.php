@@ -24,11 +24,12 @@ $eqLogics = eqLogic::byType($plugin->getId());
 			foreach ($eqLogics as $eqLogic) {
 				$opacity = ($eqLogic->getIsEnable()) ? '' : 'disableCard';
 				echo '<div class="eqLogicDisplayCard cursor '.$opacity.'" data-eqLogic_id="' . $eqLogic->getId() . '">';
-				$file='plugins/virtual/core/config/template/'.$eqLogic->getConfiguration('icone').'.png';
-				if(file_exists($file))
-				echo '<img src="'.$file.'" height="105" width="95" />';
-				else
-				echo '<img src="' . $plugin->getPathImgIcon() . '"/>';
+				$file='plugins/virtual/plugin_info/'.$eqLogic->getConfiguration('icon').'.png';
+				if(file_exists(__DIR__.'/../../../../'.$file)){
+					echo '<img src="'.$file.'" height="105" width="95" />';
+				}else{
+					echo '<img src="' . $plugin->getPathImgIcon() . '"/>';
+				}
 				echo '<br>';
 				echo '<span class="name">' . $eqLogic->getHumanName(true, true) . '</span>';
 				echo '</div>';
