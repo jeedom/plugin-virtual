@@ -283,19 +283,28 @@ class virtualCmd extends cmd {
 			if (strpos($calcul, '#' . $this->getId() . '#') !== false) {
 				throw new Exception(__('Vous ne pouvez faire un calcul sur la valeur elle meme (boucle infinie) : ', __FILE__).$this->getName());
 			}
+			$added_value = [];
 			preg_match_all("/#([0-9]*)#/", $calcul, $matches);
 			$value = '';
 			foreach ($matches[1] as $cmd_id) {
 				if (is_numeric($cmd_id)) {
 					$cmd = self::byId($cmd_id);
 					if (is_object($cmd) && $cmd->getType() == 'info') {
+						if(isset($added_value[$cmd_id])){
+							continue;	
+						}
 						$value .= '#' . $cmd_id . '#';
+						$added_value[$cmd_id] = $cmd_id;
 					}
 				}
 			}
 			preg_match_all("/variable\((.*?)\)/", $calcul, $matches);
 			foreach ($matches[1] as $variable) {
+				if(isset($added_value['#variable(' . $variable . ')#'])){
+					continue;	
+				}
 				$value .= '#variable(' . $variable . ')#';
+				$added_value['#variable(' . $variable . ')#'] = '#variable(' . $variable . ')#';
 			}
 			$this->setValue($value);
 		}
