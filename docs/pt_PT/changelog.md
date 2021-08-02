@@ -4,6 +4,10 @@
 >
 >Como lembrete, se não houver informações sobre a atualização, isso significa que se trata apenas da atualização da documentação, tradução ou texto
 
+# 02/08/2021
+
+- Correções de bugs
+
 # 16/05/2020
 
 - Correção de um problema com comandos duplicados do tipo de informação

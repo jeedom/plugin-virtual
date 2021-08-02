@@ -4,6 +4,10 @@
 >
 >As a reminder if there is no information on the update, it means that it only concerns the updating of documentation, translation or text
 
+# 08/02/2021
+
+- Bugfix
+
 # 05/16/2020
 
 - Correction of a problem with duplicate information type commands

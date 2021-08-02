@@ -107,7 +107,7 @@ Nach wie vor ist es ratsam, die Aktion mit dem Statusbefehl zu verknüpfen und a
 
 ## Kippschalter
 
-Auf diese Weise können Sie einen Schalter vom Typ umschalten. Dazu müssen Sie einen virtuellen Befehl dieses Typs erstellen :
+So erstellen Sie einen Kippschalter (oder Taster), dafür müssen Sie ein virtuelles Steuerelement dieses Typs erstellen :
 
 ![virtual14](../images/virtual14.png)
 

@@ -107,7 +107,7 @@ And as before, it is advisable to link the action to the status command and to h
 
 ## Toggle switch
 
-This is how to make a switch of type toggle, for that you have to create a virtual command of this type :
+This is how to make a toggle type switch (or push button), for this you have to create a virtual control of this type :
 
 ![virtual14](../images/virtual14.png)
 

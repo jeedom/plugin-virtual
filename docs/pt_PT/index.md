@@ -107,7 +107,7 @@ E, como antes, é aconselhável vincular a ação ao comando status e ocultá-la
 
 ## Interruptor de alavanca
 
-É assim que se alterna o tipo, para isso é necessário criar um comando virtual desse tipo :
+É assim que se faz uma chave de alternância (ou botão de pressão), para isso você deve criar um controle virtual deste tipo :
 
 ![virtual14](../images/virtual14.png)
 

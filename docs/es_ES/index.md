@@ -107,7 +107,7 @@ Y como antes, es recomendable vincular la acción al comando de estado y ocultar
 
 ## Interruptor de palanca
 
-Así es como hacer un cambio de tipo alternar, para eso debe crear un comando virtual de este tipo :
+Así es como se hace un interruptor tipo palanca (o pulsador), para ello tienes que crear un control virtual de este tipo :
 
 ![virtual14](../images/virtual14.png)
 

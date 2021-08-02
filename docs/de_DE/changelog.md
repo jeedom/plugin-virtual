@@ -4,6 +4,10 @@
 >
 >Zur Erinnerung: Wenn keine Informationen zum Update vorhanden sind, bedeutet dies, dass es sich nur um die Aktualisierung von Dokumentation, Übersetzung oder Text handelt
 
+# 08.02.2021
+
+- Fehlerbehebungen
+
 # 16.05.2020
 
 - Behebung eines Problems mit doppelten Befehlen vom Typ Information
