@@ -107,7 +107,7 @@ Et comme tout à l’heure il est conseillé de lier l’action à la commande d
 
 ## Interrupteur de type toggle
 
-Voilà comment faire un interrupteur de type toggle, pour cela il faut créer une commande virtuelle de ce type :
+Voilà comment faire un interrupteur de type toggle (ou bouton poussoir), pour cela il faut créer une commande virtuelle de ce type :
 
 ![virtual14](../images/virtual14.png)
 
