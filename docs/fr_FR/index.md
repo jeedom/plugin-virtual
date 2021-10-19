@@ -12,6 +12,10 @@ Un périphérique virtuel peut être créé pour les besoins suivants :
 -   effectuer un calcul sur plusieurs valeurs d'équipements ;
 -   exécuter de multiples actions (macro).
 
+>**IMPORTANT**
+>
+>Il ne faut surtout pas abuser des virtuels ils ajoutes une surconsommation cpu/memoire/swap/disque, un temps de latence dans les traitements, une usure de la carte SD... Il ne faut donc SURTOUT PAS dupliquer (tous) les équipements en virtuel si il n'y a pas une raison d'absolue necessite !!! C'est vraiment à utiliser avec parcimonie si vous n'avez vraiment pas d'autre choix !!!!
+
 # Configuration
 
 Le plugin ne nécessite aucune configuration, il faut juste l’activer :
