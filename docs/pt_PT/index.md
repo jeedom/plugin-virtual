@@ -12,6 +12,10 @@ Um dispositivo virtual pode ser criado para as seguintes necessidades :
 -   realizar um cálculo em vários valores de equipamento;
 -   executar várias ações (macro).
 
+>**IMPORTANTE**
+>
+>Acima de tudo, não abuse dos virtuais eles adicionam um consumo excessivo de cpu / memória / swap / disco, um tempo de latência nos tratamentos, um desgaste do cartão SD ... Portanto, NÃO É ESPECIALMENTE duplicar (todos) os equipamentos em virtual se não houver razão absoluta !!! Isso deve ser usado com moderação se você realmente não tiver outra escolha !!!!
+
 # Configuration
 
 O plugin não requer nenhuma configuração, você apenas precisa ativá-lo :

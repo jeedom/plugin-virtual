@@ -12,6 +12,10 @@ A virtual device can be created for the following needs :
 -   perform a calculation on several equipment values;
 -   perform multiple actions (macro).
 
+>**IMPORTANT**
+>
+>Above all, do not abuse the virtual ones they add a cpu / memory / swap / disk overconsumption, a latency time in the treatments, a wear of the SD card ... It is therefore ESPECIALLY NOT to duplicate (all) the equipment in virtual if there is no absolute reason !!! This is really to be used sparingly if you really have no other choice !!!!
+
 # Configuration
 
 The plugin does not require any configuration, you just have to activate it :

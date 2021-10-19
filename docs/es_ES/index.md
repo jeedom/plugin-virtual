@@ -12,6 +12,10 @@ Se puede crear un dispositivo virtual para las siguientes necesidades :
 -   realizar un cálculo en varios valores de equipo;
 -   realizar múltiples acciones (macro).
 
+>**IMPORTANTE**
+>
+>Sobre todo, no abusar de las virtuales, agregan un sobreconsumo de cpu / memoria / swap / disco, un tiempo de latencia en los tratamientos, un desgaste de la tarjeta SD ... Por lo tanto, ESPECIALMENTE NO duplicar (todo) el equipo en virtual si no hay una razón absoluta !!! Esto realmente debe usarse con moderación si realmente no tiene otra opción !!!!
+
 # Configuration
 
 El complemento no requiere ninguna configuración, solo tiene que activarlo :

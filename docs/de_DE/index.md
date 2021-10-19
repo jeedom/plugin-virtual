@@ -12,6 +12,10 @@ Ein virtuelles Gerät kann für die folgenden Anforderungen erstellt werden :
 -   eine Berechnung für mehrere Gerätewerte durchführen;
 -   Führen Sie mehrere Aktionen aus (Makro).
 
+>**WICHTIG**
+>
+>Missbrauchen Sie vor allem nicht die virtuellen, sie fügen einen CPU- / Speicher- / Swap- / Festplatten-Überverbrauch, eine Latenzzeit in den Behandlungen, eine Abnutzung der SD-Karte ... virtuell, wenn es keinen absoluten Grund gibt !!! Das ist wirklich sparsam zu verwenden, wenn man wirklich keine andere Wahl hat !!!!
+
 # Configuration
 
 Das Plugin benötigt keine Konfiguration, Sie müssen es nur aktivieren :
