@@ -19,34 +19,34 @@
 try {
   require_once dirname(__FILE__) . '/../../../../core/php/core.inc.php';
   include_file('core', 'authentification', 'php');
-  
+
   if (!isConnect('admin')) {
     throw new Exception(__('401 - Accès non autorisé', __FILE__));
   }
-  
+
   if (init('action') == 'copyFromEqLogic') {
     $virtual = virtual::byId(init('id'));
     if (!is_object($virtual)) {
-      throw new Exception(__('Equipement virtuel introuvable : ', __FILE__) . init('id'));
+      throw new Exception(__('Equipement virtuel introuvable', __FILE__) . ' : ' . init('id'));
     }
     $virtual->copyFromEqLogic(init('eqLogic_id'));
     ajax::success();
   }
-  
+
   if (init('action') == 'getTemplateList') {
     ajax::success(virtual::templateParameters());
   }
-  
+
   if (init('action') == 'applyTemplate') {
     $virtual = virtual::byId(init('id'));
     if (!is_object($virtual)) {
-      throw new Exception(__('Equipement virtuel introuvable : ', __FILE__) . init('id'));
+      throw new Exception(__('Equipement virtuel introuvable', __FILE__) . ' : ' . init('id'));
     }
     $virtual->applyTemplate(init('name'));
     ajax::success();
   }
-  
-  throw new Exception(__('Aucune methode correspondante à : ', __FILE__) . init('action'));
+
+  throw new Exception(__('Aucune méthode correspondante à', __FILE__) . ' : ' . init('action'));
   /*     * *********Catch exeption*************** */
 } catch (Exception $e) {
   ajax::error(displayExeption($e), $e->getCode());
