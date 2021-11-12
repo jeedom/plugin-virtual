@@ -1,81 +1,87 @@
 # Virtual plugin
 
-The Virtual plugin allows the creation of virtual devices and their properties.
+The plugin **Virtual** allows the creation of virtual equipment and virtual controls.
 
-We will name a device created by this plugin : virtual device.
+In this documentation, we will name a device created by this plugin as a **virtual equipment**.
 
-A virtual device can be created for the following needs :
+Virtual equipment can be useful for the following needs :
 
--   consolidate information or actions from several physical / virtual devices into a single device;
--   create a peripheral powered by a source external to Jeedom (Zibase, IPX800, etc.);
--   duplicate equipment to split it into 2, for example;
--   perform a calculation on several equipment values;
--   perform multiple actions (macro).
+- consolidate in a single device the information and / or actions of several physical / virtual devices,
+- create equipment powered by a source external to Jeedom *(Zibase, IPX800, etc)*,
+- duplicate equipment to split it into 2 for example,
+- perform a calculation on several equipment values,
+- perform multiple actions *(macro)*.
 
 >**IMPORTANT**
 >
->Above all, do not abuse the virtual ones they add a cpu / memory / swap / disk overconsumption, a latency time in the treatments, a wear of the SD card ... It is therefore ESPECIALLY NOT to duplicate (all) the equipment in virtual if there is no absolute reason !!! This is really to be used sparingly if you really have no other choice !!!!
+>Virtuals should not be abused because they lead to general overconsumption *(cpu / memory / swap / disk)*, longer latency times, wear of the SD card, etc ! Virtuals are tools to be used sparingly only when necessary.
 
 # Configuration
 
-The plugin does not require any configuration, you just have to activate it :
+## Plugin configuration
 
-![virtual1](../images/virtual1.png)
+This plugin does not require any special configuration and must simply be activated after installation.
 
-# Equipment configuration
+## Equipment configuration
 
-The configuration of virtual devices is accessible from the plugin menu :
+Virtual devices are accessible from the menu **Plugins → Programming → Virtual**.
 
-![virtual2](../images/virtual2.png)
+Click on a virtual device to access its configuration page :
 
-This is what the virtual plugin page looks like (here with already a) :
+- **Virtual name** : name of your virtual equipment.
+- **Parent object** : indicates the parent object to which the equipment belongs,
+- **Category** : equipment categories *(it can belong to several categories)*,
+- **Activate** : allows to make the equipment active,
+- **Visible** : allows to make the equipment visible on the dashboard.
+- **Self-actualization** : Info commands update frequency *(by cron - a wizard is available by clicking on the question mark at the end of the line)*.
+- **Return url** : it is possible to change the value of a virtual information by API (``http://#IP_JEEDOM#/core/api/jeeApi.php?apikey=#APIKEY_VIRTUEL#&plugin=virtual&type=event&id=#CMD_ID#&value=#VALUE#``)
+- **Virtual description** : allows you to describe the virtual equipment.
 
-![virtual3](../images/virtual3.png)
-
-This is what the configuration page of a virtual device looks like :
-
-![virtual4](../images/virtual4.png)
-
-> **Tip**
+>**TRICK**
 >
-> As in many places on Jeedom, placing the mouse to the far left brings up a quick access menu (you can from your profile always leave it visible).
+>Concerning I'**Return url**, be sure to add ``/jeedom`` after ``#IP_JEEDOM#`` if necessary.
 
-Here you find all the configuration of your equipment :
+At the top right you have access to 3 buttons in addition to those common to all plugins :
 
--   **Name of the virtual device** : name of your virtual equipment,
--   **Parent object** : indicates the parent object to which the equipment belongs,
--   **Category** : equipment categories (it can belong to several categories),
--   **Activate** : makes your equipment active,
--   **Visible** : makes it visible on the dashboard,
--   **Comment** : allows you to comment on equipment.
+- **Expression** : opens the expression tester to facilitate the implementation of certain virtual ones.
+- **Template** : allows you to create a virtual device very quickly by selecting a template.
+- **Import equipment** : Automatically duplicates existing equipment as virtual equipment *(to save time in order to split a piece of equipment into 2 for example)*.
 
-At the top right you have access to 4 buttons :
+# Commandes
 
--   **Expression** : the expression tester identical to that of the scenarios to facilitate the development of some virtual
--   **Import equipment** : allows you to automatically duplicate an existing device in a virtual one (saves time to split a device into 2 for example),
--   **Duplicate** : duplicates current equipment,
--   **Advanced (toothed wheels)** : allows to display the advanced options of the equipment (common to all Jeedom plugins).
+By clicking on the tab **Orders**, you will find the list of virtual controls :
 
-Below you find the list of orders :
+- **ID** : the order identification number.
+- **Name** :
+    - **Order name** : the name displayed on the dashboard.
+    - **Icon** : if applicable, the icon representing the order.
+    - **Related info command** *(actions)* : used to enter the status info command linked to the action command.
+- **Type** : type and subtype,
+- **Value** : allows to give the value of the command according to another command, a key *(when we make a virtual switch)*, a calculation, etc...
+- **Settings** :
+    - **Status return value** & **Duration before status return** *(infos)* : allows you to indicate that the value must return to ``Y``, ``X minutes`` after a change. For example, in the case of a motion detector which emits only upon detection, it is useful to put ``0`` in value and ``4`` in duration so that 4 minutes after a movement detection the value of the command reverts to ``0`` *(if there have been no other detections since)*.
+    - **Info to update** & **info value** *(actions)* : allows you to indicate an info command to update during the execution of the command and the value to assign to it.
+- **Options** :
+  - **Pin up** : allows you to display the order on the dashboard.
+  - **Historize** : allows to log the order.
+  - **Reverse**: allows to invert the value of the command *(info / binary only)*.
+  - **Min / max** : command value limits *(may be empty - min:0/max:100 by default)*.
+  - **Unit** : order value unit *(can be empty)*.
+  - **List of values** : List of ``valeur|texte`` separated by a ``; (point-virgule)`` *(action / list only)*.
+- **Actions** :
+    - **Advanced configuration** *(toothed wheels)* : used to display the advanced configuration of the command *(historization method, widget, etc...)*.
+    - **Test** : Used to test the command.
+    - **To delete** *(sign -)* : allows to delete the command.
 
--   the name displayed on the dashboard,
--   type and subtype,
--   the value : allows to give the value of the command according to another command, a key (when we make a virtual switch), a calculation, etc.
--   "Status feedback value "and" Duration before status feedback" : allows to indicate to Jeedom that after a change on the information its value must return to Y, X min after the change. Example : in the case of a presence detector which emits only during a presence detection, it is useful to put for example 0 in value and 4 in duration, so that 4 minutes after a detection of movement (and if there have not been any news since) Jeedom resets the information value to 0 (no more movement detected),
--   Unit : data unit (can be empty),
--   Historize : allows to historize the data,
--   Pin up : allows to display the data on the dashboard,
--   Event : in the case of RFXcom this box must always be checked because you cannot interrogate an RFXcom module,
--   min / max : data bounds (may be empty),
--   Advanced configuration (small notched wheels) : displays the advanced configuration of the command (logging method, widget, etc.),
--   "Tester" : Used to test the command,
--   Delete (sign -) : allows to delete the command.
+>**INFORMATION**
+>
+>Each virtual device has a command **Refresh** which allows to force the update of all info commands.
 
-# Tutoriel
+# Virtual examples
 
 ## Virtual switch
 
-To make a virtual switch, you need to add 2 virtual commands like this :
+To make a virtual switch, you have to add 2 virtual actions like this :
 
 ![virtual5](../images/virtual5.png)
 
@@ -85,7 +91,7 @@ Then you save and there Jeedom will automatically add the virtual information co
 
 Add in the orders "action" ``On`` and ``Off``, The command ``Etat`` (this allows Jeedom to make the link with the state command).
 
-To have a nice widget, you need to hide the status command :
+To have a nice widget, you have to hide the status command :
 
 ![virtual7](../images/virtual7.png)
 
@@ -99,7 +105,7 @@ Save and do the same for the order ``Off``. And you will get a nice widget that 
 
 ## Virtual slider
 
-To make a virtual slider, add a virtual command like this :
+To make a virtual slider, you have to add a virtual action like this :
 
 ![virtual12](../images/virtual12.png)
 
@@ -111,7 +117,7 @@ And as before, it is advisable to link the action to the status command and to h
 
 ## Toggle switch
 
-This is how to make a toggle type switch (or push button), for this you have to create a virtual control of this type :
+This is how to make a toggle type switch (or push button), for this you have to create a virtual action of this type :
 
 ![virtual14](../images/virtual14.png)
 
@@ -119,7 +125,9 @@ Then you save to see the status command appear :
 
 ![virtual15](../images/virtual15.png)
 
-Here it is necessary in the value of the action command to put ``not(\#[...][...][Etat]#)`` (replace it with your own command) and link the state to the action command (be careful, you must not hide the state command this time). You must also place the info command in binary subtype.
+Here it is necessary in the value of the action command to put ``not(\#[...][...][Etat]#)`` *(replace with your own order)* and link the state to the action command (be careful, you must not hide the state command this time). You must also place the info command in binary subtype.
+
+## Multiple orders
 
 To do a calculation on multiple orders, it's very easy ! Just create a virtual information type order and in the value field put your calculations. The expression tester can help you with this step to validate. For example, to average 2 temperatures :
 
@@ -127,35 +135,19 @@ To do a calculation on multiple orders, it's very easy ! Just create a virtual i
 
 Several points to be done correctly :
 
--   Choose the subtype according to the type of information (here calculation of average so it is a numeric),
--   Put parentheses in the calculations, this allows you to be sure of the result of the operation,
--   Put the unit well,
--   Check the box to log if necessary,
+- Choose the subtype according to the type of information (here calculation of average so it is a numeric),
+- Put parentheses in the calculations, this allows you to be sure of the result of the operation,
+- Put the unit well,
+- Check the box to log if necessary.
 
-
-
-## Multiple orders
-
-
-We will see here how to make an order which will turn off 2 lights. Nothing could be simpler, just create a virtual order and put the 2 orders separated by a ``&&`` :
+We will see here how to make an order which will turn off 2 lights. Nothing could be simpler, just create a virtual action and put the 2 commands separated by a ``&&`` :
 
 ![virtual11](../images/virtual11.png)
 
-Here, the subtype of the command must be the same as the subtypes of the controlled commands, so all the commands in the value field must have the same subtype (all "other", or all "slider ", or all of type color).
+It is imperative that the subtype of the command is the same as the subtypes of the controlled commands. All the commands in the value field must therefore have the same subtype *(all "other" or all "slider" or all of type "color", etc...)*.
 
 ## Virtual status feedback
 
 When using equipment which does not have a status feedback and if this equipment is controlled only by Jeedom, it is possible to have a virtual status feedback. This requires creating a virtual that takes the actions commands (ex: On & Off) of the equipment and which has an info command (the). You must then complete the Parameter column for each action command, by selecting the name of the info command (status) and giving the value it must take.
 
 We can also imagine a virtual one that turns on / off several lamps (actions commands separated by &&) and thus have a status of this general command.
-
-# Assigning a value by API
-
-It is possible to change the value of virtual information by a
-API call :
-
-``http://#IP_JEEDOM#/core/api/jeeApi.php?apikey=#APIKEY_VIRTUEL#&type=virtual&type=virtual&id=#ID#&value=#value#``
-
-> **NOTE**
->
-> Be careful to add a / jeedom after \#IP\_JEEDOM\# if necessary

@@ -1,8 +1,12 @@
 # Changelog Virtual
 
->**WICHTIG**
+>**Wichtig**
 >
->Zur Erinnerung: Wenn keine Informationen zum Update vorhanden sind, bedeutet dies, dass es sich nur um die Aktualisierung von Dokumentation, Übersetzung oder Text handelt
+>Zur Erinnerung: Wenn keine Informationen zum Update vorhanden sind, bedeutet dies, dass es sich nur um die Aktualisierung von Dokumentation, Übersetzung oder Text handelt.
+
+# 11.11.2021
+
+- Schnittstellen- und Dokumentations-Update
 
 # 08.02.2021
 
@@ -10,17 +14,17 @@
 
 # 16.05.2020
 
-- Behebung eines Problems mit doppelten Befehlen vom Typ Information
+- Behebung eines Problems mit doppelter Meldung von Befehlen des Informationstyps
 
 # 23.10.2019
 
-- Aktualisieren des Dokuments
-- Erzwungenes Löschen von "während einer Berechnung einer Bestellung
-- Korrektur des Berechnungsfehlers, wenn das Ergebnis "False" ist"
+- Dokumentations-Update
+- Erzwungenes Löschen von Anführungszeichen während einer Berechnung für einen Befehl
+- Korrektur eines Rechenfehlers, wenn das Ergebnis den Wert "False" hat"
 
 # 09/10/2019
 
-- Korrektur der erzwungenen Rundung auf 2 Stellen bei digitalen Steuerungen
+- Korrektur der erzwungenen Rundung an 2 Stellen bei digitalen Steuerungen
 - Hinzufügen eines Vorlagensystems zum schnellen Erstellen von Geräten
 - Fehlerbehebungen
 
@@ -39,14 +43,14 @@
 
 # 13.03.2019
 
-- Aktualisieren des Dokuments
+- Dokumentations-Update
 
 # 22.01.2019
 
--   Fehlerbehebungen
+- Fehlerbehebungen
 
 # 21.01.2019
 
--   Korrektur eines Fehlers bei den Werten, der eine Aktualisierung eines Infobefehls auslöst
--		Korrektur des Fehlers beim Kopieren eines Geräts, wenn der Befehl Aktualisieren vorhanden ist.
--   Zugabe des Expressionstesters
+- Korrektur eines Fehlers bei den Werten, die das Update eines Info-Befehls auslösen
+-	Korrektur des Fehlers beim Kopieren eines Geräts, wenn der Befehl Aktualisieren vorhanden ist.
+- Zugabe des Expressionstesters

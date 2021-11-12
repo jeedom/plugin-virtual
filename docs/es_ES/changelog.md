@@ -1,8 +1,12 @@
 # Registro de cambios virtual
 
->**IMPORTANTE**
+>**Importante**
 >
->Como recordatorio si no hay información sobre la actualización, significa que solo se refiere a la actualización de documentación, traducción o texto
+>Como recordatorio si no hay información sobre la actualización, significa que solo se refiere a la actualización de documentación, traducción o texto.
+
+# 11/11/2021
+
+- actualización de interfaz y documentación
 
 # 02/08/2021
 
@@ -10,18 +14,18 @@
 
 # 16/05/2020
 
-- Corrección de un problema con comandos de tipo de información duplicados
+- Corrección de un problema con informes duplicados de comandos de tipo de información
 
 # 23/10/2019
 
-- Actualizando el documento
-- Eliminación forzada de "durante un cálculo en un pedido
-- Corrección del error de cálculo si el resultado es "Falso""
+- Actualización de documentación
+- Eliminación forzada de comillas durante un cálculo en un comando
+- Corrección de un error de cálculo si el resultado tiene el valor "Falso"
 
 # 10/09/2019
 
-- Corrección de redondeo forzado a 2 dígitos en controles digitales
-- Agregar un sistema de plantillas para crear equipos rápidamente
+- Corrección de redondeo forzado en 2 dígitos en controles digitales
+- Adición de un sistema de plantillas para crear equipos rápidamente
 - Correcciones de errores
 
 # 26/04/2019
@@ -30,23 +34,23 @@
 
 # 22/03/2019
 
-- Adición de seguridad en caso de bucle infinito
+- Mayor seguridad en caso de bucle infinito
 
 # 18/03/2019
 
 - Correcciones de errores
-- Adición de seguridad en caso de bucle infinito
+- Mayor seguridad en caso de bucle infinito
 
 # 13/03/2019
 
-- Actualizando el documento
+- Actualización de documentación
 
 # 22/01/2019
 
--   Correcciones de errores
+- Correcciones de errores
 
 # 21/01/2019
 
--   Corrección de un error en los valores que desencadenan una actualización de un comando de información
--		Corrección del error al copiar un dispositivo si existe el comando Actualizar.
--   Adición del probador de expresión
+- Corrección de un error en los valores que provocan la actualización de un comando de información
+-	Corrección del error al copiar un dispositivo si existe el comando Actualizar.
+- Adición del probador de expresión

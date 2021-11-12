@@ -1,46 +1,41 @@
 {
-  "id": "virtual",
-  "name": "Virtuel",
-  "description": {
-    "fr_FR": "Plugin permettant de créer des équipements virtuels dans Jeedom.",
-    "en_US": "Plugin adding support to create virtual equipment in Jeedom",
-    "es_ES": "Complemento que agrega soporte para crear equipos virtuales en Jeedom",
-    "de_DE": "Plugin, das Unterstützung zum Erstellen virtueller Geräte in Jeedom hinzufügt",
-    "pt_PT": "Plugin adicionando suporte para criar equipamentos virtuais no Jeedom",
-    "ru_RU": "Plugin ajoutant le support pour créer des équipements virtuels dans Jeedom",
-    "id_ID": "Plugin ajoutant le support pour créer des équipements virtuels dans Jeedom",
-    "it_IT": "Plugin ajoutant le support pour créer des équipements virtuels dans Jeedom",
-    "ja_JP": "Plugin ajoutant le support pour créer des équipements virtuels dans Jeedom",
-    "tr": "Plugin ajoutant le support pour créer des équipements virtuels dans Jeedom"
-  },
-  "licence": "AGPL",
-  "author": "Loïc",
-  "require": "3.3.39",
-  "category": "programming",
-  "changelog": "https:\/\/doc.jeedom.com\/#language#\/plugins\/programming\/virtual\/changelog",
-  "documentation": "https:\/\/doc.jeedom.com\/#language#\/plugins\/programming\/virtual\/",
-  "language": [
-    "fr_FR",
-    "en_US",
-    "es_ES",
-    "de_DE",
-    "ru_RU",
-    "id_ID",
-    "it_IT",
-    "ja_JP",
-    "pt_PT",
-    "tr"
-  ],
-  "compatibility": [
-    "miniplus",
-    "smart",
-    "atlas",
-    "rpi",
-    "docker",
-    "diy",
-    "mobile",
-    "v4"
-  ],
-  "changelog_beta": "https:\/\/doc.jeedom.com\/#language#\/plugins\/programming\/virtual\/beta\/changelog",
-  "documentation_beta": "https:\/\/doc.jeedom.com\/#language#\/plugins\/programming\/virtual\/beta"
+    "id": "virtual",
+    "name": "Virtuel",
+    "description": {
+        "fr_FR": "Plugin permettant de créer des équipements virtuels dans Jeedom.",
+        "en_US": "Plugin for creating virtual equipment in Jeedom",
+        "es_ES": "Complemento que permite crear equipos virtuales en Jeedom",
+        "de_DE": "Plugin zum Erstellen virtueller Geräte in Jeedom",
+        "pt_PT": "Plugin que permite criar equipamentos virtuais no Jeedom",
+        "ru_RU": "Plugin permettant de créer des équipements virtuels dans Jeedom",
+        "id_ID": "Plugin permettant de créer des équipements virtuels dans Jeedom",
+        "it_IT": "Plugin permettant de créer des équipements virtuels dans Jeedom",
+        "ja_JP": "Plugin permettant de créer des équipements virtuels dans Jeedom",
+        "tr": "Plugin permettant de créer des équipements virtuels dans Jeedom"
+    },
+    "licence": "AGPL",
+    "author": "Loïc",
+    "require": "3.3.39",
+    "category": "programming",
+    "changelog": "https:\/\/doc.jeedom.com\/#language#\/plugins\/programming\/virtual\/changelog",
+    "documentation": "https:\/\/doc.jeedom.com\/#language#\/plugins\/programming\/virtual\/",
+    "language": [
+        "fr_FR",
+        "en_US",
+        "es_ES",
+        "de_DE",
+        "pt_PT"
+    ],
+    "compatibility": [
+        "miniplus",
+        "smart",
+        "atlas",
+        "rpi",
+        "docker",
+        "diy",
+        "mobile",
+        "v4"
+    ],
+    "changelog_beta": "https:\/\/doc.jeedom.com\/#language#\/plugins\/programming\/virtual\/beta\/changelog",
+    "documentation_beta": "https:\/\/doc.jeedom.com\/#language#\/plugins\/programming\/virtual\/beta"
 }

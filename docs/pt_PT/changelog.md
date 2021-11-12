@@ -2,7 +2,11 @@
 
 >**IMPORTANTE**
 >
->Como lembrete, se não houver informações sobre a atualização, isso significa que se trata apenas da atualização da documentação, tradução ou texto
+>Como lembrete, se não houver informações sobre a atualização, isso significa que se trata apenas da atualização da documentação, tradução ou texto.
+
+# 11/11/2021
+
+- interface e atualização de documentação
 
 # 02/08/2021
 
@@ -10,18 +14,18 @@
 
 # 16/05/2020
 
-- Correção de um problema com comandos duplicados do tipo de informação
+- Correção de um problema com relatórios duplicados de comandos de tipo de informação
 
 # 23/10/2019
 
-- Atualizando o documento
-- Exclusão forçada de "durante um cálculo em um pedido
-- Correção do erro de cálculo se o resultado for "False""
+- Atualização de documentação
+- Exclusão forçada de cotações durante um cálculo em um comando
+- Correção de um bug de cálculo se o resultado tiver o valor "Falso"
 
 # 10/09/2019
 
-- Correção do arredondamento forçado para 2 dígitos nos controles digitais
-- Adicionando um sistema de modelos para criar rapidamente equipamentos
+- Correção de arredondamento forçado em 2 dígitos nos controles digitais
+- Adição de um sistema de template para criar equipamentos rapidamente
 - Correções de bugs
 
 # 26/04/2019
@@ -30,23 +34,23 @@
 
 # 22/03/2019
 
-- Adição de segurança em caso de loop infinito
+- Adicionada segurança em caso de loop infinito
 
 # 18/03/2019
 
 - Correções de bugs
-- Adição de segurança em caso de loop infinito
+- Adicionada segurança em caso de loop infinito
 
 # 13/03/2019
 
-- Atualizando o documento
+- Atualização de documentação
 
 # 22/01/2019
 
--   Correções de bugs
+- Correções de bugs
 
 # 21/01/2019
 
--   Correção de um erro nos valores que acionam a atualização de um comando info
--		Correção do erro ao copiar um dispositivo se o comando Atualizar existir.
--   Adição do testador de expressão
+- Correção de um bug nos valores que acionam a atualização de um comando info
+-	Correção do erro ao copiar um dispositivo se o comando Atualizar existir.
+- Adição do testador de expressão

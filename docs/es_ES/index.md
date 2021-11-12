@@ -1,81 +1,87 @@
 # Complemento virtual
 
-El complemento virtual permite la creación de dispositivos virtuales y sus propiedades.
+El complemento **Virtual** permite la creación de equipos virtuales y controles virtuales.
 
-Vamos a nombrar un dispositivo creado por este complemento : dispositivo virtual.
+En esta documentación, nombraremos un dispositivo creado por este complemento como un **equipo virtual**.
 
-Se puede crear un dispositivo virtual para las siguientes necesidades :
+El equipo virtual puede ser útil para las siguientes necesidades :
 
--   consolidar información o acciones de varios dispositivos físicos / virtuales en un solo dispositivo;
--   crear un periférico alimentado por una fuente externa a Jeedom (Zibase, IPX800, etc.);
--   equipo duplicado para dividirlo en 2, por ejemplo;
--   realizar un cálculo en varios valores de equipo;
--   realizar múltiples acciones (macro).
+- consolidar en un solo dispositivo la información y / o acciones de varios dispositivos físicos / virtuales,
+- crear equipos alimentados por una fuente externa a Jeedom *(Zibase, IPX800, etc)*,
+- duplicar el equipo para dividirlo en 2, por ejemplo,
+- realizar un cálculo en varios valores del equipo,
+- realizar múltiples acciones *(macro)*.
 
 >**IMPORTANTE**
 >
->Sobre todo, no abusar de las virtuales, agregan un sobreconsumo de cpu / memoria / swap / disco, un tiempo de latencia en los tratamientos, un desgaste de la tarjeta SD ... Por lo tanto, ESPECIALMENTE NO duplicar (todo) el equipo en virtual si no hay una razón absoluta !!! Esto realmente debe usarse con moderación si realmente no tiene otra opción !!!!
+>No se debe abusar de los dispositivos virtuales porque conducen a un consumo excesivo generalizado *(cpu / memoria / intercambio / disco)*, tiempos de latencia más largos, desgaste de la tarjeta SD, etc ! Los virtuales son herramientas que se deben usar con moderación solo cuando sea necesario.
 
 # Configuration
 
-El complemento no requiere ninguna configuración, solo tiene que activarlo :
+## Configuración del complemento
 
-![virtual1](../images/virtual1.png)
+Este complemento no requiere ninguna configuración especial y simplemente debe activarse después de la instalación.
 
-# Configuración del equipo
+## Configuración del equipo
 
-Se puede acceder a la configuración de dispositivos virtuales desde el menú de complementos :
+Los dispositivos virtuales son accesibles desde el menú **Complementos → Programación → Virtual**.
 
-![virtual2](../images/virtual2.png)
+Haga clic en un dispositivo virtual para acceder a su página de configuración :
 
-Así es como se ve la página del complemento virtual (aquí con un) :
+- **Nombre virtual** : nombre de su equipo virtual.
+- **Objeto padre** : indica el objeto padre al que pertenece el equipo,
+- **Categoría** : categorías de equipos *(puede pertenecer a varias categorías)*,
+- **Activar** : permite activar el equipo,
+- **Visible** : permite hacer visible el equipo en el salpicadero.
+- **Autorrealización** : Frecuencia de actualización de comandos de información *(por cron: hay un asistente disponible al hacer clic en el signo de interrogación al final de la línea)*.
+- **URL de retorno** : es posible cambiar el valor de una información virtual por API (``http://#IP_JEEDOM#/core/api/jeeApi.php?apikey=#APIKEY_VIRTUEL#Yplugin=virtualYtype=eventYid=#CMD_ID#Yvalue=#VALUE#``)
+- **Descripción virtual** : le permite describir el equipo virtual.
 
-![virtual3](../images/virtual3.png)
-
-Así es como se ve la página de configuración de un dispositivo virtual :
-
-![virtual4](../images/virtual4.png)
-
-> **Punta**
+>**TRUCO**
 >
-> Como en muchos lugares de Jeedom, al colocar el mouse en el extremo izquierdo aparece un menú de acceso rápido (desde su perfil siempre puede dejarlo visible).
+>Concerniente a yo'**URL de retorno**, asegúrese de agregar ``/jeedom`` después ``#IP_JEEDOM#`` si es necesario.
 
-Aquí encontrarás toda la configuración de tu equipo :
+En la parte superior derecha tiene acceso a 3 botones además de los comunes a todos los complementos :
 
--   **Nombre del dispositivo virtual** : nombre de su equipo virtual,
--   **Objeto padre** : indica el objeto padre al que pertenece el equipo,
--   **Categoría** : categorías de equipos (puede pertenecer a varias categorías),
--   **Activar** : activa su equipo,
--   **Visible** : lo hace visible en el tablero,
--   **Comentario** : le permite comentar sobre el equipo.
+- **Expresión** : abre el probador de expresiones para facilitar la implementación de ciertos virtuales.
+- **Plantilla** : le permite crear un dispositivo virtual muy rápidamente seleccionando una plantilla.
+- **Equipo de importación** : Duplica automáticamente el equipo existente como equipo virtual *(para ahorrar tiempo con el fin de dividir un equipo en 2, por ejemplo)*.
 
-En la parte superior derecha tiene acceso a 4 botones :
+# Commandes
 
--   **Expresión** : El probador de expresión idéntico al de los escenarios para facilitar el desarrollo de algunos
--   **Equipo de importación** : le permite duplicar automáticamente un dispositivo existente en uno virtual (ahorra tiempo para dividir un dispositivo en 2, por ejemplo),
--   **Duplicar** : duplica el equipo actual,
--   **Avanzado (ruedas dentadas)** : permite visualizar las opciones avanzadas del equipo (común a todos los complementos de Jeedom).
+Haciendo clic en la pestaña **Pedidos**, encontrarás la lista de controles virtuales :
 
-A continuación encontrará la lista de pedidos :
+- **IDENTIFICACIÓN** : el número de identificación del pedido.
+- **Apellido** :
+    - **Nombre de la orden** : el nombre que se muestra en el tablero.
+    - **Icono** : si corresponde, el icono que representa el pedido.
+    - **Comando de información relacionada** *(actions)* : utilizado para ingresar el comando de información de estado vinculado al comando de acción.
+- **Escribe** : tipo y subtipo,
+- **Valor** : permite dar el valor del comando de acuerdo con otro comando, una tecla *(cuando hacemos un cambio virtual)*, un cálculo, etc...
+- **Configuraciones** :
+    - **Valor de retorno de estado** Y **Duración antes de la devolución del estado** *(infos)* : le permite indicar que el valor debe volver a ``Y``, ``X minutes`` después de un cambio. Por ejemplo, en el caso de un detector de movimiento que emite solo al ser detectado, es útil poner ``0`` en valor y ``4`` de duración para que 4 minutos después de una detección de movimiento el valor del comando vuelva a ``0`` *(si no ha habido otras detecciones desde)*.
+    - **Información para actualizar** Y **valor de la información** *(actions)* : le permite indicar un comando de información para actualizar durante la ejecución del comando y el valor para asignarle.
+- **Opciones** :
+  - **Mostrar** : le permite mostrar el pedido en el tablero.
+  - **Guardar historial** : permite registrar el pedido.
+  - **Marcha atrás**: permite invertir el valor del comando *(información / solo binario)*.
+  - **Min / max** : límites de valor nominal *(puede estar vacío - min:0/max:100 por defecto)*.
+  - **Unidad** : unidad de valor de pedido *(puede estar vacío)*.
+  - **Lista de valores** : Lista de ``valeur|texte`` separados por un ``; (point-virgule)`` *(acción / lista solamente)*.
+- **Comportamiento** :
+    - **Configuración avanzada** *(ruedas dentadas)* : utilizado para mostrar la configuración avanzada del comando *(método de historización, widget, etc...)*.
+    - **Probar** : Se usa para probar el comando.
+    - **Borrar** *(signo -)* : permite eliminar el comando.
 
--   el nombre que se muestra en el tablero,
--   tipo y subtipo,
--   el valor : permite dar el valor del comando de acuerdo con otro comando, una tecla (cuando hacemos un cambio virtual), un cálculo, etc.
--   "Valor de retroalimentación de estado "y" Duración antes de la retroalimentación de estado" : permite indicar a Jeedom que después de un cambio en la información, su valor debe volver a Y, X min después del cambio. Ejemplo : en el caso de un detector de presencia que emite solo durante una detección de presencia, es útil poner por ejemplo 0 en valor y 4 en duración, de modo que 4 minutos después de una detección de movimiento (y si no ha habido ninguna noticia desde entonces) Jeedom restablece el valor de la información a 0 (no se detecta más movimiento),
--   Unidad : unidad de datos (puede estar vacía),
--   Guardar historial : permite historizar los datos,
--   Mostrar : permite mostrar los datos en el tablero,
--   Evento : en el caso de RFXcom, esta casilla siempre debe estar marcada porque no puede interrogar a un módulo RFXcom,
--   min / max : límites de datos (pueden estar vacíos),
--   Configuración avanzada (ruedas pequeñas con muescas) : muestra la configuración avanzada del comando (método de registro, widget, etc.),
--   "Tester" : Se usa para probar el comando,
--   Eliminar (firmar -) : permite eliminar el comando.
+>**INFORMACIÓN**
+>
+>Cada dispositivo virtual tiene un comando **Actualizar** que permite forzar la actualización de todos los comandos de información.
 
-# Tutoriel
+# Ejemplos virtuales
 
 ## Interruptor virtual
 
-Para hacer un cambio virtual, debe agregar 2 comandos virtuales como este :
+Para hacer un cambio virtual, debe agregar 2 acciones virtuales como esta :
 
 ![virtual5](../images/virtual5.png)
 
@@ -99,7 +105,7 @@ Guardar y hacer lo mismo para el pedido ``Off``. Y obtendrá un buen widget que 
 
 ## Control deslizante virtual
 
-Para hacer un control deslizante virtual, agregue un comando virtual como este :
+Para hacer un control deslizante virtual, debe agregar una acción virtual como esta :
 
 ![virtual12](../images/virtual12.png)
 
@@ -111,7 +117,7 @@ Y como antes, es recomendable vincular la acción al comando de estado y ocultar
 
 ## Interruptor de palanca
 
-Así es como se hace un interruptor tipo palanca (o pulsador), para ello tienes que crear un control virtual de este tipo :
+Así es como se hace un interruptor tipo palanca (o pulsador), para ello tienes que crear una acción virtual de este tipo :
 
 ![virtual14](../images/virtual14.png)
 
@@ -119,7 +125,9 @@ Luego guarda para ver aparecer el comando de estado :
 
 ![virtual15](../images/virtual15.png)
 
-Aquí es necesario en el valor del comando de acción poner ``not(\#[...][...][Etat]#)`` (reemplácelo con su propio comando) y vincule el estado al comando de acción (tenga cuidado, esta vez no debe ocultar el comando de estado). También debe colocar el comando de información en subtipo binario.
+Aquí es necesario en el valor del comando de acción poner ``not(\#[...][...][Etat]#)`` *(reemplácelo con su propio pedido)* y vincular el estado al comando de acción (tenga cuidado, no debe ocultar el comando de estado esta vez). También debe colocar el comando de información en subtipo binario.
+
+## Pedidos múltiples
 
 Para hacer un cálculo en múltiples pedidos, es muy fácil ! Simplemente cree un orden de tipo de información virtual y en el campo de valor coloque sus cálculos. El probador de expresiones puede ayudarlo con este paso para validar. Por ejemplo, para promediar 2 temperaturas :
 
@@ -127,35 +135,19 @@ Para hacer un cálculo en múltiples pedidos, es muy fácil ! Simplemente cree u
 
 Varios puntos para hacer correctamente :
 
--   Elija el subtipo de acuerdo con el tipo de información (aquí cálculo del promedio para que sea un valor numérico),
--   Ponga paréntesis en los cálculos, esto le permite estar seguro del resultado de la operación,
--   Pon la unidad bien,
--   Marque la casilla para iniciar sesión si es necesario,
+- Elija el subtipo de acuerdo con el tipo de información (aquí cálculo del promedio para que sea un valor numérico),
+- Ponga paréntesis en los cálculos, esto le permite estar seguro del resultado de la operación,
+- Pon la unidad bien,
+- Marque la casilla para iniciar sesión si es necesario.
 
-
-
-## Pedidos múltiples
-
-
-Veremos aquí cómo hacer un pedido que apagará 2 luces. Nada podría ser más simple, solo crea un pedido virtual y coloca los 2 pedidos separados por un ``&&`` :
+Veremos aquí cómo hacer un pedido que apagará 2 luces. Nada podría ser más simple, solo crea una acción virtual y coloca los 2 comandos separados por un ``YY`` :
 
 ![virtual11](../images/virtual11.png)
 
-Aquí, el subtipo del comando debe ser el mismo que los subtipos de los comandos controlados, por lo que todos los comandos en el campo de valor deben tener el mismo subtipo (todos los controles deslizantes "otros" o todos " ", o todo tipo de color).
+Es imperativo que el subtipo del comando sea el mismo que los subtipos de los comandos controlados. Por tanto, todos los comandos del campo de valor deben tener el mismo subtipo *(todos los "otros" o todos los "controles deslizantes" o todos los de tipo "color", etc...)*.
 
 ## Retroalimentación de estado virtual
 
 Cuando se utiliza un equipo que no tiene una retroalimentación de estado y si este equipo está controlado solo por Jeedom, es posible tener una retroalimentación de estado virtual. Esto requiere crear un virtual que tome los comandos de acciones (ej: On & Off) del equipo y que tiene un comando de información (el). Luego debe completar la columna Parámetro para cada comando de acción, seleccionando el nombre del comando de información (estado) y dando el valor que debe tomar.
 
 También podemos imaginar una virtual que enciende / apaga varias lámparas (comandos de acciones separados por &&) y, por lo tanto, tiene un estado de este comando general.
-
-# Asignación de un valor por API
-
-Es posible cambiar el valor de la información virtual por un
-Llamada API :
-
-``http://#IP_JEEDOM#/core/api/jeeApi.php?apikey=#APIKEY_VIRTUEL#&type=virtual&type=virtual&id=#ID#&value=#value#``
-
-> **Nota**
->
-> Tenga cuidado de agregar un / jeedom después de \#IP\_JEEDOM\# si es necesario
