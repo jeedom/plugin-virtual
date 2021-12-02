@@ -236,7 +236,7 @@ function addCmdToTable(_cmd) {
     tr += '<select class="cmdAttr form-control input-sm" data-l1key="configuration" data-l2key="updateCmdId" style="margin-bottom:5px;" title="{{Commande information à mettre à jour}}">';
     tr += '<option value="">{{Aucune}}</option>';
     tr += '</select>';
-    tr += '<input class="cmdAttr form-control input-sm" data-l1key="configuration" data-l2key="updateCmdToValue" placeholder="Valeur de l\'information" style="display:none;">';
+    tr += '<input class="cmdAttr form-control input-sm" data-l1key="configuration" data-l2key="updateCmdToValue" placeholder="{{Valeur de l\'information}}" style="display:none;">';
     tr += '</td>';
     tr += '<td>';
     tr += '<div style="line-height:26px;">';
