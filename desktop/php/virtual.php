@@ -6,7 +6,7 @@ $plugin = plugin::byId('virtual');
 sendVarToJS('eqType', $plugin->getId());
 $eqLogics = eqLogic::byType($plugin->getId());
 ?>
-​
+
 <div class="row row-overflow">
 	<div class="col-xs-12 eqLogicThumbnailDisplay">
 		<legend><i class="fas fa-cog"></i> {{Gestion}}</legend>
@@ -43,7 +43,7 @@ $eqLogics = eqLogic::byType($plugin->getId());
 				}
 				$eqString .= '<br>';
 				$eqString .= '<span class="name">' . $eqLogic->getHumanName(true, true) . '</span>';
-​
+
 				$eqString .= '<span class="hiddenAsCard displayTableRight">';
 				if ($eqLogic->getConfiguration('autorefresh') != '') $eqString .= '<span>' . $eqLogic->getConfiguration('autorefresh') . '</span>';
 				$cats = $eqLogic->getCategory();
@@ -56,13 +56,13 @@ $eqLogics = eqLogic::byType($plugin->getId());
 				}
 				$eqString .= '</span>';
 				$eqString .= '</div>';
-​
+
 				$content .= $eqString;
 			}
 			echo $content.'</div>';
 		} ?>
 	</div>
-​
+
 	<div class="col-xs-12 eqLogic" style="display:none;">
 		<div class="input-group pull-right" style="display:inline-flex">
 			<span class="input-group-btn">
@@ -124,7 +124,7 @@ $eqLogics = eqLogic::byType($plugin->getId());
 									<label class="checkbox-inline"><input type="checkbox" class="eqLogicAttr" data-l1key="isVisible" checked/>{{Visible}}</label>
 								</div>
 							</div>
-​
+
 							<legend><i class="fas fa-cogs"></i> {{Paramètres spécifiques}}</legend>
 							<div class="form-group">
 								<label class="col-sm-3 control-label">{{Auto-actualisation}}
@@ -151,7 +151,7 @@ $eqLogics = eqLogic::byType($plugin->getId());
 								</div>
 							</div>
 						</div>
-​
+
 						<div class="col-lg-6">
 							<legend><i class="fas fa-info"></i> {{Informations}}</legend>
 							<div class="form-group">
@@ -165,7 +165,7 @@ $eqLogics = eqLogic::byType($plugin->getId());
 				</form>
 				<hr>
 			</div>
-​
+
 			<div role="tabpanel" class="tab-pane" id="commandtab">
 				<div class="input-group pull-right" style="display:inline-flex;margin-top:5px;">
 					<span class="input-group-btn">
@@ -192,7 +192,7 @@ $eqLogics = eqLogic::byType($plugin->getId());
 					</table>
 				</div>
 			</div>
-​
+
 		</div>
 	</div>
 </div>
