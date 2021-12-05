@@ -69,7 +69,7 @@ $eqLogics = eqLogic::byType($plugin->getId());
 				<a class="btn btn-primary btn-sm roundedLeft" id="bt_showExpressionTest"><i class="fas fa-check"></i><span class="hidden-xs"> {{Expression}}</span>
 				</a><a class="btn btn-default btn-sm" id="bt_importTemplate"><i class="fas fa-cubes"></i><span class="hidden-xs"> {{Template}}</span>
 				</a><a class="btn btn-default btn-sm" id="bt_importEqLogic"><i class="fas fa-share"></i><span class="hidden-xs"> {{Importer équipement}}</span>
-				</a><a class="btn btn-sm btn-default eqLogicAction roundedLeft" data-action="configure"><i class="fas fa-cogs"></i><span class="hidden-xs"> {{Configuration avancée}}</span>
+				</a><a class="btn btn-sm btn-default eqLogicAction" data-action="configure"><i class="fas fa-cogs"></i><span class="hidden-xs"> {{Configuration avancée}}</span>
 				</a><a class="btn btn-sm btn-default eqLogicAction" data-action="copy"><i class="fas fa-copy"></i><span class="hidden-xs">  {{Dupliquer}}</span>
 				</a><a class="btn btn-sm btn-success eqLogicAction" data-action="save"><i class="fas fa-check-circle"></i> {{Sauvegarder}}
 				</a><a class="btn btn-danger btn-sm eqLogicAction roundedRight" data-action="remove"><i class="fas fa-minus-circle"></i> {{Supprimer}}</a>
