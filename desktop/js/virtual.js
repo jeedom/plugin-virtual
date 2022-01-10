@@ -41,7 +41,7 @@ $('#bt_importTemplate').off('click').on('click', function () {
         })
       }
       bootbox.prompt({
-        title: "{{Quel template ?}}",
+        title: "{{Quel template ? Attention toute les commandes existantes de l'équipement vont etre effacées.}}",
         inputType: 'select',
         inputOptions: inputOptions,
         callback: function (result) {
