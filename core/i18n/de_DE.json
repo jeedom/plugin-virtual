@@ -41,7 +41,7 @@
         "Actions": "Aktionen"
     },
     "plugins\/virtual\/desktop\/js\/virtual.js": {
-        "Quel template ?": "Welche Vorlage?",
+        "Quel template ? Attention toute les commandes existantes de l'équipement vont etre effacées.": "Welche Vorlage? Achtung alle vorhandenen Befehle des Geräts werden gelöscht",
         "Testeur d'expression": "Expressionstester",
         "Nom de la commande": "Bestellname",
         "Choisir une icône": "Wählen Sie ein Symbol aus",

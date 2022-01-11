@@ -41,7 +41,7 @@
         "Actions": "Actions"
     },
     "plugins\/virtual\/desktop\/js\/virtual.js": {
-        "Quel template ?": "Quel template ?",
+        "Quel template ? Attention toute les commandes existantes de l'équipement vont etre effacées.": "Quel template ? Attention toute les commandes existantes de l'équipement vont etre effacées",
         "Testeur d'expression": "Ekspresi tester",
         "Nom de la commande": "Nom de la commande",
         "Choisir une icône": "Choisir une icône",

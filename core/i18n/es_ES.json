@@ -41,7 +41,7 @@
         "Actions": "Comportamiento"
     },
     "plugins\/virtual\/desktop\/js\/virtual.js": {
-        "Quel template ?": "¿Qué plantilla?",
+        "Quel template ? Attention toute les commandes existantes de l'équipement vont etre effacées.": "¿Qué plantilla? Atención todos los comandos existentes del equipo serán borrados",
         "Testeur d'expression": "Probador de expresión",
         "Nom de la commande": "Nombre de la orden",
         "Choisir une icône": "Elige un icono",
