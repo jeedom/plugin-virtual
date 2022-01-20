@@ -20,7 +20,7 @@ $eqLogics = eqLogic::byType($plugin->getId());
 		<legend><i class="fas fa-clone"></i> {{Mes virtuels}}</legend>
 		<?php
 		if (count($eqLogics) == 0) {
-			echo '<br><div class="text-center" style="font-size:1.2em;font-weight:bold;">{{Aucun équipement virtuel n\'est paramétré, cliquer sur "Ajouter" pour commencer}}</div>';
+			echo '<br><div class="text-center" style="font-size:1.2em;font-weight:bold;">{{Aucun équipement virtuel trouvé, cliquer sur "Ajouter" pour commencer}}</div>';
 		}
 		else {
 			echo '<div class="input-group" style="margin:5px;">';
