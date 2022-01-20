@@ -18,49 +18,42 @@ $eqLogics = eqLogic::byType($plugin->getId());
 			</div>
 		</div>
 		<legend><i class="fas fa-clone"></i> {{Mes virtuels}}</legend>
-		<?php	if (count($eqLogics) == 0) {
-			echo '<br/><div class="text-center" style="font-size:1.2em;font-weight:bold;">{{Aucun équipement virtuel n\'est paramétré, cliquer sur "Ajouter" pour commencer}}</div>';
-		} else {
-			$content = '';
-			$content .= '<div class="input-group" style="margin:5px;">';
-			$content .= '<input class="form-control roundedLeft" placeholder="{{Rechercher}}" id="in_searchEqlogic"/>';
-			$content .= '<div class="input-group-btn">';
-			$content .= '<a id="bt_resetSearch" class="btn" style="width:30px"><i class="fas fa-times"></i></a>';
-			$content .= '<a class="btn roundedRight hidden" id="bt_pluginDisplayAsTable" data-coreSupport="1" data-state="0"><i class="fas fa-grip-lines"></i></a>';
-			$content .= '</div>';
-			$content .= '</div>';
-			$content .= '<div class="eqLogicThumbnailContainer">';
+		<?php
+		if (count($eqLogics) == 0) {
+			echo '<br><div class="text-center" style="font-size:1.2em;font-weight:bold;">{{Aucun équipement virtuel n\'est paramétré, cliquer sur "Ajouter" pour commencer}}</div>';
+		}
+		else {
+			echo '<div class="input-group" style="margin:5px;">';
+			echo '<input class="form-control roundedLeft" placeholder="{{Rechercher}}" id="in_searchEqlogic">';
+			echo '<div class="input-group-btn">';
+			echo '<a id="bt_resetSearch" class="btn" style="width:30px"><i class="fas fa-times"></i></a>';
+			echo '<a class="btn roundedRight hidden" id="bt_pluginDisplayAsTable" data-coreSupport="1" data-state="0"><i class="fas fa-grip-lines"></i></a>';
+			echo '</div>';
+			echo '</div>';
+			echo '<div class="eqLogicThumbnailContainer">';
 			foreach ($eqLogics as $eqLogic) {
 				$opacity = ($eqLogic->getIsEnable()) ? '' : 'disableCard';
-				$eqString = '';
-				$eqString .= '<div class="eqLogicDisplayCard cursor '.$opacity.'" data-eqLogic_id="' . $eqLogic->getId() . '">';
+				echo '<div class="eqLogicDisplayCard cursor '.$opacity.'" data-eqLogic_id="' . $eqLogic->getId() . '">';
 				$file = 'plugins/virtual/plugin_info/' . $eqLogic->getConfiguration('icon') . '.png';
 				if (file_exists(__DIR__.'/../../../../'.$file)) {
-					$eqString .= '<img src="'.$file.'" height="105" width="95" />';
+					echo '<img src="'.$file.'" height="105" width="95">';
 				}
 				else {
-					$eqString .= '<img src="' . $plugin->getPathImgIcon() . '"/>';
+					echo '<img src="' . $plugin->getPathImgIcon() . '">';
 				}
-				$eqString .= '<br>';
-				$eqString .= '<span class="name">' . $eqLogic->getHumanName(true, true) . '</span>';
-
-				$eqString .= '<span class="hiddenAsCard displayTableRight">';
-				if ($eqLogic->getConfiguration('autorefresh') != '') $eqString .= '<span>' . $eqLogic->getConfiguration('autorefresh') . '</span>';
-				$cats = $eqLogic->getCategory();
-				unset($cats['default']);
-				$eqString .= '<span>' . implode(array_keys($cats, 1), ', ') . '</span>';
-				if ($eqLogic->getIsVisible() == 1) {
-					$eqString .= ' <i class="fas fa-eye"></i>';
-				} else {
-					$eqString .= ' <i class="fas fa-eye-slash"></i>';
+				echo '<br>';
+				echo '<span class="name">' . $eqLogic->getHumanName(true, true) . '</span>';
+				echo '<span class="hiddenAsCard displayTableRight hidden">';
+				if ($eqLogic->getConfiguration('autorefresh', '') != '') {
+					echo '<span class="label label-info hidden-xs">' .$eqLogic->getConfiguration('autorefresh') . '</span>';
 				}
-				$eqString .= '</span>';
-				$eqString .= '</div>';
-
-				$content .= $eqString;
+				echo ($eqLogic->getIsVisible() == 1) ? '<i class="fas fa-eye" title="{{Equipement visible}}"></i>' : '<i class="fas fa-eye-slash" title="{{Equipement non visible}}"></i>';
+				echo '</span>';
+				echo '</div>';
 			}
-			echo $content.'</div>';
-		} ?>
+			echo '</div>';
+		}
+		?>
 	</div>
 
 	<div class="col-xs-12 eqLogic" style="display:none;">
@@ -87,15 +80,15 @@ $eqLogics = eqLogic::byType($plugin->getId());
 						<div class="col-lg-6">
 							<legend><i class="fas fa-wrench"></i> {{Paramètres généraux}}</legend>
 							<div class="form-group">
-								<label class="col-sm-3 control-label">{{Nom du virtuel}}</label>
-								<div class="col-sm-7">
+								<label class="col-sm-4 control-label">{{Nom du virtuel}}</label>
+								<div class="col-sm-6">
 									<input type="text" class="eqLogicAttr form-control" data-l1key="id" style="display:none;">
 									<input type="text" class="eqLogicAttr form-control" data-l1key="name" placeholder="{{Nom de l'équipement virtuel}}">
 								</div>
 							</div>
 							<div class="form-group">
-								<label class="col-sm-3 control-label" >{{Objet parent}}</label>
-								<div class="col-sm-7">
+								<label class="col-sm-4 control-label" >{{Objet parent}}</label>
+								<div class="col-sm-6">
 									<select class="form-control eqLogicAttr" data-l1key="object_id">
 										<option value="">{{Aucun}}</option>
 										<?php	$options = '';
@@ -108,8 +101,8 @@ $eqLogics = eqLogic::byType($plugin->getId());
 								</div>
 							</div>
 							<div class="form-group">
-								<label class="col-sm-3 control-label">{{Catégorie}}</label>
-								<div class="col-sm-7">
+								<label class="col-sm-4 control-label">{{Catégorie}}</label>
+								<div class="col-sm-6">
 									<?php	foreach (jeedom::getConfiguration('eqLogic:category') as $key => $value) {
 										echo '<label class="checkbox-inline">';
 										echo '<input type="checkbox" class="eqLogicAttr" data-l1key="category" data-l2key="' . $key . '">' . $value['name'];
@@ -118,8 +111,8 @@ $eqLogics = eqLogic::byType($plugin->getId());
 								</div>
 							</div>
 							<div class="form-group">
-								<label class="col-sm-3 control-label">{{Options}}</label>
-								<div class="col-sm-7">
+								<label class="col-sm-4 control-label">{{Options}}</label>
+								<div class="col-sm-6">
 									<label class="checkbox-inline"><input type="checkbox" class="eqLogicAttr" data-l1key="isEnable" checked/>{{Activer}}</label>
 									<label class="checkbox-inline"><input type="checkbox" class="eqLogicAttr" data-l1key="isVisible" checked/>{{Visible}}</label>
 								</div>
@@ -127,10 +120,10 @@ $eqLogics = eqLogic::byType($plugin->getId());
 
 							<legend><i class="fas fa-cogs"></i> {{Paramètres spécifiques}}</legend>
 							<div class="form-group">
-								<label class="col-sm-3 control-label">{{Auto-actualisation}}
-									<sup><i class="fas fa-question-circle tooltips" title="{{Fréquence de rafraîchissement de l'équipement}}"></i></sup>
+								<label class="col-sm-4 control-label">{{Auto-actualisation}}
+									<sup><i class="fas fa-question-circle tooltips" title="{{Fréquence de rafraîchissement des commandes infos de l'équipement}}"></i></sup>
 								</label>
-								<div class="col-sm-7">
+								<div class="col-sm-6">
 									<div class="input-group">
 										<input type="text" class="eqLogicAttr form-control roundedLeft" data-l1key="configuration" data-l2key="autorefresh" placeholder="{{Cliquer sur ? pour afficher l'assistant cron}}">
 										<span class="input-group-btn">
@@ -141,23 +134,23 @@ $eqLogics = eqLogic::byType($plugin->getId());
 									</div>
 								</div>
 							</div>
-							<div class="form-group">
-								<label class="col-sm-3 control-label">{{URL de retour}}</label>
-								<div class="col-sm-9 callback">
-									<span>
-										<?php	echo network::getNetworkAccess('external') . '/core/api/jeeApi.php?plugin=virtual&type=event&apikey=' . jeedom::getApiKey($plugin->getId()) . '&id=#cmd_id#&value=#value#';
-										?>
-									</span>
-								</div>
-							</div>
 						</div>
 
 						<div class="col-lg-6">
 							<legend><i class="fas fa-info"></i> {{Informations}}</legend>
 							<div class="form-group">
-								<label class="col-sm-3 control-label">{{Description du virtuel}}</label>
-								<div class="col-sm-8">
+								<label class="col-sm-4 control-label">{{Description du virtuel}}</label>
+								<div class="col-sm-6">
 									<textarea class="form-control eqLogicAttr autogrow" data-l1key="comment"></textarea>
+								</div>
+							</div>
+							<legend><i class="fas fa-at"></i> {{URL de retour}}</legend>
+							<div class="form-group">
+								<div class="alert alert-info col-xs-10 col-xs-offset-1 text-center callback">
+									<span>
+										<?php	echo network::getNetworkAccess('external') . '/core/api/jeeApi.php?plugin=virtual&type=event&apikey=' . jeedom::getApiKey($plugin->getId()) . '&id=#cmd_id#&value=#value#';
+										?>
+									</span>
 								</div>
 							</div>
 						</div>
