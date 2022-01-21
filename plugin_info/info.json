@@ -15,7 +15,7 @@
     },
     "licence": "AGPL",
     "author": "Loïc",
-    "require": "3.3.39",
+    "require": "4.2",
     "category": "programming",
     "changelog": "https:\/\/doc.jeedom.com\/#language#\/plugins\/programming\/virtual\/changelog",
     "documentation": "https:\/\/doc.jeedom.com\/#language#\/plugins\/programming\/virtual\/",
