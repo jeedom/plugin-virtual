@@ -140,7 +140,7 @@ function addCmdToTable(_cmd) {
 
   if (init(_cmd.type) == 'info') {
     var tr = '<tr class="cmd" data-cmd_id="' + init(_cmd.id) + '" virtualAction="' + init(_cmd.configuration.virtualAction) + '">'
-    tr += '<td>'
+    tr += '<td class="hidden-xs">'
     tr += '<span class="cmdAttr" data-l1key="id"></span>'
     tr += '</td>'
     tr += '<td>'
@@ -196,7 +196,7 @@ function addCmdToTable(_cmd) {
 
   if (init(_cmd.type) == 'action') {
     var tr = '<tr class="cmd" data-cmd_id="' + init(_cmd.id) + '">';
-    tr += '<td>'
+    tr += '<td class="hidden-xs">'
     tr += '<span class="cmdAttr" data-l1key="id"></span>'
     tr += '</td>'
     tr += '<td>'

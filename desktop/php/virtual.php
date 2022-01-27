@@ -45,7 +45,7 @@ $eqLogics = eqLogic::byType($plugin->getId());
 				echo '<span class="name">' . $eqLogic->getHumanName(true, true) . '</span>';
 				echo '<span class="hiddenAsCard displayTableRight hidden">';
 				if ($eqLogic->getConfiguration('autorefresh', '') != '') {
-					echo '<span class="label label-info hidden-xs">' .$eqLogic->getConfiguration('autorefresh') . '</span>';
+					echo '<span class="label label-info">' .$eqLogic->getConfiguration('autorefresh') . '</span>';
 				}
 				echo ($eqLogic->getIsVisible() == 1) ? '<i class="fas fa-eye" title="{{Equipement visible}}"></i>' : '<i class="fas fa-eye-slash" title="{{Equipement non visible}}"></i>';
 				echo '</span>';
@@ -171,12 +171,12 @@ $eqLogics = eqLogic::byType($plugin->getId());
 					<table id="table_cmd" class="table table-bordered table-condensed">
 						<thead>
 							<tr>
-								<th style="min-width:50px;width:70px;"> ID</th>
-								<th style="min-width:220px;width:300px;">{{Nom}}</th>
+								<th class="hidden-xs" style="min-width:50px;width:70px;"> ID</th>
+								<th style="min-width:150px;width:300px;">{{Nom}}</th>
 								<th style="width:130px;">{{Type}}</th>
-								<th style="min-width:250px;">{{Valeur}}</th>
-								<th style="min-width:150px;width:250px;">{{Paramètres}}</th>
-								<th style="min-width:220px;width:360px;">{{Options}}</th>
+								<th style="min-width:180px;">{{Valeur}}</th>
+								<th style="min-width:130px;width:250px;">{{Paramètres}}</th>
+								<th style="min-width:260px;width:310px;">{{Options}}</th>
 								<th style="min-width:80px;width:200px;">{{Actions}}</th>
 							</tr>
 						</thead>

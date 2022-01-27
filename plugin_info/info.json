@@ -14,7 +14,7 @@
         "tr": "Plugin permettant de créer des équipements virtuels dans Jeedom"
     },
     "licence": "AGPL",
-    "author": "Loïc",
+    "author": "Jeedom SAS",
     "require": "4.2",
     "category": "programming",
     "changelog": "https:\/\/doc.jeedom.com\/#language#\/plugins\/programming\/virtual\/changelog",
