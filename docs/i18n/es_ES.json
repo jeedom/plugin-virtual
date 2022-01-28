@@ -1,7 +1,9 @@
 {
     "changelog.md": {
         "Changelog Virtuel": "Registro de cambios virtual",
-        "Pour rappel s'il n'y a pas d'information sur la mise à jour, c'est que celle-ci concerne uniquement de la mise à jour de documentation, de traduction ou de texte": "Como recordatorio si no hay información sobre la actualización, significa que solo se refiere a la actualización de documentación, traducción o texto",
+        "S'il n'y a pas d'information sur la mise à jour, c'est que celle-ci concerne uniquement de la mise à jour de documentation, de traduction ou de texte": "Si no hay información sobre la actualización, significa que se trata solo de la actualización de la documentación, la traducción o el texto",
+        "24\/01\/2022": "24\/01\/2022",
+        "Optimisations V4.2": "Optimizaciones V4.2",
         "11\/11\/2021": "11\/11\/2021",
         "mise à jour interface et documentation": "actualización de interfaz y documentación",
         "02\/08\/2021": "02\/08\/2021",

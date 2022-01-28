@@ -2,7 +2,11 @@
 
 >**Importante**
 >
->Como recordatorio si no hay información sobre la actualización, significa que solo se refiere a la actualización de documentación, traducción o texto.
+>Si no hay información sobre la actualización, significa que se trata solo de la actualización de la documentación, la traducción o el texto.
+
+# 24/01/2022
+
+- Optimizaciones V4.2
 
 # 11/11/2021
 

@@ -2,7 +2,11 @@
 
 >**Important**
 >
->As a reminder if there is no information on the update, it means that it only concerns the updating of documentation, translation or text.
+>If there is no information on the update, it means that it concerns only the update of documentation, translation or text.
+
+# 01/24/2022
+
+- V4.2 optimizations
 
 # 11/11/2021
 
