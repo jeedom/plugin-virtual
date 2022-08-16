@@ -40,6 +40,7 @@
         "Type": "Type",
         "Valeur": "値",
         "Paramètres": "設定",
+        "Etat": "Etat",
         "Actions": "Actions"
     },
     "plugins\/virtual\/desktop\/js\/virtual.js": {

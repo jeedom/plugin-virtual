@@ -40,6 +40,7 @@
         "Type": "Modelo",
         "Valeur": "Valor",
         "Paramètres": "Configurações",
+        "Etat": "Estado",
         "Actions": "Ações"
     },
     "plugins\/virtual\/desktop\/js\/virtual.js": {

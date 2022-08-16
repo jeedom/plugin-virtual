@@ -37,9 +37,10 @@
         "Ajouter une info virtuelle": "Add virtual info",
         "Ajouter une action virtuelle": "Add a virtual action",
         "Nom": "Name",
-        "Type": "Type",
+        "Type": "Kind",
         "Valeur": "Value",
         "Paramètres": "Settings",
+        "Etat": "State",
         "Actions": "Shares"
     },
     "plugins\/virtual\/desktop\/js\/virtual.js": {

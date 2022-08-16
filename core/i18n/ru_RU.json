@@ -40,6 +40,7 @@
         "Type": "Type",
         "Valeur": "Значение",
         "Paramètres": "настройки",
+        "Etat": "Etat",
         "Actions": "Actions"
     },
     "plugins\/virtual\/desktop\/js\/virtual.js": {

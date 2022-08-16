@@ -40,6 +40,7 @@
         "Type": "Typ",
         "Valeur": "Wert",
         "Paramètres": "Einstellungen",
+        "Etat": "Bundesland",
         "Actions": "Aktionen"
     },
     "plugins\/virtual\/desktop\/js\/virtual.js": {

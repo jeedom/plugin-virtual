@@ -40,6 +40,7 @@
         "Type": "Type",
         "Valeur": "Değer",
         "Paramètres": "Ayarlar ( Séçenekler )",
+        "Etat": "Etat",
         "Actions": "Actions"
     },
     "plugins\/virtual\/desktop\/js\/virtual.js": {

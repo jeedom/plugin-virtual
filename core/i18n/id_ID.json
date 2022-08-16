@@ -40,6 +40,7 @@
         "Type": "Type",
         "Valeur": "Nilai",
         "Paramètres": "Parameter²",
+        "Etat": "Etat",
         "Actions": "Actions"
     },
     "plugins\/virtual\/desktop\/js\/virtual.js": {

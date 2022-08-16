@@ -40,6 +40,7 @@
         "Type": "Escribe",
         "Valeur": "Valor",
         "Paramètres": "Configuraciones",
+        "Etat": "Estado",
         "Actions": "Comportamiento"
     },
     "plugins\/virtual\/desktop\/js\/virtual.js": {
