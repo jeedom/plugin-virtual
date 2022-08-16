@@ -21,8 +21,7 @@ $eqLogics = eqLogic::byType($plugin->getId());
 		<?php
 		if (count($eqLogics) == 0) {
 			echo '<br><div class="text-center" style="font-size:1.2em;font-weight:bold;">{{Aucun équipement virtuel trouvé, cliquer sur "Ajouter" pour commencer}}</div>';
-		}
-		else {
+		} else {
 			echo '<div class="input-group" style="margin:5px;">';
 			echo '<input class="form-control roundedLeft" placeholder="{{Rechercher}}" id="in_searchEqlogic">';
 			echo '<div class="input-group-btn">';
@@ -33,19 +32,18 @@ $eqLogics = eqLogic::byType($plugin->getId());
 			echo '<div class="eqLogicThumbnailContainer">';
 			foreach ($eqLogics as $eqLogic) {
 				$opacity = ($eqLogic->getIsEnable()) ? '' : 'disableCard';
-				echo '<div class="eqLogicDisplayCard cursor '.$opacity.'" data-eqLogic_id="' . $eqLogic->getId() . '">';
+				echo '<div class="eqLogicDisplayCard cursor ' . $opacity . '" data-eqLogic_id="' . $eqLogic->getId() . '">';
 				$file = 'plugins/virtual/plugin_info/' . $eqLogic->getConfiguration('icon') . '.png';
-				if (file_exists(__DIR__.'/../../../../'.$file)) {
-					echo '<img src="'.$file.'" height="105" width="95">';
-				}
-				else {
+				if (file_exists(__DIR__ . '/../../../../' . $file)) {
+					echo '<img src="' . $file . '" height="105" width="95">';
+				} else {
 					echo '<img src="' . $plugin->getPathImgIcon() . '">';
 				}
 				echo '<br>';
 				echo '<span class="name">' . $eqLogic->getHumanName(true, true) . '</span>';
 				echo '<span class="hiddenAsCard displayTableRight hidden">';
 				if ($eqLogic->getConfiguration('autorefresh', '') != '') {
-					echo '<span class="label label-info">' .$eqLogic->getConfiguration('autorefresh') . '</span>';
+					echo '<span class="label label-info">' . $eqLogic->getConfiguration('autorefresh') . '</span>';
 				}
 				echo ($eqLogic->getIsVisible() == 1) ? '<i class="fas fa-eye" title="{{Equipement visible}}"></i>' : '<i class="fas fa-eye-slash" title="{{Equipement non visible}}"></i>';
 				echo '</span>';
@@ -63,7 +61,7 @@ $eqLogics = eqLogic::byType($plugin->getId());
 				</a><a class="btn btn-default btn-sm" id="bt_importTemplate"><i class="fas fa-cubes"></i><span class="hidden-xs"> {{Template}}</span>
 				</a><a class="btn btn-default btn-sm" id="bt_importEqLogic"><i class="fas fa-share"></i><span class="hidden-xs"> {{Importer équipement}}</span>
 				</a><a class="btn btn-sm btn-default eqLogicAction" data-action="configure"><i class="fas fa-cogs"></i><span class="hidden-xs"> {{Configuration avancée}}</span>
-				</a><a class="btn btn-sm btn-default eqLogicAction" data-action="copy"><i class="fas fa-copy"></i><span class="hidden-xs">  {{Dupliquer}}</span>
+				</a><a class="btn btn-sm btn-default eqLogicAction" data-action="copy"><i class="fas fa-copy"></i><span class="hidden-xs"> {{Dupliquer}}</span>
 				</a><a class="btn btn-sm btn-success eqLogicAction" data-action="save"><i class="fas fa-check-circle"></i> {{Sauvegarder}}
 				</a><a class="btn btn-danger btn-sm eqLogicAction roundedRight" data-action="remove"><i class="fas fa-minus-circle"></i> {{Supprimer}}</a>
 			</span>
@@ -87,11 +85,11 @@ $eqLogics = eqLogic::byType($plugin->getId());
 								</div>
 							</div>
 							<div class="form-group">
-								<label class="col-sm-4 control-label" >{{Objet parent}}</label>
+								<label class="col-sm-4 control-label">{{Objet parent}}</label>
 								<div class="col-sm-6">
 									<select class="form-control eqLogicAttr" data-l1key="object_id">
 										<option value="">{{Aucun}}</option>
-										<?php	$options = '';
+										<?php $options = '';
 										foreach ((jeeObject::buildTree(null, false)) as $object) {
 											$options .= '<option value="' . $object->getId() . '">' . str_repeat('&nbsp;&nbsp;', $object->getConfiguration('parentNumber')) . $object->getName() . '</option>';
 										}
@@ -103,7 +101,7 @@ $eqLogics = eqLogic::byType($plugin->getId());
 							<div class="form-group">
 								<label class="col-sm-4 control-label">{{Catégorie}}</label>
 								<div class="col-sm-6">
-									<?php	foreach (jeedom::getConfiguration('eqLogic:category') as $key => $value) {
+									<?php foreach (jeedom::getConfiguration('eqLogic:category') as $key => $value) {
 										echo '<label class="checkbox-inline">';
 										echo '<input type="checkbox" class="eqLogicAttr" data-l1key="category" data-l2key="' . $key . '">' . $value['name'];
 										echo '</label>';
@@ -113,8 +111,8 @@ $eqLogics = eqLogic::byType($plugin->getId());
 							<div class="form-group">
 								<label class="col-sm-4 control-label">{{Options}}</label>
 								<div class="col-sm-6">
-									<label class="checkbox-inline"><input type="checkbox" class="eqLogicAttr" data-l1key="isEnable" checked/>{{Activer}}</label>
-									<label class="checkbox-inline"><input type="checkbox" class="eqLogicAttr" data-l1key="isVisible" checked/>{{Visible}}</label>
+									<label class="checkbox-inline"><input type="checkbox" class="eqLogicAttr" data-l1key="isEnable" checked />{{Activer}}</label>
+									<label class="checkbox-inline"><input type="checkbox" class="eqLogicAttr" data-l1key="isVisible" checked />{{Visible}}</label>
 								</div>
 							</div>
 
@@ -148,7 +146,7 @@ $eqLogics = eqLogic::byType($plugin->getId());
 							<div class="form-group">
 								<div class="alert alert-info col-xs-10 col-xs-offset-1 text-center callback">
 									<span>
-										<?php	echo network::getNetworkAccess('external') . '/core/api/jeeApi.php?plugin=virtual&type=event&apikey=' . jeedom::getApiKey($plugin->getId()) . '&id=#cmd_id#&value=#value#';
+										<?php echo network::getNetworkAccess('external') . '/core/api/jeeApi.php?plugin=virtual&type=event&apikey=' . jeedom::getApiKey($plugin->getId()) . '&id=#cmd_id#&value=#value#';
 										?>
 									</span>
 								</div>
@@ -177,6 +175,7 @@ $eqLogics = eqLogic::byType($plugin->getId());
 								<th style="min-width:180px;">{{Valeur}}</th>
 								<th style="min-width:130px;width:250px;">{{Paramètres}}</th>
 								<th style="min-width:260px;width:310px;">{{Options}}</th>
+								<th>{{Etat}}</th>
 								<th style="min-width:80px;width:200px;">{{Actions}}</th>
 							</tr>
 						</thead>
