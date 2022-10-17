@@ -69,7 +69,7 @@ $eqLogics = eqLogic::byType($plugin->getId());
 		<ul class="nav nav-tabs" role="tablist">
 			<li role="presentation"><a href="#" class="eqLogicAction" aria-controls="home" role="tab" data-toggle="tab" data-action="returnToThumbnailDisplay"><i class="fas fa-arrow-circle-left"></i></a></li>
 			<li role="presentation" class="active"><a href="#eqlogictab" aria-controls="home" role="tab" data-toggle="tab"><i class="fas fa-tachometer-alt"></i> {{Equipement}}</a></li>
-			<li role="presentation"><a href="#commandtab" aria-controls="profile" role="tab" data-toggle="tab"><i class="fas fa-list-alt"></i> {{Commandes}}</a></li>
+			<li role="presentation"><a href="#commandtab" aria-controls="profile" role="tab" data-toggle="tab"><i class="fas fa-list"></i> {{Commandes}}</a></li>
 		</ul>
 		<div class="tab-content">
 			<div role="tabpanel" class="tab-pane active" id="eqlogictab">
@@ -125,7 +125,7 @@ $eqLogics = eqLogic::byType($plugin->getId());
 									<div class="input-group">
 										<input type="text" class="eqLogicAttr form-control roundedLeft" data-l1key="configuration" data-l2key="autorefresh" placeholder="{{Cliquer sur ? pour afficher l'assistant cron}}">
 										<span class="input-group-btn">
-											<a id="bt_cronGenerator" class="btn btn-default cursor jeeHelper roundedRight" data-helper="cron" title="{{Assistant cron}}">
+											<a class="btn btn-default cursor jeeHelper roundedRight" data-helper="cron" title="Assistant cron">
 												<i class="fas fa-question-circle"></i>
 											</a>
 										</span>
@@ -176,7 +176,7 @@ $eqLogics = eqLogic::byType($plugin->getId());
 								<th style="min-width:130px;width:250px;">{{Paramètres}}</th>
 								<th style="min-width:260px;width:310px;">{{Options}}</th>
 								<th>{{Etat}}</th>
-								<th style="min-width:80px;width:200px;">{{Actions}}</th>
+								<th style="min-width:80px;width:140px;">{{Actions}}</th>
 							</tr>
 						</thead>
 						<tbody>
