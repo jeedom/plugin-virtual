@@ -2,6 +2,8 @@
     "changelog.md": {
         "Changelog Virtuel": "Changelog Virtual",
         "S'il n'y a pas d'information sur la mise à jour, c'est que celle-ci concerne uniquement de la mise à jour de documentation, de traduction ou de texte": "If there is no information on the update, it means that it concerns only the update of documentation, translation or text",
+        "17\/10\/2022": "10\/17\/2022",
+        "Mise à jour liste des commandes pour Jeedom v4.3": "Update command list for Jeedom v4.3",
         "24\/01\/2022": "01\/24\/2022",
         "Optimisations V4.2": "V4.2 optimizations",
         "11\/11\/2021": "11\/11\/2021",

@@ -30,7 +30,6 @@
         "Auto-actualisation": "Autorrealización",
         "Fréquence de rafraîchissement des commandes infos de l'équipement": "Frecuencia de actualización del comando de información del equipo",
         "Cliquer sur ? pour afficher l'assistant cron": "Haga clic en ? para mostrar el asistente cron",
-        "Assistant cron": "Asistente de cron",
         "Informations": "Información",
         "Description du virtuel": "Descripción virtual",
         "URL de retour": "URL de retorno",
@@ -40,6 +39,7 @@
         "Type": "Escribe",
         "Valeur": "Valor",
         "Paramètres": "Configuraciones",
+        "Etat": "Estado",
         "Actions": "Comportamiento"
     },
     "plugins\/virtual\/desktop\/js\/virtual.js": {

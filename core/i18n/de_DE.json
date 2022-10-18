@@ -30,7 +30,6 @@
         "Auto-actualisation": "Selbstaktualisierung",
         "Fréquence de rafraîchissement des commandes infos de l'équipement": "Aktualisierungsrate des Ausrüstungsinfo-Befehls",
         "Cliquer sur ? pour afficher l'assistant cron": "Klicke auf ? um den Cron-Assistenten anzuzeigen",
-        "Assistant cron": "Cron-Assistent",
         "Informations": "Information",
         "Description du virtuel": "Virtuelle Beschreibung",
         "URL de retour": "URL zurückgeben",
@@ -40,6 +39,7 @@
         "Type": "Typ",
         "Valeur": "Wert",
         "Paramètres": "Einstellungen",
+        "Etat": "Bundesland",
         "Actions": "Aktionen"
     },
     "plugins\/virtual\/desktop\/js\/virtual.js": {

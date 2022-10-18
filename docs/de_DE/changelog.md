@@ -4,6 +4,10 @@
 >
 >Wenn es keine Informationen über die Aktualisierung gibt, bedeutet dies, dass es sich nur um die Aktualisierung von Dokumentation, Übersetzung oder Text handelt.
 
+# 17.10.2022
+
+- Befehlsliste für Jeedom v4.3 aktualisieren
+
 # 24.01.2022
 
 - V4.2-Optimierungen
@@ -56,5 +60,5 @@
 # 21.01.2019
 
 - Korrektur eines Fehlers bei den Werten, die das Update eines Info-Befehls auslösen
--	Korrektur des Fehlers beim Kopieren eines Geräts, wenn der Befehl Aktualisieren vorhanden ist.
+- Korrektur des Fehlers beim Kopieren eines Geräts, wenn der Befehl Aktualisieren vorhanden ist.
 - Zugabe des Expressionstesters

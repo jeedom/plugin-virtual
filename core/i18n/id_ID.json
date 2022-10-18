@@ -30,7 +30,6 @@
         "Auto-actualisation": "Auto-actualisation",
         "Fréquence de rafraîchissement des commandes infos de l'équipement": "Fréquence de rafraîchissement des commandes infos de l'équipement",
         "Cliquer sur ? pour afficher l'assistant cron": "Cliquer sur ? pour afficher l'assistant cron",
-        "Assistant cron": "Assistant cron",
         "Informations": "Informations",
         "Description du virtuel": "Description du virtuel",
         "URL de retour": "URL Kembali",
@@ -40,6 +39,7 @@
         "Type": "Type",
         "Valeur": "Nilai",
         "Paramètres": "Parameter²",
+        "Etat": "Etat",
         "Actions": "Actions"
     },
     "plugins\/virtual\/desktop\/js\/virtual.js": {
