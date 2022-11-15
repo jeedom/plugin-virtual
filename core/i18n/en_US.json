@@ -66,7 +66,7 @@
         "Commande information à mettre à jour": "Command information to update",
         "Valeur de l\\'information": "Information value",
         "Liste : valeur|texte (séparées par un point-virgule)": "List: value | text (separated by a semicolon)",
-        "Liste : valeur|texte": "List: value | text"
+        "Liste : valeur|texte": "List: value|text"
     },
     "plugins\/virtual\/core\/ajax\/virtual.ajax.php": {
         "401 - Accès non autorisé": "401 - Unauthorized access",
