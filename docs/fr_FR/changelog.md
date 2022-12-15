@@ -6,7 +6,8 @@
 
 # 15/12/2022
 
-- Ajout d'un bouton permettant d'afficher/masquer les informations sensibles de l'url de retour d'un équipement.
+- Ajout d'un bouton permettant d'afficher/masquer les informations sensibles de l'url de retour d'un équipement
+- Suppression du bouton d'accès au testeur d'expression dorénavant accessible par **Outils > Testeur expression**
 
 # 17/10/2022
 

@@ -97,11 +97,6 @@ $("#bt_addVirtualAction").on('click', function(event) {
   modifyWithoutSave = true
 })
 
-$('#bt_showExpressionTest').off('click').on('click', function() {
-  $('#md_modal').dialog({ title: "{{Testeur d'expression}}" })
-  $("#md_modal").load('index.php?v=d&modal=expression.test').dialog('open')
-})
-
 document.querySelector('div.callback a.decrypt').addEventListener('click', function() {
   this.parentNode.querySelectorAll('span').forEach(function(e) {
     e.classList.toggle('encrypt')
