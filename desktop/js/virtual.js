@@ -15,7 +15,7 @@
 * along with Jeedom. If not, see <http://www.gnu.org/licenses/>.
 */
 
-$('#bt_importTemplate').off('click').on('click', function () {
+$('#bt_importTemplate').off('click').on('click', function() {
   $.ajax({
     type: "POST",
     url: "plugins/virtual/core/ajax/virtual.ajax.php",
@@ -23,11 +23,11 @@ $('#bt_importTemplate').off('click').on('click', function () {
       action: "getTemplateList",
     },
     dataType: 'json',
-    error: function (request, status, error) {
-      handleAjaxError(request, status, error);
+    error: function(error) {
+      $('#div_alert').showAlert({ message: error.message, level: 'danger' })
     },
-    success: function (data) {
-      var inputOptions = [];
+    success: function(data) {
+      var inputOptions = []
       for (var i in data.result) {
         inputOptions.push({
           text: data.result[i].name,
@@ -38,7 +38,7 @@ $('#bt_importTemplate').off('click').on('click', function () {
         title: "{{Choisir un template (Attention : les commandes existantes seront écrasées).}}",
         inputType: 'select',
         inputOptions: inputOptions,
-        callback: function (result) {
+        callback: function(result) {
           $.ajax({
             type: "POST",
             url: "plugins/virtual/core/ajax/virtual.ajax.php",
@@ -48,10 +48,10 @@ $('#bt_importTemplate').off('click').on('click', function () {
               name: result
             },
             dataType: 'json',
-            error: function (request, status, error) {
-              handleAjaxError(request, status, error)
+            error: function(error) {
+              $('#div_alert').showAlert({ message: error.message, level: 'danger' })
             },
-            success: function (data) {
+            success: function(data) {
               $('.eqLogicDisplayCard[data-eqLogic_id=' + $('.eqLogicAttr[data-l1key=id]').value() + ']').click()
             }
           })
@@ -61,8 +61,8 @@ $('#bt_importTemplate').off('click').on('click', function () {
   })
 })
 
-$('#bt_importEqLogic').off('click').on('click', function () {
-  jeedom.eqLogic.getSelectModal({}, function (result) {
+$('#bt_importEqLogic').off('click').on('click', function() {
+  jeedom.eqLogic.getSelectModal({}, function(result) {
     $.ajax({
       type: "POST",
       url: "plugins/virtual/core/ajax/virtual.ajax.php",
@@ -73,10 +73,10 @@ $('#bt_importEqLogic').off('click').on('click', function () {
       },
       dataType: 'json',
       global: false,
-      error: function (request, status, error) {
-        handleAjaxError(request, status, error)
+      error: function(error) {
+        $('#div_alert').showAlert({ message: error.message, level: 'danger' })
       },
-      success: function (data) {
+      success: function(data) {
         if (data.state != 'ok') {
           $('#div_alert').showAlert({ message: data.result, level: 'danger' })
           return
@@ -87,35 +87,42 @@ $('#bt_importEqLogic').off('click').on('click', function () {
   })
 })
 
-$("#bt_addVirtualInfo").on('click', function (event) {
+$("#bt_addVirtualInfo").on('click', function(event) {
   addCmdToTable({ type: 'info' })
   modifyWithoutSave = true
 })
 
-$("#bt_addVirtualAction").on('click', function (event) {
+$("#bt_addVirtualAction").on('click', function(event) {
   addCmdToTable({ type: 'action' })
   modifyWithoutSave = true
 })
 
-$('#bt_showExpressionTest').off('click').on('click', function () {
+$('#bt_showExpressionTest').off('click').on('click', function() {
   $('#md_modal').dialog({ title: "{{Testeur d'expression}}" })
   $("#md_modal").load('index.php?v=d&modal=expression.test').dialog('open')
 })
 
-$("#table_cmd").delegate(".listEquipementInfo", 'click', function () {
+document.querySelector('div.callback a.decrypt').addEventListener('click', function() {
+  this.parentNode.querySelectorAll('span').forEach(function(e) {
+    e.classList.toggle('encrypt')
+  })
+  this.querySelector('i').classList.toggle('fa-eye-slash')
+})
+
+$("#table_cmd").delegate(".listEquipementInfo", 'click', function() {
   var el = $(this)
-  jeedom.cmd.getSelectModal({ cmd: { type: 'info' } }, function (result) {
+  jeedom.cmd.getSelectModal({ cmd: { type: 'info' } }, function(result) {
     var calcul = el.closest('tr').find('.cmdAttr[data-l1key=configuration][data-l2key=' + el.data('input') + ']')
     calcul.atCaret('insert', result.human)
   })
 })
 
-$("#table_cmd").delegate(".listEquipementAction", 'click', function () {
+$("#table_cmd").delegate(".listEquipementAction", 'click', function() {
   var el = $(this)
   var subtype = $(this).closest('.cmd').find('.cmdAttr[data-l1key=subType]').value()
-  jeedom.cmd.getSelectModal({ cmd: { type: 'action', subType: subtype } }, function (result) {
+  jeedom.cmd.getSelectModal({ cmd: { type: 'action', subType: subtype } }, function(result) {
     var calcul = el.closest('tr').find('.cmdAttr[data-l1key=configuration][data-l2key=' + el.attr('data-input') + ']')
-    calcul.atCaret('insert', result.human);
+    calcul.atCaret('insert', result.human)
   })
 })
 
@@ -129,7 +136,7 @@ function addCmdToTable(_cmd) {
     _cmd.configuration = {}
   }
   if (init(_cmd.logicalId) == 'refresh') {
-    return;
+    return
   }
 
   if (init(_cmd.type) == 'info') {
@@ -173,9 +180,9 @@ function addCmdToTable(_cmd) {
     tr += '<input class="tooltips cmdAttr form-control input-sm" data-l1key="unite" placeholder="Unité" title="{{Unité}}" style="width:30%;max-width:80px;display:inline-block;margin-right:2px;">'
     tr += '</div>'
     tr += '</td>'
-    tr += '<td>';
-    tr += '<span class="cmdAttr" data-l1key="htmlstate"></span>';
-    tr += '</td>';
+    tr += '<td>'
+    tr += '<span class="cmdAttr" data-l1key="htmlstate"></span>'
+    tr += '</td>'
     tr += '<td>'
     if (is_numeric(_cmd.id)) {
       tr += '<a class="btn btn-default btn-xs cmdAction" data-action="configure"><i class="fas fa-cogs"></i></a> '
@@ -192,7 +199,7 @@ function addCmdToTable(_cmd) {
   }
 
   if (init(_cmd.type) == 'action') {
-    var tr = '<tr class="cmd" data-cmd_id="' + init(_cmd.id) + '">';
+    var tr = '<tr class="cmd" data-cmd_id="' + init(_cmd.id) + '">'
     tr += '<td class="hidden-xs">'
     tr += '<span class="cmdAttr" data-l1key="id"></span>'
     tr += '</td>'
@@ -205,7 +212,7 @@ function addCmdToTable(_cmd) {
     tr += '<span class="cmdAttr input-group-addon roundedRight" data-l1key="display" data-l2key="icon" style="font-size:19px;padding:0 5px 0 0!important;"></span>'
     tr += '</div>'
     tr += '<select class="cmdAttr form-control input-sm" data-l1key="value" style="display:none;margin-top:5px;" title="{{Commande information liée}}">'
-    tr += '<option value="">{{Aucune}}</option>';
+    tr += '<option value="">{{Aucune}}</option>'
     tr += '</select>'
     tr += '</td>'
     tr += '<td>'
@@ -241,13 +248,13 @@ function addCmdToTable(_cmd) {
     tr += '<input class="tooltips cmdAttr form-control input-sm" data-l1key="configuration" data-l2key="listValue" placeholder="{{Liste : valeur|texte (séparées par un point-virgule)}}" title="{{Liste : valeur|texte}}">'
     tr += '</div>'
     tr += '</td>'
-    tr += '<td>';
-    tr += '</td>';
+    tr += '<td>'
+    tr += '</td>'
     tr += '<td>'
     if (is_numeric(_cmd.id)) {
       tr += '<a class="btn btn-default btn-xs cmdAction" data-action="configure"><i class="fas fa-cogs"></i></a> '
       if (init(_cmd.type) == 'action') {
-        tr += '<a class="btn btn-default btn-xs cmdAction" data-action="test"><i class="fas fa-rss"></i> {{Tester}}</a>';
+        tr += '<a class="btn btn-default btn-xs cmdAction" data-action="test"><i class="fas fa-rss"></i> {{Tester}}</a>'
       }
     }
     tr += '<i class="fas fa-minus-circle pull-right cmdAction cursor" data-action="remove"></i></td>'
@@ -259,10 +266,10 @@ function addCmdToTable(_cmd) {
     jeedom.eqLogic.buildSelectCmd({
       id: $('.eqLogicAttr[data-l1key=id]').value(),
       filter: { type: 'info' },
-      error: function (error) {
+      error: function(error) {
         $('#div_alert').showAlert({ message: error.message, level: 'danger' })
       },
-      success: function (result) {
+      success: function(result) {
         tr.find('.cmdAttr[data-l1key=value]').append(result)
         tr.find('.cmdAttr[data-l1key=configuration][data-l2key=updateCmdId]').append(result)
         tr.setValues(_cmd, '.cmdAttr')

@@ -6,7 +6,11 @@ $plugin = plugin::byId('virtual');
 sendVarToJS('eqType', $plugin->getId());
 $eqLogics = eqLogic::byType($plugin->getId());
 ?>
-
+<style>
+	div.callback span.encrypt {
+		font-family: "text-security-disc" !important;
+	}
+</style>
 <div class="row row-overflow">
 	<div class="col-xs-12 eqLogicThumbnailDisplay">
 		<legend><i class="fas fa-cog"></i> {{Gestion}}</legend>
@@ -145,10 +149,9 @@ $eqLogics = eqLogic::byType($plugin->getId());
 							<legend><i class="fas fa-at"></i> {{URL de retour}}</legend>
 							<div class="form-group">
 								<div class="alert alert-info col-xs-10 col-xs-offset-1 text-center callback">
-									<span>
-										<?php echo network::getNetworkAccess('external') . '/core/api/jeeApi.php?plugin=virtual&type=event&apikey=' . jeedom::getApiKey($plugin->getId()) . '&id=#cmd_id#&value=#value#';
-										?>
-									</span>
+									<a class="btn btn-default btn-xs decrypt pull-right" data-plugin="virtual"><i class="fas fa-eye"></i></a>
+									<?php echo '<span class="encrypt">' . network::getNetworkAccess('external') . '</span>/core/api/jeeApi.php?plugin=virtual&type=event&apikey=<span class="encrypt">' . jeedom::getApiKey($plugin->getId()) . '</span>&id=#cmd_id#&value=#value#';
+									?>
 								</div>
 							</div>
 						</div>

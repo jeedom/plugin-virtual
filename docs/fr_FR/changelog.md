@@ -4,6 +4,10 @@
 >
 >S'il n'y a pas d'information sur la mise à jour, c'est que celle-ci concerne uniquement de la mise à jour de documentation, de traduction ou de texte.
 
+# 15/12/2022
+
+- Ajout d'un bouton permettant d'afficher/masquer les informations sensibles de l'url de retour d'un équipement.
+
 # 17/10/2022
 
 - Mise à jour liste des commandes pour Jeedom v4.3
