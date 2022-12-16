@@ -8,7 +8,6 @@
         "Rechercher": "поиск",
         "Equipement visible": "Equipement visible",
         "Equipement non visible": "Equipement non visible",
-        "Expression": "выражение",
         "Template": "шаблон",
         "Importer équipement": "Importer équipement",
         "Configuration avancée": "Расширенные настройки",
@@ -44,7 +43,6 @@
     },
     "plugins\/virtual\/desktop\/js\/virtual.js": {
         "Choisir un template (Attention : les commandes existantes seront écrasées).": "Choisir un template (Attention : les commandes existantes seront écrasées)",
-        "Testeur d'expression": "выражение Tester",
         "Nom de la commande": "Nom de la commande",
         "Choisir une icône": "Choisir une icône",
         "Calcul": "Расчёт",

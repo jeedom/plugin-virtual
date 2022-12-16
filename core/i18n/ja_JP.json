@@ -8,7 +8,6 @@
         "Rechercher": "検索",
         "Equipement visible": "Equipement visible",
         "Equipement non visible": "Equipement non visible",
-        "Expression": "表現",
         "Template": "テンプレート",
         "Importer équipement": "Importer équipement",
         "Configuration avancée": "高度な構成",
@@ -44,7 +43,6 @@
     },
     "plugins\/virtual\/desktop\/js\/virtual.js": {
         "Choisir un template (Attention : les commandes existantes seront écrasées).": "Choisir un template (Attention : les commandes existantes seront écrasées)",
-        "Testeur d'expression": "発現テスター",
         "Nom de la commande": "Nom de la commande",
         "Choisir une icône": "Choisir une icône",
         "Calcul": "計算",

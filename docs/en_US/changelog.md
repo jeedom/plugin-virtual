@@ -4,6 +4,11 @@
 >
 >If there is no information on the update, it means that it concerns only the update of documentation, translation or text.
 
+# 12/15/2022
+
+- Added a button to show/hide sensitive equipment return url information
+- Removal of the access button to the expression tester now accessible by **Tools > Expression Tester**
+
 # 10/17/2022
 
 - Update command list for Jeedom v4.3

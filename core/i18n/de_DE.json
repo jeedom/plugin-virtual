@@ -8,7 +8,6 @@
         "Rechercher": "Suchen nach",
         "Equipement visible": "Sichtbare Ausrüstung",
         "Equipement non visible": "Ausrüstung nicht sichtbar",
-        "Expression": "Ausdruck",
         "Template": "Schablone",
         "Importer équipement": "Ausrüstung importieren",
         "Configuration avancée": "Erweiterte Konfiguration",
@@ -44,7 +43,6 @@
     },
     "plugins\/virtual\/desktop\/js\/virtual.js": {
         "Choisir un template (Attention : les commandes existantes seront écrasées).": "Wählen Sie eine Vorlage (Achtung: vorhandene Befehle werden überschrieben)",
-        "Testeur d'expression": "Expressionstester",
         "Nom de la commande": "Bestellname",
         "Choisir une icône": "Wählen Sie ein Symbol aus",
         "Calcul": "Berechnung",

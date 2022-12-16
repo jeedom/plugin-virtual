@@ -8,7 +8,6 @@
         "Rechercher": "Pencarian",
         "Equipement visible": "Equipement visible",
         "Equipement non visible": "Equipement non visible",
-        "Expression": "Ekspresi",
         "Template": "Template",
         "Importer équipement": "Importer équipement",
         "Configuration avancée": "Konfigurasi lanjutan",
@@ -44,7 +43,6 @@
     },
     "plugins\/virtual\/desktop\/js\/virtual.js": {
         "Choisir un template (Attention : les commandes existantes seront écrasées).": "Choisir un template (Attention : les commandes existantes seront écrasées)",
-        "Testeur d'expression": "Ekspresi tester",
         "Nom de la commande": "Nom de la commande",
         "Choisir une icône": "Choisir une icône",
         "Calcul": "Perhitungan",

@@ -8,7 +8,6 @@
         "Rechercher": "Search",
         "Equipement visible": "Visible equipment",
         "Equipement non visible": "Equipment not visible",
-        "Expression": "Expression",
         "Template": "Template",
         "Importer équipement": "Import equipment",
         "Configuration avancée": "Advanced configuration",
@@ -44,7 +43,6 @@
     },
     "plugins\/virtual\/desktop\/js\/virtual.js": {
         "Choisir un template (Attention : les commandes existantes seront écrasées).": "Choose a template (Warning: existing commands will be overwritten)",
-        "Testeur d'expression": "Expression tester",
         "Nom de la commande": "Command name",
         "Choisir une icône": "Choose an icon",
         "Calcul": "Calculation",

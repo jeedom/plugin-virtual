@@ -8,7 +8,6 @@
         "Rechercher": "Ricercare",
         "Equipement visible": "Equipement visible",
         "Equipement non visible": "Equipement non visible",
-        "Expression": "Espressione",
         "Template": "Sagoma",
         "Importer équipement": "Importer équipement",
         "Configuration avancée": "Configurazione avanzata",
@@ -44,7 +43,6 @@
     },
     "plugins\/virtual\/desktop\/js\/virtual.js": {
         "Choisir un template (Attention : les commandes existantes seront écrasées).": "Choisir un template (Attention : les commandes existantes seront écrasées)",
-        "Testeur d'expression": "Espressione Tester",
         "Nom de la commande": "Nom de la commande",
         "Choisir une icône": "Choisir une icône",
         "Calcul": "Calcolo",
