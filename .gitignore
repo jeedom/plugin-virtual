@@ -5,3 +5,4 @@ plugins
 .remote-sync.json
 .project
 .vscode/settings.json
+.vscode
