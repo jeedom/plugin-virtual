@@ -4,6 +4,11 @@
 >
 >S'il n'y a pas d'information sur la mise à jour, c'est que celle-ci concerne uniquement de la mise à jour de documentation, de traduction ou de texte.
 
+# 02/10/2023
+
+- Ajout d'un bouton Importer Commandes, qui ouvre une modale pour selectionner plusieurs commandes par filtre pour la creation du virtuel
+
+
 # 15/12/2022
 
 - Ajout d'un bouton permettant d'afficher/masquer les informations sensibles de l'url de retour d'un équipement
