@@ -1,6 +1,15 @@
 {
+    "plugins\/virtual\/desktop\/modal\/cmdsChoice.php": {
+        "401 - Accès non autorisé": "401 – Unbefugter Zugriff",
+        "Selectionner Commandes Infos": "Wählen Sie Bestellinformationen",
+        "Selectionner Commandes Action": "Wählen Sie „Befehle Aktion“",
+        "Valider": "Bestätigen",
+        "Nom Commande": "Namensreihenfolge",
+        "Type": "Art",
+        "Valeur": "Wert"
+    },
     "plugins\/virtual\/desktop\/php\/virtual.php": {
-        "401 - Accès non autorisé": "401 - Nicht autorisierter Zugriff",
+        "401 - Accès non autorisé": "401 – Unbefugter Zugriff",
         "Gestion": "Verwaltung",
         "Ajouter": "Hinzufügen",
         "Mes virtuels": "Mein virtueller",
@@ -10,6 +19,7 @@
         "Equipement non visible": "Ausrüstung nicht sichtbar",
         "Template": "Schablone",
         "Importer équipement": "Ausrüstung importieren",
+        "Importer Commandes": "Bestellungen importieren",
         "Configuration avancée": "Erweiterte Konfiguration",
         "Dupliquer": "Duplikat",
         "Sauvegarder": "Speichern",
@@ -35,7 +45,7 @@
         "Ajouter une info virtuelle": "Virtuelle Informationen hinzufügen",
         "Ajouter une action virtuelle": "Virtuelle Aktion hinzufügen",
         "Nom": "Name",
-        "Type": "Typ",
+        "Type": "Art",
         "Valeur": "Wert",
         "Paramètres": "Einstellungen",
         "Etat": "Bundesland",
@@ -43,6 +53,7 @@
     },
     "plugins\/virtual\/desktop\/js\/virtual.js": {
         "Choisir un template (Attention : les commandes existantes seront écrasées).": "Wählen Sie eine Vorlage (Achtung: vorhandene Befehle werden überschrieben)",
+        "Tableaux Commandes": "Bestelltabellen",
         "Nom de la commande": "Bestellname",
         "Choisir une icône": "Wählen Sie ein Symbol aus",
         "Calcul": "Berechnung",
@@ -67,7 +78,7 @@
         "Liste : valeur|texte": "Liste: Wert | Text"
     },
     "plugins\/virtual\/core\/ajax\/virtual.ajax.php": {
-        "401 - Accès non autorisé": "401 - Nicht autorisierter Zugriff",
+        "401 - Accès non autorisé": "401 – Unbefugter Zugriff",
         "Equipement virtuel introuvable": "Virtuelle Ausrüstung nicht gefunden",
         "Aucune méthode correspondante à": "Keine Methode entsprechend"
     },

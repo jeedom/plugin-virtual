@@ -2,6 +2,8 @@
     "changelog.md": {
         "Changelog Virtuel": "Changelog Virtual",
         "S'il n'y a pas d'information sur la mise à jour, c'est que celle-ci concerne uniquement de la mise à jour de documentation, de traduction ou de texte": "Wenn es keine Informationen über die Aktualisierung gibt, bedeutet dies, dass es sich nur um die Aktualisierung von Dokumentation, Übersetzung oder Text handelt",
+        "02\/10\/2023": "10.02.2023",
+        "Ajout d'un bouton Importer Commandes, qui ouvre une modale pour selectionner plusieurs commandes par filtre pour la creation du virtuel": "Es wurde eine Schaltfläche „Befehle importieren“ hinzugefügt, die ein Modal öffnet, um mehrere Befehle per Filter zum Erstellen der virtuellen Datei auszuwählen",
         "15\/12\/2022": "15.12.2022",
         "Ajout d'un bouton permettant d'afficher\/masquer les informations sensibles de l'url de retour d'un équipement": "Eine Schaltfläche zum Ein-\/Ausblenden von Rücksende-URL-Informationen für vertrauliche Geräte wurde hinzugefügt",
         "Outils > Testeur expression": "Extras > Expression Tester",

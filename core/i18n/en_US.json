@@ -1,6 +1,15 @@
 {
+    "plugins\/virtual\/desktop\/modal\/cmdsChoice.php": {
+        "401 - Accès non autorisé": "401 - Unauthorized Access",
+        "Selectionner Commandes Infos": "Select Orders Info",
+        "Selectionner Commandes Action": "Select Commands Action",
+        "Valider": "To validate",
+        "Nom Commande": "Name Order",
+        "Type": "Kind",
+        "Valeur": "Value"
+    },
     "plugins\/virtual\/desktop\/php\/virtual.php": {
-        "401 - Accès non autorisé": "401 - Unauthorized access",
+        "401 - Accès non autorisé": "401 - Unauthorized Access",
         "Gestion": "Management",
         "Ajouter": "Add",
         "Mes virtuels": "My virtual",
@@ -10,6 +19,7 @@
         "Equipement non visible": "Equipment not visible",
         "Template": "Template",
         "Importer équipement": "Import equipment",
+        "Importer Commandes": "Import Orders",
         "Configuration avancée": "Advanced configuration",
         "Dupliquer": "Duplicate",
         "Sauvegarder": "Save",
@@ -35,7 +45,7 @@
         "Ajouter une info virtuelle": "Add virtual info",
         "Ajouter une action virtuelle": "Add a virtual action",
         "Nom": "Name",
-        "Type": "Type",
+        "Type": "Kind",
         "Valeur": "Value",
         "Paramètres": "Settings",
         "Etat": "State",
@@ -43,6 +53,7 @@
     },
     "plugins\/virtual\/desktop\/js\/virtual.js": {
         "Choisir un template (Attention : les commandes existantes seront écrasées).": "Choose a template (Warning: existing commands will be overwritten)",
+        "Tableaux Commandes": "Orders Tables",
         "Nom de la commande": "Command name",
         "Choisir une icône": "Choose an icon",
         "Calcul": "Calculation",
@@ -67,7 +78,7 @@
         "Liste : valeur|texte": "List: value|text"
     },
     "plugins\/virtual\/core\/ajax\/virtual.ajax.php": {
-        "401 - Accès non autorisé": "401 - Unauthorized access",
+        "401 - Accès non autorisé": "401 - Unauthorized Access",
         "Equipement virtuel introuvable": "Virtual equipment not found",
         "Aucune méthode correspondante à": "No method corresponding to"
     },

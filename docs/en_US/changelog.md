@@ -4,6 +4,11 @@
 >
 >If there is no information on the update, it means that it concerns only the update of documentation, translation or text.
 
+# 02/10/2023
+
+- Added an Import Commands button, which opens a modal to select several commands by filter for creating the virtual
+
+
 # 12/15/2022
 
 - Added a button to show/hide sensitive equipment return url information
