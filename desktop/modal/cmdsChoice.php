@@ -142,6 +142,7 @@ document.getElementById('bt_validateObjectlist').addEventListener('click', funct
   checkboxes.forEach(function(checkbox) {
     checkedCheckboxes.push(checkbox.getAttribute('data-idCmd'));
   });
+  if(checkedCheckboxes.length !== 0){
       $.ajax({
       type: "POST",
       url: "plugins/virtual/core/ajax/virtual.ajax.php",
@@ -166,7 +167,9 @@ document.getElementById('bt_validateObjectlist').addEventListener('click', funct
 
       }
     })
-   
+  }else{
+    $('#div_Alert').showAlert({ message: 'Aucune commande sélectionnée', level: 'danger' })
+  }
 });
 
 
