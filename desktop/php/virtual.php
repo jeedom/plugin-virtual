@@ -63,6 +63,7 @@ $eqLogics = eqLogic::byType($plugin->getId());
 			<span class="input-group-btn">
 				</a><a class="btn btn-primary btn-sm roundedLeft" id="bt_importTemplate"><i class="fas fa-cubes"></i><span class="hidden-xs"> {{Template}}</span>
 				</a><a class="btn btn-default btn-sm" id="bt_importEqLogic"><i class="fas fa-share"></i><span class="hidden-xs"> {{Importer équipement}}</span>
+				</a><a class="btn btn-default btn-sm" id="bt_eqLogicCmds"><i class="fas fa-share"></i><span class="hidden-xs"> {{Importer Commandes}}</span>
 				</a><a class="btn btn-sm btn-default eqLogicAction" data-action="configure"><i class="fas fa-cogs"></i><span class="hidden-xs"> {{Configuration avancée}}</span>
 				</a><a class="btn btn-sm btn-default eqLogicAction" data-action="copy"><i class="fas fa-copy"></i><span class="hidden-xs"> {{Dupliquer}}</span>
 				</a><a class="btn btn-sm btn-success eqLogicAction" data-action="save"><i class="fas fa-check-circle"></i> {{Sauvegarder}}

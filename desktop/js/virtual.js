@@ -87,6 +87,19 @@ $('#bt_importEqLogic').off('click').on('click', function() {
   })
 })
 
+
+document.getElementById('bt_eqLogicCmds').addEventListener('click', function() {
+  let idOriginal =  $('.eqLogicAttr[data-l1key=id]').value();
+  jeedom.eqLogic.getSelectModal({}, function(result) {
+    $('#md_modal').dialog({title: "{{Tableaux Commandes}}"});
+    $('#md_modal').load('index.php?v=d&plugin=virtual&modal=cmdsChoice&eqLogic='+result.id+'&idOriginal='+idOriginal).dialog('open');
+
+  })
+})
+
+
+
+
 $("#bt_addVirtualInfo").on('click', function(event) {
   addCmdToTable({ type: 'info' })
   modifyWithoutSave = true

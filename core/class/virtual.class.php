@@ -219,6 +219,65 @@ class virtual extends eqLogic {
 		$this->save();
 	}
 
+	public function copyCmdsFromEqLogic($_eqLogic_id, $cmdsSelected) {
+		$eqLogic = eqLogic::byId($_eqLogic_id);
+
+		if (!is_object($eqLogic)) {
+			throw new Exception(__('Impossible de trouver l\'équipement', __FILE__) . ' : ' . $_eqLogic_id);
+		}
+		if ($eqLogic->getEqType_name() == 'virtual') {
+			throw new Exception(__('Vous ne pouvez importer la configuration d\'un équipement virtuel', __FILE__));
+		}
+		foreach ($eqLogic->getCategory() as $key => $value) {
+			$this->setCategory($key, $value);
+		}
+		$arrayEquipmentCmd = $this->getCmd();
+		if (sizeof($arrayEquipmentCmd) > 1) {
+			$virtual_with_commands = true;
+		} else {
+			$virtual_with_commands = false;
+		}
+		foreach ($cmdsSelected as $cmdId) {
+			$cmd_def = cmd::byId($cmdId);
+			$cmd_name = $cmd_def->getName();
+			if ($cmd_name == __('Rafraichir',__FILE__)) {
+				$cmd_name .= '_1';
+			}
+			if ($virtual_with_commands) {
+				$cmd_name .= '_' . $cmd_def->getId();
+			}
+			log::add('virtual', 'debug', __('import équipement',__FILE__) . ' : ' . $eqLogic->getName() . ' > '.__('ajout de la commande',__FILE__) .' : ' . $cmd_name);
+			$cmd = new virtualCmd();
+			$cmd->setName($cmd_name);
+			$cmd->setEqLogic_id($this->getId());
+			$cmd->setIsVisible($cmd_def->getIsVisible());
+			$cmd->setType($cmd_def->getType());
+			$cmd->setUnite($cmd_def->getUnite());
+			$cmd->setOrder($cmd_def->getOrder());
+			$cmd->setGeneric_type($cmd_def->getGeneric_type());
+			$cmd->setDisplay('icon', $cmd_def->getDisplay('icon'));
+			$cmd->setDisplay('invertBinary', $cmd_def->getDisplay('invertBinary'));
+			$cmd->setConfiguration('listValue', $cmd_def->getConfiguration('listValue', ''));
+			foreach ($cmd_def->getTemplate() as $key => $value) {
+				$cmd->setTemplate($key, $value);
+			}
+			$cmd->setSubType($cmd_def->getSubType());
+			if ($cmd->getType() == 'info') {
+				$cmd->setConfiguration('calcul', '#' . $cmd_def->getId() . '#');
+				$cmd->setValue($cmd_def->getId());
+			} else {
+				$cmd->setValue($cmd_def->getValue());
+				$cmd->setConfiguration('infoName', '#' . $cmd_def->getId() . '#');
+			}
+			try {
+				$cmd->save();
+			} catch (Exception $e) {
+
+			}
+		}
+		$this->save();
+	}
+
 }
 
 class virtualCmd extends cmd {
