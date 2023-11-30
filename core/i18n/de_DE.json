@@ -9,7 +9,7 @@
         "Valeur": "Wert"
     },
     "plugins\/virtual\/desktop\/php\/virtual.php": {
-        "401 - Accès non autorisé": "401 – Unbefugter Zugriff",
+        "401 - Accès non autorisé": "401 - Nicht autorisierter Zugriff",
         "Gestion": "Verwaltung",
         "Ajouter": "Hinzufügen",
         "Mes virtuels": "Mein virtueller",
@@ -45,7 +45,7 @@
         "Ajouter une info virtuelle": "Virtuelle Informationen hinzufügen",
         "Ajouter une action virtuelle": "Virtuelle Aktion hinzufügen",
         "Nom": "Name",
-        "Type": "Art",
+        "Type": "Typ",
         "Valeur": "Wert",
         "Paramètres": "Einstellungen",
         "Etat": "Bundesland",
@@ -78,7 +78,7 @@
         "Liste : valeur|texte": "Liste: Wert | Text"
     },
     "plugins\/virtual\/core\/ajax\/virtual.ajax.php": {
-        "401 - Accès non autorisé": "401 – Unbefugter Zugriff",
+        "401 - Accès non autorisé": "401 - Nicht autorisierter Zugriff",
         "Equipement virtuel introuvable": "Virtuelle Ausrüstung nicht gefunden",
         "Aucune méthode correspondante à": "Keine Methode entsprechend"
     },

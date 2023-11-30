@@ -9,7 +9,7 @@
         "Valeur": "Value"
     },
     "plugins\/virtual\/desktop\/php\/virtual.php": {
-        "401 - Accès non autorisé": "401 - Unauthorized Access",
+        "401 - Accès non autorisé": "401 - Unauthorized access",
         "Gestion": "Management",
         "Ajouter": "Add",
         "Mes virtuels": "My virtual",
@@ -45,7 +45,7 @@
         "Ajouter une info virtuelle": "Add virtual info",
         "Ajouter une action virtuelle": "Add a virtual action",
         "Nom": "Name",
-        "Type": "Kind",
+        "Type": "Type",
         "Valeur": "Value",
         "Paramètres": "Settings",
         "Etat": "State",
@@ -78,7 +78,7 @@
         "Liste : valeur|texte": "List: value|text"
     },
     "plugins\/virtual\/core\/ajax\/virtual.ajax.php": {
-        "401 - Accès non autorisé": "401 - Unauthorized Access",
+        "401 - Accès non autorisé": "401 - Unauthorized access",
         "Equipement virtuel introuvable": "Virtual equipment not found",
         "Aucune méthode correspondante à": "No method corresponding to"
     },
