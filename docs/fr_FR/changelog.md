@@ -4,10 +4,13 @@
 >
 >S'il n'y a pas d'information sur la mise à jour, c'est que celle-ci concerne uniquement de la mise à jour de documentation, de traduction ou de texte.
 
+# 08/01/2024
+
+- Préparation pour jeedom 4.4
+
 # 02/10/2023
 
 - Ajout d'un bouton Importer Commandes, qui ouvre une modale pour selectionner plusieurs commandes par filtre pour la creation du virtuel
-
 
 # 15/12/2022
 
