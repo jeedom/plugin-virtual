@@ -1,4 +1,13 @@
 {
+    "plugins\/virtual\/desktop\/modal\/cmdsChoice.php": {
+        "401 - Accès non autorisé": "401 - Accès non autorisé",
+        "Selectionner Commandes Infos": "Selectionner Commandes Infos",
+        "Selectionner Commandes Action": "Selectionner Commandes Action",
+        "Valider": "Valider",
+        "Nom Commande": "Nom Commande",
+        "Type": "Type",
+        "Valeur": "Valeur"
+    },
     "plugins\/virtual\/desktop\/php\/virtual.php": {
         "401 - Accès non autorisé": "401-不正アクセス",
         "Gestion": "管理",
@@ -8,9 +17,9 @@
         "Rechercher": "検索",
         "Equipement visible": "Equipement visible",
         "Equipement non visible": "Equipement non visible",
-        "Expression": "表現",
         "Template": "テンプレート",
         "Importer équipement": "Importer équipement",
+        "Importer Commandes": "Importer Commandes",
         "Configuration avancée": "高度な構成",
         "Dupliquer": "重複",
         "Sauvegarder": "セーブ",
@@ -44,7 +53,7 @@
     },
     "plugins\/virtual\/desktop\/js\/virtual.js": {
         "Choisir un template (Attention : les commandes existantes seront écrasées).": "Choisir un template (Attention : les commandes existantes seront écrasées)",
-        "Testeur d'expression": "発現テスター",
+        "Tableaux Commandes": "Tableaux Commandes",
         "Nom de la commande": "Nom de la commande",
         "Choisir une icône": "Choisir une icône",
         "Calcul": "計算",

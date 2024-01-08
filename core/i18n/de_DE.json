@@ -1,4 +1,13 @@
 {
+    "plugins\/virtual\/desktop\/modal\/cmdsChoice.php": {
+        "401 - Accès non autorisé": "401 – Unbefugter Zugriff",
+        "Selectionner Commandes Infos": "Wählen Sie Bestellinformationen",
+        "Selectionner Commandes Action": "Wählen Sie „Befehle Aktion“",
+        "Valider": "Bestätigen",
+        "Nom Commande": "Namensreihenfolge",
+        "Type": "Art",
+        "Valeur": "Wert"
+    },
     "plugins\/virtual\/desktop\/php\/virtual.php": {
         "401 - Accès non autorisé": "401 - Nicht autorisierter Zugriff",
         "Gestion": "Verwaltung",
@@ -8,9 +17,9 @@
         "Rechercher": "Suchen nach",
         "Equipement visible": "Sichtbare Ausrüstung",
         "Equipement non visible": "Ausrüstung nicht sichtbar",
-        "Expression": "Ausdruck",
         "Template": "Schablone",
         "Importer équipement": "Ausrüstung importieren",
+        "Importer Commandes": "Bestellungen importieren",
         "Configuration avancée": "Erweiterte Konfiguration",
         "Dupliquer": "Duplikat",
         "Sauvegarder": "Speichern",
@@ -44,7 +53,7 @@
     },
     "plugins\/virtual\/desktop\/js\/virtual.js": {
         "Choisir un template (Attention : les commandes existantes seront écrasées).": "Wählen Sie eine Vorlage (Achtung: vorhandene Befehle werden überschrieben)",
-        "Testeur d'expression": "Expressionstester",
+        "Tableaux Commandes": "Bestelltabellen",
         "Nom de la commande": "Bestellname",
         "Choisir une icône": "Wählen Sie ein Symbol aus",
         "Calcul": "Berechnung",

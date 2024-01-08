@@ -4,6 +4,16 @@
 >
 >Se não houver informação sobre a atualização, significa que se trata apenas da atualização da documentação, tradução ou texto.
 
+# 10/02/2023
+
+- Adicionado botão Importar Comandos, que abre um modal para selecionar diversos comandos por filtro para criação do virtual
+
+
+# 15/12/2022
+
+- Adicionado um botão para mostrar/ocultar informações de URL de retorno de equipamento sensível
+- Remoção do botão de acesso ao testador de expressão agora acessível por **Ferramentas > Testador de expressões**
+
 # 17/10/2022
 
 - Atualizar lista de comandos para Jeedom v4.3

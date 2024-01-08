@@ -33,6 +33,15 @@ try {
     ajax::success();
   }
 
+  if (init('action') == 'copyCmdsFromEqLogic') {
+    $virtual = virtual::byId(init('id'));
+    if (!is_object($virtual)) {
+      throw new Exception(__('Equipement virtuel introuvable', __FILE__) . ' : ' . init('id'));
+    }
+    $virtual->copyCmdsFromEqLogic(init('eqLogic_id'), init('cmdsSelected'));
+    ajax::success();
+  }
+
   if (init('action') == 'getTemplateList') {
     ajax::success(virtual::templateParameters());
   }
@@ -49,6 +58,5 @@ try {
   throw new Exception(__('Aucune méthode correspondante à', __FILE__) . ' : ' . init('action'));
   /*     * *********Catch exeption*************** */
 } catch (Exception $e) {
-  ajax::error(displayExeption($e), $e->getCode());
+  ajax::error(displayException($e), $e->getCode());
 }
-?>

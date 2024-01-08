@@ -4,6 +4,16 @@
 >
 >Si no hay información sobre la actualización, significa que se trata solo de la actualización de la documentación, la traducción o el texto.
 
+# 10/02/2023
+
+- Se agregó un botón Importar comandos, que abre un modo para seleccionar varios comandos por filtro para crear el virtual
+
+
+# 15/12/2022
+
+- Se agregó un botón para mostrar/ocultar información de URL de devolución de equipos confidenciales
+- Eliminación del botón de acceso al probador de expresión ahora accesible por **Herramientas > Probador de expresiones**
+
 # 17/10/2022
 
 - Lista de comandos de actualización para Jeedom v4.3

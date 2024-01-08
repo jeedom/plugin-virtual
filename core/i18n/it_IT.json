@@ -1,4 +1,13 @@
 {
+    "plugins\/virtual\/desktop\/modal\/cmdsChoice.php": {
+        "401 - Accès non autorisé": "401 - Accès non autorisé",
+        "Selectionner Commandes Infos": "Selectionner Commandes Infos",
+        "Selectionner Commandes Action": "Selectionner Commandes Action",
+        "Valider": "Valider",
+        "Nom Commande": "Nom Commande",
+        "Type": "Type",
+        "Valeur": "Valeur"
+    },
     "plugins\/virtual\/desktop\/php\/virtual.php": {
         "401 - Accès non autorisé": "401 - Accesso non autorizzato",
         "Gestion": "Gestione",
@@ -8,9 +17,9 @@
         "Rechercher": "Ricercare",
         "Equipement visible": "Equipement visible",
         "Equipement non visible": "Equipement non visible",
-        "Expression": "Espressione",
         "Template": "Sagoma",
         "Importer équipement": "Importer équipement",
+        "Importer Commandes": "Importer Commandes",
         "Configuration avancée": "Configurazione avanzata",
         "Dupliquer": "Duplicato",
         "Sauvegarder": "Salva",
@@ -44,7 +53,7 @@
     },
     "plugins\/virtual\/desktop\/js\/virtual.js": {
         "Choisir un template (Attention : les commandes existantes seront écrasées).": "Choisir un template (Attention : les commandes existantes seront écrasées)",
-        "Testeur d'expression": "Espressione Tester",
+        "Tableaux Commandes": "Tableaux Commandes",
         "Nom de la commande": "Nom de la commande",
         "Choisir une icône": "Choisir une icône",
         "Calcul": "Calcolo",

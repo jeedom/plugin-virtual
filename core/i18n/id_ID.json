@@ -1,4 +1,13 @@
 {
+    "plugins\/virtual\/desktop\/modal\/cmdsChoice.php": {
+        "401 - Accès non autorisé": "401 - Accès non autorisé",
+        "Selectionner Commandes Infos": "Selectionner Commandes Infos",
+        "Selectionner Commandes Action": "Selectionner Commandes Action",
+        "Valider": "Valider",
+        "Nom Commande": "Nom Commande",
+        "Type": "Type",
+        "Valeur": "Valeur"
+    },
     "plugins\/virtual\/desktop\/php\/virtual.php": {
         "401 - Accès non autorisé": "401 - Akses tidak sah",
         "Gestion": "Manajemen",
@@ -8,9 +17,9 @@
         "Rechercher": "Pencarian",
         "Equipement visible": "Equipement visible",
         "Equipement non visible": "Equipement non visible",
-        "Expression": "Ekspresi",
         "Template": "Template",
         "Importer équipement": "Importer équipement",
+        "Importer Commandes": "Importer Commandes",
         "Configuration avancée": "Konfigurasi lanjutan",
         "Dupliquer": "Duplikat",
         "Sauvegarder": "Menyimpan",
@@ -44,7 +53,7 @@
     },
     "plugins\/virtual\/desktop\/js\/virtual.js": {
         "Choisir un template (Attention : les commandes existantes seront écrasées).": "Choisir un template (Attention : les commandes existantes seront écrasées)",
-        "Testeur d'expression": "Ekspresi tester",
+        "Tableaux Commandes": "Tableaux Commandes",
         "Nom de la commande": "Nom de la commande",
         "Choisir une icône": "Choisir une icône",
         "Calcul": "Perhitungan",

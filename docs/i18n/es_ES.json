@@ -2,6 +2,12 @@
     "changelog.md": {
         "Changelog Virtuel": "Registro de cambios virtual",
         "S'il n'y a pas d'information sur la mise à jour, c'est que celle-ci concerne uniquement de la mise à jour de documentation, de traduction ou de texte": "Si no hay información sobre la actualización, significa que se trata solo de la actualización de la documentación, la traducción o el texto",
+        "02\/10\/2023": "10\/02\/2023",
+        "Ajout d'un bouton Importer Commandes, qui ouvre une modale pour selectionner plusieurs commandes par filtre pour la creation du virtuel": "Se agregó un botón Importar comandos, que abre un modo para seleccionar varios comandos por filtro para crear el virtual",
+        "15\/12\/2022": "15\/12\/2022",
+        "Ajout d'un bouton permettant d'afficher\/masquer les informations sensibles de l'url de retour d'un équipement": "Se agregó un botón para mostrar\/ocultar información de URL de devolución de equipos confidenciales",
+        "Outils > Testeur expression": "Herramientas > Probador de expresiones",
+        "Suppression du bouton d'accès au testeur d'expression dorénavant accessible par": "Eliminación del botón de acceso al probador de expresión ahora accesible por",
         "17\/10\/2022": "17\/10\/2022",
         "Mise à jour liste des commandes pour Jeedom v4.3": "Lista de comandos de actualización para Jeedom v4.3",
         "24\/01\/2022": "24\/01\/2022",

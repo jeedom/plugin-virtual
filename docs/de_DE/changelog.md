@@ -4,6 +4,16 @@
 >
 >Wenn es keine Informationen über die Aktualisierung gibt, bedeutet dies, dass es sich nur um die Aktualisierung von Dokumentation, Übersetzung oder Text handelt.
 
+# 10.02.2023
+
+- Es wurde eine Schaltfläche „Befehle importieren“ hinzugefügt, die ein Modal öffnet, um mehrere Befehle per Filter zum Erstellen der virtuellen Datei auszuwählen
+
+
+# 15.12.2022
+
+- Eine Schaltfläche zum Ein-/Ausblenden von Rücksende-URL-Informationen für vertrauliche Geräte wurde hinzugefügt
+- Entfernen der Zugriffsschaltfläche für den Ausdruckstester, auf den jetzt zugegriffen werden kann **Extras > Expression Tester**
+
 # 17.10.2022
 
 - Befehlsliste für Jeedom v4.3 aktualisieren

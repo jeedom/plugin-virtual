@@ -1,4 +1,13 @@
 {
+    "plugins\/virtual\/desktop\/modal\/cmdsChoice.php": {
+        "401 - Accès non autorisé": "401 - Unauthorized Access",
+        "Selectionner Commandes Infos": "Select Orders Info",
+        "Selectionner Commandes Action": "Select Commands Action",
+        "Valider": "To validate",
+        "Nom Commande": "Name Order",
+        "Type": "Kind",
+        "Valeur": "Value"
+    },
     "plugins\/virtual\/desktop\/php\/virtual.php": {
         "401 - Accès non autorisé": "401 - Unauthorized access",
         "Gestion": "Management",
@@ -8,9 +17,9 @@
         "Rechercher": "Search",
         "Equipement visible": "Visible equipment",
         "Equipement non visible": "Equipment not visible",
-        "Expression": "Expression",
         "Template": "Template",
         "Importer équipement": "Import equipment",
+        "Importer Commandes": "Import Orders",
         "Configuration avancée": "Advanced configuration",
         "Dupliquer": "Duplicate",
         "Sauvegarder": "Save",
@@ -44,7 +53,7 @@
     },
     "plugins\/virtual\/desktop\/js\/virtual.js": {
         "Choisir un template (Attention : les commandes existantes seront écrasées).": "Choose a template (Warning: existing commands will be overwritten)",
-        "Testeur d'expression": "Expression tester",
+        "Tableaux Commandes": "Orders Tables",
         "Nom de la commande": "Command name",
         "Choisir une icône": "Choose an icon",
         "Calcul": "Calculation",
@@ -66,7 +75,7 @@
         "Commande information à mettre à jour": "Command information to update",
         "Valeur de l\\'information": "Information value",
         "Liste : valeur|texte (séparées par un point-virgule)": "List: value | text (separated by a semicolon)",
-        "Liste : valeur|texte": "List: value | text"
+        "Liste : valeur|texte": "List: value|text"
     },
     "plugins\/virtual\/core\/ajax\/virtual.ajax.php": {
         "401 - Accès non autorisé": "401 - Unauthorized access",

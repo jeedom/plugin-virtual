@@ -6,7 +6,11 @@ $plugin = plugin::byId('virtual');
 sendVarToJS('eqType', $plugin->getId());
 $eqLogics = eqLogic::byType($plugin->getId());
 ?>
-
+<style>
+	div.callback span.encrypt {
+		font-family: "text-security-disc" !important;
+	}
+</style>
 <div class="row row-overflow">
 	<div class="col-xs-12 eqLogicThumbnailDisplay">
 		<legend><i class="fas fa-cog"></i> {{Gestion}}</legend>
@@ -57,9 +61,9 @@ $eqLogics = eqLogic::byType($plugin->getId());
 	<div class="col-xs-12 eqLogic" style="display:none;">
 		<div class="input-group pull-right" style="display:inline-flex">
 			<span class="input-group-btn">
-				<a class="btn btn-primary btn-sm roundedLeft" id="bt_showExpressionTest"><i class="fas fa-check"></i><span class="hidden-xs"> {{Expression}}</span>
-				</a><a class="btn btn-default btn-sm" id="bt_importTemplate"><i class="fas fa-cubes"></i><span class="hidden-xs"> {{Template}}</span>
+				</a><a class="btn btn-primary btn-sm roundedLeft" id="bt_importTemplate"><i class="fas fa-cubes"></i><span class="hidden-xs"> {{Template}}</span>
 				</a><a class="btn btn-default btn-sm" id="bt_importEqLogic"><i class="fas fa-share"></i><span class="hidden-xs"> {{Importer équipement}}</span>
+				</a><a class="btn btn-default btn-sm" id="bt_eqLogicCmds"><i class="fas fa-share"></i><span class="hidden-xs"> {{Importer Commandes}}</span>
 				</a><a class="btn btn-sm btn-default eqLogicAction" data-action="configure"><i class="fas fa-cogs"></i><span class="hidden-xs"> {{Configuration avancée}}</span>
 				</a><a class="btn btn-sm btn-default eqLogicAction" data-action="copy"><i class="fas fa-copy"></i><span class="hidden-xs"> {{Dupliquer}}</span>
 				</a><a class="btn btn-sm btn-success eqLogicAction" data-action="save"><i class="fas fa-check-circle"></i> {{Sauvegarder}}
@@ -145,10 +149,9 @@ $eqLogics = eqLogic::byType($plugin->getId());
 							<legend><i class="fas fa-at"></i> {{URL de retour}}</legend>
 							<div class="form-group">
 								<div class="alert alert-info col-xs-10 col-xs-offset-1 text-center callback">
-									<span>
-										<?php echo network::getNetworkAccess('external') . '/core/api/jeeApi.php?plugin=virtual&type=event&apikey=' . jeedom::getApiKey($plugin->getId()) . '&id=#cmd_id#&value=#value#';
-										?>
-									</span>
+									<a class="btn btn-default btn-xs decrypt pull-right" data-plugin="virtual"><i class="fas fa-eye"></i></a>
+									<?php echo '<span class="encrypt">' . network::getNetworkAccess('external') . '</span>/core/api/jeeApi.php?plugin=virtual&type=event&apikey=<span class="encrypt">' . jeedom::getApiKey($plugin->getId()) . '</span>&id=#cmd_id#&value=#value#';
+									?>
 								</div>
 							</div>
 						</div>
@@ -170,12 +173,12 @@ $eqLogics = eqLogic::byType($plugin->getId());
 						<thead>
 							<tr>
 								<th class="hidden-xs" style="min-width:50px;width:70px;"> ID</th>
-								<th style="min-width:150px;width:300px;">{{Nom}}</th>
+								<th style="min-width:120px;width:250px;">{{Nom}}</th>
 								<th style="width:130px;">{{Type}}</th>
 								<th style="min-width:180px;">{{Valeur}}</th>
-								<th style="min-width:130px;width:250px;">{{Paramètres}}</th>
-								<th style="min-width:260px;width:310px;">{{Options}}</th>
+								<th style="min-width:100px;width:200px;">{{Paramètres}}</th>
 								<th>{{Etat}}</th>
+								<th style="min-width:260px;width:310px;">{{Options}}</th>
 								<th style="min-width:80px;width:140px;">{{Actions}}</th>
 							</tr>
 						</thead>
