@@ -4,10 +4,13 @@
 >
 >Si no hay información sobre la actualización, significa que se trata solo de la actualización de la documentación, la traducción o el texto.
 
+# 08/01/2024
+
+- Preparándose para el apuro 4.4
+
 # 10/02/2023
 
 - Se agregó un botón Importar comandos, que abre un modo para seleccionar varios comandos por filtro para crear el virtual
-
 
 # 15/12/2022
 
