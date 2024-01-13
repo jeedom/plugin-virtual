@@ -20,6 +20,21 @@ $eqLogics = eqLogic::byType($plugin->getId());
 				<br>
 				<span>{{Ajouter}}</span>
 			</div>
+			<div class="cursor eqLogicAction logoSecondary" data-action="gotoPluginConf">
+				<i class="fas fa-wrench"></i>
+				<br />
+				<span>{{Configuration}}</span>
+			</div>
+			<?php
+			$jeedomVersion  = jeedom::version() ?? '0';
+			$displayInfo = version_compare($jeedomVersion, '4.4.0', '>=');
+			if ($displayInfo) {
+				echo '<div class="cursor eqLogicAction info" data-action="createCommunityPost">';
+				echo '<i class="fas fa-ambulance"></i><br>';
+				echo '<span>{{Community}}</span>';
+				echo '</div>';
+			}
+			?>
 		</div>
 		<legend><i class="fas fa-clone"></i> {{Mes virtuels}}</legend>
 		<?php
