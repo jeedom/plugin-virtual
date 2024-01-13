@@ -192,7 +192,7 @@ $eqLogics = eqLogic::byType($plugin->getId());
 								<th style="width:130px;">{{Type}}</th>
 								<th style="min-width:180px;">{{Valeur}}</th>
 								<th style="min-width:100px;width:200px;">{{Paramètres}}</th>
-								<th>{{Etat}}</th>
+								<th>{{Valeur}}</th>
 								<th style="min-width:260px;width:310px;">{{Options}}</th>
 								<th style="min-width:80px;width:140px;">{{Actions}}</th>
 							</tr>
