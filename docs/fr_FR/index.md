@@ -129,7 +129,7 @@ Ici il faut dans la valeur de la commande action mettre ``not(#[...][...][Etat]#
 
 ## Multiple commandes
 
-Pour faire un calcul sur de multiples commandes, c’est très facile ! Il suffit de créer une commande de type information virtuelle et dans le champs valeur mettre vos calculs. Le testeur d'expression peut vous aider à cette étape pour valider. Par exemple, pour faire la moyenne de 2 températures :
+Pour faire un calcul sur de multiples commandes, c’est très facile ! Il suffit de créer une commande virtuelle de type ``info/Numérique`` et dans le champs valeur mettre vos calculs. Le testeur d'expression peut vous aider à cette étape pour valider. Par exemple, pour faire la moyenne de 2 températures :
 
 ![virtual10](../images/virtual10.png)
 
@@ -140,7 +140,7 @@ Plusieurs points à réaliser correctement :
 - Bien mettre l’unité,
 - Cocher la case pour historiser si nécessaire.
 
-Nous allons voir ici comment faire une commande qui va éteindre 2 lumières. Rien de plus simple, il suffit de créer une action virtuelle et de mettre les 2 commandes séparées par un ``&&`` :
+Nous allons voir ici comment faire une commande qui va éteindre 2 lumières. Rien de plus simple, Il suffit de créer une commande virtuelle de type ``action/Défaut`` et de mettre les 2 commandes séparées par un ``&&`` :
 
 ![virtual11](../images/virtual11.png)
 
