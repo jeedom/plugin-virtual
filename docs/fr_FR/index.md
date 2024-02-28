@@ -125,7 +125,7 @@ Ensuite vous sauvegardez pour voir apparaître la commande d'état :
 
 ![virtual15](../images/virtual15.png)
 
-Ici il faut dans la valeur de la commande action mettre ``not(\#[...][...][Etat]#)`` *(remplacer par votre propre commande)* et lier l'état à la commande action (attention, il ne faut pas masquer la commande état cette fois). Il faut aussi passer la commande info en sous-type binaire.
+Ici il faut dans la valeur de la commande action mettre ``not(#[...][...][Etat]#)`` *(remplacer par votre propre commande)* et lier l'état à la commande action (attention, il ne faut pas masquer la commande état cette fois). Il faut aussi passer la commande info en sous-type binaire.
 
 ## Multiple commandes
 
