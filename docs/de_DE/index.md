@@ -125,11 +125,11 @@ Anschließend speichern Sie, um den Statusbefehl anzuzeigen :
 
 ![virtual15](../images/virtual15.png)
 
-Hier muss im Wert des Aktionsbefehls gesetzt werden ``not(\#[...][...][Etat]#)`` *(durch Ihre eigene Bestellung ersetzen)* und verknüpfen Sie den Zustand mit dem Aktionsbefehl (Achtung, Sie dürfen den Zustandsbefehl diesmal nicht ausblenden). Sie müssen den Befehl info auch im binären Subtyp platzieren.
+Hier muss im Wert des Aktionsbefehls gesetzt werden ``not(#[...][...][Etat]#)`` *(durch Ihre eigene Bestellung ersetzen)* und verknüpfen Sie den Zustand mit dem Aktionsbefehl (Achtung, Sie dürfen den Zustandsbefehl diesmal nicht ausblenden). Sie müssen den Befehl info auch im binären Subtyp platzieren.
 
 ## Mehrfachbestellungen
 
-Es ist sehr einfach, eine Berechnung für mehrere Bestellungen durchzuführen ! Erstellen Sie einfach eine virtuelle Informationstypreihenfolge und geben Sie im Wertefeld Ihre Berechnungen ein. Der Ausdruckstester kann Ihnen bei diesem Schritt bei der Validierung helfen. Zum Beispiel, um 2 Temperaturen zu mitteln :
+Es ist sehr einfach, eine Berechnung für mehrere Bestellungen durchzuführen ! Erstellen Sie einfach einen virtuellen Befehl vom Typ ``info/Numérique`` und geben Sie in das Wertefeld Ihre Berechnungen ein. Der Ausdruckstester kann Ihnen bei diesem Schritt bei der Validierung helfen. Zum Beispiel, um 2 Temperaturen zu mitteln :
 
 ![virtual10](../images/virtual10.png)
 
@@ -140,7 +140,7 @@ Einige Punkte müssen richtig gemacht werden :
 - Stellen Sie das Gerät gut auf,
 - Aktivieren Sie das Kontrollkästchen, um bei Bedarf zu protokollieren.
 
-Wir werden hier sehen, wie man eine Bestellung aufgibt, die 2 Lichter ausschaltet. Nichts könnte einfacher sein, erstellen Sie einfach eine virtuelle Aktion und setzen Sie die 2 Befehle getrennt durch a ``&&`` :
+Wir werden hier sehen, wie man eine Bestellung aufgibt, die 2 Lichter ausschaltet. Nichts könnte einfacher sein, erstellen Sie einfach einen virtuellen Befehl vom Typ ``action/Défaut`` und geben Sie die beiden Befehle durch a getrennt ein ``&&`` :
 
 ![virtual11](../images/virtual11.png)
 

@@ -125,11 +125,11 @@ Luego guarda para ver aparecer el comando de estado :
 
 ![virtual15](../images/virtual15.png)
 
-Aquí es necesario en el valor del comando de acción poner ``not(\#[...][...][Etat]#)`` *(reemplácelo con su propio pedido)* y vincular el estado al comando de acción (tenga cuidado, no debe ocultar el comando de estado esta vez). También debe colocar el comando de información en subtipo binario.
+Aquí es necesario en el valor del comando de acción poner ``not(#[...][...][Etat]#)`` *(reemplácelo con su propio pedido)* y vincular el estado al comando de acción (tenga cuidado, no debe ocultar el comando de estado esta vez). También debe colocar el comando de información en subtipo binario.
 
 ## Pedidos múltiples
 
-Para hacer un cálculo en múltiples pedidos, es muy fácil ! Simplemente cree un orden de tipo de información virtual y en el campo de valor coloque sus cálculos. El probador de expresiones puede ayudarlo con este paso para validar. Por ejemplo, para promediar 2 temperaturas :
+Para hacer un cálculo en múltiples pedidos, es muy fácil ! Simplemente cree un comando virtual de tipo ``info/Numérique`` y en el campo valor pon tus cálculos. El probador de expresiones puede ayudarlo con este paso para validar. Por ejemplo, para promediar 2 temperaturas :
 
 ![virtual10](../images/virtual10.png)
 
@@ -140,7 +140,7 @@ Varios puntos para hacer correctamente :
 - Pon la unidad bien,
 - Marque la casilla para iniciar sesión si es necesario.
 
-Veremos aquí cómo hacer un pedido que apagará 2 luces. Nada podría ser más simple, solo crea una acción virtual y coloca los 2 comandos separados por un ``YY`` :
+Veremos aquí cómo hacer un pedido que apagará 2 luces. Nada podría ser más simple, simplemente cree un comando virtual de tipo ``action/Défaut`` y poner los 2 comandos separados por un ``YY`` :
 
 ![virtual11](../images/virtual11.png)
 
