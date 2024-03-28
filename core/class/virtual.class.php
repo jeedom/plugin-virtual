@@ -59,7 +59,11 @@ class virtual extends eqLogic {
 				try {
 					$c = new Cron\CronExpression(checkAndFixCron($autorefresh), new Cron\FieldFactory);
 					if ($c->isDue()) {
-						$eqLogic->refresh();
+						try {
+							$eqLogic->refresh();
+						} catch (Exception $exc) {
+							log::add('virtual', 'error', __('Erreur pour ', __FILE__) . $eqLogic->getHumanName() . ' : ' . $exc->getMessage());
+						}
 					}
 				} catch (Exception $exc) {
 					log::add('virtual', 'error', __('Expression cron non valide pour', __FILE__) . ' ' . $eqLogic->getHumanName() . ' : ' . $autorefresh);
