@@ -87,6 +87,7 @@
         "Equipement ID virtuel inconnu ": "Unknown virtual ID device",
         "L\\'équipement n\\'est pas de type virtuel": "The equipment is not virtual type",
         "Commande introuvable": "Command not found",
+        "Erreur pour ": "Error for",
         "Expression cron non valide pour": "Invalid cron expression for",
         "Virtuel": "Virtual",
         "dans la commande": "in the command",
