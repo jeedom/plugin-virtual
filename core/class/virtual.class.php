@@ -60,6 +60,7 @@ class virtual extends eqLogic {
 					$c = new Cron\CronExpression(checkAndFixCron($autorefresh), new Cron\FieldFactory);
 					if ($c->isDue()) {
 						try {
+							log:add('virtual','debug',__('Mise à jour des valeurs pour : ', __FILE__).$eqLogic->getHumanName());
 							$eqLogic->refresh();
 						} catch (Exception $exc) {
 							log::add('virtual', 'error', __('Erreur pour ', __FILE__) . $eqLogic->getHumanName() . ' : ' . $exc->getMessage());
