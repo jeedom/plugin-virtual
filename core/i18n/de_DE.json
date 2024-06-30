@@ -87,6 +87,7 @@
         "Equipement ID virtuel inconnu ": "Unbekanntes virtuelles ID-Gerät",
         "L\\'équipement n\\'est pas de type virtuel": "Das Gerät ist kein virtueller Typ",
         "Commande introuvable": "Befehl nicht gefunden",
+        "Mise à jour des valeurs pour : ": "Aktualisierte Werte für:",
         "Erreur pour ": "Fehler für",
         "Expression cron non valide pour": "Ungültiger Cron-Ausdruck für",
         "Virtuel": "Virtuell",
