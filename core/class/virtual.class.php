@@ -60,7 +60,7 @@ class virtual extends eqLogic {
 					$c = new Cron\CronExpression(checkAndFixCron($autorefresh), new Cron\FieldFactory);
 					if ($c->isDue()) {
 						try {
-							log:add('virtual','debug',__('Mise à jour des valeurs pour : ', __FILE__).$eqLogic->getHumanName());
+							log::add('virtual', 'debug', __('Mise à jour des valeurs pour : ', __FILE__) . $eqLogic->getHumanName());
 							$eqLogic->refresh();
 						} catch (Exception $exc) {
 							log::add('virtual', 'error', __('Erreur pour ', __FILE__) . $eqLogic->getHumanName() . ' : ' . $exc->getMessage());
@@ -73,7 +73,7 @@ class virtual extends eqLogic {
 		}
 	}
 
-	public static function templateParameters($_template = ''){
+	public static function templateParameters($_template = '') {
 		$return = array();
 		foreach (ls(dirname(__FILE__) . '/../config/template', '*.json', false, array('files', 'quiet')) as $file) {
 			try {
@@ -82,7 +82,6 @@ class virtual extends eqLogic {
 					$return += json_decode($content, true);
 				}
 			} catch (Exception $e) {
-
 			}
 		}
 		if (isset($_template) && $_template != '') {
@@ -101,13 +100,13 @@ class virtual extends eqLogic {
 				preg_match_all("/#([0-9]*)#/", $cmd->getConfiguration('infoName', ''), $matches);
 				foreach ($matches[1] as $cmd_id) {
 					if (!cmd::byId(str_replace('#', '', $cmd_id))) {
-						$return[] = array('detail' => __('Virtuel',__FILE__).' ' . $virtual->getHumanName().' '.__('dans la commande',__FILE__).' ' . $cmd->getName(), 'help' => __('Nom Information',__FILE__), 'who' => '#' . $cmd_id . '#');
+						$return[] = array('detail' => __('Virtuel', __FILE__) . ' ' . $virtual->getHumanName() . ' ' . __('dans la commande', __FILE__) . ' ' . $cmd->getName(), 'help' => __('Nom Information', __FILE__), 'who' => '#' . $cmd_id . '#');
 					}
 				}
 				preg_match_all("/#([0-9]*)#/", $cmd->getConfiguration('calcul', ''), $matches);
 				foreach ($matches[1] as $cmd_id) {
 					if (!cmd::byId(str_replace('#', '', $cmd_id))) {
-						$return[] = array('detail' => __('Virtuel',__FILE__).' ' . $virtual->getHumanName().' '.__('dans la commande',__FILE__).' ' . $cmd->getName(), 'help' => __('Calcul',__FILE__), 'who' => '#' . $cmd_id . '#');
+						$return[] = array('detail' => __('Virtuel', __FILE__) . ' ' . $virtual->getHumanName() . ' ' . __('dans la commande', __FILE__) . ' ' . $cmd->getName(), 'help' => __('Calcul', __FILE__), 'who' => '#' . $cmd_id . '#');
 					}
 				}
 			}
@@ -117,7 +116,7 @@ class virtual extends eqLogic {
 
 	/*     * *********************Methode d'instance************************* */
 
-	public function applyTemplate($_template){
+	public function applyTemplate($_template) {
 		$template = self::templateParameters($_template);
 		if (!is_array($template)) {
 			return true;
@@ -186,13 +185,13 @@ class virtual extends eqLogic {
 		}
 		foreach ($eqLogic->getCmd() as $cmd_def) {
 			$cmd_name = $cmd_def->getName();
-			if ($cmd_name == __('Rafraichir',__FILE__)) {
+			if ($cmd_name == __('Rafraichir', __FILE__)) {
 				$cmd_name .= '_1';
 			}
 			if ($virtual_with_commands) {
 				$cmd_name .= '_' . $cmd_def->getId();
 			}
-			log::add('virtual', 'debug', __('import équipement',__FILE__) . ' : ' . $eqLogic->getName() . ' > '.__('ajout de la commande',__FILE__) .' : ' . $cmd_name);
+			log::add('virtual', 'debug', __('import équipement', __FILE__) . ' : ' . $eqLogic->getName() . ' > ' . __('ajout de la commande', __FILE__) . ' : ' . $cmd_name);
 			$cmd = new virtualCmd();
 			$cmd->setName($cmd_name);
 			$cmd->setEqLogic_id($this->getId());
@@ -218,7 +217,6 @@ class virtual extends eqLogic {
 			try {
 				$cmd->save();
 			} catch (Exception $e) {
-
 			}
 		}
 		$this->save();
@@ -245,13 +243,13 @@ class virtual extends eqLogic {
 		foreach ($cmdsSelected as $cmdId) {
 			$cmd_def = cmd::byId($cmdId);
 			$cmd_name = $cmd_def->getName();
-			if ($cmd_name == __('Rafraichir',__FILE__)) {
+			if ($cmd_name == __('Rafraichir', __FILE__)) {
 				$cmd_name .= '_1';
 			}
 			if ($virtual_with_commands) {
 				$cmd_name .= '_' . $cmd_def->getId();
 			}
-			log::add('virtual', 'debug', __('import équipement',__FILE__) . ' : ' . $eqLogic->getName() . ' > '.__('ajout de la commande',__FILE__) .' : ' . $cmd_name);
+			log::add('virtual', 'debug', __('import équipement', __FILE__) . ' : ' . $eqLogic->getName() . ' > ' . __('ajout de la commande', __FILE__) . ' : ' . $cmd_name);
 			$cmd = new virtualCmd();
 			$cmd->setName($cmd_name);
 			$cmd->setEqLogic_id($this->getId());
@@ -277,12 +275,10 @@ class virtual extends eqLogic {
 			try {
 				$cmd->save();
 			} catch (Exception $e) {
-
 			}
 		}
 		$this->save();
 	}
-
 }
 
 class virtualCmd extends cmd {
@@ -303,8 +299,8 @@ class virtualCmd extends cmd {
 			if (is_object($actionInfo)) {
 				$this->setId($actionInfo->getId());
 			}
-			$this->setConfiguration('calcul','');
-			if($this->getType() == 'info'){
+			$this->setConfiguration('calcul', '');
+			if ($this->getType() == 'info') {
 				$this->setValue('');
 			}
 		}
@@ -312,13 +308,13 @@ class virtualCmd extends cmd {
 			if ($this->getConfiguration('infoName') == '') {
 				throw new Exception(__('Le nom de la commande info ne peut être vide', __FILE__));
 			}
-			if (strpos($this->getConfiguration('infoName'),'core::jeeObject::summary') !== false) {
+			if (strpos($this->getConfiguration('infoName'), 'core::jeeObject::summary') !== false) {
 				return;
 			}
 			$cmd = cmd::byId(str_replace('#', '', $this->getConfiguration('infoName')));
 			if (is_object($cmd)) {
-				if($cmd->getId() == $this->getId()){
-					throw new Exception(__('Vous ne pouvez appeler la commande elle-même (boucle infinie) sur', __FILE__) . ' : '.$this->getName());
+				if ($cmd->getId() == $this->getId()) {
+					throw new Exception(__('Vous ne pouvez appeler la commande elle-même (boucle infinie) sur', __FILE__) . ' : ' . $this->getName());
 				}
 				$this->setSubType($cmd->getSubType());
 				$this->setConfiguration('infoId', '');
@@ -329,15 +325,15 @@ class virtualCmd extends cmd {
 					$actionInfo->setType('info');
 					switch ($this->getSubType()) {
 						case 'slider':
-						$actionInfo->setSubType('numeric');
-						break;
+							$actionInfo->setSubType('numeric');
+							break;
 						default:
-						$actionInfo->setSubType('string');
-						break;
+							$actionInfo->setSubType('string');
+							break;
 					}
-				}else{
-					if($actionInfo->getId() == $this->getId()){
-						throw new Exception(__('Vous ne pouvez appeler la commande elle-même (boucle infinie) sur', __FILE__) . ' : '.$this->getName());
+				} else {
+					if ($actionInfo->getId() == $this->getId()) {
+						throw new Exception(__('Vous ne pouvez appeler la commande elle-même (boucle infinie) sur', __FILE__) . ' : ' . $this->getName());
 					}
 				}
 				$actionInfo->setConfiguration('virtualAction', 1);
@@ -349,7 +345,7 @@ class virtualCmd extends cmd {
 		} else {
 			$calcul = $this->getConfiguration('calcul');
 			if (strpos($calcul, '#' . $this->getId() . '#') !== false) {
-				throw new Exception(__('Vous ne pouvez appeler la commande elle-même (boucle infinie) sur', __FILE__) . ' : '.$this->getName());
+				throw new Exception(__('Vous ne pouvez appeler la commande elle-même (boucle infinie) sur', __FILE__) . ' : ' . $this->getName());
 			}
 			$added_value = [];
 			preg_match_all("/#([0-9]*)#/", $calcul, $matches);
@@ -358,7 +354,7 @@ class virtualCmd extends cmd {
 				if (is_numeric($cmd_id)) {
 					$cmd = self::byId($cmd_id);
 					if (is_object($cmd) && $cmd->getType() == 'info') {
-						if(isset($added_value[$cmd_id])){
+						if (isset($added_value[$cmd_id])) {
 							continue;
 						}
 						$value .= '#' . $cmd_id . '#';
@@ -368,7 +364,7 @@ class virtualCmd extends cmd {
 			}
 			preg_match_all("/variable\((.*?)\)/", $calcul, $matches);
 			foreach ($matches[1] as $variable) {
-				if(isset($added_value['#variable(' . $variable . ')#'])){
+				if (isset($added_value['#variable(' . $variable . ')#'])) {
 					continue;
 				}
 				$value .= '#variable(' . $variable . ')#';
@@ -392,64 +388,62 @@ class virtualCmd extends cmd {
 		}
 		switch ($this->getType()) {
 			case 'info':
-			if ($this->getConfiguration('virtualAction', 0) == '0') {
-				try {
-					$result = jeedom::evaluateExpression($this->getConfiguration('calcul'));
-					if(is_string($result)){
-						$result = str_replace('"', '', $result);
+				if ($this->getConfiguration('virtualAction', 0) == '0') {
+					try {
+						$result = jeedom::evaluateExpression($this->getConfiguration('calcul'));
+						if (is_string($result)) {
+							$result = str_replace('"', '', $result);
+						}
+						return $result;
+					} catch (Exception $e) {
+						log::add('virtual', 'info', $e->getMessage());
+						return $this->getConfiguration('calcul');
 					}
-					return $result;
-				} catch (Exception $e) {
-					log::add('virtual', 'info', $e->getMessage());
-					return $this->getConfiguration('calcul');
 				}
-			}
-			break;
+				break;
 			case 'action':
-			if (strpos($this->getConfiguration('infoName'),'core::jeeObject::summary') !== false) {
-				jeeObject::actionOnSummary($this,$_options);
-				return;
-			}
-			$virtualCmd = virtualCmd::byId($this->getConfiguration('infoId'));
-			if (!is_object($virtualCmd)) {
-				$cmds = explode('&&', $this->getConfiguration('infoName'));
-				if (is_array($cmds)) {
-					foreach ($cmds as $cmd_id) {
-						$cmd = cmd::byId(str_replace('#', '', $cmd_id));
-						if (is_object($cmd)) {
-							try {
-								$cmd->execCmd($_options);
-							} catch (\Exception $e) {
-
+				if (strpos($this->getConfiguration('infoName'), 'core::jeeObject::summary') !== false) {
+					jeeObject::actionOnSummary($this, $_options);
+					return;
+				}
+				$virtualCmd = virtualCmd::byId($this->getConfiguration('infoId'));
+				if (!is_object($virtualCmd)) {
+					$cmds = explode('&&', $this->getConfiguration('infoName'));
+					if (is_array($cmds)) {
+						foreach ($cmds as $cmd_id) {
+							$cmd = cmd::byId(str_replace('#', '', $cmd_id));
+							if (is_object($cmd)) {
+								try {
+									$cmd->execCmd($_options);
+								} catch (\Exception $e) {
+								}
 							}
 						}
+						return;
+					} else {
+						$cmd = cmd::byId(str_replace('#', '', $this->getConfiguration('infoName')));
+						return $cmd->execCmd($_options);
 					}
-					return;
 				} else {
-					$cmd = cmd::byId(str_replace('#', '', $this->getConfiguration('infoName')));
-					return $cmd->execCmd($_options);
+					if ($virtualCmd->getEqType() != 'virtual') {
+						throw new Exception(__('La cible de la commande virtuelle n\'est pas un équipement de type virtuel', __FILE__));
+					}
+					if ($this->getSubType() == 'slider') {
+						$value = $_options['slider'];
+					} else if ($this->getSubType() == 'color') {
+						$value = $_options['color'];
+					} else if ($this->getSubType() == 'select') {
+						$value = $_options['select'];
+					} else {
+						$value = $this->getConfiguration('value');
+					}
+					$result = jeedom::evaluateExpression($value);
+					if ($this->getSubtype() == 'message') {
+						$result = $_options['title'] . ' ' . $_options['message'];
+					}
+					$eqLogic->checkAndUpdateCmd($virtualCmd, $result);
 				}
-			} else {
-				if ($virtualCmd->getEqType() != 'virtual') {
-					throw new Exception(__('La cible de la commande virtuelle n\'est pas un équipement de type virtuel', __FILE__));
-				}
-				if ($this->getSubType() == 'slider') {
-					$value = $_options['slider'];
-				} else if ($this->getSubType() == 'color') {
-					$value = $_options['color'];
-				} else if ($this->getSubType() == 'select') {
-					$value = $_options['select'];
-				} else {
-					$value = $this->getConfiguration('value');
-				}
-				$result = jeedom::evaluateExpression($value);
-				if ($this->getSubtype() == 'message') {
-					$result = $_options['title'] . ' ' . $_options['message'];
-				}
-				$eqLogic->checkAndUpdateCmd($virtualCmd,$result);
-			}
-			break;
+				break;
 		}
 	}
-
 }
