@@ -136,7 +136,7 @@ class virtual extends eqLogic {
 				}
 			}
 		} catch (Exception $exc) {
-			log::add('virtual', 'error', __('Erreur pour', __FILE__) . ' ' . $eqLogic->getHumanName() . ' : ' . $exc->getMessage());
+			log::add('virtual', 'error', __('Erreur pour', __FILE__) . ' ' . $this->getHumanName() . ' : ' . $exc->getMessage());
 		}
 	}
 
