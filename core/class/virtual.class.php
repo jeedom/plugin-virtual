@@ -29,6 +29,7 @@ class virtual extends eqLogic {
 			$eqLogic = new virtual();
 			$eqLogic->setName(__('Jeedom interne', __FILE__));
 			$eqLogic->setIsEnable(1);
+			$eqLogic->setConfiguration('autorefresh','*/10 * * * *');
 		}
 		$eqLogic->setEqType_name('virtual');
 		$eqLogic->setLogicalId('jeedom::monitor');
@@ -38,6 +39,77 @@ class virtual extends eqLogic {
 			$eqLogic->setName($eqLogic->getName() . ' remote ' . rand(0, 9999));
 			$eqLogic->save();
 		}
+
+		$cmd = $eqLogic->getCmd(null, 'jeedom::monitor::update::nb');
+		if (!is_object($cmd)) {
+			$cmd = new virtualCmd();
+			$cmd->setName(__('Nombre de mise à jour',__FILE__));
+			$cmd->setTemplate('mobile', 'line');
+			$cmd->setTemplate('dashboard', 'line');
+		}
+		$cmd->setConfiguration('infoName','jeedom::internal');
+		$cmd->setEqLogic_id($eqLogic->getId());
+		$cmd->setLogicalId('jeedom::monitor::update::nb');
+		$cmd->setType('info');
+		$cmd->setSubType('numeric');
+		$cmd->save();
+
+		$cmd = $eqLogic->getCmd(null, 'jeedom::monitor::message::nb');
+		if (!is_object($cmd)) {
+			$cmd = new virtualCmd();
+			$cmd->setName(__('Nombre de message',__FILE__));
+			$cmd->setTemplate('mobile', 'line');
+			$cmd->setTemplate('dashboard', 'line');
+		}
+		$cmd->setConfiguration('infoName','jeedom::internal');
+		$cmd->setEqLogic_id($eqLogic->getId());
+		$cmd->setLogicalId('jeedom::monitor::message::nb');
+		$cmd->setType('info');
+		$cmd->setSubType('numeric');
+		$cmd->save();
+
+		$cmd = $eqLogic->getCmd(null, 'jeedom::monitor::version');
+		if (!is_object($cmd)) {
+			$cmd = new virtualCmd();
+			$cmd->setName(__('Version',__FILE__));
+			$cmd->setTemplate('mobile', 'line');
+			$cmd->setTemplate('dashboard', 'line');
+		}
+		$cmd->setConfiguration('infoName','jeedom::internal');
+		$cmd->setEqLogic_id($eqLogic->getId());
+		$cmd->setLogicalId('jeedom::monitor::version');
+		$cmd->setType('info');
+		$cmd->setSubType('string');
+		$cmd->save();
+
+		$cmd = $eqLogic->getCmd(null, 'jeedom::monitor::update');
+		if (!is_object($cmd)) {
+			$cmd = new virtualCmd();
+			$cmd->setName(__('Mettre à jour',__FILE__));
+			$cmd->setTemplate('mobile', 'line');
+			$cmd->setTemplate('dashboard', 'line');
+		}
+		$cmd->setConfiguration('infoName','jeedom::internal');
+		$cmd->setEqLogic_id($eqLogic->getId());
+		$cmd->setLogicalId('jeedom::monitor::update');
+		$cmd->setType('action');
+		$cmd->setSubType('other');
+		$cmd->save();
+
+		$cmd = $eqLogic->getCmd(null, 'jeedom::monitor::backup');
+		if (!is_object($cmd)) {
+			$cmd = new virtualCmd();
+			$cmd->setName(__('Backuper',__FILE__));
+			$cmd->setTemplate('mobile', 'line');
+			$cmd->setTemplate('dashboard', 'line');
+		}
+		$cmd->setConfiguration('infoName','jeedom::internal');
+		$cmd->setEqLogic_id($eqLogic->getId());
+		$cmd->setLogicalId('jeedom::monitor::backup');
+		$cmd->setType('action');
+		$cmd->setSubType('other');
+		$cmd->save();
+
 		foreach (plugin::listPlugin(true) as $plugin) {
 			if ($plugin->getHasOwnDeamon() != 1) {
 				continue;
@@ -83,6 +155,7 @@ class virtual extends eqLogic {
 			$cmd->setSubType('other');
 			$cmd->save();
 		}
+		self::updateJeedomMonitor();
 	}
 
 	public static function updateJeedomMonitor(){
@@ -90,25 +163,15 @@ class virtual extends eqLogic {
 		if(!is_object($eqLogic)){
 			return;
 		}
+		$eqLogic->checkAndUpdateCmd('jeedom::monitor::update::nb',update::nbNeedUpdate());
+		$eqLogic->checkAndUpdateCmd('jeedom::monitor::message::nb',message::nbMessage());
+		$eqLogic->checkAndUpdateCmd('jeedom::monitor::version',jeedom::version());
 		foreach (plugin::listPlugin(true) as $plugin) {
 			if ($plugin->getHasOwnDeamon() != 1) {
 				continue;
 			}
-			$cmd = $eqLogic->getCmd(null, 'jeedom::monitor::deamonState::' . $plugin->getId());
-			if (!is_object($cmd)) {
-				continue;
-			}
-			$info = $plugin->deamon_info();
-			if ($info['state'] == 'ok') {
-				$cmd->event(1);
-			} else {
-				$cmd->event(0);
-			}
+			$eqLogic->checkAndUpdateCmd('jeedom::monitor::deamonState::' . $plugin->getId(),($plugin->deamon_info()['state'] == 'ok'));
 		}
-	}
-
-	public static function cron10(){
-		self::updateJeedomMonitor();
 	}
 
 	public static function event() {
@@ -507,6 +570,12 @@ class virtualCmd extends cmd {
 						if(is_object($plugin)){
 							$plugin->deamon_stop();
 						}
+					}
+					if (strpos($this->getLogicalId(), 'update') !== false) {
+						jeedom::update();
+					}
+					if (strpos($this->getLogicalId(), 'backup') !== false) {
+						jeedom::backup(true);
 					}
 					virtual::updateJeedomMonitor();
 					return;
