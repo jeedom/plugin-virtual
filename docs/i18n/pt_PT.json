@@ -2,6 +2,8 @@
     "changelog.md": {
         "Changelog Virtuel": "Changelog Virtual",
         "S'il n'y a pas d'information sur la mise à jour, c'est que celle-ci concerne uniquement de la mise à jour de documentation, de traduction ou de texte": "Se não houver informação sobre a atualização, significa que se trata apenas da atualização da documentação, tradução ou texto",
+        "Ajout d'un bouton pour crée Jeedom monitor, c'est un équipement qui vous permet de récuperer des informations sur Jeedom (pour le moment que l'état des démons) et d'agir sur Jeedom (pour le moment seulement sur les démons": "Adicionado um botão para criar o monitor Jeedom, este é um equipamento que permite recuperar informações sobre Jeedom (no momento apenas o estado dos demônios) e atuar no Jeedom (no momento apenas sobre os demônios",
+        "Les informations sont mises à jour toutes les 10min": "As informações são atualizadas a cada 10 minutos",
         "08\/01\/2024": "01\/08\/2024",
         "Préparation pour jeedom 4.4": "Preparando-se para Jeedom 4.4",
         "02\/10\/2023": "10\/02\/2023",

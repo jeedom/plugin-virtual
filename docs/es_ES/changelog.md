@@ -4,6 +4,8 @@
 >
 >Si no hay información sobre la actualización, significa que se trata solo de la actualización de la documentación, la traducción o el texto.
 
+- Se agregó un botón para crear el monitor Jeedom, este es un equipo que te permite recuperar información sobre Jeedom (por el momento solo el estado de los demonios) y actuar sobre Jeedom (por el momento solo sobre los demonios)). La información se actualiza cada 10 minutos
+
 # 08/01/2024
 
 - Preparándose para el apuro 4.4

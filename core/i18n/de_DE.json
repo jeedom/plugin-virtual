@@ -12,6 +12,7 @@
         "401 - Accès non autorisé": "401 - Nicht autorisierter Zugriff",
         "Gestion": "Verwaltung",
         "Ajouter": "Hinzufügen",
+        "Crée\/Mettre à jour Jeedom monitor": "Jeedom-Monitor erstellen\/aktualisieren",
         "Mes virtuels": "Mein virtueller",
         "Aucun équipement virtuel trouvé, cliquer sur \"Ajouter\" pour commencer": "Keine virtuellen Geräte gefunden, klicken Sie zum Starten auf „Hinzufügen“",
         "Rechercher": "Suchen nach",
@@ -83,6 +84,10 @@
         "Aucune méthode correspondante à": "Keine Methode entsprechend"
     },
     "plugins\/virtual\/core\/class\/virtual.class.php": {
+        "Jeedom interne": "Interne Geizhalsigkeit",
+        "Démon": "Dämon",
+        "Démarrer démon": "Daemon starten",
+        "Arrêter démon": "Stoppt den Dämon",
         "Commande ID virtuel inconnu ou la commande n\\'est pas de type virtuel": "Virtuelle Befehls-ID unbekannt oder Befehl ist nicht vom virtuellen Typ",
         "Equipement ID virtuel inconnu ": "Unbekanntes virtuelles ID-Gerät",
         "L\\'équipement n\\'est pas de type virtuel": "Das Gerät ist kein virtueller Typ",

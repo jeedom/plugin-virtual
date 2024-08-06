@@ -12,6 +12,7 @@
         "401 - Accès non autorisé": "401 - Unauthorized access",
         "Gestion": "Management",
         "Ajouter": "Add",
+        "Crée\/Mettre à jour Jeedom monitor": "Create\/Update Jeedom monitor",
         "Mes virtuels": "My virtual",
         "Aucun équipement virtuel trouvé, cliquer sur \"Ajouter\" pour commencer": "No virtual equipment found, click \"Add\" to start",
         "Rechercher": "Search",
@@ -83,6 +84,10 @@
         "Aucune méthode correspondante à": "No method corresponding to"
     },
     "plugins\/virtual\/core\/class\/virtual.class.php": {
+        "Jeedom interne": "Internal jeedom",
+        "Démon": "Demon",
+        "Démarrer démon": "Start daemon",
+        "Arrêter démon": "Stop Demon",
         "Commande ID virtuel inconnu ou la commande n\\'est pas de type virtuel": "Command virtual ID unknown or command is not of virtual type",
         "Equipement ID virtuel inconnu ": "Unknown virtual ID device",
         "L\\'équipement n\\'est pas de type virtuel": "The equipment is not virtual type",

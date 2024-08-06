@@ -4,6 +4,8 @@
 >
 >Wenn es keine Informationen über die Aktualisierung gibt, bedeutet dies, dass es sich nur um die Aktualisierung von Dokumentation, Übersetzung oder Text handelt.
 
+- Es wurde eine Schaltfläche zum Erstellen eines Jeedom-Monitors hinzugefügt. Hierbei handelt es sich um ein Gerät, mit dem Sie Informationen über Jeedom (im Moment nur den Zustand von Dämonen) abrufen und auf Jeedom (im Moment nur für Dämonen) reagieren können). Die Informationen werden alle 10 Minuten aktualisiert
+
 # 01.08.2024
 
 - Vorbereitung auf Jeedom 4.4
