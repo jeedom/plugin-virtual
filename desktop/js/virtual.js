@@ -28,6 +28,10 @@ $('#bt_createJeedomMonitor').off('click').on('click', function() {
       $('#div_alert').showAlert({ message: error.message, level: 'danger' })
     },
     success: function(data) {
+      if (data.state != 'ok') {
+        $('#div_alert').showAlert({ message: data.result, level: 'danger' })
+        return
+      }
       window.location.reload();
     }
   });

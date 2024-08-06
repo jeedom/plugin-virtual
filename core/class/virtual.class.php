@@ -30,6 +30,7 @@ class virtual extends eqLogic {
 			$eqLogic->setName(__('Jeedom interne', __FILE__));
 			$eqLogic->setIsEnable(1);
 		}
+		$eqLogic->setEqType_name('virtual');
 		$eqLogic->setLogicalId('jeedom::monitor');
 		try {
 			$eqLogic->save();
@@ -43,11 +44,12 @@ class virtual extends eqLogic {
 			}
 			$cmd = $eqLogic->getCmd(null, 'jeedom::monitor::deamonState::' . $plugin->getId());
 			if (!is_object($cmd)) {
-				$cmd = new jeelinkCmd();
+				$cmd = new virtualCmd();
 				$cmd->setName(__('Démon', __FILE__) . ' ' . $plugin->getName());
 				$cmd->setTemplate('mobile', 'line');
 				$cmd->setTemplate('dashboard', 'line');
 			}
+			$cmd->setConfiguration('infoName','jeedom::internal');
 			$cmd->setConfiguration('deamon', $plugin->getId());
 			$cmd->setEqLogic_id($eqLogic->getId());
 			$cmd->setLogicalId('jeedom::monitor::deamonState::' . $plugin->getId());
@@ -57,9 +59,10 @@ class virtual extends eqLogic {
 
 			$cmd = $eqLogic->getCmd(null, 'jeedom::monitor::deamonStart::' . $plugin->getId());
 			if (!is_object($cmd)) {
-				$cmd = new jeelinkCmd();
+				$cmd = new virtualCmd();
 				$cmd->setName(__('Démarrer démon', __FILE__) . ' ' . $plugin->getName());
 			}
+			$cmd->setConfiguration('infoName','jeedom::internal');
 			$cmd->setConfiguration('deamon', $plugin->getId());
 			$cmd->setEqLogic_id($eqLogic->getId());
 			$cmd->setLogicalId('jeedom::monitor::deamonStart::' . $plugin->getId());
@@ -69,9 +72,10 @@ class virtual extends eqLogic {
 
 			$cmd = $eqLogic->getCmd(null, 'jeedom::monitor::deamonStop::' . $plugin->getId());
 			if (!is_object($cmd)) {
-				$cmd = new jeelinkCmd();
+				$cmd = new virtualCmd();
 				$cmd->setName(__('Arrêter démon', __FILE__) . ' ' . $plugin->getName());
 			}
+			$cmd->setConfiguration('infoName','jeedom::internal');
 			$cmd->setConfiguration('deamon', $plugin->getId());
 			$cmd->setEqLogic_id($eqLogic->getId());
 			$cmd->setLogicalId('jeedom::monitor::deamonStop::' . $plugin->getId());
@@ -389,6 +393,9 @@ class virtualCmd extends cmd {
 		if ($this->getType() == 'action') {
 			if ($this->getConfiguration('infoName') == '') {
 				throw new Exception(__('Le nom de la commande info ne peut être vide', __FILE__));
+			}
+			if (strpos($this->getConfiguration('infoName'), 'jeedom::internal') !== false) {
+				return;
 			}
 			if (strpos($this->getConfiguration('infoName'), 'core::jeeObject::summary') !== false) {
 				return;
