@@ -20,8 +20,6 @@ $eqLogics = eqLogic::byType($plugin->getId());
 				<br>
 				<span>{{Ajouter}}</span>
 			</div>
-		</div>
-		<div class="eqLogicThumbnailContainer">
 			<div class="cursor logoSecondary" id="bt_createJeedomMonitor">
 				<i class="fas fa-plus-circle"></i>
 				<br>
