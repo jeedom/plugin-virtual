@@ -213,6 +213,10 @@ class virtual extends eqLogic {
 	}
 
 	public function refresh() {
+		if($this->getLogicalId() == 'jeedom::monitor'){
+			self::updateJeedomMonitor();
+			return;
+		}
 		try {
 			foreach ($this->getCmd('info') as $cmd) {
 				if ($cmd->getConfiguration('calcul') == '' || $cmd->getConfiguration('virtualAction', 0) != '0') {
@@ -504,6 +508,7 @@ class virtualCmd extends cmd {
 							$plugin->deamon_stop();
 						}
 					}
+					virtual::updateJeedomMonitor();
 					return;
 				}
 				if (strpos($this->getConfiguration('infoName'), 'core::jeeObject::summary') !== false) {
