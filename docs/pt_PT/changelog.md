@@ -4,7 +4,7 @@
 >
 >Se não houver informação sobre a atualização, significa que se trata apenas da atualização da documentação, tradução ou texto.
 
-- Adicionado um botão para criar o monitor Jeedom, este é um equipamento que permite recuperar informações sobre Jeedom (no momento apenas o estado dos demônios) e atuar no Jeedom (no momento apenas sobre os demônios). As informações são atualizadas a cada 10 minutos
+- Adicionado um botão para criar monitor Jeedom, este é um equipamento que permite recuperar informações sobre Jeedom e agir sobre Jeedom.
 
 # 01/08/2024
 

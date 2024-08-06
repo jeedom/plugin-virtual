@@ -22,6 +22,20 @@ O equipamento virtual pode ser útil para as seguintes necessidades :
 
 Este plugin não requer nenhuma configuração especial e deve simplesmente ser ativado após a instalação.
 
+## Criar/atualizar monitor Jeedom
+
+Botão que permite criar equipamentos de internet Jeedom que fornecerão informações internas sobre Jeedom : 
+
+- para cada plugin que possui um daemon, um comando sobre o estado do daemon
+- para cada plugin que possui um daemon, um comando para iniciar o daemon
+- para cada plugin que tenha um daemon, um comando para parar o daemon
+- número de atualizações disponíveis
+- número de mensagens no centro de mensagens
+- versão do Jeedom
+- faça um backup
+- lançar a atualização do Jeedom (e plugins)
+
+
 ## Configuração do equipamento
 
 Dispositivos virtuais são acessíveis a partir do menu **Plugins → Programação → Virtual**.

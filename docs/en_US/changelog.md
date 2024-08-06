@@ -4,7 +4,7 @@
 >
 >If there is no information on the update, it means that it concerns only the update of documentation, translation or text.
 
-- Added a button to create Jeedom monitor, this is equipment that allows you to retrieve information on Jeedom (for the moment only the state of demons) and to act on Jeedom (for the moment only on demons). Information is updated every 10 minutes
+- Added a button to create Jeedom monitor, this is equipment that allows you to retrieve information on Jeedom and act on Jeedom.
 
 # 01/08/2024
 

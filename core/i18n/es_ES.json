@@ -85,6 +85,11 @@
     },
     "plugins\/virtual\/core\/class\/virtual.class.php": {
         "Jeedom interne": "Aflicción interna",
+        "Nombre de mise à jour": "Número de actualizaciones",
+        "Nombre de message": "Número de mensajes",
+        "Version": "Versión",
+        "Mettre à jour": "Poner al día",
+        "Backuper": "Respaldo",
         "Démon": "Demonio",
         "Démarrer démon": "Iniciar demonio",
         "Arrêter démon": "Detener demonio",

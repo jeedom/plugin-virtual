@@ -85,6 +85,11 @@
     },
     "plugins\/virtual\/core\/class\/virtual.class.php": {
         "Jeedom interne": "Internal jeedom",
+        "Nombre de mise à jour": "Number of updates",
+        "Nombre de message": "Number of messages",
+        "Version": "Version",
+        "Mettre à jour": "To update",
+        "Backuper": "Backup",
         "Démon": "Demon",
         "Démarrer démon": "Start daemon",
         "Arrêter démon": "Stop Demon",

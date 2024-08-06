@@ -22,6 +22,20 @@ Virtuelle Ausrüstung kann für die folgenden Bedürfnisse nützlich sein :
 
 Dieses Plugin erfordert keine spezielle Konfiguration und muss nach der Installation einfach aktiviert werden.
 
+## Jeedom-Monitor erstellen/aktualisieren
+
+Schaltfläche, mit der Sie Jeedom-Internetgeräte erstellen können, die Ihnen interne Informationen zu Jeedom liefern : 
+
+- für jedes Plugin, das einen Daemon hat, einen Befehl zum Status des Daemons
+- für jedes Plugin, das einen Daemon hat, einen Befehl zum Starten des Daemons
+- für jedes Plugin, das einen Daemon hat, einen Befehl zum Stoppen des Daemons
+- Anzahl der verfügbaren Updates
+- Anzahl der Nachrichten im Nachrichtencenter
+- Version von Jeedom
+- Erstelle eine Sicherung
+- Starten Sie das Update von Jeedom (und Plugins))
+
+
 ## Gerätekonfiguration
 
 Virtuelle Geräte sind über das Menü zugänglich **Plugins → Programmierung → Virtuell**.

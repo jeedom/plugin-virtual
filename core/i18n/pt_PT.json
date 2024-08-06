@@ -85,6 +85,11 @@
     },
     "plugins\/virtual\/core\/class\/virtual.class.php": {
         "Jeedom interne": "Jejum interno",
+        "Nombre de mise à jour": "Número de atualizações",
+        "Nombre de message": "Número de mensagens",
+        "Version": "Versão",
+        "Mettre à jour": "Atualizar",
+        "Backuper": "Cópia de segurança",
         "Démon": "Demônio",
         "Démarrer démon": "Iniciar daemon",
         "Arrêter démon": "Pare o Demônio",

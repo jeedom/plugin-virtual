@@ -85,6 +85,11 @@
     },
     "plugins\/virtual\/core\/class\/virtual.class.php": {
         "Jeedom interne": "Interne Geizhalsigkeit",
+        "Nombre de mise à jour": "Anzahl der Updates",
+        "Nombre de message": "Anzahl der Nachrichten",
+        "Version": "Ausführung",
+        "Mettre à jour": "Aktualisieren",
+        "Backuper": "Sicherung",
         "Démon": "Dämon",
         "Démarrer démon": "Daemon starten",
         "Arrêter démon": "Stoppt den Dämon",

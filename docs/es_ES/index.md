@@ -22,6 +22,20 @@ El equipo virtual puede ser útil para las siguientes necesidades :
 
 Este complemento no requiere ninguna configuración especial y simplemente debe activarse después de la instalación.
 
+## Crear/actualizar monitor Jeedom
+
+Botón que le permite crear equipos de Internet Jeedom que le brindarán información interna sobre jeedom : 
+
+- para cada complemento que tenga un demonio, un comando sobre el estado del demonio
+- para cada complemento que tenga un demonio, un comando para iniciar el demonio
+- para cada complemento que tenga un demonio, un comando para detener el demonio
+- número de actualizaciones disponibles
+- número de mensajes en el centro de mensajes
+- versión de aflicción
+- hacer una copia de seguridad
+- inicie la actualización de Jeedom (y complementos)
+
+
 ## Configuración del equipo
 
 Los dispositivos virtuales son accesibles desde el menú **Complementos → Programación → Virtual**.
