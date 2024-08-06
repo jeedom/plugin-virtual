@@ -21,6 +21,13 @@ $eqLogics = eqLogic::byType($plugin->getId());
 				<span>{{Ajouter}}</span>
 			</div>
 		</div>
+		<div class="eqLogicThumbnailContainer">
+			<div class="cursor logoSecondary" id="bt_createJeedomMonitor">
+				<i class="fas fa-plus-circle"></i>
+				<br>
+				<span>{{Crée/Mettre à jour Jeedom monitor}}</span>
+			</div>
+		</div>
 		<legend><i class="fas fa-clone"></i> {{Mes virtuels}}</legend>
 		<?php
 		if (count($eqLogics) == 0) {

@@ -23,6 +23,90 @@ class virtual extends eqLogic {
 
 	/*     * ***********************Methode static*************************** */
 
+	public static function createJeedomMonitor(){
+		$eqLogic = self::byLogicalId('jeedom::monitor','virtual');
+		if(!is_object($eqLogic)){
+			$eqLogic = new virtual();
+			$eqLogic->setName(__('Jeedom interne', __FILE__));
+			$eqLogic->setIsEnable(1);
+		}
+		$eqLogic->setLogicalId('jeedom::monitor');
+		try {
+			$eqLogic->save();
+		} catch (Exception $e) {
+			$eqLogic->setName($eqLogic->getName() . ' remote ' . rand(0, 9999));
+			$eqLogic->save();
+		}
+		foreach (plugin::listPlugin(true) as $plugin) {
+			if ($plugin->getHasOwnDeamon() != 1) {
+				continue;
+			}
+			$cmd = $eqLogic->getCmd(null, 'jeedom::monitor::deamonState::' . $plugin->getId());
+			if (!is_object($cmd)) {
+				$cmd = new jeelinkCmd();
+				$cmd->setName(__('Démon', __FILE__) . ' ' . $plugin->getName());
+				$cmd->setTemplate('mobile', 'line');
+				$cmd->setTemplate('dashboard', 'line');
+			}
+			$cmd->setConfiguration('deamon', $plugin->getId());
+			$cmd->setEqLogic_id($eqLogic->getId());
+			$cmd->setLogicalId('jeedom::monitor::deamonState::' . $plugin->getId());
+			$cmd->setType('info');
+			$cmd->setSubType('binary');
+			$cmd->save();
+
+			$cmd = $eqLogic->getCmd(null, 'jeedom::monitor::deamonStart::' . $plugin->getId());
+			if (!is_object($cmd)) {
+				$cmd = new jeelinkCmd();
+				$cmd->setName(__('Démarrer démon', __FILE__) . ' ' . $plugin->getName());
+			}
+			$cmd->setConfiguration('deamon', $plugin->getId());
+			$cmd->setEqLogic_id($eqLogic->getId());
+			$cmd->setLogicalId('jeedom::monitor::deamonStart::' . $plugin->getId());
+			$cmd->setType('action');
+			$cmd->setSubType('other');
+			$cmd->save();
+
+			$cmd = $eqLogic->getCmd(null, 'jeedom::monitor::deamonStop::' . $plugin->getId());
+			if (!is_object($cmd)) {
+				$cmd = new jeelinkCmd();
+				$cmd->setName(__('Arrêter démon', __FILE__) . ' ' . $plugin->getName());
+			}
+			$cmd->setConfiguration('deamon', $plugin->getId());
+			$cmd->setEqLogic_id($eqLogic->getId());
+			$cmd->setLogicalId('jeedom::monitor::deamonStop::' . $plugin->getId());
+			$cmd->setType('action');
+			$cmd->setSubType('other');
+			$cmd->save();
+		}
+	}
+
+	public static function updateJeedomMonitor(){
+		$eqLogic = self::byLogicalId('jeedom::monitor','virtual');
+		if(!is_object($eqLogic)){
+			return;
+		}
+		foreach (plugin::listPlugin(true) as $plugin) {
+			if ($plugin->getHasOwnDeamon() != 1) {
+				continue;
+			}
+			$cmd = $eqLogic->getCmd(null, 'jeedom::monitor::deamonState::' . $plugin->getId());
+			if (!is_object($cmd)) {
+				continue;
+			}
+			$info = $plugin->deamon_info();
+			if ($info['state'] == 'ok') {
+				$cmd->event(1);
+			} else {
+				$cmd->event(0);
+			}
+		}
+	}
+
+	public static function cron10(){
+		self::updateJeedomMonitor();
+	}
+
 	public static function event() {
 		log::add('virtual', 'debug', json_encode($_GET));
 		if (init('id') != '') {
@@ -162,8 +246,6 @@ class virtual extends eqLogic {
 			$refresh->save();
 		}
 	}
-
-
 
 	public function copyFromEqLogic($_eqLogic_id) {
 		$eqLogic = eqLogic::byId($_eqLogic_id);
@@ -402,6 +484,21 @@ class virtualCmd extends cmd {
 				}
 				break;
 			case 'action':
+				if (strpos($this->getLogicalId(), 'jeedom::monitor') !== false) {
+					if (strpos($this->getLogicalId(), 'deamonStart') !== false) {
+						$plugin = plugin::byId($this->getConfiguration('deamon'));
+						if(is_object($plugin)){
+							$plugin->deamon_start();
+						}
+					}
+					if (strpos($this->getLogicalId(), 'deamonStop') !== false) {
+						$plugin = plugin::byId($this->getConfiguration('deamon'));
+						if(is_object($plugin)){
+							$plugin->deamon_stop();
+						}
+					}
+					return;
+				}
 				if (strpos($this->getConfiguration('infoName'), 'core::jeeObject::summary') !== false) {
 					jeeObject::actionOnSummary($this, $_options);
 					return;

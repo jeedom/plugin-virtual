@@ -4,6 +4,8 @@
 >
 >S'il n'y a pas d'information sur la mise à jour, c'est que celle-ci concerne uniquement de la mise à jour de documentation, de traduction ou de texte.
 
+- Ajout d'un bouton pour crée Jeedom monitor, c'est un équipement qui vous permet de récuperer des informations sur Jeedom (pour le moment que l'état des démons) et d'agir sur Jeedom (pour le moment seulement sur les démons). Les informations sont mises à jour toutes les 10min
+
 # 08/01/2024
 
 - Préparation pour jeedom 4.4
