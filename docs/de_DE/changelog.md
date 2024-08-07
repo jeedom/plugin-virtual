@@ -4,6 +4,8 @@
 >
 >Wenn es keine Informationen über die Aktualisierung gibt, bedeutet dies, dass es sich nur um die Aktualisierung von Dokumentation, Übersetzung oder Text handelt.
 
+# 08.07.2024
+
 - Es wurde eine Schaltfläche zum Erstellen eines Jeedom-Monitors hinzugefügt. Dabei handelt es sich um ein Gerät, mit dem Sie Informationen über Jeedom abrufen und auf Jeedom reagieren können.
 
 # 01.08.2024

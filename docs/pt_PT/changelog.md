@@ -4,6 +4,8 @@
 >
 >Se não houver informação sobre a atualização, significa que se trata apenas da atualização da documentação, tradução ou texto.
 
+# 08/07/2024
+
 - Adicionado um botão para criar monitor Jeedom, este é um equipamento que permite recuperar informações sobre Jeedom e agir sobre Jeedom.
 
 # 01/08/2024
