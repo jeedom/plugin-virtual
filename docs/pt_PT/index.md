@@ -22,6 +22,20 @@ O equipamento virtual pode ser útil para as seguintes necessidades :
 
 Este plugin não requer nenhuma configuração especial e deve simplesmente ser ativado após a instalação.
 
+## Criar/atualizar monitor Jeedom
+
+Botão que permite criar equipamentos de internet Jeedom que fornecerão informações internas sobre Jeedom : 
+
+- para cada plugin que possui um daemon, um comando sobre o estado do daemon
+- para cada plugin que possui um daemon, um comando para iniciar o daemon
+- para cada plugin que tenha um daemon, um comando para parar o daemon
+- número de atualizações disponíveis
+- número de mensagens no centro de mensagens
+- versão do Jeedom
+- faça um backup
+- lançar a atualização do Jeedom (e plugins)
+
+
 ## Configuração do equipamento
 
 Dispositivos virtuais são acessíveis a partir do menu **Plugins → Programação → Virtual**.
@@ -125,11 +139,11 @@ Em seguida, salve para ver o comando status aparecer :
 
 ![virtual15](../images/virtual15.png)
 
-Aqui é necessário no valor do comando action colocar ``not(\#[...][...][Etat]#)`` *(substitua por seu próprio pedido)* e vincular o estado ao comando de ação (tenha cuidado, você não deve ocultar o comando de estado desta vez). Você também deve colocar o comando info no subtipo binário.
+Aqui é necessário no valor do comando action colocar ``not(#[...][...][Etat]#)`` *(substitua por seu próprio pedido)* e vincular o estado ao comando de ação (tenha cuidado, você não deve ocultar o comando de estado desta vez). Você também deve colocar o comando info no subtipo binário.
 
 ## Pedidos múltiplos
 
-Para fazer um cálculo em vários pedidos, é muito fácil ! Basta criar uma ordem do tipo de informação virtual e, no campo valor, colocar seus cálculos. O testador de expressão pode ajudá-lo com esta etapa para validar. Por exemplo, para média de 2 temperaturas :
+Para fazer um cálculo em vários pedidos, é muito fácil ! Basta criar um comando virtual do tipo ``info/Numérique`` e no campo valor coloque seus cálculos. O testador de expressão pode ajudá-lo com esta etapa para validar. Por exemplo, para média de 2 temperaturas :
 
 ![virtual10](../images/virtual10.png)
 
@@ -140,7 +154,7 @@ Vários pontos a serem feitos corretamente :
 - Coloque a unidade bem,
 - Marque a caixa para registrar, se necessário.
 
-Veremos aqui como fazer um pedido que desligará 2 luzes. Nada mais simples, basta criar uma ação virtual e colocar os 2 comandos separados por um ``EE`` :
+Veremos aqui como fazer um pedido que desligará 2 luzes. Nada poderia ser mais simples, basta criar um comando virtual do tipo ``action/Défaut`` e coloque os 2 comandos separados por um ``EE`` :
 
 ![virtual11](../images/virtual11.png)
 

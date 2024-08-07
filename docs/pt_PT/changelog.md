@@ -4,10 +4,15 @@
 >
 >Se não houver informação sobre a atualização, significa que se trata apenas da atualização da documentação, tradução ou texto.
 
+- Adicionado um botão para criar monitor Jeedom, este é um equipamento que permite recuperar informações sobre Jeedom e agir sobre Jeedom.
+
+# 01/08/2024
+
+- Preparando-se para Jeedom 4.4
+
 # 10/02/2023
 
 - Adicionado botão Importar Comandos, que abre um modal para selecionar diversos comandos por filtro para criação do virtual
-
 
 # 15/12/2022
 

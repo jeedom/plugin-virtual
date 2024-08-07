@@ -20,6 +20,11 @@ $eqLogics = eqLogic::byType($plugin->getId());
 				<br>
 				<span>{{Ajouter}}</span>
 			</div>
+			<div class="cursor logoSecondary" id="bt_createJeedomMonitor">
+				<i class="fas fa-heartbeat"></i>
+				<br>
+				<span>{{Créer/Mettre à jour Jeedom monitor}}</span>
+			</div>
 		</div>
 		<legend><i class="fas fa-clone"></i> {{Mes virtuels}}</legend>
 		<?php

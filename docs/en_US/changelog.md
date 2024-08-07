@@ -4,10 +4,15 @@
 >
 >If there is no information on the update, it means that it concerns only the update of documentation, translation or text.
 
+- Added a button to create Jeedom monitor, this is equipment that allows you to retrieve information on Jeedom and act on Jeedom.
+
+# 01/08/2024
+
+- Preparing for jeedom 4.4
+
 # 02/10/2023
 
 - Added an Import Commands button, which opens a modal to select several commands by filter for creating the virtual
-
 
 # 12/15/2022
 

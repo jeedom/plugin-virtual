@@ -1,0 +1,15 @@
+on:
+  # Workflows check plugin Jeedom
+  push:
+    branches:
+      - beta
+  pull_request:
+    branches:
+      - beta
+      - master
+      
+name : 'Full Workflows Plugin Jeedom'
+
+jobs:
+  plugin:
+    uses: jeedom/workflows/.github/workflows/plugin.yml@main

@@ -22,6 +22,20 @@ Virtual equipment can be useful for the following needs :
 
 This plugin does not require any special configuration and must simply be activated after installation.
 
+## Create/Update Jeedom monitor
+
+Button allowing you to create Jeedom internet equipment which will give you internal information on jeedom : 
+
+- for each plugin having a daemon a command on the state of the daemon
+- for each plugin having a daemon a command to start the daemon
+- for each plugin having a daemon a command to stop the daemon
+- number of updates available
+- number of messages in the message center
+- version of jeedom
+- make a backup
+- launch the update of Jeedom (and plugins)
+
+
 ## Equipment configuration
 
 Virtual devices are accessible from the menu **Plugins → Programming → Virtual**.
@@ -125,11 +139,11 @@ Then you save to see the status command appear :
 
 ![virtual15](../images/virtual15.png)
 
-Here it is necessary in the value of the action command to put ``not(\#[...][...][Etat]#)`` *(replace with your own order)* and link the state to the action command (be careful, you must not hide the state command this time). You must also place the info command in binary subtype.
+Here it is necessary in the value of the action command to put ``not(#[...][...][Etat]#)`` *(replace with your own order)* and link the state to the action command (be careful, you must not hide the state command this time). You must also place the info command in binary subtype.
 
 ## Multiple orders
 
-To do a calculation on multiple orders, it's very easy ! Just create a virtual information type order and in the value field put your calculations. The expression tester can help you with this step to validate. For example, to average 2 temperatures :
+To do a calculation on multiple orders, it's very easy ! Simply create a virtual command of type ``info/Numérique`` and in the value field put your calculations. The expression tester can help you with this step to validate. For example, to average 2 temperatures :
 
 ![virtual10](../images/virtual10.png)
 
@@ -140,7 +154,7 @@ Several points to be done correctly :
 - Put the unit well,
 - Check the box to log if necessary.
 
-We will see here how to make an order which will turn off 2 lights. Nothing could be simpler, just create a virtual action and put the 2 commands separated by a ``&&`` :
+We will see here how to make an order which will turn off 2 lights. Nothing could be simpler, just create a virtual command of type ``action/Défaut`` and put the 2 commands separated by a ``&&`` :
 
 ![virtual11](../images/virtual11.png)
 

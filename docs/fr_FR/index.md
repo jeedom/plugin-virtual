@@ -22,6 +22,20 @@ Un équipement virtuel peut être utile pour les besoins suivants :
 
 Ce plugin ne nécessite pas de configuration particulière et doit simplement être activé après l'installation.
 
+## Créer/Mettre à jour Jeedom monitor
+
+Bouton permettant de créer un équipement Jeedom internet qui vous donnera des informations interne sur jeedom : 
+
+- pour chaque plugin ayant un démon une commande sur l'état du démon
+- pour chaque plugin ayant un démon une commande pour démarrer le démon
+- pour chaque plugin ayant un démon une commande pour arreter le démon
+- nombre de mise a jour disponible
+- nombre de message dans le centre des messages
+- version de jeedom
+- faire un backup
+- lancer la mise a jour de Jeedom (et des plugins)
+
+
 ## Configuration des équipements
 
 Les équipements virtuels sont accessibles à partir du menu **Plugins → Programmation → Virtuel**.
@@ -125,11 +139,11 @@ Ensuite vous sauvegardez pour voir apparaître la commande d'état :
 
 ![virtual15](../images/virtual15.png)
 
-Ici il faut dans la valeur de la commande action mettre ``not(\#[...][...][Etat]#)`` *(remplacer par votre propre commande)* et lier l'état à la commande action (attention, il ne faut pas masquer la commande état cette fois). Il faut aussi passer la commande info en sous-type binaire.
+Ici il faut dans la valeur de la commande action mettre ``not(#[...][...][Etat]#)`` *(remplacer par votre propre commande)* et lier l'état à la commande action (attention, il ne faut pas masquer la commande état cette fois). Il faut aussi passer la commande info en sous-type binaire.
 
 ## Multiple commandes
 
-Pour faire un calcul sur de multiples commandes, c’est très facile ! Il suffit de créer une commande de type information virtuelle et dans le champs valeur mettre vos calculs. Le testeur d'expression peut vous aider à cette étape pour valider. Par exemple, pour faire la moyenne de 2 températures :
+Pour faire un calcul sur de multiples commandes, c’est très facile ! Il suffit de créer une commande virtuelle de type ``info/Numérique`` et dans le champs valeur mettre vos calculs. Le testeur d'expression peut vous aider à cette étape pour valider. Par exemple, pour faire la moyenne de 2 températures :
 
 ![virtual10](../images/virtual10.png)
 
@@ -140,7 +154,7 @@ Plusieurs points à réaliser correctement :
 - Bien mettre l’unité,
 - Cocher la case pour historiser si nécessaire.
 
-Nous allons voir ici comment faire une commande qui va éteindre 2 lumières. Rien de plus simple, il suffit de créer une action virtuelle et de mettre les 2 commandes séparées par un ``&&`` :
+Nous allons voir ici comment faire une commande qui va éteindre 2 lumières. Rien de plus simple, Il suffit de créer une commande virtuelle de type ``action/Défaut`` et de mettre les 2 commandes séparées par un ``&&`` :
 
 ![virtual11](../images/virtual11.png)
 

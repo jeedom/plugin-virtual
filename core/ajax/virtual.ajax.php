@@ -46,6 +46,10 @@ try {
     ajax::success(virtual::templateParameters());
   }
 
+  if (init('action') == 'createJeedomMonitor') {
+    ajax::success(virtual::createJeedomMonitor());
+  }
+
   if (init('action') == 'applyTemplate') {
     $virtual = virtual::byId(init('id'));
     if (!is_object($virtual)) {

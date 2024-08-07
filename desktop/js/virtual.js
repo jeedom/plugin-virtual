@@ -15,6 +15,28 @@
 * along with Jeedom. If not, see <http://www.gnu.org/licenses/>.
 */
 
+
+$('#bt_createJeedomMonitor').off('click').on('click', function() {
+  $.ajax({
+    type: "POST",
+    url: "plugins/virtual/core/ajax/virtual.ajax.php",
+    data: {
+      action: "createJeedomMonitor",
+    },
+    dataType: 'json',
+    error: function(error) {
+      $('#div_alert').showAlert({ message: error.message, level: 'danger' })
+    },
+    success: function(data) {
+      if (data.state != 'ok') {
+        $('#div_alert').showAlert({ message: data.result, level: 'danger' })
+        return
+      }
+      window.location.reload();
+    }
+  });
+})
+
 $('#bt_importTemplate').off('click').on('click', function() {
   $.ajax({
     type: "POST",
@@ -87,7 +109,6 @@ $('#bt_importEqLogic').off('click').on('click', function() {
   })
 })
 
-
 document.getElementById('bt_eqLogicCmds').addEventListener('click', function() {
   let idOriginal =  $('.eqLogicAttr[data-l1key=id]').value();
   jeedom.eqLogic.getSelectModal({}, function(result) {
@@ -96,9 +117,6 @@ document.getElementById('bt_eqLogicCmds').addEventListener('click', function() {
 
   })
 })
-
-
-
 
 $("#bt_addVirtualInfo").on('click', function(event) {
   addCmdToTable({ type: 'info' })

@@ -4,6 +4,10 @@
 >
 >S'il n'y a pas d'information sur la mise à jour, c'est que celle-ci concerne uniquement de la mise à jour de documentation, de traduction ou de texte.
 
+# 07/08/2024
+
+- Ajout d'un bouton pour créerJeedom monitor, c'est un équipement qui vous permet de récuperer des informations sur Jeedom et d'agir sur Jeedom.
+
 # 08/01/2024
 
 - Préparation pour jeedom 4.4
