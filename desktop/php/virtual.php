@@ -46,7 +46,7 @@ $eqLogics = eqLogic::byType($plugin->getId());
 				if (file_exists(__DIR__ . '/../../../../' . $file)) {
 					echo '<img src="' . $file . '" height="105" width="95">';
 				} else {
-					echo '<img src="' . $plugin->getPathImgIcon() . '">';
+					echo '<img src="' . $eqLogic->getImage() . '"/>';
 				}
 				echo '<br>';
 				echo '<span class="name">' . $eqLogic->getHumanName(true, true) . '</span>';
