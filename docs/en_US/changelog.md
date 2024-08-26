@@ -4,6 +4,8 @@
 >
 >If there is no information on the update, it means that it concerns only the update of documentation, translation or text.
 
+- Support for custom equipment images (Jeedom 4.5)
+
 # 07/08/2024
 
 - Added a button to create Jeedom monitor, this is equipment that allows you to retrieve information on Jeedom and act on Jeedom.

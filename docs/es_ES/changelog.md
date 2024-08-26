@@ -4,6 +4,8 @@
 >
 >Si no hay información sobre la actualización, significa que se trata solo de la actualización de la documentación, la traducción o el texto.
 
+- Soporte para imágenes de equipos personalizados (Jeedom 4.5)
+
 # 08/07/2024
 
 - Se agregó un botón para crear el monitor Jeedom, este es un equipo que le permite recuperar información sobre Jeedom y actuar sobre Jeedom.
