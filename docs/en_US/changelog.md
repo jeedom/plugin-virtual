@@ -5,6 +5,7 @@
 >If there is no information on the update, it means that it concerns only the update of documentation, translation or text.
 
 - Support for custom equipment images (Jeedom 4.5)
+- Fixed a bug on importing orders
 
 # 07/08/2024
 

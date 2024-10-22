@@ -5,6 +5,7 @@
 >Wenn es keine Informationen über die Aktualisierung gibt, bedeutet dies, dass es sich nur um die Aktualisierung von Dokumentation, Übersetzung oder Text handelt.
 
 - Unterstützung für benutzerdefinierte Gerätebilder (Jeedom 4.5)
+- Ein Fehler beim Importieren von Bestellungen wurde behoben
 
 # 08.07.2024
 
