@@ -2,6 +2,7 @@
     "changelog.md": {
         "Changelog Virtuel": "Changelog Virtual",
         "S'il n'y a pas d'information sur la mise à jour, c'est que celle-ci concerne uniquement de la mise à jour de documentation, de traduction ou de texte": "If there is no information on the update, it means that it concerns only the update of documentation, translation or text",
+        "28\/11\/205": "",
         "Support des images d'équipement personnalisées (Jeedom 4.5": "Support for custom equipment images (Jeedom 4.5",
         "Correction d'un bug sur l'import des commandes": "Fixed a bug on importing orders",
         "07\/08\/2024": "07\/08\/2024",
