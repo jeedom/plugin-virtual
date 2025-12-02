@@ -35,7 +35,7 @@ class virtual extends eqLogic {
 		$eqLogic->setLogicalId('jeedom::monitor');
 		try {
 			$eqLogic->save();
-		} catch (Exception $e) {
+		} catch (Throwable $e) {
 			$eqLogic->setName($eqLogic->getName() . ' remote ' . rand(0, 9999));
 			$eqLogic->save();
 		}
@@ -232,7 +232,7 @@ class virtual extends eqLogic {
 				if (is_json($content)) {
 					$return += json_decode($content, true);
 				}
-			} catch (Exception $e) {
+			} catch (Throwable $e) {
 			}
 		}
 		if (isset($_template) && $_template != '') {
@@ -290,7 +290,7 @@ class virtual extends eqLogic {
 					$cmd->event($value);
 				}
 			}
-		} catch (Exception $exc) {
+		} catch (Throwable $exc) {
 			log::add('virtual', 'error', __('Erreur pour', __FILE__) . ' ' . $this->getHumanName() . ' : ' . $exc->getMessage());
 		}
 	}
@@ -369,7 +369,7 @@ class virtual extends eqLogic {
 			}
 			try {
 				$cmd->save();
-			} catch (Exception $e) {
+			} catch (Throwable $e) {
 			}
 		}
 		$this->save();
@@ -427,7 +427,7 @@ class virtual extends eqLogic {
 			}
 			try {
 				$cmd->save();
-			} catch (Exception $e) {
+			} catch (Throwable $e) {
 			}
 		}
 		$this->save();
@@ -555,7 +555,7 @@ class virtualCmd extends cmd {
 							$result = str_replace('"', '', $result);
 						}
 						return $result;
-					} catch (Exception $e) {
+					} catch (Throwable $e) {
 						log::add('virtual', 'info', $e->getMessage());
 						return $this->getConfiguration('calcul');
 					}
@@ -597,7 +597,7 @@ class virtualCmd extends cmd {
 							if (is_object($cmd)) {
 								try {
 									$cmd->execCmd($_options);
-								} catch (\Exception $e) {
+								} catch (Throwable $e) {
 								}
 							}
 						}
