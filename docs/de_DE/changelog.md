@@ -6,6 +6,10 @@
 
 # 
 
+- "
+
+# 28/11/205
+
 - Unterstützung für benutzerdefinierte Gerätebilder (Jeedom 4.5)
 - Ein Fehler beim Importieren von Bestellungen wurde behoben
 

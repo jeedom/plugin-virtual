@@ -6,6 +6,10 @@
 
 # 
 
+- "
+
+# 28/11/205
+
 - Suporte para imagens de equipamentos personalizados (Jeedom 4.5)
 - Corrigido um bug ao importar pedidos
 

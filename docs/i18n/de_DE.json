@@ -2,7 +2,9 @@
     "changelog.md": {
         "Changelog Virtuel": "Changelog Virtual",
         "S'il n'y a pas d'information sur la mise à jour, c'est que celle-ci concerne uniquement de la mise à jour de documentation, de traduction ou de texte": "Wenn es keine Informationen über die Aktualisierung gibt, bedeutet dies, dass es sich nur um die Aktualisierung von Dokumentation, Übersetzung oder Text handelt",
-        "28\/11\/205": "",
+        "02\/12\/2025": "",
+        "Meilleure gestion de l'erreur \"DivisionByZeroError": "",
+        "28\/11\/205": "28\/11\/205",
         "Support des images d'équipement personnalisées (Jeedom 4.5": "Unterstützung für benutzerdefinierte Gerätebilder (Jeedom 4.5",
         "Correction d'un bug sur l'import des commandes": "Ein Fehler beim Importieren von Bestellungen wurde behoben",
         "07\/08\/2024": "08.07.2024",

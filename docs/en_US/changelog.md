@@ -6,6 +6,10 @@
 
 # 
 
+- "
+
+# 28/11/205
+
 - Support for custom equipment images (Jeedom 4.5)
 - Fixed a bug on importing orders
 

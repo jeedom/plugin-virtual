@@ -6,6 +6,10 @@
 
 # 
 
+- "
+
+# 28/11/205
+
 - Soporte para imágenes de equipos personalizados (Jeedom 4.5)
 - Se corrigió un error al importar pedidos
 
