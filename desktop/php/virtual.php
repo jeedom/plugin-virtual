@@ -166,7 +166,7 @@ $eqLogics = eqLogic::byType($plugin->getId());
 			</div>
 
 			<div role="tabpanel" class="tab-pane" id="commandtab">
-				<div class="input-group pull-right" style="display:inline-flex;margin-top:5px;">
+				<div class="input-group" style="display:inline-flex;margin-top:5px;position:fixed;z-index:10;right:20px;">
 					<span class="input-group-btn">
 						<a class="btn btn-info btn-xs roundedLeft" id="bt_addVirtualInfo"><i class="fas fa-plus-circle"></i> {{Ajouter une info virtuelle}}
 						</a><a class="btn btn-warning btn-xs roundedRight" id="bt_addVirtualAction"><i class="fas fa-plus-circle"></i> {{Ajouter une action virtuelle}}</a>
