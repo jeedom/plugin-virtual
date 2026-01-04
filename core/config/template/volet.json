@@ -29,7 +29,7 @@
       {
         "name":"Etat",
         "type":"info",
-        "subType":"numeric",
+        "subType": "string",
         "isVisible":1,
         "generic_type": "FLAP_STATE",
         "configuration":{
@@ -43,13 +43,6 @@
       	}
       },
       {
-        "name":"Bouton",
-        "type":"info",
-        "subType":"string",
-        "isVisible":0,
-        "generic_type": ""
-      },
-      {
         "name":"up",
         "type":"action",
         "subType":"other",
@@ -58,8 +51,8 @@
         "unite":"",
         "configuration":{
           "virtualAction":"1",
-          "infoName":"Bouton",
-          "value":""
+          "infoName":"Etat",
+          "value":"opened"
         },
         "display":{
           "showNameOndashboard":0,
@@ -75,8 +68,8 @@
         "generic_type": "FLAP_STOP",
         "configuration":{
           "virtualAction":"1",
-          "infoName":"Bouton",
-          "value":""
+          "infoName":"Etat",
+          "value":"unknown"
         },
         "display":{
           "showNameOndashboard":0,
@@ -92,8 +85,8 @@
         "generic_type": "FLAP_DOWN",
         "configuration":{
           "virtualAction":"1",
-          "infoName":"Bouton",
-          "value":""
+          "infoName":"Etat",
+          "value":"closed"
         },
         "display":{
           "showNameOndashboard":0,
