@@ -20,8 +20,12 @@ if (!isConnect('admin')) {
     throw new Exception('{{401 - Accès non autorisé}}');
 }
 $plugin = plugin::byId('virtual');
-$eqLogicId = init('eqLogic'); 
-$idOriginal = init('idOriginal');  
+$eqLogicId = init('eqLogic');
+$idOriginal = init('idOriginal');
+sendVarToJS([
+  'eqLogicId' => $eqLogicId,
+  'idOriginal' => $idOriginal
+]);
 ?>
 <span class='pull-right'>
 	<a class="btn btn-default pull-left" id="bt_selectAllInfos">{{Selectionner Commandes Infos}}</a>
@@ -34,105 +38,105 @@ $idOriginal = init('idOriginal');
 </span>
 <br/><br/>
 <div id='div_Alert' style="display: none;"></div>
-<table id="tableVirtual" data-toggle="table" data-height="600" data-pagination="true" data-search="true">
+<table id="tableVirtual" class="table table-condensed">
 	<thead>
-    <tr>
-      <th data-field="nomobjet">{{Nom Commande}}</th>
-      <th data-field="typeobjet">{{Type}}</th>
-      <th data-field="value">{{Valeur}}</th>
-      <th></th>
-    </tr>
+		<tr>
+			<th>{{Nom Commande}}</th>
+			<th>{{Type}}</th>
+			<th>{{Valeur}}</th>
+			<th></th>
+		</tr>
 	</thead>
-<tbody>
-  <?php
-  if(is_object(eqLogic::byId($eqLogicId))){
-    $cmds = cmd::byEqLogicId($eqLogicId);
-    foreach($cmds as $cmd){
-      $cmdId = $cmd->getId();
-      $cmdName = $cmd->getName();
-      $cmdType = $cmd->getType();
-      $cmdSubType = $cmd->getSubType();
-      if($cmdType == 'info'){
-        $cmdValue = $cmd->execCmd();
-      }else{
-        $cmdValue = '';
-      }
-      $cmdIsVisible = $cmd->getIsVisible();
-      echo '<tr><td><span class="label label-info"  style="font-size : 1em;cursor:default;">' .  $cmdName . ' </span></td>';
-      echo '<td><span class="' . ($cmdType == 'action' ? 'label label-warning' : 'label label-info') . '" style="font-size : 1em;cursor:default;">' . $cmdType . ' </span></td>';
-      echo '<td><span class="label label-info" style="font-size : 1em;cursor:default;">' .  $cmdValue . ' </span></td>';
-      echo '<td><input type="checkbox" class="' . ($cmdType == 'action' ? 'checkAction' : 'checkInfos') . '"  data-idCmd="'.$cmdId.'" style="font-size: 1em; cursor: default;"></td></tr>';
-    }
-  }
-  ?>
-</tbody>
-
-<script>
-  function updateTableFilter(check) {
-    var searchText = $('.search-input').val().toLowerCase();
-    $('#tableVirtual tbody tr').each(function() {
-      var $row = $(this);
-      var $nomobjet = $row.find('td:eq(0)').text().toLowerCase();
-      var $checkbox = $row.find('input[type="checkbox"].' + check);
-      if ($nomobjet.includes(searchText)) {
-        if( $checkbox.prop('checked')){
-              $checkbox.not(this).prop('checked', false);
-            }else{
-              $checkbox.not(this).prop('checked', true);
-            }
-        
-      } else {
-        $checkbox.not(this).prop('checked', false);
-      }
-    });
-  }
-
- $('#bt_selectAllInfos').on('click',function(){
-      updateTableFilter('checkInfos');
-});
-
-$('#bt_selectAllActions').on('click',function(){
-      updateTableFilter('checkAction');
-});
-
-document.getElementById('bt_validateObjectlist').addEventListener('click', function() {
-  var checkedCheckboxes = [];
-  var eqLogicid = <?= $eqLogicId; ?>;
-  var idOriginal = <?= $idOriginal; ?>;
-  var checkboxes = document.querySelectorAll('#tableVirtual tbody input[type="checkbox"]:checked');
-  checkboxes.forEach(function(checkbox) {
-    checkedCheckboxes.push(checkbox.getAttribute('data-idCmd'));
-  });
-  if(checkedCheckboxes.length !== 0){
-      $.ajax({
-      type: "POST",
-      url: "plugins/virtual/core/ajax/virtual.ajax.php",
-      data: {
-        action: "copyCmdsFromEqLogic",
-        eqLogic_id: eqLogicid,
-        id: idOriginal,
-        cmdsSelected: checkedCheckboxes
-      },
-      dataType: 'json',
-      global: false,
-      error: function(error) {
-        $('#div_alert').showAlert({ message: error.message, level: 'danger' })
-      },
-      success: function(data) {
-        if (data.state != 'ok') {
-          $('#div_alert').showAlert({ message: data.result, level: 'danger' })
-          return
+	<tbody>
+      <?php
+      if (is_object(eqLogic::byId($eqLogicId))) {
+        $cmds = cmd::byEqLogicId($eqLogicId);
+        foreach($cmds as $cmd) {
+          $cmdId = $cmd->getId();
+          $cmdName = $cmd->getName();
+          $cmdType = $cmd->getType();
+          $cmdSubType = $cmd->getSubType();
+          if ($cmdType == 'info') {
+            $cmdValue = $cmd->execCmd();
+          } else {
+            $cmdValue = '';
+          }
+          $cmdIsVisible = $cmd->getIsVisible();
+          $tr = '<tr>';
+          $tr .= '<td><span class="label label-info"  style="font-size : 1em;cursor:default;">' .  $cmdName . ' </span></td>';
+          $tr .= '<td><span class="' . ($cmdType == 'action' ? 'label label-warning' : 'label label-info') . '" style="font-size : 1em;cursor:default;">' . $cmdType . ' </span></td>';
+          $tr .= '<td><span class="label label-info" style="font-size : 1em;cursor:default;">' .  $cmdValue . ' </span></td>';
+          $tr .= '<td><input type="checkbox" class="checkContext ' . ($cmdType == 'action' ? 'checkAction' : 'checkInfos') . '"  data-idCmd="'.$cmdId.'" style="font-size: 1em; cursor: default;"></td>';
+          $tr .= '</tr>';
+          echo $tr;
         }
-        $('#md_modal').load('index.php?v=d&plugin=virtual&modal=cmdsChoice&eqLogic='+eqLogicid+'&idOriginal='+idOriginal).dialog('close');
-        $('.eqLogicDisplayCard[data-eqLogic_id=' + idOriginal + ']').click()
-
+      }
+      ?>
+	</tbody>
+</table>
+<script>
+  // DataTable
+  new DataTable(document.getElementById('tableVirtual'), {
+    columns: [
+      { select: 0, sort: "asc" }
+    ],
+    searchable: true,
+    paging: true,
+    perPage: 30,
+    perPageSelect: [10, 20, 30, 50, 100],
+  })
+  // ContextMenu
+  var checkContextMenuCallback = function(_el) {
+    _el.triggerEvent('change')
+  }
+  jeedomUtils.setCheckContextMenu(checkContextMenuCallback)
+        
+  function updateTableFilter(check) {
+    document.querySelectorAll('#tableVirtual input[type="checkbox"].' + check).forEach(_checkbox => {
+      if (!_checkbox.checked) {
+        _checkbox.checked = true
       }
     })
-  }else{
-    $('#div_Alert').showAlert({ message: 'Aucune commande sélectionnée', level: 'danger' })
   }
-});
+
+  document.getElementById('bt_selectAllInfos').addEventListener('click', function() {
+    updateTableFilter('checkInfos');
+  })
+    
+  document.getElementById('bt_selectAllActions').addEventListener('click', function() {
+    updateTableFilter('checkAction');
+  })
+    
+  document.getElementById('bt_validateObjectlist').addEventListener('click', function() {
+    var checkedCheckboxes = [];
+    document.querySelectorAll('#tableVirtual tbody input[type="checkbox"]:checked').forEach(function(_checkbox) {
+      checkedCheckboxes.push(_checkbox.getAttribute('data-idCmd'));
+    });
+    if (checkedCheckboxes.length !== 0) {
+      domUtils.ajax({
+        type: "POST",
+        url: "plugins/virtual/core/ajax/virtual.ajax.php",
+        data: {
+          action: "copyCmdsFromEqLogic",
+          eqLogic_id: eqLogicId,
+          id: idOriginal,
+          cmdsSelected: checkedCheckboxes
+        },
+        dataType: "json",
+        error: function (request, status, error) {
+          domUtils.handleAjaxError(request, status, error)
+        },
+        success: function (data) {
+          if (data.state != "ok") {
+            jeedomUtils.showAlert({ message: data.result, level: "danger" })
+            return
+          }
+          jeedomUtils.closeJeeDialogs()
+          document.querySelector('.eqLogicDisplayCard[data-eqLogic_id="' + document.querySelector('#eqlogictab .eqLogicAttr[data-l1key=id]')?.jeeValue() + '"]')?.click()
+        }
+      })
+    } else {
+      jeedomUtils.showAlert({ message: '{{Aucune commande sélectionnée}}', level: "danger" })
+    }
+  });
 </script>
-<?php include_file('desktop', 'boot_table', 'css', 'virtual');?>
-<?php include_file('desktop', 'boot_table', 'js', 'virtual');?>
-<?php include_file('desktop', 'virtual', 'js', 'virtual');?>
