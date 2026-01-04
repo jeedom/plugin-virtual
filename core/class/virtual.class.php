@@ -278,6 +278,20 @@ class virtual extends eqLogic {
 	public function refresh() {
 		if($this->getLogicalId() == 'jeedom::monitor'){
 			self::updateJeedomMonitor();
+			try {
+				foreach ($this->getCmd('info') as $cmd) {
+					if ($cmd->getLogicalId() != '') continue;
+					if ($cmd->getConfiguration('calcul') == '' || $cmd->getConfiguration('virtualAction', 0) != '0') {
+						continue;
+					}
+					$value = $cmd->execute();
+					if ($cmd->execCmd() != $cmd->formatValue($value)) {
+						$cmd->event($value);
+					}
+				}
+			} catch (Exception $exc) {
+				log::add('virtual', 'error', __('Erreur pour', __FILE__) . ' ' . $this->getHumanName() . ' : ' . $exc->getMessage());
+			}
 			return;
 		}
 		try {
